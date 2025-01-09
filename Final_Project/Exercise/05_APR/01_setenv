@@ -1,0 +1,2 @@
+#!/bin/csh
+setenv OA_HOME /RAID2/cad/cadence/INNOVUS/INNOVUS_20.15.000/share/oa

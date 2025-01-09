@@ -1,0 +1,13 @@
+./09_clean_up > check.log
+./01_run_vcs_rtl > check.log
+if  grep -i -q 'FAIL' 'vcs.log'; then
+        echo -e "\033[31m--- 01_RTL PATTERN Fail !! ---\033[0m"
+elif grep -i -q 'Congratulations' 'vcs.log'; then
+        echo -e "\033[0;30;42m--- 01_RTL PATTERN PASS !! ---\033[0m"
+        Latency=`cat vcs.log | grep 'execution cycles =' | grep -Eo '[+-]?[0-9]+([.][0-9]+)?'`
+        cycle=`cat vcs.log | grep 'clock period =' | grep -Eo '[+-]?[0-9]+([.][0-9]+)?'`
+        echo -e "\033[0;30;42mExecution cycles:\033[0m $Latency cycles "
+        echo -e "\033[0;30;42mCycle Time:\033[0m $cycle ns "
+else
+        echo -e "\033[31m--- 01_RTL wrong !! ---\033[0m"
+fi

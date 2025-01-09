@@ -1,0 +1,61 @@
+library (jasper_bbox_gates) {
+delay_model : table_lookup;
+date        : "Tue Feb  1 20:40:43 BRST 2022"
+comment     : "Copyright (C) 2022 Cadence Design Systems, Inc." ;
+revision    : 1.0 ;
+time_unit : "1ns";
+voltage_unit : "1V";
+current_unit : "1mA";
+pulling_resistance_unit : "1kohm";
+leakage_power_unit : "1nW";
+capacitive_load_unit (1,pf);
+slew_upper_threshold_pct_rise : 80;
+slew_lower_threshold_pct_rise : 20;
+slew_upper_threshold_pct_fall : 80;
+slew_lower_threshold_pct_fall : 20;
+input_threshold_pct_rise : 30;
+input_threshold_pct_fall : 70;
+output_threshold_pct_rise : 70;
+output_threshold_pct_fall : 30;
+nom_process : 1;
+nom_voltage : 5;
+nom_temperature : 25;
+operating_conditions ( typical ) {
+   process : 1;
+   voltage : 5;
+   temperature : 25;
+}
+default_operating_conditions : typical;
+voltage_map (COREVDD, 1.0);
+voltage_map (COREGND, 0.0);
+wire_load("ZeroWireload") {
+    resistance : 0 ;
+    capacitance : 1 ;
+    area : 1
+    slope : 0 ;
+    fanout_length(1,0.0000)
+    fanout_length(2,0.0000)
+    fanout_length(3,0.0000)
+    fanout_length(4,0.0000)
+    fanout_length(5,0.0000)
+    fanout_length(6,0.0000)
+    fanout_length(7,0.0000)
+    fanout_length(8,0.0000)
+    fanout_length(9,0.0000)
+    fanout_length(10,0.0000)
+    fanout_length(11,0.0000)
+    fanout_length(12,0.0000)
+    fanout_length(13,0.0000)
+    fanout_length(14,0.0000)
+    fanout_length(15,0.0000)
+    fanout_length(16,0.0000)
+    fanout_length(17,0.0000)
+    fanout_length(18,0.0000)
+    fanout_length(19,0.0000)
+    fanout_length(20,0.0000)
+}
+default_wire_load : "ZeroWireload";
+default_wire_load_mode : segmented;
+default_cell_leakage_power : 0.0 ;
+default_leakage_power_density : 0.0 ;
+}

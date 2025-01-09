@@ -1,0 +1,22 @@
+set company "iclab"
+set desinger "Student"
+
+set search_path         " ./ \
+			../01_RTL                     \
+                        ~iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/    \
+                        ~iclabTA01/UMC018_CBDK/CIC/Sdb/          \
+                        /usr/cad/synopsys/synthesis/cur/libraries/syn/ \
+                        /usr/cad/synopsys/synthesis/cur/dw "
+set target_library      " fsa0m_a_generic_core_ss1p62v125c.db \
+                        fsa0m_a_generic_core_ff1p98vm40c.db \
+                        fsa0m_a_t33_generic_io_ss1p62v125c.db \
+                        fsa0m_a_t33_generic_io_tt1p8v25c.db" 
+set link_library        " * $target_library dw_foundation.sldb standard.sldb "
+set symbol_library      " *.sdb "
+set synthetic_library   " dw_foundation.sldb "
+
+set verilogout_no_tri true
+set hdlin_enable_presto_for_vhdl "TRUE"
+set sh_enable_line_editing true 
+history keep 100
+alias h history

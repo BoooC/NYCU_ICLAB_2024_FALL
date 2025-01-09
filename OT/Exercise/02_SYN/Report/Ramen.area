@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : Ramen
+Version: T-2022.03
+Date   : Sat Oct 26 15:07:29 2024
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabTA01/umc018/Synthesis/slow.db)
+
+Number of ports:                           53
+Number of nets:                           970
+Number of cells:                          887
+Number of combinational cells:            729
+Number of sequential cells:               157
+Number of macros/black boxes:               0
+Number of buf/inv:                        126
+Number of references:                      40
+
+Combinational area:              14942.189048
+Buf/Inv area:                     1267.358445
+Noncombinational area:           10870.675278
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 25812.864326
+Total area:                 undefined
+1

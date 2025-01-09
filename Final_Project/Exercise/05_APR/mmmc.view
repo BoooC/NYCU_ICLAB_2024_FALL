@@ -1,0 +1,11 @@
+# Version:1.0 MMMC View Definition File
+# Do Not Remove Above Line
+create_rc_corner -name RC_Corner -cap_table {RC/u18_Faraday.CapTbl} -preRoute_res {1.0} -preRoute_cap {1.0} -preRoute_clkres {0.0} -preRoute_clkcap {0.0} -postRoute_res {1.0} -postRoute_cap {1.0} -postRoute_xcap {1.0} -postRoute_clkres {0.0} -postRoute_clkcap {0.0} -qx_tech_file {RC/icecaps.tch}
+create_library_set -name lib_max -timing {LIB/fsa0m_a_generic_core_ss1p62v125c.lib LIB/fsa0m_a_t33_generic_io_ss1p62v125c.lib LIB/SUMA180_1024X8X1BM2_WC.lib} -si {CeltIC/u18_ss.cdb}
+create_library_set -name lib_min -timing {LIB/fsa0m_a_generic_core_ff1p98vm40c.lib LIB/fsa0m_a_t33_generic_io_ff1p98vm40c.lib LIB/SUMA180_1024X8X1BM2_BC.lib} -si {CeltIC/u18_ff.cdb}
+create_constraint_mode -name func_mode -sdc_files {CHIP.sdc}
+create_delay_corner -name Delay_Corner_max -library_set {lib_max} -rc_corner {RC_Corner}
+create_delay_corner -name Delay_Corner_min -library_set {lib_min} -rc_corner {RC_Corner}
+create_analysis_view -name av_func_mode_max -constraint_mode {func_mode} -delay_corner {Delay_Corner_max}
+create_analysis_view -name av_func_mode_min -constraint_mode {func_mode} -delay_corner {Delay_Corner_max}
+set_analysis_view -setup {av_func_mode_max} -hold {av_func_mode_min}

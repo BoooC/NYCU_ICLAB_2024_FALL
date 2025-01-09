@@ -1,0 +1,71 @@
+2024-09-16 01:02:41.478672 (194826) main____ INFO    ----------------------------------------
+2024-09-16 01:02:41.478739 (194826) main____ INFO    Jasper version info
+2024-09-16 01:02:41.478744 (194826) main____ INFO      tool      : Jasper 2023.09
+2024-09-16 01:02:41.478748 (194826) main____ INFO      version   : 2023.09p001 64 bits
+2024-09-16 01:02:41.478751 (194826) main____ INFO      build date: 2023.10.25 14:35:20 UTC
+2024-09-16 01:02:41.478753 (194826) main____ INFO    ----------------------------------------
+2024-09-16 01:02:41.478755 (194826) main____ INFO    Runtime info:
+2024-09-16 01:02:41.478758 (194826) main____ INFO      platform  : Linux 3.10.0-1160.88.1.el7.x86_64 x86_64
+2024-09-16 01:02:41.478763 (194826) main____ INFO      hostname  : ee30
+2024-09-16 01:02:41.478765 (194826) main____ INFO      pid       : 194826
+2024-09-16 01:02:41.478768 (194826) main____ INFO      arguments : '-style' 'windows' '-sec' 'jg_sec_run1.tcl'
+2024-09-16 01:02:41.478771 (194826) main____ INFO      locale    : ANSI_X3.4-1968
+2024-09-16 01:02:41.478773 (194826) main____ INFO    ----------------------------------------
+2024-09-16 01:02:41.478775 (194826) main____ INFO    System resource limits info:
+2024-09-16 01:02:41.478777 (194826) main____ INFO      virtual memory: unlimited
+2024-09-16 01:02:41.478780 (194826) main____ INFO      cpu time      : unlimited
+2024-09-16 01:02:41.478786 (194826) main____ INFO      processes     : 4096
+2024-09-16 01:02:41.478793 (194826) main____ INFO      stack size    : 8388608 B
+2024-09-16 01:02:41.478796 (194826) main____ INFO      core file size: 0 B
+2024-09-16 01:02:41.478799 (194826) main____ INFO      open files    : 1024
+2024-09-16 01:02:41.478801 (194826) main____ INFO      file size     : unlimited
+2024-09-16 01:02:41.478803 (194826) main____ INFO    ----------------------------------------
+2024-09-16 01:02:41.478806 (194826) main____ INFO    Memory statistics:
+2024-09-16 01:02:41.478808 (194826) main____ INFO      total physical memory  : 1056530580 kB
+2024-09-16 01:02:41.478810 (194826) main____ INFO      free physical memory   : 1009467884 kB
+2024-09-16 01:02:41.478813 (194826) main____ INFO      committed address space: 9005788 kB
+2024-09-16 01:02:41.478815 (194826) main____ INFO    ----------------------------------------
+2024-09-16 01:02:41.479254 (194826) main____ INFO    Important environment variables:
+2024-09-16 01:02:41.479265 (194826) main____ INFO      CDS_AUTO_64BIT     : 'ALL'
+2024-09-16 01:02:41.479269 (194826) main____ INFO      CDS_LOAD_ENV       : 'CSF'
+2024-09-16 01:02:41.479272 (194826) main____ INFO      CDS_Netlisting_Mode: 'Analog'
+2024-09-16 01:02:41.479276 (194826) main____ INFO      DISPLAY            : 'localhost:16.0'
+2024-09-16 01:02:41.479279 (194826) main____ INFO      JASPER_INSTALL_DIR : '/usr/cad/cadence/JASPER/jasper_2023.09p001'
+2024-09-16 01:02:41.479287 (194826) main____ INFO      JASPER_KERNEL_CHECK: '1'
+2024-09-16 01:02:41.479291 (194826) main____ INFO      JASPER_OS_CHECK    : '1'
+2024-09-16 01:02:41.479295 (194826) main____ INFO      LM_LICENSE_FILE    : '26585@lshc:5280@lshc:1717@lshc:5280@lstc:26585@lstc:1717@lstc'
+2024-09-16 01:02:41.479299 (194826) main____ INFO    ----------------------------------------
+2024-09-16 01:02:41.480733 (194826) lic_core INFO    Initializing license system ...
+2024-09-16 01:02:41.483471 (194826) lic_core INFO    ... license system initialized.
+2024-09-16 01:02:41.500591 (194826) lic__man INFO    Claim 'main' for <ui>.
+2024-09-16 01:02:41.500637 (194826) lic_core INFO    (1) checking out 'jasper_interactive' ...
+2024-09-16 01:02:41.565807 (194826) lic_core INFO    ... (1) checkout succeeded
+2024-09-16 01:02:41.565896 (194826) lic__man INFO    Claim 'sec' for <ui>.
+2024-09-16 01:02:41.565918 (194826) lic_core INFO    (2) checking out 'jasper_sec' ...
+2024-09-16 01:02:41.638850 (194826) lic_core INFO    ... (2) checkout failed (error: -5) ("FLEXnet ERROR(-5, 0, 0): No such feature exists.")
+2024-09-16 01:02:41.638908 (194826) lic_core INFO    (3) checking out 'jasper_fao' ...
+2024-09-16 01:02:41.724581 (194826) lic_core INFO    ... (3) checkout succeeded
+2024-09-16 01:02:41.725108 (194826) main____ INFO    Tool inactivity delay is 480000 ms.
+2024-09-16 01:02:42.131373 (194826) lic__man INFO    Claim 'sec' for <ui>.
+2024-09-16 01:02:42.378295 (194826) lic__man INFO    Unclaim 'sec' for <ui>.
+2024-09-16 01:02:42.378326 (194826) lic__man INFO    Claim 'sec' for <ui>.
+2024-09-16 01:02:42.397756 (194826) session_ INFO    Starting analysis session with session id 'session_0' (launcher: <local>) ...
+2024-09-16 01:02:42.400651 (194826) session_ INFO    Analysis session with session id 'session_0' started (pid: 194850)
+2024-09-16 01:02:43.157689 (194826) session_ INFO    Analysis session 'session_0' connected to the console (host: 127.0.0.1:58992)
+2024-09-16 01:02:43.463185 (194826) main____ INFO    Releasing console memory by request of analysis session 'session_0'.
+2024-09-16 01:02:43.464469 (194826) lic__man INFO    Unclaim everything for 'session_0'.
+2024-09-16 01:02:43.484414 (194826) lic__man INFO    Claim 'sec' for 'session_0'.
+2024-09-16 01:02:44.898155 (194826) lic__man INFO    Unclaim everything for 'session_0'.
+2024-09-16 01:02:44.968813 (194826) lic__man INFO    Claim 'sec' for 'session_0'.
+2024-09-16 01:02:46.349934 (194826) lic__man INFO    Claim 'sec' for 'session_0'.
+2024-09-16 01:02:46.349961 (194826) lic__man INFO    Claim 'sec' for 'session_0/prove-1'.
+2024-09-16 01:02:50.936943 (194826) lic__man INFO    Unclaim everything for 'session_0/prove-4'.
+2024-09-16 01:02:50.980039 (194826) lic__man INFO    Unclaim everything for 'session_0/prove-2'.
+2024-09-16 01:02:51.175316 (194826) lic__man INFO    Unclaim everything for 'session_0/prove-3'.
+2024-09-16 01:02:51.296691 (194826) lic__man INFO    Unclaim everything for 'session_0/prove-1'.
+2024-09-16 01:02:52.318742 (194826) lic__man INFO    Unclaim everything for 'session_0/prove-0'.
+2024-09-16 01:03:52.043231 (194826) main____ INFO    About to exit: requested from GUI
+2024-09-16 01:03:52.234761 (194826) session_ INFO    Analysis session 'session_0' disconnected.
+2024-09-16 01:03:52.239930 (194826) lic_core INFO    (1) checkin jasper_interactive
+2024-09-16 01:03:52.242366 (194826) lic_core INFO    (3) checkin jasper_fao
+2024-09-16 01:03:52.246994 (194826) main____ INFO    Exiting with status 0.

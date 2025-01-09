@@ -1,0 +1,19 @@
+set company "iclab"
+set desinger "Student"
+
+set search_path         " ./ \
+			../01_RTL                     \
+                        ~iclabTA01/umc018/Synthesis/    \
+                        ~iclabTA01/umc018/Sdb/          \
+                        /usr/cad/synopsys/synthesis/cur/libraries/syn/ \
+                        /usr/cad/synopsys/synthesis/cur/dw "
+set target_library      " slow.db fast.db umc18io3v5v_slow.db umc18io3v5v_fast.db" 
+set link_library        " * $target_library dw_foundation.sldb standard.sldb "
+set symbol_library      " *.sdb "
+set synthetic_library   " dw_foundation.sldb "
+
+set verilogout_no_tri true
+set hdlin_enable_presto_for_vhdl "TRUE"
+set sh_enable_line_editing true 
+history keep 100
+alias h history

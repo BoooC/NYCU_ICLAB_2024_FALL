@@ -1,0 +1,1 @@
+make irun_cov define=${1:-"CORRECT"}

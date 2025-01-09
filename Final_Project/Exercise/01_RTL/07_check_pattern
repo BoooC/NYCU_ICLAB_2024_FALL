@@ -1,0 +1,46 @@
+echo -e "***********************************************************************"
+echo -e "* Please make sure you include the encrypted design in your TESTBED.v *"
+echo -e "***********************************************************************"
+MAIN=(11 2 1 2 2 5)
+SD=(3 1 1 1 5)
+./09_clean_up > check.log
+
+for ((i=1; i<=6; i++))
+do
+    for((j=1; j<=${MAIN[$i-1]}; j++))
+    do
+        ./01_run_vcs_rtl SPEC_MAIN_$i\_$j > check.log
+        if  grep -i -q "SPEC MAIN-$i FAIL" 'vcs.log'; then
+                echo -e "\033[32m--- SPEC MAIN-$i-$j check Pass ---\033[0m"
+        else
+                echo -e "\033[31m--- SPEC MAIN-$i-$j check Fail ---\033[0m"
+                exit 0
+        fi
+    done
+    echo -e "\033[42m--- PATTERN check SPEC MAIN-$i Pass ---\033[0m"
+done
+
+for ((i=1; i<=5; i++))
+do
+    for((j=1; j<=${SD[$i-1]}; j++))
+    do
+        ./01_run_vcs_rtl SPEC_SD_$i\_$j > check.log
+        if  grep -i -q "SPEC SD-$i FAIL" 'vcs.log'; then
+                echo -e "\033[32m--- SPEC SD-$i-$j check Pass ---\033[0m"
+        else
+                echo -e "\033[31m--- SPEC SD-$i-$j check Fail ---\033[0m"
+                exit 0
+        fi
+    done
+    echo -e "\033[42m--- PATTERN check SPEC SD-$i Pass ---\033[0m"
+done
+
+./01_run_vcs_rtl CORRECT > check.log
+if  grep -i -q "Congratulations" 'vcs.log'; then
+        echo -e "\033[32m--- CORRECT DESING check Pass ---\033[0m"
+else
+        echo -e "\033[31m--- CORRECT DESING check Fail ---\033[0m"
+        exit 0
+fi
+
+echo -e "\033[42m--- PATTERN PASS !!! ---\033[0m"

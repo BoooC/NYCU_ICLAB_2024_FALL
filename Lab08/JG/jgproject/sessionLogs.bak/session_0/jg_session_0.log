@@ -1,0 +1,349 @@
+# ----------------------------------------
+# Jasper Version Info
+# tool      : Jasper 2023.09
+# platform  : Linux 3.10.0-1160.88.1.el7.x86_64
+# version   : 2023.09p001 64 bits
+# build date: 2023.10.25 14:35:20 UTC
+# ----------------------------------------
+# started   : 2024-09-16 00:04:35 CST
+# hostname  : ee30.EEHPC
+# pid       : 184359
+# arguments : '-label' 'session_0' '-console' '//127.0.0.1:33004' '-style' 'windows' '-data' 'AAAAnnicVYq9CkBgGEbPR0omV+AOGMxWG4nBapCUZPCzWLhUd/J5E+LU81ePAqJNa82FuYq5JKQUxOIZpeSLOu4SKb6ofP8lWM/xuRgiG5+Jhlq6R0dLde+KkYWBkIBZdi8PhxN+VREN' '-proj' '/RAID2/COURSE/iclab/iclabTA08/Lab08/JG/jgproject/sessionLogs/session_0' '-init' '-hidden' '/RAID2/COURSE/iclab/iclabTA08/Lab08/JG/jgproject/.tmp/.initCmds.tcl' 'jg_sec_run2.tcl'
+
+Any disclosure about the Cadence Design Systems software or its use
+model to any third party violates the written Non-Disclosure Agreement
+between Cadence Design Systems, Inc. and the customer.
+
+THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND TRADE SECRETS OF
+CADENCE DESIGN SYSTEMS, INC. USE, DISCLOSURE, OR REPRODUCTION IS
+PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF CADENCE
+DESIGN SYSTEMS, INC.
+
+Copyright (C) 2000-2023 Cadence Design Systems, Inc. All Rights
+Reserved.  Unpublished -- rights reserved under the copyright laws of
+the United States.
+
+This product includes software developed by others and redistributed
+according to license agreement. See doc/third_party_readme.txt for
+further details.
+
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c) (1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+
+                          Cadence Design Systems, Inc.
+                          2655 Seely Avenue
+                          San Jose, CA 95134
+                          Phone: 408.943.1234
+
+For technical assistance visit http://support.cadence.com.
+
+Jasper Apps Analysis Session - /RAID2/COURSE/iclab/iclabTA08/Lab08/JG/jgproject/sessionLogs/session_0
+
+WARNING (WG017): [session]: The system's locale is "ANSI_X3.4-1968", which is not UTF-8. Non-ASCII characters might not be handled correctly.
+WARNING (WG017): [jg_console]: The system's locale is "ANSI_X3.4-1968", which is not UTF-8. Non-ASCII characters might not be handled correctly.
+INFO: successfully checked out licenses "jasper_interactive" and "jasper_fao".
+INFO: reading configuration file "/RAID2/COURSE/iclab/iclabTA08/.config/cadence/jasper.conf".
+% clear -all 
+INFO (IPF121): Cleared environment completely for new design analysis.
+% 
+% set_proofgrid_max_local_jobs 10
+% check_sec -analyze -sv -both ../EXERCISE/01_RTL/GATED_OR.v
+[-- (VERI-1482)] Analyzing Verilog file '/usr/cad/cadence/JASPER/jasper_2023.09p001/lib/verilog/packages/std/std.sv' into library 'std'
+[-- (VERI-1482)] Analyzing Verilog file '../EXERCISE/01_RTL/GATED_OR.v'
+% check_sec -analyze -sv -both ../EXERCISE/01_RTL/SA.v 
+[-- (VERI-1482)] Analyzing Verilog file '../EXERCISE/01_RTL/SA.v'
+% check_sec -elaborate -both  -top SA -disable_auto_bbox
+INFO (ISW003): Top module name is "SA".
+[INFO (HIER-8002)] ../EXERCISE/01_RTL/SA.v(796): Disabling old hierarchical reference handler
+[INFO (VERI-1018)] ../EXERCISE/01_RTL/GATED_OR.v(2): compiling module 'GATED_OR'
+[INFO (VERI-1018)] ../EXERCISE/01_RTL/SA.v(798): compiling module 'PE'
+[INFO (VERI-1018)] ../EXERCISE/01_RTL/SA.v(24): compiling module 'SA'
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(141): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(142): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(145): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(146): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(147): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(153): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(154): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(155): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(161): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(162): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(163): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(169): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(170): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(171): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(175): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(178): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(179): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(180): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(186): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(187): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(188): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(203): expression size 32 truncated to fit in target size 1
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(212): expression size 32 truncated to fit in target size 10
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(218): expression size 32 truncated to fit in target size 9
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(229): expression size 32 truncated to fit in target size 9
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(230): expression size 32 truncated to fit in target size 9
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(231): expression size 32 truncated to fit in target size 9
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(251): expression size 29 truncated to fit in target size 5
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(254): expression size 29 truncated to fit in target size 5
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(266): 5-bit index expression 'in_col' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(266): 5-bit index expression 'in_row' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(271): 5-bit index expression 'in_col' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(271): 5-bit index expression 'in_row' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(271): 5-bit index expression 'in_col' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(271): 5-bit index expression 'in_row' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(274): 5-bit index expression 'in_col' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(274): 5-bit index expression 'in_row' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(274): 5-bit index expression 'in_col' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(274): 5-bit index expression 'in_row' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(277): 5-bit index expression 'in_col' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(277): 5-bit index expression 'in_row' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(277): 5-bit index expression 'in_col' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(277): 5-bit index expression 'in_row' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(307): 5-bit index expression 'in_col' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(307): 5-bit index expression 'in_row' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(311): 5-bit index expression 'in_col' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(311): 5-bit index expression 'in_row' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(344): 5-bit index expression 'in_col' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(344): 5-bit index expression 'in_row' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(348): 5-bit index expression 'in_col' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(348): 5-bit index expression 'in_row' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(381): 5-bit index expression 'in_col' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(381): 5-bit index expression 'in_row' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(385): 5-bit index expression 'in_col' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(385): 5-bit index expression 'in_row' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(755): expression size 32 truncated to fit in target size 1
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(758): expression size 32 truncated to fit in target size 1
+[WARN (VERI-1209)] ../EXERCISE/01_RTL/SA.v(761): expression size 32 truncated to fit in target size 1
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(780): 5-bit index expression 'out_col' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(780): 5-bit index expression 'out_row' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(783): 5-bit index expression 'out_col' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(783): 5-bit index expression 'out_row' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(786): 5-bit index expression 'out_col' is larger than the required 3 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] ../EXERCISE/01_RTL/SA.v(786): 5-bit index expression 'out_row' is larger than the required 3 bits. This might lead to an out-of-bound access
+INFO (INL208): Elaboration synthesis summary:
+  Number of synthesized netlists          3 (0 packages)
+  Single run mode                         On
+  Pipeline                                On (3 pipelined netlists)
+  Late hierarchical reference connection  On
+  Number of analyzed Verilog modules      3 (3 synthesized)
+  Number of analyzed VHDL entities        0 (0 synthesized)
+INFO (INL003): Clearing all state information (assumes, stopats, and so forth).
+SA
+[<embedded>] % check_sec -setup
+WARNING (WSEC130): The split setup flow automatically maps flop and latch pairs that are nonresettable or uninitialized.
+    To remove those mappings, use "check_sec -auto_map_reset_x_values off".
+    To avoid adding any mapping, add the switch "-no_auto_mapping".
+INFO (ISEC091): Connecting spec and imp designs.
+INFO (IPM031): Clearing proof results of all properties.
+INFO (IMTR159): Auto init mapping has been enabled for all tasks.
+INFO (IMTR082): Calculating design region.
+INFO (ISEC083): Building the SEC signal DB.
+INFO (IMTR087): Collecting free X signals.
+INFO (IMTR087): Collecting free X signals - Done.
+INFO (IMTR084): Collecting undriven signals.
+INFO (IMTR084): Collecting undriven signals - Done.
+INFO (IMTR088): Collecting stopat signals.
+INFO (IMTR088): Collecting stopat signals - Done.
+INFO (IMTR086): Collecting register signals.
+INFO (IMTR086): Collecting register signals - Done.
+INFO (ISEC083): Building the SEC signal DB - Done.
+INFO (IMTR093): Modeling the MPRAM blackbox instances.
+INFO (IMTR074): Applying auto mapping for signal type = "dut_output".
+INFO (IMTR074): Applying auto mapping for signal type = "bbox_input".
+INFO (IMTR074): Applying auto mapping for signal type = "primary_input".
+INFO (IMTR074): Applying auto mapping for signal type = "undriven".
+INFO (IMTR074): Applying auto mapping for signal type = "bbox_output".
+INFO (IMTR074): Applying auto mapping for signal type = "setup_stopat".
+[<embedded>] % 
+[<embedded>] % #clock clk -both_edge
+[<embedded>] % clock clk -both_edge 
+[<embedded>] % reset ~rst_n
+INFO (IPM031): Clearing proof results of all properties.
+INFO (IRS006): Current reset condition is "rst_n".
+[<embedded>] % 
+[<embedded>] % check_sec -gen
+INFO (IMTR114): Start - Clear AutoProve Data on task="<embedded>".
+INFO (IMTR115): Done - Clear AutoProve Data on task="<embedded>".
+INFO (IMTR031): Exposing connection mappings.
+INFO (IMTR028): Exposing connection mapping properties...
+INFO (IMTR029): Exposing connection mapping properties, DONE.
+INFO (ISEC021): Computing SEC environment configuration.
+INFO (IMTR032): Computing clock data.
+INFO (IMTR033): Computing reset data.
+INFO (IRS039): Reset analysis complete.
+INFO (IMTR094): Updating init mapping entries.
+INFO (IMTR074): Applying auto mapping for signal type = "reset_x".
+INFO (IMTR095): Apply mapping sanity check.
+INFO (ISEC097): Applying sanity check for cutpoints against user-specified assumptions and SEC connections.
+INFO (IMTR126): Started calculating user verification targets' COI on task "<embedded>".
+INFO (IMTR127): Finished calculating user verification targets' COI on task "<embedded>".
+INFO (IMTR131): Started updating mapping entries according to the targets' COI.
+INFO (IMTR132): Finished updating mapping entries according to the targets' COI.
+INFO (IMTR034): Exposing the remaining mapping entries.
+INFO (IMTR028): Exposing verification target mapping properties...
+INFO (IMTR029): Exposing verification target mapping properties, DONE.
+INFO (ISEC042): Running interface check.
+INFO (ISEC043): All boundary inputs, boundary outputs, and reset_x signals are mapped.
+<embedded>
+[<embedded>] % check_sec -interface
+   Interface Check Summary
+=============================
+primary_input       - PASSED
+primary_output      - PASSED
+user_bbox_input     - PASSED
+user_bbox_output    - PASSED
+auto_bbox_input     - PASSED
+auto_bbox_output    - PASSED
+user_task_stopat    - PASSED
+user_env_stopat     - PASSED
+setup_stopat        - PASSED
+internal_undriven   - PASSED
+x_assignment        - PASSED
+x_default_assignment- PASSED
+x_index_out_of_range- PASSED
+x_divide_by_zero    - PASSED
+x_misc_undriven     - PASSED
+x_low_power         - PASSED
+x_bus_contention    - PASSED
+x_bus_floating      - PASSED
+reset_x             - PASSED
+imp_assumptions     - PASSED
+=============================
+Overall interface check result - PASSED
+passed
+[<embedded>] % 
+[<embedded>] % assume cg_en==0
+WARNING (WNL023): Expression sizes mismatch.
+INFO (IPM005): The name "<embedded>::assume:0" is assigned to assumption "cg_en==0".
+assume:0
+[<embedded>] % assume SA_imp.cg_en==1
+WARNING (WNL023): Expression sizes mismatch.
+INFO (IPM005): The name "<embedded>::assume:1" is assigned to assumption "SA_imp.cg_en==1".
+assume:1
+[<embedded>] % check_sec -waive -waive_signals cg_en
+cg_en
+[<embedded>] % check_sec -waive -waive_signals SA_imp.cg_en
+SA_imp.cg_en
+[<embedded>] % 
+[<embedded>] % check_sec -interface
+INFO (IMTR114): Start - Clear AutoProve Data on task="<embedded>".
+INFO (IMTR115): Done - Clear AutoProve Data on task="<embedded>".
+INFO (IMTR032): Computing clock data.
+INFO (IMTR033): Computing reset data.
+INFO (IRS039): Reset analysis complete.
+INFO (IMTR094): Updating init mapping entries.
+INFO (IMTR074): Applying auto mapping for signal type = "reset_x".
+INFO (IMTR095): Apply mapping sanity check.
+INFO (ISEC097): Applying sanity check for cutpoints against user-specified assumptions and SEC connections.
+INFO (IMTR126): Started calculating user verification targets' COI on task "<embedded>".
+INFO (IMTR127): Finished calculating user verification targets' COI on task "<embedded>".
+INFO (IMTR131): Started updating mapping entries according to the targets' COI.
+INFO (IMTR132): Finished updating mapping entries according to the targets' COI.
+INFO (IMTR034): Exposing the remaining mapping entries.
+INFO (ISEC042): Running interface check.
+INFO (ISEC043): All boundary inputs, boundary outputs, and reset_x signals are mapped.
+   Interface Check Summary
+=============================
+primary_input       - PASSED
+primary_output      - PASSED
+user_bbox_input     - PASSED
+user_bbox_output    - PASSED
+auto_bbox_input     - PASSED
+auto_bbox_output    - PASSED
+user_task_stopat    - PASSED
+user_env_stopat     - PASSED
+setup_stopat        - PASSED
+internal_undriven   - PASSED
+x_assignment        - PASSED
+x_default_assignment- PASSED
+x_index_out_of_range- PASSED
+x_divide_by_zero    - PASSED
+x_misc_undriven     - PASSED
+x_low_power         - PASSED
+x_bus_contention    - PASSED
+x_bus_floating      - PASSED
+reset_x             - PASSED
+imp_assumptions     - PASSED
+=============================
+Overall interface check result - PASSED
+passed
+[<embedded>] % 
+[<embedded>] % 
+[<embedded>] % set_sec_autoprove_strategy design_style
+WARNING (WCD001): The command "set_sec_autoprove_strategy design_style" has been deprecated. Use "set_sec_autoprove_strategy clock_gating/state_matching" instead.
+[<embedded>] % set_sec_autoprove_design_style_type clock_gating
+WARNING (WDEP018): The command "set_sec_autoprove_design_style_type" has been deprecated. Use "set_sec_autoprove_strategy clock_gating/state_matching" instead.
+[<embedded>] % 
+[<embedded>] % 
+[<embedded>] % check_sec -prove -bg
+INFO (ISEC116): Preparing the SEC environment for "sec_design_style_clock_gating" strategy - started.
+INFO (ISEC116): Preparing the SEC environment for "sec_design_style_clock_gating" strategy - done.
+INFO (ISEC143): SEC proof cache is off. To enable it, use the "set_proofmaster on" command.
+INFO (IMTR158): Both edges clock has been detected and clock optimization has been enabled.
+background 0
+INFO (IMTR110): (0.proof) Starting SEC clock gating strategy on task "<embedded>".
+INFO (IPF031): Settings used for proof thread default:
+    orchestration                 = off (auto)
+    time_limit                    = 86400s
+    proofgrid_per_engine_max_jobs = 1
+    proofgrid_max_jobs            = 10
+    proofgrid_mode                = local
+    proofgrid_restarts            = 10
+WARNING (WPF015): 2: max_jobs=1. Ignoring exceeding part of engine_mode { EAMcustom1 Ncustom2 AMcustom3 Ht Hpcustom4 Mpcustom5 J }.
+INFO (IRS026): Computing reset analysis for expressions.
+INFO (IRS027): Finished computing reset analysis for expressions.
+WARNING (WMTR018): cutpoint on a verification pair (primary_output, bbox_input, or mpram_port): "out_valid -> SA_imp.out_valid".
+WARNING (WMTR018): cutpoint on a verification pair (primary_output, bbox_input, or mpram_port): "out_data[31:0] -> SA_imp.out_data[31:0]".
+Htscustom9: Custom engine code is hT3N0LhP3feYRABjCHqhIMzrrE+3/q+KYn2rpXcsai/7id+dKx0lO4wyqAS/56za9Jpv9X/7IWGwnfjpAHefLq+IgK4OHbjMwsF9ER9x7aHROGIfmqd0lXLs3fVGhJ4huCEpGkWC0d/nrRw6edIVnPE5MgEA
+Htscustom10: Custom engine code is hT3N0LhP3feYRABjCHqhIMzrrE+3/q+KYn2rpXcsai/7id+dKx0lO4wyqAS/56za9Jxv9X/7IWGwnfjpAHefLq+IgK4OHbjMwsF9ER9x7aHROGYfmqd0lXLs3fVGhJ4huCEpGkWC0d/nrRw6edP5nPWGjQEA
+INFO (IRS026): Computing reset analysis for expressions.
+INFO (IRS027): Finished computing reset analysis for expressions.
+WARNING (WPF015): 4: max_jobs=7. Ignoring exceeding part of engine_mode { B Bmcustom6 Mcustom11 Mpcustom5 }.
+WARNING (WPF015): 4: max_jobs=7. Ignoring exceeding part of engine_mode { B Bmcustom6 Mcustom11 Mpcustom5 }.
+WARNING (WPF015): 5: max_jobs=1. Ignoring exceeding part of engine_mode { J Mpcustom5 L U2 Bmcustom6 Hpcustom4 }.
+WARNING (WPF015): 4: max_jobs=7. Ignoring exceeding part of engine_mode { B Bmcustom6 Mcustom11 Mpcustom5 }.
+INFO (IPF061): 4: Some targets were skipped during proof.
+WARNING (WPF015): 4: max_jobs=7. Ignoring exceeding part of engine_mode { B Bmcustom6 Mcustom11 Mpcustom5 }.
+WARNING (WPF015): 5: max_jobs=1. Ignoring exceeding part of engine_mode { J Mpcustom5 L U2 Bmcustom6 Hpcustom4 }.
+INFO (ISEC107): (0.proof) SEC clock gating strategy (FE): A counterexample (cex) with 919 cycles was found for the property "<embedded>::out_data[31:0]" in 1281.94 s.
+INFO (ISEC107): (0.proof) SEC clock gating strategy (FE): A counterexample (cex) with 919 cycles was found for the property "<embedded>::out_valid" in 1281.95 s.
+INFO (IPF061): 4: Some targets were skipped during proof.
+INFO (ISEC134): (0.proof) SEC Proof Result: determined_or_skipped.
+
+==============================================================
+SUMMARY - SEC CLOCK GATING STRATEGY
+==============================================================
+           Properties Considered              : 2
+                 assertions                   : 2
+                  - proven                    : 0
+                  - bounded_proven (user)     : 0
+                  - bounded_proven (auto)     : 0
+                  - marked_proven             : 0
+                  - cex                       : 2
+                  - ar_cex                    : 0
+                  - undetermined              : 0
+                  - unknown                   : 0
+                  - error                     : 0
+                 covers                       : 0
+                  - unreachable               : 0
+                  - bounded_unreachable (user): 0
+                  - covered                   : 0
+                  - ar_covered                : 0
+                  - undetermined              : 0
+                  - unknown                   : 0
+                  - error                     : 0
+INFO (IPL005): Received request to exit from the console.
+INFO (IPL014): Waiting for the Tcl-thread to exit.
+INFO: Waiting for proof threads to stop...
+INFO: Proof threads stopped.
+INFO (IPL018): The peak resident set memory use for this session was 110.877 GB.
+INFO (IPL015): The Tcl-thread exited with status 0.
+INFO (IPL016): Exiting the analysis session with status 0.

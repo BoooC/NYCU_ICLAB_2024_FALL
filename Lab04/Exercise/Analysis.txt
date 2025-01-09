@@ -1,0 +1,43 @@
+
+| Cycle Time (ns) | Area       | Cycle | Performance  | Design Info         |                |                   |
+|-----------------|------------|-------|--------------|---------------------|----------------|-------------------|
+| 14.0            | 2453519.4  | 22    |  755683975   | Pipelined reciprocal| exp speed mode | PE x 4            | <<< 02 fail
+| 14.2            | 2406570.6  | 22    |  751812655   | Pipelined reciprocal| exp speed mode | PE x 4            | <<< 02 fail
+| 14.3            | 2378286.2  | 22    |  748208839   | Pipelined reciprocal| exp speed mode | PE x 4            |
+| 14.4            | 2323630.1  | 22    |  736126016   | Pipelined reciprocal| exp speed mode | PE x 4            |
+| 14.5            | 2316039.3  | 22    |  738816537   | Pipelined reciprocal| exp speed mode | PE x 4            |
+| 14.6            | 2309838.9  | 22    |  741920255   | Pipelined reciprocal| exp speed mode | PE x 4            |
+| 14.7            | 2255455.6  | 22    |  729414333   | Pipelined reciprocal| exp speed mode | PE x 4            | <<< Best
+| 14.8            | 2252531.7  | 22    |  733424322   | Pipelined reciprocal| exp speed mode | PE x 4            |
+| 14.9            | 2238088.4  | 22    |  733645378   | Pipelined reciprocal| exp speed mode | PE x 4            |
+| 15.0            | 2282136.6  | 22    |  753105078   | Pipelined reciprocal| exp speed mode | PE x 4            |
+|-----------------|------------|-------|--------------|---------------------|----------------|-------------------|
+| 14.0            | 2301393.2  | 24    |  773268115   | Pipelined reciprocal| exp speed mode | PE x 4            |
+| 14.1            | 2301206.9  | 24    |  778728415   | Pipelined reciprocal| exp speed mode | PE x 4            |
+| 14.3            | 2299181.1  | 24    |  789078954   | Pipelined reciprocal| exp speed mode | PE x 4            |
+| 14.4            | 2241604.4  | 24    |  774698481   | Pipelined reciprocal| exp speed mode | PE x 4            |
+| 14.5            | 2218748.7  | 24    |  772124547   | Pipelined reciprocal| exp speed mode | PE x 4            |
+| 14.6            | 2246028.6  | 24    |  787008421   | Pipelined reciprocal| exp speed mode | PE x 4            |
+| 14.7            | 2204295.5  | 24    |  777675452   | Pipelined reciprocal| exp speed mode | PE x 4            |
+| 15.0            | 2158055.3  | 24    |  776899908   | Pipelined reciprocal| exp speed mode | PE x 4            |
+| 18.0            | 2056260.8  | 24    |  888304666   | Pipelined reciprocal| exp speed mode | PE x 4            |
+|-----------------|------------|-------|--------------|---------------------|----------------|-------------------|
+| 14.5            | 1504557.4  | 59    | 1287148813   | Pipelined reciprocal| exp speed mode | PE x 2            |
+|-----------------|------------|-------|--------------|---------------------|----------------|-------------------|
+| 14.3            | 1726554.6  | 59    | 1456694116   | Pipelined div       | exp speed mode |                   |
+| 14.5            | 1704327.6  | 59    | 1458052261   | Pipelined div       | exp speed mode |                   |
+| 15.0            | 1663928.5  | 59    | 1472576722   | Pipelined div       | exp speed mode |                   |
+| 15.0            | 1655153.5  | 61    | 1514465452   | Pipelined div       | exp speed mode | div den pipeline  |
+| 16.0            | 1615180.1  | 59    | 1524730014   | Pipelined div       | exp speed mode |                   |
+| 16.0            | 1769934.2  | 57    | 1614179990   | Pipelined div       | 3-stage MAC    |                   |
+| 15.8            | 1744467.3  | 59    | 1626192417   | Pipelined div       |                |                   |
+| 16.0            | 1718454.8  | 59    | 1622221331   | Pipelined div       |                |                   |
+| 17.0            | 1679828.7  | 59    | 1684868186   | Pipelined div       |                |                   |
+| 18.0            | 1621686.5  | 59    | 1722231063   | Pipelined div       |                |                   |
+|-----------------|------------|-------|--------------|---------------------|----------------|-------------------|
+| 16.0            | fail       | 55    | ----------   | Combination div     | 3-stage MAC    |                   |
+| 16.0            | fail       | --    | ----------   | Combination div     |                |                   |
+| 17.0            | 1707869.4  | 57    | 1654925449   | Combination div     |                |                   |
+| 18.0            | 1618077.4  | 57    | 1660147412   | Combination div     |                |                   |
+
+

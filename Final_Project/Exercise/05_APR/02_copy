@@ -1,0 +1,4 @@
+#!/bin/tcsh
+
+cp ../02_SYN/Netlist/ISP_SYN.v CHIP_SYN.v
+echo "Remember to change the module name 'ISP' to 'CHIP'!"

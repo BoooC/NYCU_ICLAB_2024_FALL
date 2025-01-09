@@ -1,0 +1,1833 @@
+# ----------------------------------------
+# Jasper Version Info
+# tool      : Jasper 2023.09
+# platform  : Linux 3.10.0-1160.88.1.el7.x86_64
+# version   : 2023.09p001 64 bits
+# build date: 2023.10.25 14:35:20 UTC
+# ----------------------------------------
+# started   : 2024-10-17 03:44:57 CST
+# hostname  : ee32.EEHPC
+# pid       : 84911
+# arguments : '-label' 'session_0' '-console' '//127.0.0.1:33384' '-style' 'windows' '-data' 'AAAAjHicY2RgYLCp////PwMYMFcBCQEGHwZfhiAGVyDpzxAGpOGA8QGUYcPIgAwYAxtQaAYGVphCmBImIOZg0GVIZkgBYgYGHoYshnQGPYYSIC8HzAcAU+INbA==' '-proj' '/RAID2/COURSE/iclab/iclabTA06/test_Lab07/Exercise/05_JG/jgproject/sessionLogs/session_0' '-init' '-hidden' '/RAID2/COURSE/iclab/iclabTA06/test_Lab07/Exercise/05_JG/jgproject/.tmp/.initCmds.tcl' 'jg.tcl'
+
+Any disclosure about the Cadence Design Systems software or its use
+model to any third party violates the written Non-Disclosure Agreement
+between Cadence Design Systems, Inc. and the customer.
+
+THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND TRADE SECRETS OF
+CADENCE DESIGN SYSTEMS, INC. USE, DISCLOSURE, OR REPRODUCTION IS
+PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF CADENCE
+DESIGN SYSTEMS, INC.
+
+Copyright (C) 2000-2023 Cadence Design Systems, Inc. All Rights
+Reserved.  Unpublished -- rights reserved under the copyright laws of
+the United States.
+
+This product includes software developed by others and redistributed
+according to license agreement. See doc/third_party_readme.txt for
+further details.
+
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c) (1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+
+                          Cadence Design Systems, Inc.
+                          2655 Seely Avenue
+                          San Jose, CA 95134
+                          Phone: 408.943.1234
+
+For technical assistance visit http://support.cadence.com.
+
+Jasper Apps Analysis Session - /RAID2/COURSE/iclab/iclabTA06/test_Lab07/Exercise/05_JG/jgproject/sessionLogs/session_0
+
+WARNING (WG017): [session]: The system's locale is "ANSI_X3.4-1968", which is not UTF-8. Non-ASCII characters might not be handled correctly.
+WARNING (WG017): [jg_console]: The system's locale is "ANSI_X3.4-1968", which is not UTF-8. Non-ASCII characters might not be handled correctly.
+INFO: successfully checked out licenses "jasper_interactive" and "jasper_dao".
+INFO: reading configuration file "/RAID2/COURSE/iclab/iclabTA06/.config/cadence/jasper.conf".
+% check_cdc -init
+% clear -all
+INFO (IPF121): Cleared environment completely for new design analysis.
+% 
+% ## --------------- Environment Setting ---------------- ##
+% set_schematic_viewer_simplify_concatenations on
+% set_reset_max_iterations 2000
+% 
+% ## ----------------- Setting Variables ---------------- ##
+% set design_path "../01_RTL"
+../01_RTL
+% set mem_path "../04_MEM"
+../04_MEM
+% set report_dir "./Report"
+./Report
+% set DESIGN "CONV_TOP"
+CONV_TOP
+% set MEM "DUAL_64X8X1BM1"
+DUAL_64X8X1BM1
+% 
+% ## ------------- Loading Custom Rule File ------------- ##
+% 
+% ## --------------- Analyzing the Design --------------- ##
+% analyze -sv ${mem_path}/$MEM\.v
+[-- (VERI-1482)] Analyzing Verilog file '/usr/cad/cadence/JASPER/jasper_2023.09p001/lib/verilog/packages/std/std.sv' into library 'std'
+[-- (VERI-1482)] Analyzing Verilog file '../04_MEM/DUAL_64X8X1BM1.v'
+% analyze -sv ${design_path}/$DESIGN\.v 
+[-- (VERI-1482)] Analyzing Verilog file '../01_RTL/CONV_TOP.v'
+[INFO (VERI-1328)] ../01_RTL/CONV_TOP.v(1): analyzing included file '../01_RTL/DESIGN_module.v'
+[INFO (VERI-1328)] ../01_RTL/CONV_TOP.v(2): analyzing included file '../01_RTL/synchronizer/Handshake_syn.v'
+[INFO (VERI-1328)] ../01_RTL/CONV_TOP.v(3): analyzing included file '../01_RTL/synchronizer/FIFO_syn.v'
+[INFO (VERI-1328)] ../01_RTL/CONV_TOP.v(4): analyzing included file '../01_RTL/synchronizer/NDFF_syn.v'
+[INFO (VERI-1328)] ../01_RTL/CONV_TOP.v(5): analyzing included file '../01_RTL/synchronizer/NDFF_BUS_syn.v'
+% 
+% ## ----------------- Reading Liberty ------------------ ##
+% liberty -load ${mem_path}/$MEM\_WC.lib 
+INFO (ILIB001): Finished reading library DUAL_64X8X1BM1_WC. Extracted 1 cells from it.
+WARNING (WLIB008): Missing primary power pin in cell "DUAL_64X8X1BM1".
+WARNING (WLIB009): Missing primary ground pin in cell "DUAL_64X8X1BM1".
+% 
+% ## -------------- Elaborating the design -------------- ##
+% elaborate -top $DESIGN 
+INFO (ILIB002): Liberty cell "DUAL_64X8X1BM1" from file "/RAID2/COURSE/iclab/iclabTA06/test_Lab07/Exercise/04_MEM/DUAL_64X8X1BM1_WC.lib" will be used during elaboration.
+[-- (VERI-1482)] Analyzing Verilog file '/RAID2/COURSE/iclab/iclabTA06/test_Lab07/Exercise/05_JG/jgproject/sessionLogs/session_0/liberty/jg_liberty_module_DUAL_64X8X1BM1_WC1' into library 'DUAL_64X8X1BM1_WC'
+INFO (ISW003): Top module name is "CONV_TOP".
+[INFO (HIER-8002)] ../01_RTL/CONV_TOP.v(136): Disabling old hierarchical reference handler
+[WARN (VERI-1927)] ../01_RTL/synchronizer/FIFO_syn.v(187): port 'DOA0' remains unconnected for this instance
+[INFO (VERI-1018)] ../01_RTL/DESIGN_module.v(1): compiling module 'CLK_1_MODULE'
+[WARN (VERI-1209)] ../01_RTL/DESIGN_module.v(103): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../01_RTL/DESIGN_module.v(117): expression size 32 truncated to fit in target size 4
+[INFO (VERI-1018)] ../01_RTL/synchronizer/NDFF_syn.v(2): compiling module 'NDFF_syn'
+[INFO (VERI-1018)] ../01_RTL/synchronizer/Handshake_syn.v(1): compiling module 'Handshake_syn:(WIDTH=30)'
+[INFO (VERI-1018)] ../01_RTL/DESIGN_module.v(154): compiling module 'CLK_2_MODULE'
+[WARN (VERI-1209)] ../01_RTL/DESIGN_module.v(210): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../01_RTL/DESIGN_module.v(212): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] ../01_RTL/DESIGN_module.v(226): expression size 32 truncated to fit in target size 8
+[INFO (VERI-1018)] ../01_RTL/synchronizer/NDFF_BUS_syn.v(1): compiling module 'NDFF_BUS_syn:(WIDTH=7)'
+[INFO (VERI-1018)] ../04_MEM/DUAL_64X8X1BM1.v(64): compiling module 'DUAL_64X8X1BM1'
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X8X1BM1.v(80): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X8X1BM1.v(81): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X8X1BM1.v(82): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X8X1BM1.v(932): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X8X1BM1.v(933): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X8X1BM1.v(934): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X8X1BM1.v(935): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X8X1BM1.v(936): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X8X1BM1.v(937): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X8X1BM1.v(938): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X8X1BM1.v(939): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X8X1BM1.v(940): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X8X1BM1.v(941): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X8X1BM1.v(942): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X8X1BM1.v(943): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X8X1BM1.v(944): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X8X1BM1.v(945): Using only the typical value of the min:typ:max expression
+[WARN (VERI-1060)] ../04_MEM/DUAL_64X8X1BM1.v(306): 'initial' construct is ignored
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X8X1BM1.v(310): 'LastClkAEdge' should be on the sensitivity list
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X8X1BM1.v(313): 'latch_last_A' should be on the sensitivity list
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X8X1BM1.v(314): 'latch_last_DIA' should be on the sensitivity list
+[WARN (VERI-1142)] ../04_MEM/DUAL_64X8X1BM1.v(905): system task 'display' is ignored for synthesis
+[WARN (VERI-1142)] ../04_MEM/DUAL_64X8X1BM1.v(904): system task 'display' is ignored for synthesis
+[WARN (VERI-1142)] ../04_MEM/DUAL_64X8X1BM1.v(919): system task 'display' is ignored for synthesis
+[WARN (VERI-1141)] ../04_MEM/DUAL_64X8X1BM1.v(585): system function call 'time' is not supported
+[WARN (VERI-1142)] ../04_MEM/DUAL_64X8X1BM1.v(903): system task 'display' is ignored for synthesis
+[WARN (VERI-1029)] ../04_MEM/DUAL_64X8X1BM1.v(595): event trigger is ignored
+[WARN (VERI-1141)] ../04_MEM/DUAL_64X8X1BM1.v(619): system function call 'time' is not supported
+[WARN (VERI-1141)] ../04_MEM/DUAL_64X8X1BM1.v(626): system function call 'time' is not supported
+[WARN (VERI-1142)] ../04_MEM/DUAL_64X8X1BM1.v(906): system task 'display' is ignored for synthesis
+[WARN (VERI-1029)] ../04_MEM/DUAL_64X8X1BM1.v(639): event trigger is ignored
+[WARN (VERI-1029)] ../04_MEM/DUAL_64X8X1BM1.v(644): event trigger is ignored
+[WARN (VERI-1017)] ../04_MEM/DUAL_64X8X1BM1.v(661): case condition never applies due to comparison with 'x' or 'z'
+[WARN (VERI-1017)] ../04_MEM/DUAL_64X8X1BM1.v(667): case condition never applies due to comparison with 'x' or 'z'
+[WARN (VERI-1017)] ../04_MEM/DUAL_64X8X1BM1.v(668): case condition never applies due to comparison with 'x' or 'z'
+[WARN (VERI-1017)] ../04_MEM/DUAL_64X8X1BM1.v(669): case condition never applies due to comparison with 'x' or 'z'
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X8X1BM1.v(318): 'CSA_' should be on the sensitivity list
+[WARN (VERI-1141)] ../04_MEM/DUAL_64X8X1BM1.v(318): system function call 'time' is not supported
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X8X1BM1.v(319): 'A_' should be on the sensitivity list
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X8X1BM1.v(320): 'DIA_' should be on the sensitivity list
+[WARN (VERI-1017)] ../04_MEM/DUAL_64X8X1BM1.v(322): case condition never applies due to comparison with 'x' or 'z'
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X8X1BM1.v(340): 'LastClkBEdge' should be on the sensitivity list
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X8X1BM1.v(343): 'latch_last_B' should be on the sensitivity list
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X8X1BM1.v(344): 'latch_last_DIB' should be on the sensitivity list
+[WARN (VERI-1141)] ../04_MEM/DUAL_64X8X1BM1.v(699): system function call 'time' is not supported
+[WARN (VERI-1029)] ../04_MEM/DUAL_64X8X1BM1.v(709): event trigger is ignored
+[WARN (VERI-1141)] ../04_MEM/DUAL_64X8X1BM1.v(733): system function call 'time' is not supported
+[WARN (VERI-1141)] ../04_MEM/DUAL_64X8X1BM1.v(739): system function call 'time' is not supported
+[WARN (VERI-1029)] ../04_MEM/DUAL_64X8X1BM1.v(752): event trigger is ignored
+[WARN (VERI-1029)] ../04_MEM/DUAL_64X8X1BM1.v(757): event trigger is ignored
+[WARN (VERI-1017)] ../04_MEM/DUAL_64X8X1BM1.v(774): case condition never applies due to comparison with 'x' or 'z'
+[WARN (VERI-1017)] ../04_MEM/DUAL_64X8X1BM1.v(780): case condition never applies due to comparison with 'x' or 'z'
+[WARN (VERI-1017)] ../04_MEM/DUAL_64X8X1BM1.v(781): case condition never applies due to comparison with 'x' or 'z'
+[WARN (VERI-1017)] ../04_MEM/DUAL_64X8X1BM1.v(782): case condition never applies due to comparison with 'x' or 'z'
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X8X1BM1.v(348): 'CSB_' should be on the sensitivity list
+[WARN (VERI-1141)] ../04_MEM/DUAL_64X8X1BM1.v(348): system function call 'time' is not supported
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X8X1BM1.v(349): 'B_' should be on the sensitivity list
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X8X1BM1.v(350): 'DIB_' should be on the sensitivity list
+[WARN (VERI-1017)] ../04_MEM/DUAL_64X8X1BM1.v(352): case condition never applies due to comparison with 'x' or 'z'
+[WARN (VERI-1157)] ../04_MEM/DUAL_64X8X1BM1.v(420): use of events is not supported; event is ignored
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X8X1BM1.v(425): 'DOA_tmp' should be on the sensitivity list
+[WARN (VDB-1000)] ../04_MEM/DUAL_64X8X1BM1.v(423): net 'NODELAYA' is constantly driven from multiple places
+[WARN (VDB-1001)] ../04_MEM/DUAL_64X8X1BM1.v(392): found another driver here
+[WARN (VDB-1001)] ../04_MEM/DUAL_64X8X1BM1.v(337): found another driver here
+[WARN (VERI-1157)] ../04_MEM/DUAL_64X8X1BM1.v(428): use of events is not supported; event is ignored
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X8X1BM1.v(433): 'DOB_tmp' should be on the sensitivity list
+[WARN (VDB-1000)] ../04_MEM/DUAL_64X8X1BM1.v(431): net 'NODELAYB' is constantly driven from multiple places
+[WARN (VDB-1001)] ../04_MEM/DUAL_64X8X1BM1.v(417): found another driver here
+[WARN (VDB-1001)] ../04_MEM/DUAL_64X8X1BM1.v(367): found another driver here
+[WARN (VERI-9052)] ../04_MEM/DUAL_64X8X1BM1.v(1014): system timing check $period is ignored for synthesis
+[WARN (VERI-9052)] ../04_MEM/DUAL_64X8X1BM1.v(1015): system timing check $width is ignored for synthesis
+[WARN (VERI-9052)] ../04_MEM/DUAL_64X8X1BM1.v(1016): system timing check $width is ignored for synthesis
+[WARN (VERI-9052)] ../04_MEM/DUAL_64X8X1BM1.v(1017): system timing check $period is ignored for synthesis
+[WARN (VERI-9052)] ../04_MEM/DUAL_64X8X1BM1.v(1018): system timing check $width is ignored for synthesis
+[WARN (VERI-9052)] ../04_MEM/DUAL_64X8X1BM1.v(1019): system timing check $width is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1021): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1022): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1023): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1024): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1025): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1026): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1027): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1028): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1029): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1030): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1031): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1032): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1033): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1034): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1035): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1036): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1039): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1040): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1041): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1042): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1043): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1044): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1045): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1046): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1047): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1048): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1049): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1050): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1051): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1052): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1053): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X8X1BM1.v(1054): path declaration is ignored for synthesis
+[WARN (VDB-1000)] ../04_MEM/DUAL_64X8X1BM1.v(392): net 'Memory[63][7]' is constantly driven from multiple places
+[INFO (VERI-1018)] ../01_RTL/synchronizer/FIFO_syn.v(1): compiling module 'FIFO_syn'
+[WARN (VERI-1209)] ../01_RTL/synchronizer/FIFO_syn.v(59): expression size 32 truncated to fit in target size 7
+[WARN (VERI-1209)] ../01_RTL/synchronizer/FIFO_syn.v(107): expression size 32 truncated to fit in target size 7
+[WARN (VERI-8028)] ../01_RTL/synchronizer/FIFO_syn.v(142): missing/open ports on instance u_dual_sram of module DUAL_64X8X1BM1
+[INFO (VERI-1018)] ../01_RTL/CONV_TOP.v(7): compiling module 'CONV_TOP'
+INFO (INL208): Elaboration synthesis summary:
+  Number of synthesized netlists          8 (0 packages)
+  Single run mode                         On
+  Pipeline                                On (8 pipelined netlists)
+  Late hierarchical reference connection  On
+  Number of analyzed Verilog modules      9 (8 synthesized)
+  Number of analyzed VHDL entities        0 (0 synthesized)
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(281): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(285): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(289): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(293): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(297): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../01_RTL/DESIGN_module.v(301): multiplication operator mult_3u_3u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+INFO (INL003): Clearing all state information (assumes, stopats, and so forth).
+INFO (IMDS005): Number of multiple-driven bits in design: 642. Use "get_design_info -list multiple_driven" for more information.
+CONV_TOP
+[<embedded>] % 
+[<embedded>] % ## ---------------- Decalaring Resets ----------------- ##
+[<embedded>] % config_rtlds -reset -async rst_n -polarity low  
+[<embedded>] % 
+[<embedded>] % ## ------------------- Reading SDC -------------------- ##
+[<embedded>] % read_sdc $DESIGN\_SYN.sdc
+WARNING (WCDC241): At least one SDC clock exceeded maximum factor 10 after normalization.
+    The proportions of their periods cannot be kept among their factors.
+WARNING (WCK028): The clock "clk1" was declared with an absolute factor of 20.
+    The presence of slow clocks - with absolute factor greater than 10 - can cause major performance issues during proof.
+INFO (ISDC001): SDC file "CONV_TOP_SYN.sdc" was successfully processed. The CTE log file can be found at cte.log.
+========================================================================================
+                                Command Execution Report                                
+========================================================================================
+              command name              | successes | failures  |  ignored  |   total   
+----------------------------------------------------------------------------------------
+create_clock                            |     2     |     0     |     0     |     2     
+get_clocks                              |    12     |     0     |     0     |    12     
+get_ports                               |    264    |     0     |     0     |    264    
+set_clock_groups                        |     1     |     0     |     0     |     1     
+set_clock_transition                    |     0     |     0     |     8     |     8     
+set_clock_uncertainty                   |     0     |     0     |     2     |     2     
+set_input_delay                         |    65     |     0     |     0     |    65     
+set_input_transition                    |     0     |     0     |    68     |    68     
+set_load                                |     0     |     0     |     9     |     9     
+set_max_capacitance                     |     0     |     0     |    34     |    34     
+set_max_fanout                          |     0     |     0     |    34     |    34     
+set_max_transition                      |     0     |     0     |    34     |    34     
+set_output_delay                        |    18     |     0     |     0     |    18     
+set_units                               |     0     |     0     |     1     |     1     
+set_wire_load_mode                      |     0     |     0     |     1     |     1     
+set_wire_load_model                     |     0     |     0     |     1     |     1     
+----------------------------------------------------------------------------------------
+[<embedded>] % 
+[<embedded>] % ## --------------- Defining False Path ---------------- ##
+[<embedded>] % 
+[<embedded>] % ## ---------------- Defining Constants ---------------- ##
+[<embedded>] % # config_rtlds -rule -parameter {fifo_detection = true}
+[<embedded>] % # config_rtlds -rule -parameter {handshake_detection = true}
+[<embedded>] % config_rtlds -rule -parameter  {ignore_convergence_from_complex_schemes = true}
+[<embedded>] % 
+[<embedded>] % ## ------------ Clock Association of Ports ------------ ##
+[<embedded>] % 
+[<embedded>] % ## --------------- Structural Analysis ---------------- ##
+[<embedded>] % # Find Clock Domains
+[<embedded>] % check_cdc -clock_domain -find
+INFO (ICDC030): Only resets declared with the "config_rtlds -reset" command will be considered in the structural analysis.
+INFO (ICDC019): 03:45:04 Creating Abstractions for Hierarchical Flow (step 1 of 1).
+INFO (IRS029): Starting reset analysis: phase 1 of 4.
+INFO (IRS030): Running reset analysis: phase 2 of 4.
+INFO (IRS031): Running reset analysis: phase 3 of 4.
+INFO (IRS020): Starting the reset analysis simulation with a limit of 2000 iterations (phase 4 of 4).
+INFO (IRS024): Reset iterations 0 to 121 analyzed.
+INFO (IRS018): Reset analysis simulation executed for 120 iterations. Assigned values for 1755 of 1755 design flops, 0 of 2362 design latches, 0 of 0 internal elements.
+INFO (IRS039): Reset analysis complete.
+INFO (ICDC019): 03:45:04 Detecting CDC units (step 1 of 1).
+INFO (ICDC019): 03:45:04 Getting information from clock API (step 1 of 1).
+INFO (ICDC019): 03:45:04 Finding design clocks (step 1 of 1).
+INFO (ICDC019): 03:45:04 Add flop units (step 1 of 1).
+INFO (ICDC019): 03:45:04 Apply clock sense (step 1 of 1).
+INFO (ICDC019): 03:45:04 Building CDC unit graph (step 1 of 1).
+INFO (IGPH001): Filtering Graph (10% completed).
+INFO (IGPH001): Filtering Graph (20% completed).
+INFO (IGPH001): Filtering Graph (30% completed).
+INFO (IGPH001): Filtering Graph (40% completed).
+INFO (IGPH001): Filtering Graph (50% completed).
+INFO (IGPH001): Filtering Graph (60% completed).
+INFO (IGPH001): Filtering Graph (70% completed).
+INFO (IGPH001): Filtering Graph (80% completed).
+INFO (IGPH001): Filtering Graph (90% completed).
+INFO (IGPH001): Filtering Graph (100% completed).
+INFO (ICDC019): 03:45:04 Adding parent relationships for abstracted clocks (step 1 of 1).
+INFO (ICDC019): 03:45:04 Building design clock tree (step 1 of 1).
+INFO (ICDC019): 03:45:04 Update units status (step 1 of 1).
+INFO (ICDC019): 03:45:04 Update Clock domains status (step 1 of 1).
+INFO (ICDC019): 03:45:04 Add clock related violations (step 1 of 1).
+INFO (ICDC019): 03:45:04 Add integration violations (step 1 of 1).
+INFO (ICDC019): 03:45:05 Adding Hierarchy Waiver (step 1 of 1).
+Clock Domains Found: 2
+2
+[<embedded>] % # Find CDC pairs
+[<embedded>] % check_cdc -pair -find
+INFO (ICDC020): 03:45:05 CDC Pairs Detection (10% completed).
+INFO (ICDC020): 03:45:05 CDC Pairs Detection (20% completed).
+INFO (ICDC020): 03:45:05 CDC Pairs Detection (30% completed).
+INFO (ICDC020): 03:45:05 CDC Pairs Detection (40% completed).
+INFO (ICDC020): 03:45:05 CDC Pairs Detection (50% completed).
+INFO (ICDC020): 03:45:05 CDC Pairs Detection (60% completed).
+INFO (ICDC020): 03:45:05 CDC Pairs Detection (70% completed).
+INFO (ICDC020): 03:45:05 CDC Pairs Detection (80% completed).
+INFO (ICDC020): 03:45:05 CDC Pairs Detection (90% completed).
+INFO (ICDC020): 03:45:05 CDC Pairs Detection (100% completed).
+INFO (IGPH001): Filtering Graph (50% completed).
+INFO (IGPH001): Filtering Graph (100% completed).
+CDC Pairs Found: 23
+23
+[<embedded>] % # Find Schemes
+[<embedded>] % check_cdc -scheme -add handshake -module Handshake_syn -map {{data din} {sreq sreq} {dreq dreq} {dack dack} {sack sack}}
+Handshake_syn.din
+[<embedded>] % check_cdc -scheme -add fifo -module FIFO_syn -map {{rdata rdata} {wdata wdata} {wptr wptr} {rptr rptr} {wfull wfull} {rempty rempty} {winc winc} {rinc rinc}}
+FIFO_syn.rdata
+[<embedded>] % check_cdc -scheme -find
+INFO (ICDC019): 03:45:05 Finding user-defined schemes (step 1 of 3).
+INFO (ICDC019): 03:45:05 Finding external synchronizers (step 2 of 3).
+INFO (ICDC019): 03:45:05 Finding automatic schemes (step 3 of 3).
+INFO (ICDC019): 03:45:05   Finding FIFO schemes (step 1 of 7).
+INFO (ICDC019): 03:45:05   Finding Pulse And Edge schemes (step 2 of 7).
+INFO (ICDC019): 03:45:05     Pulse and Edge schemes detection (step 1 of 2).
+INFO (ICDC019): 03:45:05     Pulse and Edge schemes detection (step 2 of 2).
+INFO (ICDC019): 03:45:05   Finding NDFF with 'allow control neighbor' false and 'allow fanout' false (step 3 of 7).
+INFO (ICDC019): 03:45:05   Finding Composite schemes (step 4 of 7).
+INFO (ICDC019): 03:45:05     Finding Handshake schemes (step 1 of 5).
+INFO (ICDC019): 03:45:05     Finding Glitch Protector schemes (step 2 of 5).
+INFO (ICDC019): 03:45:05     Finding Mux schemes (step 3 of 5).
+INFO (ICDC019): 03:45:05     Finding Sync Enabler schemes (step 4 of 5).
+INFO (ICDC019): 03:45:05     Finding Aggressive Control Sync schemes (step 5 of 5).
+INFO (ICDC019): 03:45:05   Finding NDFF with 'allow control neighbor' true and 'allow fanout' true (step 7 of 7).
+CDC Schemes Found: 2
+2
+[<embedded>] % # Find Convergence
+[<embedded>] % check_cdc -group -find
+INFO (ICDC019): 03:45:05 Finding convergences (step 1 of 3).
+INFO (ICDC019): 03:45:05 Finding glitches (step 1 of 2).
+INFO (ICDC020): 03:45:05   Glitches detection - Build Convergence Map (20% completed).
+INFO (ICDC020): 03:45:05   Glitches detection - Build Convergence Map (30% completed).
+INFO (ICDC020): 03:45:05   Glitches detection - Build Convergence Map (50% completed).
+INFO (ICDC020): 03:45:05   Glitches detection - Build Convergence Map (70% completed).
+INFO (ICDC020): 03:45:05   Glitches detection - Build Convergence Map (80% completed).
+INFO (ICDC020): 03:45:05   Glitches detection - Build Convergence Map (100% completed).
+CDC Convergences Found: 0
+0
+[<embedded>] % 
+[<embedded>] % ## ------------------ Reset Analysis ------------------ ##
+[<embedded>] % ## check_cdc -reset -find
+[<embedded>] % 
+[<embedded>] % ## ---------------- Functional Checks ----------------- ##
+[<embedded>] % check_cdc -protocol_check -generate
+WARNING (WRS035): The declared reset file does not initialize all flops/latches. Use the command "reset -sequence" or reset files that contain internal signals to avoid spurious counterexamples. If your reset file already contains internal signals use the switch "-include_internal" to reset internal flops/latches.
+INFO (IRS021): Reset analysis using cached values. Assigned values for 1755 of 1755 design flops, 0 of 2362 design latches, 0 of 0 internal elements.
+INFO (IRS039): Reset analysis complete.
+CDC_u_FIFO_syn.rdata_no_write_on_full CDC_u_FIFO_syn.rdata_no_read_on_empty CDC_u_FIFO_syn.rdata_wptr_gray_coded CDC_u_FIFO_syn.rdata_rptr_gray_coded CDC_u_Handshake_syn.dreq_data_stable CDC_u_Handshake_syn.sack_data_stable CDC_u_Handshake_syn.din_src_req_hold CDC_u_Handshake_syn.din_src_new_req CDC_u_Handshake_syn.din_dest_ack_hold CDC_u_Handshake_syn.din_dest_new_ack CDC_u_Handshake_syn.din_data_stability_dest
+[<embedded>] % check_cdc -protocol_check -prove
+INFO (IPF127): Verbosity level: 6
+INFO (IPF127): Using Proof Grid in local mode, with 1 licenses
+INFO (IPF127): Trace generation: Keeping
+INFO (IPF127): Engine C/G memory limit: 4096MB
+INFO (IPF127): Using rule cdc_functional.
+INFO (IPF127): (cdc_functional_plan) Using action: prove_action.
+INFO (IPF036): Starting proof on task: "<CDC_scheme_properties>", 11 properties to prove with 0 already proven/unreachable
+INFO (IRS026): Computing reset analysis for expressions.
+INFO (IRS027): Finished computing reset analysis for expressions.
+INFO (IPF031): Settings used for proof thread 0:
+    orchestration                 = off
+    time_limit                    = 86399s
+    per_property_time_limit       = 1s * 10 ^ scan
+    engine_mode                   = Hp Ht N B 
+    proofgrid_per_engine_max_jobs = 1
+    max engine jobs               = Hp Ht N B, total 4
+    proofgrid_mode                = local
+    proofgrid_restarts            = 10
+INFO (ICK016): The clocks listed below were automatically declared as "-both_edges" by the tool as the fastest clock had already been declared as "-both_edges", or it is a slow clock that has activity on the negedge.
+    For message help, type "help -message ICK016".
+    clk1 clk2
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property "CDC_u_FIFO_syn.rdata_no_read_on_empty" was proven in 0.00 s.
+0: Found proofs for 1 properties in preprocessing
+0: Using multistage preprocessing
+0: Starting reduce
+0: Finished reduce in 0.002s
+0.0.PRE: Performing Proof Simplification...
+0.0.Hp: clocks: 3, declared: 3, looping: 0, posedge: 3, negedge: 0, noedge: 0, bothedge: 0
+0.0.Hp: Proof Simplification Iteration 1	[0.00 s]
+0.0.Hp: Proof Simplification Iteration 2	[0.00 s]
+0.0.Hp: Proof Simplification Iteration 3	[0.00 s]
+0.0.Hp: Proof Simplification Iteration 4	[0.00 s]
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property ":noDeadEnd" was proven in 0.00 s.
+    Use check_assumptions -show -dead_end to show this property in the property table.
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property ":noConflict" was proven in 0.00 s.
+    Use check_assumptions -show to show this property in the property table.
+INFO (IPF047): 0.0.PRE: The cover property ":live" was covered in 1 cycles in 0.00 s.
+    Use check_assumptions -show -live to show this property in the property table.
+0.0.PRE: Proof Simplification completed in 0.01 s
+0: About to start ProofGrid in its own thread with a limit of 10000 pending notifications and a limit of 10 traces.
+0: =============================== ProofGrid start ===============================
+0: ProofGrid usable level: 10
+0: Initial ProofGrid level: 1
+0: ProofGrid is starting event handling
+0.0.B: Proofgrid shell started at 85022@ee32(local) jg_84911_ee32_1
+0.0.Ht: Proofgrid shell started at 85019@ee32(local) jg_84911_ee32_1
+0.0.Ht: clocks: 3, declared: 3, looping: 0, posedge: 3, negedge: 0, noedge: 0, bothedge: 0
+0.0.B: clocks: 3, declared: 3, looping: 0, posedge: 3, negedge: 0, noedge: 0, bothedge: 0
+0.0.N: Proofgrid shell started at 85021@ee32(local) jg_84911_ee32_1
+0.0.B: Next scan (0) will use per property time limit: 1s * 10 ^ 0 = 1s
+0.0.B: Starting proof for property "CDC_u_FIFO_syn.rdata_no_write_on_full"	[0.00 s].
+0.0.B: Trace Attempt  1	[0.00 s]
+0.0.B: Trace Attempt  2	[0.00 s]
+0.0.Hp: Proofgrid shell started at 85018@ee32(local) jg_84911_ee32_1
+0.0.B: Trace Attempt  3	[0.00 s]
+0.0.B: Trace Attempt  4	[0.00 s]
+0.0.B: Trace Attempt  5	[0.00 s]
+0.0.N: clocks: 3, declared: 3, looping: 0, posedge: 3, negedge: 0, noedge: 0, bothedge: 0
+0.0.N: Next scan (0) will use per property time limit: 1s * 10 ^ 0 = 1s
+0.0.N: Starting proof for property "CDC_u_FIFO_syn.rdata_no_write_on_full"	[0.00 s].
+0.0.N: Trace Attempt  1	[0.00 s]
+0.0.N: Trace Attempt  2	[0.00 s]
+0.0.N: Trace Attempt  3	[0.00 s]
+0.0.Hp: clocks: 3, declared: 3, looping: 0, posedge: 3, negedge: 0, noedge: 0, bothedge: 0
+0.0.N: Trace Attempt  4	[0.00 s]
+0.0.N: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.N: The property "CDC_u_FIFO_syn.rdata_no_write_on_full" was proven in 0.00 s.
+0.0.N: Stopped processing property "CDC_u_FIFO_syn.rdata_no_write_on_full"	[0.00 s].
+0.0.B: Trace Attempt 45	[0.00 s]
+0.0.B: Stopped processing property "CDC_u_FIFO_syn.rdata_no_write_on_full"	[0.00 s].
+0.0.B: Starting proof for property "CDC_u_FIFO_syn.rdata_wptr_gray_coded"	[0.00 s].
+0.0.B: Trace Attempt  1	[0.00 s]
+0.0.B: Trace Attempt  2	[0.00 s]
+0.0.B: Trace Attempt  3	[0.00 s]
+0.0.B: Trace Attempt  4	[0.00 s]
+0.0.B: Trace Attempt  5	[0.00 s]
+0.0.Ht: Trace Attempt  1	[0.01 s]
+0.0.N: Starting proof for property "CDC_u_FIFO_syn.rdata_wptr_gray_coded"	[0.00 s].
+0.0.Ht: Trace Attempt  2	[0.01 s]
+0.0.Ht: Trace Attempt  3	[0.01 s]
+0.0.N: Trace Attempt  1	[0.00 s]
+0.0.Ht: Trace Attempt  4	[0.01 s]
+0.0.Ht: Trace Attempt  5	[0.01 s]
+0.0.N: Trace Attempt  2	[0.00 s]
+0.0.N: Trace Attempt  2	[0.00 s]
+0.0.N: Trace Attempt  3	[0.00 s]
+0.0.N: Trace Attempt  4	[0.00 s]
+0.0.N: Trace Attempt  4	[0.00 s]
+0.0.Ht: Trace Attempt 12	[0.01 s]
+0.0.Ht: A trace with 12 cycles was found. [0.01 s]
+INFO (IPF055): 0.0.Ht: A counterexample (cex) with 12 cycles was found for the property "CDC_u_Handshake_syn.din_dest_new_ack" in 0.07 s.
+0.0.Ht: Trace Attempt 13	[0.01 s]
+0.0.N: Trace Attempt  5	[0.00 s]
+0.0.N: Trace Attempt  1	[0.03 s]
+0.0.N: Trace Attempt  2	[0.03 s]
+0.0.N: Trace Attempt  3	[0.03 s]
+0.0.N: Trace Attempt  4	[0.03 s]
+0.0.N: Trace Attempt  1	[0.27 s]
+0.0.N: Trace Attempt  2	[0.27 s]
+0.0.N: Trace Attempt  3	[0.27 s]
+0.0.N: Trace Attempt  4	[0.27 s]
+0.0.Hp: A proof was found: No trace exists. [0.35 s]
+INFO (IPF057): 0.0.Hp: The property "CDC_u_Handshake_syn.dreq_data_stable" was proven in 0.35 s.
+0.0.Hp: A proof was found: No trace exists. [0.35 s]
+INFO (IPF057): 0.0.Hp: The property "CDC_u_Handshake_syn.din_dest_ack_hold" was proven in 0.35 s.
+0.0.Hp: A proof was found: No trace exists. [0.44 s]
+INFO (IPF057): 0.0.Hp: The property "CDC_u_Handshake_syn.sack_data_stable" was proven in 0.43 s.
+0.0.N: Trace Attempt  1	[0.68 s]
+0.0.N: Trace Attempt  2	[0.68 s]
+0.0.N: Trace Attempt  3	[0.68 s]
+0.0.N: Trace Attempt  4	[0.68 s]
+0.0.Hp: A proof was found: No trace exists. [0.84 s]
+INFO (IPF057): 0.0.Hp: The property "CDC_u_FIFO_syn.rdata_wptr_gray_coded" was proven in 0.83 s.
+0.0.N: Trace Attempt 33	[0.81 s]
+0.0.N: Stopped processing property "CDC_u_FIFO_syn.rdata_wptr_gray_coded"	[0.83 s].
+0.0.N: Starting proof for property "CDC_u_FIFO_syn.rdata_rptr_gray_coded"	[0.00 s].
+0.0.N: Trace Attempt  1	[0.00 s]
+0.0.N: Trace Attempt  2	[0.00 s]
+0.0.B: Trace Attempt 7933	[0.83 s]
+0.0.B: Stopped processing property "CDC_u_FIFO_syn.rdata_wptr_gray_coded"	[0.84 s].
+0.0.N: Trace Attempt  2	[0.00 s]
+0.0.B: Starting proof for property "CDC_u_FIFO_syn.rdata_rptr_gray_coded"	[0.00 s].
+0.0.N: Trace Attempt  3	[0.00 s]
+0.0.N: Trace Attempt  4	[0.00 s]
+0.0.B: Trace Attempt  1	[0.00 s]
+0.0.B: Trace Attempt  2	[0.00 s]
+0.0.B: Trace Attempt  3	[0.00 s]
+0.0.B: Trace Attempt  4	[0.00 s]
+0.0.B: Trace Attempt  5	[0.00 s]
+0.0.N: Trace Attempt  4	[0.00 s]
+0.0.N: Trace Attempt  5	[0.00 s]
+0.0.N: Trace Attempt  1	[0.00 s]
+0.0.N: Trace Attempt  2	[0.00 s]
+0.0.N: Trace Attempt  3	[0.00 s]
+0.0.N: Trace Attempt  4	[0.00 s]
+0.0.N: Trace Attempt  1	[0.02 s]
+0.0.N: Trace Attempt  2	[0.02 s]
+0.0.N: Trace Attempt  3	[0.02 s]
+0.0.N: Trace Attempt  4	[0.02 s]
+0.0.Hp: A proof was found: No trace exists. [0.92 s]
+INFO (IPF057): 0.0.Hp: The property "CDC_u_Handshake_syn.din_data_stability_dest" was proven in 0.92 s.
+0: ProofGrid usable level: 3
+0.0.N: Trace Attempt  1	[0.11 s]
+0.0.N: Trace Attempt  2	[0.11 s]
+0.0.N: Trace Attempt  3	[0.11 s]
+0.0.N: Trace Attempt  4	[0.11 s]
+0.0.N: Trace Attempt  1	[0.67 s]
+0.0.N: Trace Attempt  2	[0.68 s]
+0.0.N: Trace Attempt  3	[0.68 s]
+0.0.N: Trace Attempt  4	[0.68 s]
+0.0.Hp: A proof was found: No trace exists. [1.67 s]
+INFO (IPF057): 0.0.Hp: The property "CDC_u_Handshake_syn.din_src_req_hold" was proven in 1.67 s.
+0.0.Hp: A proof was found: No trace exists. [1.67 s]
+INFO (IPF057): 0.0.Hp: The property "CDC_u_Handshake_syn.din_src_new_req" was proven in 1.67 s.
+0.0.N: Requesting engine job to stop
+0.0.B: Requesting engine job to stop
+0.0.Hp: Requesting engine job to terminate
+0.0.Ht: Requesting engine job to terminate
+INFO (IPF144): 0: Initiating shutdown of proof [1.83 s]
+0.0.Hp: A proof was found: No trace exists. [1.82 s]
+INFO (IPF057): 0.0.Hp: The property "CDC_u_FIFO_syn.rdata_rptr_gray_coded" was proven in 1.82 s.
+0.0.Hp: All properties determined. [1.82 s]
+0.0.B: Trace Attempt 8470	[0.99 s]
+0.0.B: Stopped processing property "CDC_u_FIFO_syn.rdata_rptr_gray_coded"	[0.99 s].
+0.0.B: All properties determined. [0.99 s]
+0.0.N: Trace Attempt 43	[0.98 s]
+0.0.N: Stopped processing property "CDC_u_FIFO_syn.rdata_rptr_gray_coded"	[0.99 s].
+0.0.N: All properties determined. [0.99 s]
+0.0.N: Exited with Success (@ 1.83 s)
+0: ProofGrid usable level: 0
+0.0.B: Exited with Success (@ 1.83 s)
+0.0.Hp: Exited with Success (@ 1.84 s)
+0.0.Ht: Interrupted (multi)
+0.0.Ht: Trace Attempt 9632	[1.72 s]
+0.0.Ht: All properties determined. [1.86 s]
+0.0.Ht: Exited with Success (@ 1.90 s)
+0: --------------------------------------------------------------
+ProofGrid Summary (utilization 96.99 %)
+--------------------------------------------------------------
+     engines started                               :     4
+     engine jobs started                           :     4
+
+    Average time in state (seconds)
+    ------------------------------------------------------
+    Engine  Pending     Running        Dead    Utilization
+    ------------------------------------------------------
+     Hp        0.07        1.82        0.00       96.54 %
+     Ht        0.05        1.83        0.00       97.16 %
+      N        0.06        1.83        0.00       97.03 %
+      B        0.05        1.83        0.00       97.21 %
+    all        0.06        1.83        0.00       96.99 %
+
+    Total time in state (seconds)
+    -----------------------------------------
+            Pending     Running        Dead  
+    -----------------------------------------
+               0.23        7.31        0.00
+
+    Data read    : 1.60 MiB
+    Data written : 623.88 kiB
+
+0: All pending notifications were processed.
+INFO (IPF127): (cdc_functional_plan) Done using action: prove_action.
+INFO (IPF127): (cdc_functional_plan) Final state reached.
+
+==============================================================
+SUMMARY
+==============================================================
+           Properties Considered              : 11
+                 assertions                   : 11
+                  - proven                    : 10 (90.9091%)
+                  - bounded_proven (user)     : 0 (0%)
+                  - bounded_proven (auto)     : 0 (0%)
+                  - marked_proven             : 0 (0%)
+                  - cex                       : 1 (9.09091%)
+                  - ar_cex                    : 0 (0%)
+                  - undetermined              : 0 (0%)
+                  - unknown                   : 0 (0%)
+                  - error                     : 0 (0%)
+                 covers                       : 0
+                  - unreachable               : 0
+                  - bounded_unreachable (user): 0
+                  - covered                   : 0
+                  - ar_covered                : 0
+                  - undetermined              : 0
+                  - unknown                   : 0
+                  - error                     : 0
+{unprocessed 0} {passed 1} {failed 1} u_Handshake_syn.din
+[<embedded>] % 
+[<embedded>] % ## ---------- Proving Signal Configuration ------------ ##
+[<embedded>] % # config_rtlds -signal -prove
+[<embedded>] % 
+[<embedded>] % ## ----------------- Validate Waiver ------------------ ##
+[<embedded>] % check_cdc -waiver -generate
+[<embedded>] % check_cdc -waiver -prove
+WARNING (WCDC021): You have not created CDC conditional waiver checks yet; nothing to prove.
+    Run "check_cdc -waiver -add" to manually create conditional waivers.
+    Run "check_cdc -waiver -generate" to automatically create conditional waivers.
+[<embedded>] % 
+[<embedded>] % ## ------- Metastability Injection in Formal ---------- ##
+[<embedded>] % # check_cdc -metastability -inject -include_protocol_check -include_inactive_pairs
+[<embedded>] % # check_cdc -metastability -prove
+[<embedded>] % 
+[<embedded>] % ## ---------------- Report Generation ----------------- ##
+[<embedded>] % check_cdc -report pairs -file $report_dir/pairs.csv -force
+[<embedded>] % check_cdc -report convergence_schemes -file $report_dir/schemes.csv -force
+[<embedded>] % check_cdc -report violations -file $report_dir/violations.csv -force
+[<embedded>] % check_cdc -report rules -file $report_dir/rules.csv -force
+[<embedded>] % check_cdc -report -detailed -file $report_dir/summary.txt -force
+INFO (IPL005): Received request to exit from the console.
+INFO (IPL014): Waiting for the Tcl-thread to exit.
+INFO: Waiting for proof threads to stop...
+INFO: Proof threads stopped.
+INFO (IPL018): The peak resident set memory use for this session was 0.312 GB.
+INFO (IPL015): The Tcl-thread exited with status 0.
+INFO (IPL016): Exiting the analysis session with status 0.

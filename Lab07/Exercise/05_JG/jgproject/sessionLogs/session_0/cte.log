@@ -1,0 +1,40 @@
+2024-10-17 03:45:04   main   info  | Process started.
+2024-10-17 03:45:04   main   info  | Endpoint: /tmp/ctem8w2pW
+2024-10-17 03:45:04   ipc    info  | Sending handshake.
+2024-10-17 03:45:04   ipc    info  | Waiting for server handshake...
+2024-10-17 03:45:04   ipc    info  | Connected
+
+2024-10-17 03:45:04   main   info  | Process bootstrapped.
+2024-10-17 03:45:04  stdout  info  | Stream redirection initiated
+2024-10-17 03:45:04  stderr  error | Stream redirection initiated
+2024-10-17 03:45:04   cte    info  | CTE interface starting to run.
+2024-10-17 03:45:04   cte    warn  | [TCLNL-330] set_input_delay on clock root 'clk1' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root.
+2024-10-17 03:45:04   cte    warn  | [TCLNL-330] set_input_delay on clock root 'clk2' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root.
+2024-10-17 03:45:04   tcl    info  | CTE Tcl interp finished evaluating the SDC file.
+2024-10-17 03:45:04   tcl    info  | 
+========================================================================================
+                                Command Execution Report                                
+========================================================================================
+              command name              | successes | failures  |  ignored  |   total   
+----------------------------------------------------------------------------------------
+set_input_transition                    |     0     |     0     |    68     |    68     
+set_clock_groups                        |     1     |     0     |     0     |     1     
+set_output_delay                        |    18     |     0     |     0     |    18     
+set_units                               |     0     |     0     |     1     |     1     
+set_wire_load_mode                      |     0     |     0     |     1     |     1     
+set_max_fanout                          |     0     |     0     |    34     |    34     
+get_ports                               |    264    |     0     |     0     |    264    
+set_max_capacitance                     |     0     |     0     |    34     |    34     
+create_clock                            |     2     |     0     |     0     |     2     
+set_wire_load_model                     |     0     |     0     |     1     |     1     
+get_clocks                              |    12     |     0     |     0     |    12     
+set_clock_uncertainty                   |     0     |     0     |     2     |     2     
+set_max_transition                      |     0     |     0     |    34     |    34     
+set_clock_transition                    |     0     |     0     |     8     |     8     
+set_load                                |     0     |     0     |     9     |     9     
+set_input_delay                         |    65     |     0     |     0     |    65     
+----------------------------------------------------------------------------------------
+
+2024-10-17 03:45:04  stderr  error | Stream redirection terminated
+2024-10-17 03:45:04  stdout  info  | Stream redirection terminated
+2024-10-17 03:45:04   main   info  | Process finished

@@ -1,0 +1,1 @@
+verifyConnectivity -type all -error 1000 -warning 50

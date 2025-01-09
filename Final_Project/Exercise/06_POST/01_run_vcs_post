@@ -1,0 +1,2 @@
+echo -e "\033[31mRemember: You need to rename the module name 'CHIP' to 'ISP' in 'CHIP.v'!!!\033[0m"
+make vcs_post

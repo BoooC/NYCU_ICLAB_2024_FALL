@@ -1,0 +1,72 @@
+ 
+****************************************
+Report : port
+Design : Ramen
+Version: T-2022.03
+Date   : Sat Oct 26 15:07:29 2024
+****************************************
+
+
+
+Attributes:
+    d - dont_touch_network
+
+                       Pin      Wire     Max     Max     Connection
+Port           Dir     Load     Load     Trans   Cap     Class      Attrs
+--------------------------------------------------------------------------------
+clk            in      0.0000   0.0000    3.00    0.15   --         d
+in_valid       in      0.0000   0.0000    3.00    0.15   --         
+portion        in      0.0000   0.0000    3.00    0.15   --         
+ramen_type[0]  in      0.0000   0.0000    3.00    0.15   --         
+ramen_type[1]  in      0.0000   0.0000    3.00    0.15   --         
+rst_n          in      0.0000   0.0000    3.00    0.15   --         
+selling        in      0.0000   0.0000    3.00    0.15   --         
+out_valid_order
+               out     0.0500   0.0000   --      --      --         
+out_valid_tot  out     0.0500   0.0000   --      --      --         
+sold_num[0]    out     0.0500   0.0000   --      --      --         
+sold_num[1]    out     0.0500   0.0000   --      --      --         
+sold_num[2]    out     0.0500   0.0000   --      --      --         
+sold_num[3]    out     0.0500   0.0000   --      --      --         
+sold_num[4]    out     0.0500   0.0000   --      --      --         
+sold_num[5]    out     0.0500   0.0000   --      --      --         
+sold_num[6]    out     0.0500   0.0000   --      --      --         
+sold_num[7]    out     0.0500   0.0000   --      --      --         
+sold_num[8]    out     0.0500   0.0000   --      --      --         
+sold_num[9]    out     0.0500   0.0000   --      --      --         
+sold_num[10]   out     0.0500   0.0000   --      --      --         
+sold_num[11]   out     0.0500   0.0000   --      --      --         
+sold_num[12]   out     0.0500   0.0000   --      --      --         
+sold_num[13]   out     0.0500   0.0000   --      --      --         
+sold_num[14]   out     0.0500   0.0000   --      --      --         
+sold_num[15]   out     0.0500   0.0000   --      --      --         
+sold_num[16]   out     0.0500   0.0000   --      --      --         
+sold_num[17]   out     0.0500   0.0000   --      --      --         
+sold_num[18]   out     0.0500   0.0000   --      --      --         
+sold_num[19]   out     0.0500   0.0000   --      --      --         
+sold_num[20]   out     0.0500   0.0000   --      --      --         
+sold_num[21]   out     0.0500   0.0000   --      --      --         
+sold_num[22]   out     0.0500   0.0000   --      --      --         
+sold_num[23]   out     0.0500   0.0000   --      --      --         
+sold_num[24]   out     0.0500   0.0000   --      --      --         
+sold_num[25]   out     0.0500   0.0000   --      --      --         
+sold_num[26]   out     0.0500   0.0000   --      --      --         
+sold_num[27]   out     0.0500   0.0000   --      --      --         
+success        out     0.0500   0.0000   --      --      --         
+total_gain[0]  out     0.0500   0.0000   --      --      --         
+total_gain[1]  out     0.0500   0.0000   --      --      --         
+total_gain[2]  out     0.0500   0.0000   --      --      --         
+total_gain[3]  out     0.0500   0.0000   --      --      --         
+total_gain[4]  out     0.0500   0.0000   --      --      --         
+total_gain[5]  out     0.0500   0.0000   --      --      --         
+total_gain[6]  out     0.0500   0.0000   --      --      --         
+total_gain[7]  out     0.0500   0.0000   --      --      --         
+total_gain[8]  out     0.0500   0.0000   --      --      --         
+total_gain[9]  out     0.0500   0.0000   --      --      --         
+total_gain[10] out     0.0500   0.0000   --      --      --         
+total_gain[11] out     0.0500   0.0000   --      --      --         
+total_gain[12] out     0.0500   0.0000   --      --      --         
+total_gain[13] out     0.0500   0.0000   --      --      --         
+total_gain[14] out     0.0500   0.0000   --      --      --         
+
+1
