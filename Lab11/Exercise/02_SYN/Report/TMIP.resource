@@ -1,0 +1,431 @@
+ 
+****************************************
+Report : resources
+Design : TMIP
+Version: T-2022.03
+Date   : Mon Dec  2 02:57:51 2024
+****************************************
+
+
+Resource Report for this hierarchy in file ./TMIP.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| lt_x_13        | DW_cmp         | width=9    | lt_172_2 (TMIP.v:172)      |
+| sub_x_28       | DW01_dec       | width=2    | sub_233 (TMIP.v:233)       |
+| lt_x_32        | DW_cmp         | width=4    | lt_238 (TMIP.v:238)        |
+| add_x_35       | DW01_inc       | width=4    | add_255 (TMIP.v:255)       |
+| add_x_37       | DW01_inc       | width=4    | add_267 (TMIP.v:267)       |
+| add_x_40       | DW01_inc       | width=3    | add_279 (TMIP.v:279)       |
+| add_x_43       | DW01_inc       | width=2    | add_292 (TMIP.v:292)       |
+| add_x_46       | DW01_inc       | width=2    | add_307 (TMIP.v:307)       |
+| add_x_50       | DW01_add       | width=8    | add_345 (TMIP.v:345)       |
+| div_55         | DW_div_uns     | a_width=10 | div_362 (TMIP.v:362)       |
+|                |                | b_width=2  |                            |
+| add_x_56       | DW01_add       | width=8    | add_370 (TMIP.v:370)       |
+| gt_x_61        | DW_cmp         | width=4    | gt_495 (TMIP.v:495)        |
+| gte_x_84       | DW_cmp         | width=9    | gte_601 (TMIP.v:601)       |
+| lte_x_85       | DW_cmp         | width=9    | lte_618 (TMIP.v:618)       |
+| gt_x_189       | DW_cmp         | width=8    | gt_1061 (TMIP.v:1061)      |
+| gt_x_191       | DW_cmp         | width=8    | gt_1062 (TMIP.v:1062)      |
+| gte_x_193      | DW_cmp         | width=8    | gte_1071_2 (TMIP.v:1071)   |
+| gte_x_194      | DW_cmp         | width=8    | gte_1071_4 (TMIP.v:1071)   |
+| gte_x_195      | DW_cmp         | width=8    | gte_1073_2 (TMIP.v:1073)   |
+| gte_x_196      | DW_cmp         | width=8    | gte_1073_4 (TMIP.v:1073)   |
+| gte_x_197      | DW_cmp         | width=8    | gte_1081_2 (TMIP.v:1081)   |
+| gte_x_198      | DW_cmp         | width=8    | gte_1081_4 (TMIP.v:1081)   |
+| gte_x_199      | DW_cmp         | width=8    | gte_1083_2 (TMIP.v:1083)   |
+| gte_x_200      | DW_cmp         | width=8    | gte_1083_4 (TMIP.v:1083)   |
+| mult_x_231     | DW_mult_uns    | a_width=8  | mult_1203 (TMIP.v:1203)    |
+|                |                | b_width=8  |                            |
+| gte_x_232      | DW_cmp         | width=5    | gte_1211 (TMIP.v:1211)     |
+| lte_x_233      | DW_cmp         | width=5    | lte_1211 (TMIP.v:1211)     |
+| add_x_238      | DW01_inc       | width=3    | add_1232 (TMIP.v:1232)     |
+| add_x_242      | DW01_inc       | width=5    | add_1247 (TMIP.v:1247)     |
+| add_x_246      | DW01_inc       | width=3    | add_1256 (TMIP.v:1256)     |
+| sub_x_250      | DW01_sub       | width=5    | sub_1285 (TMIP.v:1285)     |
+| gte_x_257      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_0/gte_1442 (TMIP.v:1442) |
+| lte_x_259      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_0/lte_1443 (TMIP.v:1443) |
+| lte_x_261      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_0/lte_1444 (TMIP.v:1444) |
+| gte_x_262      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_0/gte_1444_2 (TMIP.v:1444) |
+| lte_x_263      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_0/lte_1444_3 (TMIP.v:1444) |
+| gte_x_264      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_0/gte_1444_4 (TMIP.v:1444) |
+| gte_x_268      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_7/gte_1442 (TMIP.v:1442) |
+| lte_x_269      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_7/lte_1443 (TMIP.v:1443) |
+| lte_x_270      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_7/lte_1444 (TMIP.v:1444) |
+| gte_x_271      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_7/gte_1444_2 (TMIP.v:1444) |
+| lte_x_272      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_7/lte_1444_3 (TMIP.v:1444) |
+| gte_x_273      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_7/gte_1444_4 (TMIP.v:1444) |
+| gte_x_283      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_6/gte_1442 (TMIP.v:1442) |
+| lte_x_287      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_6/lte_1443 (TMIP.v:1443) |
+| lte_x_288      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_6/lte_1444 (TMIP.v:1444) |
+| gte_x_289      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_6/gte_1444_2 (TMIP.v:1444) |
+| lte_x_290      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_6/lte_1444_3 (TMIP.v:1444) |
+| gte_x_291      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_6/gte_1444_4 (TMIP.v:1444) |
+| gte_x_294      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_5/gte_1442 (TMIP.v:1442) |
+| lte_x_295      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_5/lte_1443 (TMIP.v:1443) |
+| lte_x_296      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_5/lte_1444 (TMIP.v:1444) |
+| gte_x_297      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_5/gte_1444_2 (TMIP.v:1444) |
+| lte_x_298      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_5/lte_1444_3 (TMIP.v:1444) |
+| gte_x_299      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_5/gte_1444_4 (TMIP.v:1444) |
+| gte_x_306      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_4/gte_1442 (TMIP.v:1442) |
+| lte_x_307      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_4/lte_1443 (TMIP.v:1443) |
+| lte_x_310      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_4/lte_1444 (TMIP.v:1444) |
+| gte_x_311      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_4/gte_1444_2 (TMIP.v:1444) |
+| lte_x_312      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_4/lte_1444_3 (TMIP.v:1444) |
+| gte_x_313      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_4/gte_1444_4 (TMIP.v:1444) |
+| gte_x_318      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_3/gte_1442 (TMIP.v:1442) |
+| lte_x_322      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_3/lte_1443 (TMIP.v:1443) |
+| lte_x_324      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_3/lte_1444 (TMIP.v:1444) |
+| gte_x_325      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_3/gte_1444_2 (TMIP.v:1444) |
+| lte_x_326      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_3/lte_1444_3 (TMIP.v:1444) |
+| gte_x_327      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_3/gte_1444_4 (TMIP.v:1444) |
+| gte_x_333      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_2/gte_1442 (TMIP.v:1442) |
+| lte_x_335      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_2/lte_1443 (TMIP.v:1443) |
+| lte_x_337      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_2/lte_1444 (TMIP.v:1444) |
+| gte_x_338      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_2/gte_1444_2 (TMIP.v:1444) |
+| lte_x_339      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_2/lte_1444_3 (TMIP.v:1444) |
+| gte_x_340      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_2/gte_1444_4 (TMIP.v:1444) |
+| gt_x_342       | DW_cmp         | width=8    | gt_321 (TMIP.v:321)        |
+|                |                |            | gt_354 (TMIP.v:354)        |
+| gte_x_343      | DW_cmp         | width=9    | gte_484 (TMIP.v:484)       |
+|                |                |            | gte_485 (TMIP.v:485)       |
+|                |                |            | gte_756 (TMIP.v:756)       |
+|                |                |            | gte_757 (TMIP.v:757)       |
+| gte_x_344      | DW_cmp         | width=9    | gte_486 (TMIP.v:486)       |
+|                |                |            | gte_758 (TMIP.v:758)       |
+| gt_x_345       | DW_cmp         | width=9    | gt_534 (TMIP.v:534)        |
+|                |                |            | gt_535 (TMIP.v:535)        |
+| gt_x_346       | DW_cmp         | width=9    | gt_541 (TMIP.v:541)        |
+|                |                |            | gt_542 (TMIP.v:542)        |
+|                |                |            | gt_543 (TMIP.v:543)        |
+| gte_x_347      | DW_cmp         | width=9    | gte_616 (TMIP.v:616)       |
+|                |                |            | gte_626 (TMIP.v:626)       |
+|                |                |            | gte_635 (TMIP.v:635)       |
+| gt_x_348       | DW_cmp         | width=9    | gt_628 (TMIP.v:628)        |
+|                |                |            | gt_637 (TMIP.v:637)        |
+| gte_x_349      | DW_cmp         | width=8    | gte_1071 (TMIP.v:1071)     |
+|                |                |            | gte_1081 (TMIP.v:1081)     |
+| gte_x_350      | DW_cmp         | width=8    | gte_1071_3 (TMIP.v:1071)   |
+|                |                |            | gte_1081_3 (TMIP.v:1081)   |
+| gte_x_351      | DW_cmp         | width=8    | gte_1073 (TMIP.v:1073)     |
+|                |                |            | gte_1083 (TMIP.v:1083)     |
+| gte_x_352      | DW_cmp         | width=8    | gte_1073_3 (TMIP.v:1073)   |
+|                |                |            | gte_1083_3 (TMIP.v:1083)   |
+| gte_x_353      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_0/gte_1444 (TMIP.v:1444) |
+       |            | find_median_inst/sort_3_inst_0/lte_1444_4 (TMIP.v:1444) |
+| lte_x_354      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_0/gte_1444_3 (TMIP.v:1444) |
+     |            | find_median_inst/sort_3_inst_0/lte_1444_2 (TMIP.v:1444) |
+| gte_x_355      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_7/gte_1444 (TMIP.v:1444) |
+       |            | find_median_inst/sort_3_inst_7/lte_1444_4 (TMIP.v:1444) |
+| lte_x_356      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_7/gte_1444_3 (TMIP.v:1444) |
+     |            | find_median_inst/sort_3_inst_7/lte_1444_2 (TMIP.v:1444) |
+| gte_x_357      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_6/gte_1444 (TMIP.v:1444) |
+       |            | find_median_inst/sort_3_inst_6/lte_1444_4 (TMIP.v:1444) |
+| lte_x_358      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_6/gte_1444_3 (TMIP.v:1444) |
+     |            | find_median_inst/sort_3_inst_6/lte_1444_2 (TMIP.v:1444) |
+| gte_x_359      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_5/gte_1444 (TMIP.v:1444) |
+       |            | find_median_inst/sort_3_inst_5/lte_1444_4 (TMIP.v:1444) |
+| lte_x_360      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_5/gte_1444_3 (TMIP.v:1444) |
+     |            | find_median_inst/sort_3_inst_5/lte_1444_2 (TMIP.v:1444) |
+| gte_x_361      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_4/gte_1444 (TMIP.v:1444) |
+       |            | find_median_inst/sort_3_inst_4/lte_1444_4 (TMIP.v:1444) |
+| lte_x_362      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_4/gte_1444_3 (TMIP.v:1444) |
+     |            | find_median_inst/sort_3_inst_4/lte_1444_2 (TMIP.v:1444) |
+| gte_x_363      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_3/gte_1444 (TMIP.v:1444) |
+       |            | find_median_inst/sort_3_inst_3/lte_1444_4 (TMIP.v:1444) |
+| lte_x_364      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_3/gte_1444_3 (TMIP.v:1444) |
+     |            | find_median_inst/sort_3_inst_3/lte_1444_2 (TMIP.v:1444) |
+| gte_x_365      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_2/gte_1444 (TMIP.v:1444) |
+       |            | find_median_inst/sort_3_inst_2/lte_1444_4 (TMIP.v:1444) |
+| lte_x_366      | DW_cmp         | width=8    | find_median_inst/sort_3_inst_2/gte_1444_3 (TMIP.v:1444) |
+     |            | find_median_inst/sort_3_inst_2/lte_1444_2 (TMIP.v:1444) |
+| add_x_213      | DW01_inc       | width=9    | add_1135 (TMIP.v:1135)     |
+|                |                |            | add_1140 (TMIP.v:1140)     |
+|                |                |            | add_1146 (TMIP.v:1146)     |
+| add_x_215      | DW01_inc       | width=4    | add_1137 (TMIP.v:1137)     |
+|                |                |            | add_1142 (TMIP.v:1142)     |
+|                |                |            | add_1148 (TMIP.v:1148)     |
+| add_x_214      | DW01_inc       | width=3    | add_1136 (TMIP.v:1136)     |
+|                |                |            | add_1141 (TMIP.v:1141)     |
+|                |                |            | add_1147 (TMIP.v:1147)     |
+| add_x_234      | DW01_add       | width=20   | add_1211 (TMIP.v:1211)     |
+|                |                |            | add_1220 (TMIP.v:1220)     |
+| add_x_77       | DW01_inc       | width=8    | add_561 (TMIP.v:561)       |
+|                |                |            | add_569 (TMIP.v:569)       |
+| DP_OP_1297J1_122_1483           |            |                            |
+|                | DP_OP_1297J1_122_1483 |     |                            |
+| DP_OP_1304J1_138_3802           |            |                            |
+|                | DP_OP_1304J1_138_3802 |     |                            |
+| DP_OP_1185J1_130_2342           |            |                            |
+|                | DP_OP_1185J1_130_2342 |     |                            |
+| DP_OP_1138J1_123_461            |            |                            |
+|                | DP_OP_1138J1_123_461 |      |                            |
+=============================================================================
+
+Datapath Report for DP_OP_1297J1_122_1483
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_1297J1_122_1483 | mult_add_334_aco (TMIP.v:334)                      |
+|                      | add_334_aco (TMIP.v:334)                            |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Unsigned | 10    |                                          |
+| I2    | PI   | Unsigned | 1     |                                          |
+| I3    | PI   | Unsigned | 8     |                                          |
+| T485  | IFO  | Unsigned | 10    | I1 * I2 (TMIP.v:334)                     |
+| O1    | PO   | Unsigned | 10    | T485 + I3 (TMIP.v:334)                   |
+==============================================================================
+
+Datapath Report for DP_OP_1304J1_138_3802
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_1304J1_138_3802 | add_695 (TMIP.v:695) add_732 (TMIP.v:732)          |
+|                      | add_740 (TMIP.v:740) add_740_2 (TMIP.v:740)         |
+|                      | add_757 (TMIP.v:757) add_758 (TMIP.v:758)           |
+|                      | add_758_2 (TMIP.v:758) add_682 (TMIP.v:682)         |
+|                      | add_696 (TMIP.v:696) add_708 (TMIP.v:708)           |
+|                      | add_713 (TMIP.v:713) add_723 (TMIP.v:723)           |
+|                      | add_724 (TMIP.v:724) add_741 (TMIP.v:741)           |
+|                      | add_750 (TMIP.v:750) add_750_2 (TMIP.v:750)         |
+|                      | sub_749 (TMIP.v:749) add_683 (TMIP.v:683)           |
+|                      | add_724_2 (TMIP.v:724) add_742 (TMIP.v:742)         |
+|                      | add_749 (TMIP.v:749) add_681 (TMIP.v:681)           |
+|                      | add_714 (TMIP.v:714) add_722 (TMIP.v:722)           |
+|                      | add_722_2 (TMIP.v:722) add_731 (TMIP.v:731)         |
+|                      | add_745 (TMIP.v:745) add_746 (TMIP.v:746)           |
+|                      | add_746_2 (TMIP.v:746) sub_745 (TMIP.v:745)         |
+|                      | add_697 (TMIP.v:697) add_742_2 (TMIP.v:742)         |
+|                      | sub_723 (TMIP.v:723) sub_741 (TMIP.v:741)           |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 6     |                                          |
+| I2    | PI   | Unsigned | 4     |                                          |
+| I3    | PI   | Unsigned | 1     |                                          |
+| O1    | PO   | Signed   | 6     | addsub(I1,I2,I3) ( TMIP.v:681 TMIP.v:682 TMIP.v:683 TMIP.v:695 TMIP.v:696 TMIP.v:697 TMIP.v:708 TMIP.v:713 TMIP.v:714 TMIP.v:722 TMIP.v:723 TMIP.v:724 TMIP.v:731 TMIP.v:732 TMIP.v:740 TMIP.v:741 TMIP.v:742 TMIP.v:745 TMIP.v:746 TMIP.v:749 TMIP.v:750 TMIP.v:757 TMIP.v:758 ) |
+==============================================================================
+
+Datapath Report for DP_OP_1185J1_130_2342
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_1185J1_130_2342 | add_616 (TMIP.v:616) add_617 (TMIP.v:617)          |
+|                      | add_618 (TMIP.v:618) add_626 (TMIP.v:626)           |
+|                      | add_635 (TMIP.v:635) add_636 (TMIP.v:636)           |
+|                      | add_637 (TMIP.v:637) sub_627 (TMIP.v:627)           |
+|                      | sub_628 (TMIP.v:628) add_628_aco (TMIP.v:628)       |
+|                      | add_627_aco (TMIP.v:627) add_601 (TMIP.v:601)       |
+|                      | add_601_2_aco (TMIP.v:601) add_600_aco (TMIP.v:600) |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 8     |                                          |
+| I2    | PI   | Unsigned | 3     |                                          |
+| I3    | PI   | Unsigned | 1     |                                          |
+| O1    | PO   | Signed   | 8     | addsub(I1,I2,I3) ( TMIP.v:600 TMIP.v:601 TMIP.v:616 TMIP.v:617 TMIP.v:618 TMIP.v:626 TMIP.v:627 TMIP.v:628 TMIP.v:635 TMIP.v:636 TMIP.v:637 ) |
+==============================================================================
+
+Datapath Report for DP_OP_1138J1_123_461
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_1138J1_123_461 | add_420 (TMIP.v:420) add_429 (TMIP.v:429)           |
+|                      | add_446 (TMIP.v:446) add_460 (TMIP.v:460)           |
+|                      | add_484 (TMIP.v:484) add_421 (TMIP.v:421)           |
+|                      | add_421_2 (TMIP.v:421) add_422 (TMIP.v:422)         |
+|                      | add_422_2 (TMIP.v:422) add_423 (TMIP.v:423)         |
+|                      | add_423_2 (TMIP.v:423) add_430 (TMIP.v:430)         |
+|                      | add_430_2 (TMIP.v:430) add_431 (TMIP.v:431)         |
+|                      | add_431_2 (TMIP.v:431) add_432 (TMIP.v:432)         |
+|                      | add_432_2 (TMIP.v:432) add_443 (TMIP.v:443)         |
+|                      | add_443_2 (TMIP.v:443) add_447 (TMIP.v:447)         |
+|                      | add_447_2 (TMIP.v:447) add_448 (TMIP.v:448)         |
+|                      | add_448_2 (TMIP.v:448) add_455 (TMIP.v:455)         |
+|                      | add_455_2 (TMIP.v:455) add_455_3 (TMIP.v:455)       |
+|                      | add_455_4 (TMIP.v:455) add_456 (TMIP.v:456)         |
+|                      | sub_456 (TMIP.v:456) add_456_2 (TMIP.v:456)         |
+|                      | add_456_3 (TMIP.v:456) add_457 (TMIP.v:457)         |
+|                      | add_457_2 (TMIP.v:457) add_457_3 (TMIP.v:457)       |
+|                      | add_457_4 (TMIP.v:457) add_461 (TMIP.v:461)         |
+|                      | add_461_2 (TMIP.v:461) add_462 (TMIP.v:462)         |
+|                      | add_462_2 (TMIP.v:462) add_469 (TMIP.v:469)         |
+|                      | add_469_2 (TMIP.v:469) add_469_3 (TMIP.v:469)       |
+|                      | add_469_4 (TMIP.v:469) add_470 (TMIP.v:470)         |
+|                      | sub_470 (TMIP.v:470) add_470_2 (TMIP.v:470)         |
+|                      | add_470_3 (TMIP.v:470) add_471 (TMIP.v:471)         |
+|                      | add_471_2 (TMIP.v:471) add_471_3 (TMIP.v:471)       |
+|                      | add_471_4 (TMIP.v:471) add_474 (TMIP.v:474)         |
+|                      | sub_474 (TMIP.v:474) add_474_2 (TMIP.v:474)         |
+|                      | add_474_3 (TMIP.v:474) add_475 (TMIP.v:475)         |
+|                      | add_475_2 (TMIP.v:475) add_475_3 (TMIP.v:475)       |
+|                      | add_475_4 (TMIP.v:475) add_478 (TMIP.v:478)         |
+|                      | sub_478 (TMIP.v:478) add_478_2 (TMIP.v:478)         |
+|                      | add_478_3 (TMIP.v:478) add_479 (TMIP.v:479)         |
+|                      | add_479_2 (TMIP.v:479) add_479_3 (TMIP.v:479)       |
+|                      | add_479_4 (TMIP.v:479) add_485 (TMIP.v:485)         |
+|                      | add_485_2 (TMIP.v:485) add_486 (TMIP.v:486)         |
+|                      | add_486_2 (TMIP.v:486) add_486_3 (TMIP.v:486)       |
+|                      | add_486_4 (TMIP.v:486) C13837 (TMIP.v:497)          |
+|                      | C13838 (TMIP.v:496) C13831 (TMIP.v:486)             |
+|                      | C13830 (TMIP.v:485) C13832 (TMIP.v:483)             |
+|                      | C13828 (TMIP.v:479) C13827 (TMIP.v:478)             |
+|                      | C13826 (TMIP.v:475) C13825 (TMIP.v:474)             |
+|                      | C13824 (TMIP.v:471) C13823 (TMIP.v:470)             |
+|                      | C13822 (TMIP.v:469) C13833 (TMIP.v:468)             |
+|                      | C13819 (TMIP.v:459) C13817 (TMIP.v:457)             |
+|                      | C13816 (TMIP.v:456) C13815 (TMIP.v:455)             |
+|                      | C13821 (TMIP.v:454) C13812 (TMIP.v:445)             |
+|                      | C13814 (TMIP.v:442) C13835 (TMIP.v:440)             |
+|                      | C13808 (TMIP.v:428) C13806 (TMIP.v:419)             |
+|                      | C13810 (TMIP.v:417) C13804 (TMIP.v:410)             |
+|                      | C13840 (TMIP.v:406) sub_411 (TMIP.v:411)            |
+|                      | add_497 (TMIP.v:497) add_497_2 (TMIP.v:497)         |
+|                      | add_424 (TMIP.v:424) add_433 (TMIP.v:433)           |
+|                      | add_412 (TMIP.v:412) add_413 (TMIP.v:413)           |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Unsigned | 8     |                                          |
+| I2    | PI   | Unsigned | 8     |                                          |
+| I3    | PI   | Unsigned | 1     |                                          |
+| I4    | PI   | Signed   | 8     |                                          |
+| I5    | PI   | Unsigned | 1     |                                          |
+| I6    | PI   | Unsigned | 1     |                                          |
+| I7    | PI   | Unsigned | 1     |                                          |
+| I8    | PI   | Signed   | 8     |                                          |
+| I9    | PI   | Unsigned | 1     |                                          |
+| T1133 | IFO  | Signed   | 8     | { I3, I5 } ? O1 : I4 ( TMIP.v:406 TMIP.v:410 TMIP.v:417 TMIP.v:419 TMIP.v:428 TMIP.v:440 TMIP.v:442 TMIP.v:445 TMIP.v:454 TMIP.v:455 TMIP.v:456 TMIP.v:457 TMIP.v:459 TMIP.v:468 TMIP.v:469 TMIP.v:470 TMIP.v:471 TMIP.v:474 TMIP.v:475 TMIP.v:478 TMIP.v:479 TMIP.v:483 TMIP.v:485 TMIP.v:486 TMIP.v:496 TMIP.v:497 ) |
+| T1136 | IFO  | Signed   | 8     | { I7, I9 } ? O1 : I8 ( TMIP.v:406 TMIP.v:410 TMIP.v:417 TMIP.v:419 TMIP.v:428 TMIP.v:440 TMIP.v:442 TMIP.v:445 TMIP.v:454 TMIP.v:455 TMIP.v:456 TMIP.v:457 TMIP.v:459 TMIP.v:468 TMIP.v:469 TMIP.v:470 TMIP.v:471 TMIP.v:474 TMIP.v:475 TMIP.v:478 TMIP.v:479 TMIP.v:483 TMIP.v:485 TMIP.v:486 TMIP.v:496 TMIP.v:497 ) |
+| O1    | PO   | Unsigned | 8     | I1 + I2 ( TMIP.v:420 TMIP.v:421 TMIP.v:422 TMIP.v:423 TMIP.v:429 TMIP.v:430 TMIP.v:431 TMIP.v:432 TMIP.v:443 TMIP.v:446 TMIP.v:447 TMIP.v:448 TMIP.v:455 TMIP.v:456 TMIP.v:457 TMIP.v:460 TMIP.v:461 TMIP.v:462 TMIP.v:469 TMIP.v:470 TMIP.v:471 TMIP.v:474 TMIP.v:475 TMIP.v:478 TMIP.v:479 TMIP.v:484 TMIP.v:485 TMIP.v:486 ) |
+| O2    | PO   | Signed   | 8     | addsub(T1133,T1136,I6) ( TMIP.v:411 TMIP.v:412 TMIP.v:413 TMIP.v:421 TMIP.v:422 TMIP.v:423 TMIP.v:424 TMIP.v:430 TMIP.v:431 TMIP.v:432 TMIP.v:433 TMIP.v:443 TMIP.v:447 TMIP.v:448 TMIP.v:455 TMIP.v:456 TMIP.v:457 TMIP.v:461 TMIP.v:462 TMIP.v:469 TMIP.v:470 TMIP.v:471 TMIP.v:474 TMIP.v:475 TMIP.v:478 TMIP.v:479 TMIP.v:485 TMIP.v:486 TMIP.v:497 ) |
+==============================================================================
+
+
+Resource Report for Ungrouped Hierarchy div_55
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| lt_x_13            | DW_cmp           | apparch (area)     |                |
+| sub_x_28           | DW01_dec         | apparch (area)     |                |
+| lt_x_32            | DW_cmp           | apparch (area)     |                |
+| add_x_35           | DW01_inc         | apparch (area)     |                |
+| add_x_37           | DW01_inc         | apparch (area)     |                |
+| add_x_40           | DW01_inc         | apparch (area)     |                |
+| add_x_43           | DW01_inc         | apparch (area)     |                |
+| add_x_46           | DW01_inc         | apparch (area)     |                |
+| add_x_50           | DW01_add         | apparch (area)     |                |
+| div_55             | DW_div_uns       | cla                |                |
+| add_x_56           | DW01_add         | apparch (area)     |                |
+| gt_x_61            | DW_cmp           | apparch (area)     |                |
+| gte_x_84           | DW_cmp           | apparch (area)     |                |
+| lte_x_85           | DW_cmp           | apparch (area)     |                |
+| gt_x_189           | DW_cmp           | apparch (area)     |                |
+| gt_x_191           | DW_cmp           | apparch (area)     |                |
+| gte_x_193          | DW_cmp           | apparch (area)     |                |
+| gte_x_194          | DW_cmp           | apparch (area)     |                |
+| gte_x_195          | DW_cmp           | apparch (area)     |                |
+| gte_x_196          | DW_cmp           | apparch (area)     |                |
+| gte_x_197          | DW_cmp           | apparch (area)     |                |
+| gte_x_198          | DW_cmp           | apparch (area)     |                |
+| gte_x_199          | DW_cmp           | apparch (area)     |                |
+| gte_x_200          | DW_cmp           | apparch (area)     |                |
+| mult_x_231         | DW_mult_uns      | pparch (area,speed)                 |
+|                    |                  | mult_arch: and     |                |
+| gte_x_232          | DW_cmp           | apparch (area)     |                |
+| lte_x_233          | DW_cmp           | apparch (area)     |                |
+| add_x_238          | DW01_inc         | apparch (area)     |                |
+| add_x_242          | DW01_inc         | apparch (area)     |                |
+| add_x_246          | DW01_inc         | apparch (area)     |                |
+| sub_x_250          | DW01_sub         | apparch (area)     |                |
+| gte_x_257          | DW_cmp           | apparch (area)     |                |
+| lte_x_259          | DW_cmp           | apparch (area)     |                |
+| lte_x_261          | DW_cmp           | apparch (area)     |                |
+| gte_x_262          | DW_cmp           | apparch (area)     |                |
+| lte_x_263          | DW_cmp           | apparch (area)     |                |
+| gte_x_264          | DW_cmp           | apparch (area)     |                |
+| lte_x_270          | DW_cmp           | apparch (area)     |                |
+| gte_x_271          | DW_cmp           | apparch (area)     |                |
+| lte_x_272          | DW_cmp           | apparch (area)     |                |
+| gte_x_273          | DW_cmp           | apparch (area)     |                |
+| gte_x_283          | DW_cmp           | apparch (area)     |                |
+| lte_x_296          | DW_cmp           | apparch (area)     |                |
+| gte_x_297          | DW_cmp           | apparch (area)     |                |
+| lte_x_298          | DW_cmp           | apparch (area)     |                |
+| gte_x_299          | DW_cmp           | apparch (area)     |                |
+| lte_x_307          | DW_cmp           | apparch (area)     |                |
+| gte_x_318          | DW_cmp           | apparch (area)     |                |
+| lte_x_322          | DW_cmp           | apparch (area)     |                |
+| lte_x_324          | DW_cmp           | apparch (area)     |                |
+| gte_x_325          | DW_cmp           | apparch (area)     |                |
+| lte_x_326          | DW_cmp           | apparch (area)     |                |
+| gte_x_327          | DW_cmp           | apparch (area)     |                |
+| gte_x_333          | DW_cmp           | apparch (area)     |                |
+| lte_x_335          | DW_cmp           | apparch (area)     |                |
+| lte_x_337          | DW_cmp           | apparch (area)     |                |
+| gte_x_338          | DW_cmp           | apparch (area)     |                |
+| lte_x_339          | DW_cmp           | apparch (area)     |                |
+| gte_x_340          | DW_cmp           | apparch (area)     |                |
+| gt_x_342           | DW_cmp           | apparch (area)     |                |
+| gte_x_343          | DW_cmp           | apparch (area)     |                |
+| gte_x_344          | DW_cmp           | apparch (area)     |                |
+| gt_x_345           | DW_cmp           | apparch (area)     |                |
+| gt_x_346           | DW_cmp           | apparch (area)     |                |
+| gte_x_347          | DW_cmp           | apparch (area)     |                |
+| gt_x_348           | DW_cmp           | apparch (area)     |                |
+| gte_x_349          | DW_cmp           | apparch (area)     |                |
+| gte_x_350          | DW_cmp           | apparch (area)     |                |
+| gte_x_351          | DW_cmp           | apparch (area)     |                |
+| gte_x_352          | DW_cmp           | apparch (area)     |                |
+| gte_x_353          | DW_cmp           | apparch (area)     |                |
+| lte_x_354          | DW_cmp           | apparch (area)     |                |
+| gte_x_355          | DW_cmp           | apparch (area)     |                |
+| lte_x_356          | DW_cmp           | apparch (area)     |                |
+| gte_x_357          | DW_cmp           | apparch (area)     |                |
+| gte_x_359          | DW_cmp           | apparch (area)     |                |
+| lte_x_360          | DW_cmp           | apparch (area)     |                |
+| gte_x_361          | DW_cmp           | apparch (area)     |                |
+| gte_x_363          | DW_cmp           | apparch (area)     |                |
+| lte_x_364          | DW_cmp           | apparch (area)     |                |
+| gte_x_365          | DW_cmp           | apparch (area)     |                |
+| lte_x_366          | DW_cmp           | apparch (area)     |                |
+| add_x_213          | DW01_inc         | apparch (area)     |                |
+| add_x_215          | DW01_inc         | apparch (area)     |                |
+| add_x_214          | DW01_inc         | apparch (area)     |                |
+| add_x_234          | DW01_add         | apparch (area)     |                |
+| add_x_77           | DW01_inc         | apparch (area)     |                |
+| DP_OP_1297J1_122_1483                 |                    |                |
+|                    | DP_OP_1297J1_122_1483 | str (area)    |                |
+|                    |                  | mult_arch: and     |                |
+| DP_OP_1304J1_138_3802                 |                    |                |
+|                    | DP_OP_1304J1_138_3802 | str (area)    |                |
+| DP_OP_1185J1_130_2342                 |                    |                |
+|                    | DP_OP_1185J1_130_2342 | str (area)    |                |
+| DP_OP_1138J1_123_461                  |                    |                |
+|                    | DP_OP_1138J1_123_461 | str (area)     |                |
+===============================================================================
+
+1

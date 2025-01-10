@@ -1,0 +1,21 @@
+ 
+****************************************
+Report : clocks
+Design : CONV_TOP
+Version: T-2022.03
+Date   : Fri Jan 10 14:15:33 2025
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+clk1            47.10   {0 23.55}           d f       {clk1}
+clk2            10.10   {0 5.05}            d f       {clk2}
+--------------------------------------------------------------------------------
+1

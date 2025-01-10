@@ -1,0 +1,65 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Fri Jan 10 14:13:33 2025
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     16
+    Unconnected ports (LINT-28)                                    16
+
+Cells                                                              10
+    Cells with unconnected inputs (LINT-0)                          8
+    Cells do not drive (LINT-1)                                     2
+
+Nets                                                                7
+    Unloaded nets (LINT-2)                                          7
+
+Tristate                                                            8
+    Single tristate driver drives an input pin (LINT-63)            8
+--------------------------------------------------------------------------------
+
+Warning: In design 'FIFO_syn_WIDTH8_WORDS64', input pin 'DIB0' of leaf cell 'u_dual_sram' is not connected to any net.  Logic 0 assumed. (LINT-0)
+Warning: In design 'FIFO_syn_WIDTH8_WORDS64', input pin 'DIB1' of leaf cell 'u_dual_sram' is not connected to any net.  Logic 0 assumed. (LINT-0)
+Warning: In design 'FIFO_syn_WIDTH8_WORDS64', input pin 'DIB2' of leaf cell 'u_dual_sram' is not connected to any net.  Logic 0 assumed. (LINT-0)
+Warning: In design 'FIFO_syn_WIDTH8_WORDS64', input pin 'DIB3' of leaf cell 'u_dual_sram' is not connected to any net.  Logic 0 assumed. (LINT-0)
+Warning: In design 'FIFO_syn_WIDTH8_WORDS64', input pin 'DIB4' of leaf cell 'u_dual_sram' is not connected to any net.  Logic 0 assumed. (LINT-0)
+Warning: In design 'FIFO_syn_WIDTH8_WORDS64', input pin 'DIB5' of leaf cell 'u_dual_sram' is not connected to any net.  Logic 0 assumed. (LINT-0)
+Warning: In design 'FIFO_syn_WIDTH8_WORDS64', input pin 'DIB6' of leaf cell 'u_dual_sram' is not connected to any net.  Logic 0 assumed. (LINT-0)
+Warning: In design 'FIFO_syn_WIDTH8_WORDS64', input pin 'DIB7' of leaf cell 'u_dual_sram' is not connected to any net.  Logic 0 assumed. (LINT-0)
+Warning: In design 'FIFO_syn_WIDTH8_WORDS64', cell 'B_1' does not drive any nets. (LINT-1)
+Warning: In design 'FIFO_syn_WIDTH8_WORDS64', cell 'B_3' does not drive any nets. (LINT-1)
+Warning: In design 'CONV_TOP', net 'u_input_output/net368' driven by pin 'u_input_output/C675/Z' has no loads. (LINT-2)
+Warning: In design 'CONV_TOP', net 'u_input_output/net367' driven by pin 'u_input_output/C669/Z' has no loads. (LINT-2)
+Warning: In design 'CONV_TOP', net 'u_Conv/net393' driven by pin 'u_Conv/C1221/Z' has no loads. (LINT-2)
+Warning: In design 'CONV_TOP', net 'u_Conv/net392' driven by pin 'u_Conv/C1209/Z' has no loads. (LINT-2)
+Warning: In design 'CONV_TOP', net 'u_Conv/net391' driven by pin 'u_Conv/C1197/Z' has no loads. (LINT-2)
+Warning: In design 'CONV_TOP', net 'u_Conv/net390' driven by pin 'u_Conv/C1188/Z' has no loads. (LINT-2)
+Warning: In design 'CONV_TOP', net 'u_Conv/net389' driven by pin 'u_Conv/C1176/Z' has no loads. (LINT-2)
+Warning: In design 'CLK_1_MODULE', port 'flag_handshake_to_clk1' is not connected to any nets. (LINT-28)
+Warning: In design 'CLK_1_MODULE', port 'flag_clk1_to_handshake' is not connected to any nets. (LINT-28)
+Warning: In design 'CLK_1_MODULE', port 'flag_clk1_to_fifo' is not connected to any nets. (LINT-28)
+Warning: In design 'CLK_1_MODULE', port 'flag_fifo_to_clk1' is not connected to any nets. (LINT-28)
+Warning: In design 'Handshake_syn_WIDTH30', port 'flag_handshake_to_clk1' is not connected to any nets. (LINT-28)
+Warning: In design 'Handshake_syn_WIDTH30', port 'flag_clk1_to_handshake' is not connected to any nets. (LINT-28)
+Warning: In design 'Handshake_syn_WIDTH30', port 'flag_handshake_to_clk2' is not connected to any nets. (LINT-28)
+Warning: In design 'Handshake_syn_WIDTH30', port 'flag_clk2_to_handshake' is not connected to any nets. (LINT-28)
+Warning: In design 'CLK_2_MODULE', port 'flag_handshake_to_clk2' is not connected to any nets. (LINT-28)
+Warning: In design 'CLK_2_MODULE', port 'flag_clk2_to_handshake' is not connected to any nets. (LINT-28)
+Warning: In design 'CLK_2_MODULE', port 'flag_fifo_to_clk2' is not connected to any nets. (LINT-28)
+Warning: In design 'CLK_2_MODULE', port 'flag_clk2_to_fifo' is not connected to any nets. (LINT-28)
+Warning: In design 'FIFO_syn_WIDTH8_WORDS64', port 'flag_fifo_to_clk2' is not connected to any nets. (LINT-28)
+Warning: In design 'FIFO_syn_WIDTH8_WORDS64', port 'flag_clk2_to_fifo' is not connected to any nets. (LINT-28)
+Warning: In design 'FIFO_syn_WIDTH8_WORDS64', port 'flag_fifo_to_clk1' is not connected to any nets. (LINT-28)
+Warning: In design 'FIFO_syn_WIDTH8_WORDS64', port 'flag_clk1_to_fifo' is not connected to any nets. (LINT-28)
+Warning: Net 'u_FIFO_syn/ram_out[0]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_FIFO_syn/ram_out[1]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_FIFO_syn/ram_out[2]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_FIFO_syn/ram_out[3]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_FIFO_syn/ram_out[4]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_FIFO_syn/ram_out[5]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_FIFO_syn/ram_out[6]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_FIFO_syn/ram_out[7]' has a single tri-state driver.  (LINT-63)
+1

@@ -1,0 +1,176 @@
+Information: The max_cores limit for the local (current) process has been modified by 4 to 8. (CMCR-103)
+# specify parameters
+set DESIGN "CONV_TOP"
+CONV_TOP
+#Step 1 Read in the design data, which includes a gate-level netlist and associated logic libraries.
+set search_path         " ./ 			../02_SYN/Netlist                                 ../04_MEM/                                                    ~iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/                            ~iclabTA01/UMC018_CBDK/CIC/Sdb/                                  /usr/cad/synopsys/synthesis/cur/libraries/syn/                         /usr/cad/synopsys/synthesis/cur/dw "
+ ./    ../02_SYN/Netlist                                 ../04_MEM/                                                    ~iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/                            ~iclabTA01/UMC018_CBDK/CIC/Sdb/                                  /usr/cad/synopsys/synthesis/cur/libraries/syn/                         /usr/cad/synopsys/synthesis/cur/dw 
+set target_library      " fsa0m_a_generic_core_ss1p62v125c.db DUAL_64X8X1BM1_WC.db "
+ fsa0m_a_generic_core_ss1p62v125c.db DUAL_64X8X1BM1_WC.db 
+set link_library        " * $target_library dw_foundation.sldb standard.sldb DUAL_64X8X1BM1_WC.db "
+ *  fsa0m_a_generic_core_ss1p62v125c.db DUAL_64X8X1BM1_WC.db  dw_foundation.sldb standard.sldb DUAL_64X8X1BM1_WC.db 
+read_verilog Netlist/$DESIGN\_SYN.v
+1
+current_design $DESIGN
+Information: current_design won't return any data before link (DES-071)
+link_design -keep_sub_designs $DESIGN
+Loading verilog file '/RAID2/COURSE/iclab/iclab055/Lab07/Exercise/02_SYN/Netlist/CONV_TOP_SYN.v'
+Loading db file '/RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ss1p62v125c.db'
+Loading db file '/RAID2/COURSE/iclab/iclab055/Lab07/Exercise/04_MEM/DUAL_64X8X1BM1_WC.db'
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/standard.sldb'
+Warning: -keep_sub_design option of link_design will be made obsolete and removed from future releases of PrimeTime starting with the 2017.12 release. (PT-007)
+Linking design CONV_TOP...
+Information: 343 (89.79%) library cells are unused in library fsa0m_a_generic_core_ss1p62v125c..... (LNK-045)
+Information: 1004 (100.00%) library cells are unused in library dw_foundation.sldb..... (LNK-045)
+Information: 178 (100.00%) library cells are unused in library standard.sldb..... (LNK-045)
+Information: total 1525 library cells are unused (LNK-046)
+Design 'CONV_TOP' was successfully linked.
+Information: There are 1606 leaf cells, ports, hiers and 1664 nets in the design (LNK-047)
+1
+#create_clock -period $CLK_period CLK
+read_sdc Netlist/$DESIGN\_SYN.sdc
+
+Reading SDC version 2.1...
+Warning: Setting input delay on clock port (clk1) relative to a clock (clk1) defined at the same port. Command is ignored. (UITE-489)
+Warning: Setting input delay on clock port (clk2) relative to a clock (clk2) defined at the same port. Command is ignored. (UITE-489)
+1
+1
+#Step 6 Specify case and mode analysis settings.
+#Step 7 Back-annotate delay and parasitics.
+read_sdf Netlist/$DESIGN\_SYN.sdf
+
+****************************************
+Report : read_sdf /RAID2/COURSE/iclab/iclab055/Lab07/Exercise/02_SYN/Netlist/CONV_TOP_SYN.sdf
+	-load_delay cell
+	-analysis_type on_chip_variation
+	-min_type sdf_min
+	-max_type sdf_max
+Design : CONV_TOP
+Version: P-2019.03-SP5-1
+Date   : Fri Jan 10 14:15:47 2025
+****************************************
+
+        0 error(s)
+        Number of annotated cell delay arcs :     20657
+        Number of annotated net delay arcs  :      4563
+        Number of annotated timing checks   :      2330
+        Number of annotated constraints     :      1127
+        TEMPERATURE: 125.00 (min)  125.00 (max)
+        VOLTAGE    : 1.62 (min)  1.62 (max)
+        PROCESS    : WCCOM (min)  WCCOM (max)
+1
+# set_annotated_check 
+# modify here 
+# set all_dffs [get_cells -hierarchical -filter "ref_name =~ *DFF*"]
+foreach_in_collection x [get_cell */A1_reg] {
+  set_annotated_check -0 -setup -from [get_object_name $x]/CK -to [get_object_name $x]/D -clock rise
+  set_annotated_check -0 -hold  -from [get_object_name $x]/CK -to [get_object_name $x]/D -clock rise
+}
+write_sdf Netlist/$DESIGN\_SYN_pt.sdf
+Warning: Zero transition time will be used at to pins of annotated arcs. Delays on not annotated delay arcs will be estimated using best available slew.  (PTE-066)
+Information: Using automatic min wire load selection group 'DEFAULT'. (ENV-003)
+Information: Using automatic max wire load selection group 'DEFAULT'. (ENV-003)
+Information: Using automatic min wire load selection group 'DEFAULT'. (ENV-003)
+Information: Building multi voltage information for entire design. (MV-022)
+Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
+Information: Zero transition time used at to pin of annotated arcs. Delays on not annotated delay arcs will be estimated using best available slew.  (PTE-054)
+Information: Zero transition time used at to pin of annotated arcs. Delays on not annotated delay arcs will be estimated using best available slew.  (PTE-054)
+1
+#Step 8 (Optional) Apply variation.
+#Step 9 Specify power information
+#Step 10 (Optional) Specify options and data for signal integrity analysis.
+#Step 11 (Optional) Apply options for specific design techniques.
+#Step 12 Check the design data and analysis setup.
+check_timing
+Information: Checking 'no_input_delay'.
+Information: Checking 'no_driving_cell'.
+Information: Checking 'unconstrained_endpoints'.
+Information: Checking 'unexpandable_clocks'.
+Information: Checking 'latch_fanout'.
+Information: Checking 'no_clock'.
+Information: Checking 'partial_input_delay'.
+Information: Checking 'generic'.
+Information: Checking 'loops'.
+Information: Checking 'generated_clocks'.
+Information: Checking 'pulse_clock_non_pulse_clock_merge'.
+Information: Checking 'pll_configuration'.
+check_timing succeeded.
+1
+#Step 13 Perform a full timing analysis and examine the results.
+report_timing > Report/$DESIGN\_pt.timing
+report_timing
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+	-sort_by slack
+Design : CONV_TOP
+Version: P-2019.03-SP5-1
+Date   : Fri Jan 10 14:15:47 2025
+****************************************
+
+
+  Startpoint: u_Conv_ifmap_y_reg_0_
+               (rising edge-triggered flip-flop clocked by clk2)
+  Endpoint: u_FIFO_syn_u_dual_sram
+               (rising edge-triggered flip-flop clocked by clk2)
+  Path Group: clk2
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk2 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_Conv_ifmap_y_reg_0_/CK (QDFFRBS)                      0.00       0.00 r
+  u_Conv_ifmap_y_reg_0_/Q (QDFFRBS)                       0.95 *     0.95 r
+  U1138/O (INV1S)                                         0.65 *     1.60 f
+  U1234/O (NR2)                                           0.55 *     2.15 r
+  U1235/O (AOI22S)                                        0.27 *     2.42 f
+  U1236/O (NR2)                                           0.56 *     2.98 r
+  U1250/O (INV1S)                                         0.35 *     3.33 f
+  U1253/O (NR2P)                                          0.79 *     4.12 r
+  U1297/O (AOI22S)                                        0.25 *     4.37 f
+  U1300/O (AOI13HS)                                       0.24 *     4.61 r
+  U1309/O (NR3)                                           0.25 *     4.86 f
+  U1079/O (ND3S)                                          0.34 *     5.19 r
+  U1099/O (AN2S)                                          0.27 *     5.46 r
+  U1097/S (HA1S)                                          0.47 *     5.93 f
+  U1350/CO (FA1S)                                         0.55 *     6.48 f
+  U1349/CO (FA1S)                                         0.56 *     7.05 f
+  U1352/CO (FA1S)                                         0.53 *     7.57 f
+  U1354/CO (FA1S)                                         0.53 *     8.10 f
+  U1355/CO (FA1S)                                         0.53 *     8.62 f
+  U1123/C (HA1S)                                          0.29 *     8.92 f
+  U1122/O (MAOI1S)                                        0.49 *     9.41 r
+  u_FIFO_syn_u_dual_sram/DIA7 (DUAL_64X8X1BM1)            0.00 *     9.41 r
+  data arrival time                                                  9.41
+
+  clock clk2 (rise edge)                                 10.10      10.10
+  clock network delay (ideal)                             0.00      10.10
+  clock reconvergence pessimism                           0.00      10.10
+  clock uncertainty                                      -0.10      10.00
+  u_FIFO_syn_u_dual_sram/CKA (DUAL_64X8X1BM1)                       10.00 r
+  library setup time                                     -0.58 *     9.42
+  data required time                                                 9.42
+  ------------------------------------------------------------------------------
+  data required time                                                 9.42
+  data arrival time                                                 -9.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
+#Step 14 (Optional) Perform ECO to fix timing violations and recover power.
+#Step 15 Save the PrimeTime session.
+#save_session
+exit
+Information: Defining new variable 'x'. (CMD-041)
+Information: Defining new variable 'DESIGN'. (CMD-041)
+Maximum memory usage for this session: 1106.35 MB
+CPU usage for this session: 3 seconds 
+Elapsed time for this session: 4 seconds
+Diagnostics summary: 5 warnings, 15 informationals
+
+Thank you for using pt_shell!

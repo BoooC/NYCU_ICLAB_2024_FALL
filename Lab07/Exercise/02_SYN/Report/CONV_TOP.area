@@ -1,0 +1,74 @@
+ 
+****************************************
+Report : area
+Design : CONV_TOP
+Version: T-2022.03
+Date   : Fri Jan 10 14:15:33 2025
+****************************************
+
+Library(s) Used:
+
+    fsa0m_a_generic_core_ss1p62v125c (File: /RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ss1p62v125c.db)
+    DUAL_64X8X1BM1_WC (File: /RAID2/COURSE/iclab/iclab055/Lab07/Exercise/04_MEM/DUAL_64X8X1BM1_WC.db)
+
+Number of ports:                          107
+Number of nets:                          1664
+Number of cells:                         1562
+Number of combinational cells:           1044
+Number of sequential cells:               501
+Number of macros/black boxes:               1
+Number of buf/inv:                        115
+Number of references:                      41
+
+Combinational area:              17320.766569
+Buf/Inv area:                      749.951992
+Noncombinational area:           27413.870872
+Macro/Black Box area:            54498.683594
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 99233.321035
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area              Local cell area
+                                  -------------------  ---------------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black-
+                                  Total       Total    national    national    boxes       Design
+--------------------------------  ----------  -------  ----------  ----------  ----------  ---------
+CONV_TOP                          99233.3210    100.0  17320.7666  25513.9925  54498.6836  CONV_TOP
+u_FIFO_syn/M0/genblk1[0].u_NDFF_syn
+                                    118.7424      0.1      0.0000    118.7424      0.0000  NDFF_syn
+u_FIFO_syn/M0/genblk1[1].u_NDFF_syn
+                                    118.7424      0.1      0.0000    118.7424      0.0000  NDFF_syn
+u_FIFO_syn/M0/genblk1[2].u_NDFF_syn
+                                    118.7424      0.1      0.0000    118.7424      0.0000  NDFF_syn
+u_FIFO_syn/M0/genblk1[3].u_NDFF_syn
+                                    118.7424      0.1      0.0000    118.7424      0.0000  NDFF_syn
+u_FIFO_syn/M0/genblk1[4].u_NDFF_syn
+                                    118.7424      0.1      0.0000    118.7424      0.0000  NDFF_syn
+u_FIFO_syn/M0/genblk1[5].u_NDFF_syn
+                                    118.7424      0.1      0.0000    118.7424      0.0000  NDFF_syn
+u_FIFO_syn/M0/genblk1[6].u_NDFF_syn
+                                    118.7424      0.1      0.0000    118.7424      0.0000  NDFF_syn
+u_FIFO_syn/M1/genblk1[0].u_NDFF_syn
+                                    118.7424      0.1      0.0000    118.7424      0.0000  NDFF_syn
+u_FIFO_syn/M1/genblk1[1].u_NDFF_syn
+                                    118.7424      0.1      0.0000    118.7424      0.0000  NDFF_syn
+u_FIFO_syn/M1/genblk1[2].u_NDFF_syn
+                                    118.7424      0.1      0.0000    118.7424      0.0000  NDFF_syn
+u_FIFO_syn/M1/genblk1[3].u_NDFF_syn
+                                    118.7424      0.1      0.0000    118.7424      0.0000  NDFF_syn
+u_FIFO_syn/M1/genblk1[4].u_NDFF_syn
+                                    118.7424      0.1      0.0000    118.7424      0.0000  NDFF_syn
+u_FIFO_syn/M1/genblk1[5].u_NDFF_syn
+                                    118.7424      0.1      0.0000    118.7424      0.0000  NDFF_syn
+u_FIFO_syn/M1/genblk1[6].u_NDFF_syn
+                                    118.7424      0.1      0.0000    118.7424      0.0000  NDFF_syn
+u_Handshake_syn/U_NDFF_ack          118.7424      0.1      0.0000    118.7424      0.0000  NDFF_syn
+u_Handshake_syn/U_NDFF_req          118.7424      0.1      0.0000    118.7424      0.0000  NDFF_syn
+--------------------------------  ----------  -------  ----------  ----------  ----------  ---------
+Total                                                  17320.7666  27413.8709  54498.6836
+
+1

@@ -1,0 +1,2159 @@
+Command: vcs -timescale=1ns/1fs -j4 -sverilog +v2k -full64 -Mupdate -R -debug_access+all \
+-f filelist.f -o simv -l vcs.log -P /usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/linux64/novas.tab \
+/usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/linux64/pli.a -v /RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/Verilog/fsa0m_a_generic_core_30.lib.src \
++define+FUNC +define+GATE +define+PERF +neg_tchk +nowarnNTCDSN
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+         Version T-2022.06_Full64 -- Wed Jan  1 04:01:42 2025
+
+                    Copyright (c) 1991 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'TESTBED.v'
+Parsing included file 'PATTERN.vp'.
+Parsing included file '../00_TESTBED/pseudo_DRAM.v'.
+
+Warning-[TMR] Text macro redefined
+../00_TESTBED/pseudo_DRAM.v, 10
+  Text macro (LAT_MAX) is redefined. The last definition will override 
+  previous ones.
+  Location of previous definition: ../00_TESTBED/pseudo_DRAM.v, 6.
+  Previous value: 10
+
+
+Warning-[TMR] Text macro redefined
+../00_TESTBED/pseudo_DRAM.v, 11
+  Text macro (LAT_MIN) is redefined. The last definition will override 
+  previous ones.
+  Location of previous definition: ../00_TESTBED/pseudo_DRAM.v, 7.
+  Previous value: 1
+
+Back to file 'PATTERN.vp'.
+Back to file 'TESTBED.v'.
+Parsing included file 'ISP_SYN.v'.
+Back to file 'TESTBED.v'.
+Parsing library file '/RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/Verilog/fsa0m_a_generic_core_30.lib.src'
+Top Level Modules:
+       TESTBED
+TimeScale is 10 ps / 1 ps
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1657
+ISP, "DFFSBN img_size_reg_reg_0__3_( .D (n1778),  .CK (clk),  .SB (rst_n),  .QB (n6037));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1659
+ISP, "DFFSBN img_size_reg_reg_15__3_( .D (n17930),  .CK (clk),  .SB (rst_n),  .QB (n6067));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1660
+ISP, "DFFSBN img_size_reg_reg_14__3_( .D (n17920),  .CK (clk),  .SB (n2155),  .QB (n6066));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1661
+ISP, "DFFSBN img_size_reg_reg_13__3_( .D (n17910),  .CK (clk),  .SB (rst_n),  .QB (n6073));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1662
+ISP, "DFFSBN img_size_reg_reg_12__3_( .D (n17900),  .CK (clk),  .SB (n2153),  .QB (n6039));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1663
+ISP, "DFFSBN img_size_reg_reg_11__3_( .D (n17890),  .CK (clk),  .SB (rst_n),  .QB (n6042));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1665
+ISP, "DFFSBN img_size_reg_reg_9__3_( .D (n17870),  .CK (clk),  .SB (n2159),  .QB (n6065));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1667
+ISP, "DFFSBN img_size_reg_reg_8__3_( .D (n1786),  .CK (clk),  .SB (n2160),  .QB (n6040));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1669
+ISP, "DFFSBN img_size_reg_reg_7__3_( .D (n17850),  .CK (clk),  .SB (n2159),  .QB (n6071));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1671
+ISP, "DFFSBN img_size_reg_reg_6__3_( .D (n17840),  .CK (clk),  .SB (n2152),  .QB (n6038));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1673
+ISP, "DFFSBN img_size_reg_reg_5__3_( .D (n17830),  .CK (clk),  .SB (rst_n),  .QB (n6069));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1675
+ISP, "DFFSBN img_size_reg_reg_4__3_( .D (n17820),  .CK (clk),  .SB (n2157),  .QB (n6035));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1677
+ISP, "DFFSBN img_size_reg_reg_3__3_( .D (n17810),  .CK (clk),  .SB (rst_n),  .QB (n6068));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1681
+ISP, "DFFSBN img_size_reg_reg_1__3_( .D (n17790),  .CK (clk),  .SB (n2160),  .QB (n6070));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1936
+ISP, "JKFRBN divided_by_9_inst_idx_reg_2_( .J (n6014),  .K (n6230),  .CK (clk),  .RB (n2152),  .QB (n6229));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1938
+ISP, "DFFN exposure_acc_reg_9_( .D (N1928),  .CK (clk),  .Q (exposure_acc[9]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1939
+ISP, "DFFN center_buffer_reg_11__5_( .D (n1523),  .CK (clk),  .QB (n6226));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1940
+ISP, "DFFN center_buffer_reg_7__1_( .D (n1495),  .CK (clk),  .QB (n6145));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1941
+ISP, "DFFN focus_add_stage_4_reg_reg_5_( .D (N1361),  .CK (clk),  .Q (focus_add_stage_4_reg[5]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1943
+ISP, "DFFN center_buffer_reg_8__5_( .D (n1499),  .CK (clk),  .QB (n6206));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1944
+ISP, "DFFN center_buffer_reg_6__6_( .D (n1482),  .CK (clk),  .QB (n6217));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1951
+ISP, "DFFN center_buffer_reg_10__6_( .D (n1514),  .CK (clk),  .QB (n6187));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1952
+ISP, "DFFN center_buffer_reg_8__3_( .D (n1501),  .CK (clk),  .QB (n6207));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1953
+ISP, "DFFN center_buffer_reg_7__7_( .D (n1489),  .CK (clk),  .QB (n6140));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1954
+ISP, "DFFN center_buffer_reg_6__3_( .D (n1485),  .CK (clk),  .QB (n6218));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1955
+ISP, "DFFN center_buffer_reg_10__3_( .D (n1517),  .CK (clk),  .QB (n6190));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1956
+ISP, "DFFN center_buffer_reg_7__3_( .D (n1493),  .CK (clk),  .QB (n6143));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1996
+ISP, "DFFS wdata_s_inf_reg_19_( .D (n3436),  .CK (clk),  .Q (wdata_s_inf[19]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 1997
+ISP, "DFFS focus_add_stage_1_reg_reg_4__5_( .D (N1284),  .CK (clk),  .Q (focus_add_stage_1_reg[13]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2005
+ISP, "DFFP exp_add_stage_4_reg_reg_6_( .D (N1893),  .CK (clk),  .Q (exp_add_stage_4_reg[6]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2019
+ISP, "DFFRBP divided_by_9_inst_acc_reg_10_( .D (n1254),  .CK (clk),  .RB (n2159),  .Q (divided_by_9_inst_acc[10]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2496
+ISP, "DFFS center_buffer_reg_8__7_( .D (n1497),  .CK (clk),  .QB (n6205));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2497
+ISP, "DFFS wdata_s_inf_reg_11_( .D (n3432),  .CK (clk),  .Q (wdata_s_inf[11]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2500
+ISP, "DFFS focus_add_stage_1_reg_reg_1__4_( .D (N1307),  .CK (clk),  .Q (focus_add_stage_1_reg[36]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2502
+ISP, "DFFS focus_add_stage_1_reg_reg_1__2_( .D (N1305),  .CK (clk),  .Q (focus_add_stage_1_reg[34]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2504
+ISP, "DFFS focus_add_stage_1_reg_reg_1__1_( .D (N1304),  .CK (clk),  .Q (focus_add_stage_1_reg[33]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2508
+ISP, "DFFS adj_gray_data_reg_reg_6__4_( .D (n1854),  .CK (clk),  .Q (adj_gray_data_reg[67]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2518
+ISP, "DFFS center_buffer_reg_15__5_( .D (n1555),  .CK (clk),  .QB (n6154));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2519
+ISP, "DFFS center_buffer_reg_25__4_( .D (n1636),  .CK (clk),  .QB (n6091));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2520
+ISP, "DFFS center_buffer_reg_22__4_( .D (n1612),  .CK (clk),  .QB (n6092));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2521
+ISP, "DFFS center_buffer_reg_19__5_( .D (n1587),  .CK (clk),  .QB (n6088));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2522
+ISP, "DFFS center_buffer_reg_19__4_( .D (n1588),  .CK (clk),  .QB (n6093));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2523
+ISP, "DFFS center_buffer_reg_16__5_( .D (n1563),  .CK (clk),  .QB (n6089));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2524
+ISP, "DFFS center_buffer_reg_4__5_( .D (n1467),  .CK (clk),  .QB (n6189));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2529
+ISP, "DFFS center_buffer_reg_14__1_( .D (n1551),  .CK (clk),  .QB (n6136));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2530
+ISP, "DFFS center_buffer_reg_24__4_( .D (n1628),  .CK (clk),  .QB (n6156));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2531
+ISP, "DFFS center_buffer_reg_15__1_( .D (n1559),  .CK (clk),  .QB (n6167));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2532
+ISP, "DFFS center_buffer_reg_4__1_( .D (n1471),  .CK (clk),  .QB (n6196));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2533
+ISP, "DFFS exp_add_stage_2_reg_reg_2__7_( .D (N1843),  .CK (clk),  .Q (exp_add_stage_2_reg[25]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2535
+ISP, "DFFS exp_add_stage_2_reg_reg_0__7_( .D (N1825),  .CK (clk),  .Q (exp_add_stage_2_reg[7]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2539
+ISP, "DFFS center_buffer_reg_5__2_( .D (n1478),  .CK (clk),  .QB (n6223));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2540
+ISP, "DFFS center_buffer_reg_26__1_( .D (n1647),  .CK (clk),  .QB (n6132));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2541
+ISP, "DFFS adj_gray_data_reg_reg_6__3_( .D (n18520),  .CK (clk),  .Q (adj_gray_data_reg[66]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2543
+ISP, "DFFS adj_gray_data_reg_reg_6__2_( .D (adj_gray_data[44]),  .CK (clk),  .Q (adj_gray_data_reg[65]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2545
+ISP, "DFFS focus_add_stage_1_reg_reg_5__1_( .D (N1272),  .CK (clk),  .Q (focus_add_stage_1_reg[1]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2547
+ISP, "DFFS focus_add_stage_1_reg_reg_5__2_( .D (N1273),  .CK (clk),  .Q (focus_add_stage_1_reg[2]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2549
+ISP, "DFFS focus_add_stage_1_reg_reg_1__6_( .D (N1309),  .CK (clk),  .Q (focus_add_stage_1_reg[38]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2551
+ISP, "DFFS center_buffer_reg_28__6_( .D (n1658),  .CK (clk),  .QB (n6080));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2554
+ISP, "DFFS center_buffer_reg_25__6_( .D (n1634),  .CK (clk),  .QB (n6081));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2555
+ISP, "DFFS focus_add_stage_1_reg_reg_5__4_( .D (N1275),  .CK (clk),  .Q (focus_add_stage_1_reg[4]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2557
+ISP, "DFFS center_buffer_reg_5__1_( .D (n1479),  .CK (clk),  .QB (n6224));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2558
+ISP, "DFFS center_buffer_reg_25__1_( .D (n1639),  .CK (clk),  .QB (n6099));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2559
+ISP, "DFFS center_buffer_reg_21__1_( .D (n1607),  .CK (clk),  .QB (n6165));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2560
+ISP, "DFFS center_buffer_reg_17__7_( .D (n1569),  .CK (clk),  .QB (n6118));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2561
+ISP, "DFFS center_buffer_reg_13__5_( .D (n1539),  .CK (clk),  .QB (n6090));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2562
+ISP, "DFFS focus_add_stage_4_reg_reg_6_( .D (N1362),  .CK (clk),  .Q (focus_add_stage_4_reg[6]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2564
+ISP, "DFFS focus_add_stage_1_reg_reg_1__5_( .D (N1308),  .CK (clk),  .Q (focus_add_stage_1_reg[37]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2566
+ISP, "DFFS focus_add_stage_2_reg_reg_2__8_( .D (N1345),  .CK (clk),  .Q (focus_add_stage_2_reg[8]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2568
+ISP, "DFFS focus_add_stage_1_reg_reg_2__6_( .D (N1301),  .CK (clk),  .Q (focus_add_stage_1_reg[30]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2570
+ISP, "DFFS center_buffer_reg_24__6_( .D (n1626),  .CK (clk),  .QB (n6146));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2571
+ISP, "DFFS adj_gray_data_reg_reg_3__0_( .D (n2315),  .CK (clk),  .Q (adj_gray_data_reg[84]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2573
+ISP, "DFFS adj_gray_data_reg_reg_5__0_( .D (n2328),  .CK (clk),  .Q (adj_gray_data_reg[70]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2575
+ISP, "DFFS center_buffer_reg_18__6_( .D (n1578),  .CK (clk),  .QB (n6148));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2576
+ISP, "DFFS center_buffer_reg_12__6_( .D (n1530),  .CK (clk),  .QB (n6150));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2577
+ISP, "DFFS center_buffer_reg_23__4_( .D (n1620),  .CK (clk),  .QB (n6124));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2578
+ISP, "DFFS center_buffer_reg_21__6_( .D (n1602),  .CK (clk),  .QB (n6147));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2579
+ISP, "DFFS focus_add_stage_1_reg_reg_2__5_( .D (N1300),  .CK (clk),  .Q (focus_add_stage_1_reg[29]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2581
+ISP, "DFFS focus_add_stage_1_reg_reg_0__1_( .D (N1312),  .CK (clk),  .Q (focus_add_stage_1_reg[41]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2583
+ISP, "DFFS focus_add_stage_1_reg_reg_0__2_( .D (N1313),  .CK (clk),  .Q (focus_add_stage_1_reg[42]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2589
+ISP, "DFFS center_buffer_reg_0__7_( .D (n1433),  .CK (clk),  .QB (add_x_112_n8));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2596
+ISP, "DFFS focus_add_stage_1_reg_reg_0__5_( .D (N1316),  .CK (clk),  .Q (focus_add_stage_1_reg[45]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2598
+ISP, "DFFS focus_add_stage_1_reg_reg_0__4_( .D (N1315),  .CK (clk),  .Q (focus_add_stage_1_reg[44]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2600
+ISP, "DFFS focus_add_stage_1_reg_reg_0__6_( .D (N1317),  .CK (clk),  .Q (focus_add_stage_1_reg[46]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2602
+ISP, "DFFS focus_add_stage_1_reg_reg_0__3_( .D (N1314),  .CK (clk),  .Q (focus_add_stage_1_reg[43]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2604
+ISP, "DFFS adj_gray_data_reg_reg_4__3_( .D (n18530),  .CK (clk),  .Q (adj_gray_data_reg[80]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2606
+ISP, "DFFS adj_gray_data_reg_reg_8__3_( .D (n6062),  .CK (clk),  .Q (adj_gray_data_reg[52]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2610
+ISP, "DFFS wdata_s_inf_reg_114_( .D (n4538),  .CK (clk),  .Q (wdata_s_inf[114]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2613
+ISP, "DFFS focus_add_stage_1_reg_reg_5__5_( .D (N1276),  .CK (clk),  .Q (focus_add_stage_1_reg[5]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2615
+ISP, "DFFS adj_gray_data_reg_reg_3__2_( .D (adj_gray_data[53]),  .CK (clk),  .Q (adj_gray_data_reg[86]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2617
+ISP, "DFFS focus_add_stage_1_reg_reg_2__3_( .D (N1298),  .CK (clk),  .Q (focus_add_stage_1_reg[27]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2619
+ISP, "DFFS adj_gray_data_reg_reg_4__4_( .D (n18550),  .CK (clk),  .Q (adj_gray_data_reg[81]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2621
+ISP, "DFFS focus_add_stage_1_reg_reg_1__3_( .D (N1306),  .CK (clk),  .Q (focus_add_stage_1_reg[35]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2623
+ISP, "DFFS focus_add_stage_1_reg_reg_4__1_( .D (N1280),  .CK (clk),  .Q (focus_add_stage_1_reg[9]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2625
+ISP, "DFFS focus_add_stage_1_reg_reg_4__3_( .D (N1282),  .CK (clk),  .Q (focus_add_stage_1_reg[11]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2627
+ISP, "DFFS focus_add_stage_1_reg_reg_5__3_( .D (N1274),  .CK (clk),  .Q (focus_add_stage_1_reg[3]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2631
+ISP, "DFFS focus_add_stage_1_reg_reg_4__2_( .D (N1281),  .CK (clk),  .Q (focus_add_stage_1_reg[10]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2633
+ISP, "DFFS adj_gray_data_reg_reg_9__2_( .D (adj_gray_data[29]),  .CK (clk),  .Q (adj_gray_data_reg[44]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2635
+ISP, "DFFS adj_gray_data_reg_reg_6__1_( .D (adj_gray_data[43]),  .CK (clk),  .Q (adj_gray_data_reg[64]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2649
+ISP, "DFFS adj_gray_data_reg_reg_12__0_( .D (n2313),  .CK (clk),  .Q (adj_gray_data_reg[21]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2651
+ISP, "DFFS adj_gray_data_reg_reg_9__0_( .D (adj_gray_data[28]),  .CK (clk),  .Q (adj_gray_data_reg[42]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2653
+ISP, "DFFS adj_gray_data_reg_reg_5__1_( .D (n2327),  .CK (clk),  .Q (adj_gray_data_reg[71]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2655
+ISP, "DFFS adj_gray_data_reg_reg_4__1_( .D (n2325),  .CK (clk),  .Q (adj_gray_data_reg[78]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2657
+ISP, "DFFS focus_add_stage_1_reg_reg_0__7_( .D (N1318),  .CK (clk),  .Q (focus_add_stage_1_reg[47]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2659
+ISP, "DFFS center_buffer_reg_24__2_( .D (n1630),  .CK (clk),  .QB (n6159));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2660
+ISP, "DFFS adj_gray_data_reg_reg_8__2_( .D (adj_gray_data[35]),  .CK (clk),  .Q (adj_gray_data_reg[51]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2662
+ISP, "DFFS center_buffer_reg_25__5_( .D (n1635),  .CK (clk),  .QB (n6086));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2665
+ISP, "DFFS center_buffer_reg_25__7_( .D (n1633),  .CK (clk),  .QB (n6108));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2668
+ISP, "DFFS center_buffer_reg_20__7_( .D (n1593),  .CK (clk),  .QB (n6117));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2669
+ISP, "DFFS center_buffer_reg_20__2_( .D (n1598),  .CK (clk),  .QB (n6129));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2670
+ISP, "DFFS center_buffer_reg_19__7_( .D (n1585),  .CK (clk),  .QB (n6110));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2671
+ISP, "DFFS center_buffer_reg_17__6_( .D (n1570),  .CK (clk),  .QB (n6120));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2672
+ISP, "DFFS center_buffer_reg_16__6_( .D (n1562),  .CK (clk),  .QB (n6084));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2673
+ISP, "DFFS center_buffer_reg_16__2_( .D (n1566),  .CK (clk),  .QB (n6097));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2674
+ISP, "DFFS center_buffer_reg_13__6_( .D (n1538),  .CK (clk),  .QB (n6085));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2675
+ISP, "DFFS center_buffer_reg_13__2_( .D (n1542),  .CK (clk),  .QB (n6098));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2676
+ISP, "DFFS center_buffer_reg_12__2_( .D (n1534),  .CK (clk),  .QB (n6163));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2677
+ISP, "DFFS center_buffer_reg_10__2_( .D (n1518),  .CK (clk),  .QB (n6192));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2678
+ISP, "DFFS center_buffer_reg_9__2_( .D (n1510),  .CK (clk),  .QB (n6181));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2679
+ISP, "DFFS center_buffer_reg_7__6_( .D (n1490),  .CK (clk),  .QB (n6141));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2680
+ISP, "DFFS center_buffer_reg_23__2_( .D (n1622),  .CK (clk),  .QB (n6128));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2681
+ISP, "DFFS center_buffer_reg_22__7_( .D (n1609),  .CK (clk),  .QB (n6109));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2682
+ISP, "DFFS center_buffer_reg_21__7_( .D (n1601),  .CK (clk),  .QB (n6174));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2683
+ISP, "DFFS center_buffer_reg_14__3_( .D (n1549),  .CK (clk),  .QB (n6126));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2684
+ISP, "DFFS center_buffer_reg_12__3_( .D (n1533),  .CK (clk),  .QB (n6158));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2685
+ISP, "DFFS center_buffer_reg_10__7_( .D (n1513),  .CK (clk),  .QB (n6185));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2686
+ISP, "DFFS center_buffer_reg_9__3_( .D (n1509),  .CK (clk),  .QB (n6179));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2689
+ISP, "DFFS focus_add_stage_4_reg_reg_7_( .D (N1363),  .CK (clk),  .Q (focus_add_stage_4_reg[7]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2691
+ISP, "DFFS center_buffer_reg_4__6_( .D (n1466),  .CK (clk),  .QB (n6188));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2694
+ISP, "DFFS center_buffer_reg_5__3_( .D (n1477),  .CK (clk),  .QB (n6222));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2707
+ISP, "DFFS adj_gray_data_reg_reg_11__0_( .D (n2314),  .CK (clk),  .Q (adj_gray_data_reg[28]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2709
+ISP, "DFFS adj_gray_data_reg_reg_10__1_( .D (n2318),  .CK (clk),  .Q (adj_gray_data_reg[36]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2716
+ISP, "DFFS focus_add_stage_1_reg_reg_2__4_( .D (N1299),  .CK (clk),  .Q (focus_add_stage_1_reg[28]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2718
+ISP, "DFFS focus_add_stage_1_reg_reg_2__1_( .D (N1296),  .CK (clk),  .Q (focus_add_stage_1_reg[25]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2720
+ISP, "DFFS focus_add_stage_1_reg_reg_2__2_( .D (N1297),  .CK (clk),  .Q (focus_add_stage_1_reg[26]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2773
+ISP, "DFFP focus_sub_in_1_reg_reg_3__3_( .D (N1167),  .CK (clk),  .Q (n2123));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2777
+ISP, "DFFRBT divided_by_9_inst_acc_reg_0_( .D (n1264),  .CK (clk),  .RB (n2158),  .Q (n2104));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2783
+ISP, "DFFP center_buffer_reg_3__2_( .D (n1462),  .CK (clk),  .QB (n6182));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2784
+ISP, "DFFP center_buffer_reg_4__2_( .D (n1470),  .CK (clk),  .QB (n6193));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2785
+ISP, "DFFP center_buffer_reg_3__6_( .D (n1458),  .CK (clk),  .QB (n6176));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2786
+ISP, "DFFP center_buffer_reg_4__7_( .D (n1465),  .CK (clk),  .QB (n6186));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2787
+ISP, "DFFP center_buffer_reg_4__3_( .D (n1469),  .CK (clk),  .QB (n6191));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2788
+ISP, "DFFP center_buffer_reg_4__0_( .D (n1472),  .CK (clk),  .QB (n6194));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2818
+ISP, "DFFN adj_gray_data_reg_reg_4__0_( .D (adj_gray_data[49]),  .CK (clk),  .Q (adj_gray_data_reg[77]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2822
+ISP, "DFFN adj_gray_data_reg_reg_7__0_( .D (n2341),  .CK (clk),  .Q (adj_gray_data_reg[56]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2828
+ISP, "DFFN focus_add_stage_2_reg_reg_2__7_( .D (N1344),  .CK (clk),  .Q (focus_add_stage_2_reg[7]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2837
+ISP, "DFFN adj_gray_data_reg_reg_8__0_( .D (adj_gray_data[34]),  .CK (clk),  .Q (adj_gray_data_reg[49]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2839
+ISP, "DFFN adj_gray_data_reg_reg_10__0_( .D (n2114),  .CK (clk),  .Q (adj_gray_data_reg[35]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2853
+ISP, "DFFS adj_gray_data_reg_reg_7__1_( .D (n2324),  .CK (clk),  .Q (adj_gray_data_reg[57]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2861
+ISP, "DFFN center_buffer_reg_7__5_( .D (n1491),  .CK (clk),  .QB (n6142));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2862
+ISP, "DFFN center_buffer_reg_8__1_( .D (n1503),  .CK (clk),  .QB (n6209));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2870
+ISP, "DFFS center_buffer_reg_2__7_( .D (n14490),  .CK (clk),  .QB (add_x_114_n8));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2871
+ISP, "DFFS center_buffer_reg_9__6_( .D (n1506),  .CK (clk),  .QB (n6177));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2872
+ISP, "DFFS center_buffer_reg_3__3_( .D (n1461),  .CK (clk),  .QB (n6180));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2873
+ISP, "DFFS center_buffer_reg_20__4_( .D (n1596),  .CK (clk),  .QB (n6125));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2874
+ISP, "DFFS center_buffer_reg_15__2_( .D (n1558),  .CK (clk),  .QB (n6162));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2894
+ISP, "DFFS center_buffer_reg_3__1_( .D (n1463),  .CK (clk),  .QB (n6184));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2895
+ISP, "DFFS center_buffer_reg_3__5_( .D (n1459),  .CK (clk),  .QB (n6178));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2898
+ISP, "DFFS center_buffer_reg_18__7_( .D (n1577),  .CK (clk),  .QB (n6175));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2899
+ISP, "DFFS center_buffer_reg_26__5_( .D (n1643),  .CK (clk),  .QB (n6121));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2900
+ISP, "DFFS center_buffer_reg_21__4_( .D (n1604),  .CK (clk),  .QB (n6157));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2901
+ISP, "DFFS center_buffer_reg_24__1_( .D (n1631),  .CK (clk),  .QB (n6164));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2902
+ISP, "DFFS center_buffer_reg_18__1_( .D (n1583),  .CK (clk),  .QB (n6166));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2903
+ISP, "DFFS center_buffer_reg_12__1_( .D (n1535),  .CK (clk),  .QB (n6168));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2904
+ISP, "DFFS center_buffer_reg_22__5_( .D (n1611),  .CK (clk),  .QB (n6087));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2905
+ISP, "DFFS center_buffer_reg_24__5_( .D (n1627),  .CK (clk),  .QB (n6151));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2906
+ISP, "DFFS center_buffer_reg_12__5_( .D (n1531),  .CK (clk),  .QB (n6155));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2907
+ISP, "DFFS center_buffer_reg_21__5_( .D (n1603),  .CK (clk),  .QB (n6152));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2908
+ISP, "DFFS center_buffer_reg_20__1_( .D (n1599),  .CK (clk),  .QB (n6134));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2909
+ISP, "DFFS center_buffer_reg_18__5_( .D (n1579),  .CK (clk),  .QB (n6153));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2910
+ISP, "DFFS center_buffer_reg_26__2_( .D (n1646),  .CK (clk),  .QB (n6127));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2911
+ISP, "DFFS center_buffer_reg_15__6_( .D (n1554),  .CK (clk),  .QB (n6149));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2912
+ISP, "DFFS center_buffer_reg_14__5_( .D (n1547),  .CK (clk),  .QB (n6123));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2913
+ISP, "DFFS center_buffer_reg_25__2_( .D (n1638),  .CK (clk),  .QB (n6094));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2914
+ISP, "DFFS center_buffer_reg_13__7_( .D (n1537),  .CK (clk),  .QB (n6111));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2915
+ISP, "DFFS center_buffer_reg_21__2_( .D (n1606),  .CK (clk),  .QB (n6160));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2916
+ISP, "DFFS center_buffer_reg_17__5_( .D (n1571),  .CK (clk),  .QB (n6122));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2917
+ISP, "DFFS center_buffer_reg_17__2_( .D (n1574),  .CK (clk),  .QB (n6130));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2918
+ISP, "DFFS center_buffer_reg_23__6_( .D (n1618),  .CK (clk),  .QB (n6119));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2919
+ISP, "DFFS center_buffer_reg_22__2_( .D (n1614),  .CK (clk),  .QB (n6095));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2920
+ISP, "DFFS center_buffer_reg_22__6_( .D (n1610),  .CK (clk),  .QB (n6082));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2921
+ISP, "DFFS center_buffer_reg_19__2_( .D (n1590),  .CK (clk),  .QB (n6096));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2922
+ISP, "DFFS center_buffer_reg_18__2_( .D (n1582),  .CK (clk),  .QB (n6161));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2923
+ISP, "DFFS center_buffer_reg_19__6_( .D (n1586),  .CK (clk),  .QB (n6083));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2924
+ISP, "DFFS center_buffer_reg_23__1_( .D (n1623),  .CK (clk),  .QB (n6133));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2925
+ISP, "DFFS center_buffer_reg_14__2_( .D (n1550),  .CK (clk),  .QB (n6131));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2926
+ISP, "DFFS center_buffer_reg_17__1_( .D (n1575),  .CK (clk),  .QB (n6135));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2945
+ISP, "DFFS center_buffer_reg_11__7_( .D (n1521),  .CK (clk),  .QB (n6225));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2946
+ISP, "DFFS center_buffer_reg_11__3_( .D (n1525),  .CK (clk),  .QB (n6227));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2947
+ISP, "DFFS center_buffer_reg_11__2_( .D (n1526),  .CK (clk),  .QB (n6228));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2948
+ISP, "DFFS center_buffer_reg_6__2_( .D (n1486),  .CK (clk),  .QB (n6219));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2949
+ISP, "DFFS center_buffer_reg_7__2_( .D (n1494),  .CK (clk),  .QB (n6144));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2950
+ISP, "DFFS center_buffer_reg_9__1_( .D (n1511),  .CK (clk),  .QB (n6183));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2951
+ISP, "DFFS center_buffer_reg_10__1_( .D (n1519),  .CK (clk),  .QB (n6195));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+ISP_SYN.v, 2952
+ISP, "DFFS center_buffer_reg_8__2_( .D (n1502),  .CK (clk),  .QB (n6208));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[PCWM-W] Port connection width mismatch
+TESTBED.v, 106
+"ISP u_ISP( .clk (clk),  .rst_n (rst_n),  .in_valid (in_valid),  .in_pic_no (in_pic_no),  .in_mode (in_mode),  .in_ratio_mode (in_ratio_mode),  .out_valid (out_valid),  .out_data (out_data),  .awid_s_inf (awid_s_inf),  .awaddr_s_inf (awaddr_s_inf),  .awsize_s_inf (awsize_s_inf),  .awburst_s_inf (awburst_s_inf),  .awlen_s_inf (awlen_s_inf),  .awvalid_s_inf (awvalid_s_inf),  .awready_s_inf (awready_s_inf),  .wdata_s_inf (wdata_s_inf),  .wlast_s_inf (wlast_s_inf),  .wvalid_s_inf (wvalid_s_inf),  .wready_s_inf (wready_s_inf),  .bid_s_inf (bid_s_inf),  .bresp_s_inf (bresp_s_inf),  .bvalid_s_inf (bvalid_s_inf),  .bready_s_inf (bready_s_inf),  .arid_s_inf (arid_s_inf),  .araddr_s_inf (araddr_s_inf),  .arlen_s_inf (arlen_s_inf),  .arsize_s_inf (arsize_s_inf),  . ... "
+  The following 1-bit expression is connected to 2-bit port "in_mode" of 
+  module "ISP", instance "u_ISP".
+  Expression: in_mode
+  Instantiated module defined at: "ISP_SYN.v", 8
+  Use +lint=PCWM for more details.
+
+
+   ***   $sdf_annotate() version 1.2R
+   ***    SDF file: "ISP_SYN.sdf"
+   ***    Annotation scope: TESTBED.u_ISP
+   ***    No MTM selection argument specified
+   ***    No SCALE FACTORS argument specified
+   ***    No SCALE TYPE argument specified
+   ***    MTM selection defaulted to "TOOL_CONTROL":
+               (+typdelays compiled, TYPICAL delays selected)
+   ***    SCALE FACTORS defaulted to "1.0:1.0:1.0":
+   ***    SCALE TYPE defaulted to: "FROM_MTM"
+   ***    Turnoff delay: "FROM_FILE"
+   ***    Approximation (mipd) policy: "MAXIMUM"
+
+   ***    SDF annotation begin: Wed Jan  1 04:01:43 2025
+
+
+SDF Info: +pulse_r/100, +pulse_e/100 in effect
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+ISP_SYN.sdf, 94293
+module: QDFFRBN, "instance: TESTBED.u_ISP.in_count_reg_0_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+ISP_SYN.sdf, 94314
+module: QDFFRBN, "instance: TESTBED.u_ISP.divided_by_9_inst_acc_reg_11_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+ISP_SYN.sdf, 94335
+module: QDFFRBN, "instance: TESTBED.u_ISP.img_size_reg_reg_10__0_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+ISP_SYN.sdf, 94356
+module: QDFFRBS, "instance: TESTBED.u_ISP.img_size_reg_reg_14__0_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+ISP_SYN.sdf, 94377
+module: QDFFRBS, "instance: TESTBED.u_ISP.img_size_reg_reg_11__0_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+ISP_SYN.sdf, 94398
+module: QDFFRBS, "instance: TESTBED.u_ISP.img_size_reg_reg_8__0_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+ISP_SYN.sdf, 94419
+module: QDFFRBS, "instance: TESTBED.u_ISP.img_size_reg_reg_9__0_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+ISP_SYN.sdf, 94440
+module: QDFFRBN, "instance: TESTBED.u_ISP.channel_count_reg_0_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+ISP_SYN.sdf, 94461
+module: QDFFRBP, "instance: TESTBED.u_ISP.focus_pipe_count_reg_3_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+All future warnings not reported; use +sdfverbose to report them.
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+ISP_SYN.sdf, 94482
+module: QDFFRBP, "instance: TESTBED.u_ISP.focus_pipe_count_reg_0_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+          Total errors: 0
+          Total warnings: 360
+   ***    SDF annotation completed: Wed Jan  1 04:01:43 2025
+
+
+
+Warning-[DRTZ] Detect delay value roundoff to 0
+  Delay from design or SDF file roundoff to 0 based on timescale
+  Please use switch -diag timescale to dump detailed information.
+
+Starting vcs inline pass...
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+115 modules and 3 UDPs read.
+recompiling module PATTERN
+	However, due to incremental compilation, only 1 module needs to be compiled. 
+make[1]: Entering directory `/RAID2/COURSE/iclab/iclab055/Midterm_Project/Exercise/03_GATE/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+ld -shared  -Bsymbolic   -o .//../simv.daidir//_cuarc0.so objs/amcQw_d.o 
+rm -f _cuarc0.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/usr/cad/synopsys/vcs/2022.06/linux64/lib -L/usr/cad/synopsys/vcs/2022.06/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1     _217171_archive_1.so _217192_archive_1.so \
+_prev_archive_1.so _cuarc0.so objs/udps/qndjy.o objs/udps/keuHx.o objs/udps/Sbaqa.o \
+SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o \
+-lvirsim -lerrorinf -lsnpsmalloc -lvfs /usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/linux64/pli.a \
+-lvcsnew -lsimprofile -luclinative /usr/cad/synopsys/vcs/2022.06/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   \
+/usr/cad/synopsys/vcs/2022.06/linux64/lib/vcs_save_restore_new.o /usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/LINUX64/pli.a \
+-ldl -lm  -lc -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/RAID2/COURSE/iclab/iclab055/Midterm_Project/Exercise/03_GATE/csrc' \
+
+Command: /RAID2/COURSE/iclab/iclab055/Midterm_Project/Exercise/03_GATE/./simv +v2k -a vcs.log +define+FUNC +define+GATE +define+PERF +neg_tchk +nowarnNTCDSN
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06_Full64; Runtime version T-2022.06_Full64;  Jan  1 04:01 2025
+Doing SDF annotation ...... Done
+[32mPass Pattern           0, Function: color auto exposure[0m
+[32mPass Pattern           1, Function: color auto exposure[0m
+[32mPass Pattern           2, Function: color auto exposure[0m
+[32mPass Pattern           3, Function: color_auto_focus[0m
+[32mPass Pattern           4, Function: color auto exposure[0m
+[32mPass Pattern           5, Function: color_auto_focus[0m
+[32mPass Pattern           6, Function: color_auto_focus[0m
+[32mPass Pattern           7, Function: color auto exposure[0m
+[32mPass Pattern           8, Function: color auto exposure[0m
+[32mPass Pattern           9, Function: color auto exposure[0m
+[32mPass Pattern          10, Function: color_auto_focus[0m
+[32mPass Pattern          11, Function: color auto exposure[0m
+[32mPass Pattern          12, Function: color_auto_focus[0m
+[32mPass Pattern          13, Function: color auto exposure[0m
+[32mPass Pattern          14, Function: color_auto_focus[0m
+[32mPass Pattern          15, Function: color auto exposure[0m
+[32mPass Pattern          16, Function: color auto exposure[0m
+[32mPass Pattern          17, Function: color auto exposure[0m
+[32mPass Pattern          18, Function: color_auto_focus[0m
+[32mPass Pattern          19, Function: color_auto_focus[0m
+[32mPass Pattern          20, Function: color auto exposure[0m
+[32mPass Pattern          21, Function: color auto exposure[0m
+[32mPass Pattern          22, Function: color_auto_focus[0m
+[32mPass Pattern          23, Function: color_auto_focus[0m
+[32mPass Pattern          24, Function: color auto exposure[0m
+[32mPass Pattern          25, Function: color_auto_focus[0m
+[32mPass Pattern          26, Function: color_auto_focus[0m
+[32mPass Pattern          27, Function: color_auto_focus[0m
+[32mPass Pattern          28, Function: color_auto_focus[0m
+[32mPass Pattern          29, Function: color_auto_focus[0m
+[32mPass Pattern          30, Function: color_auto_focus[0m
+[32mPass Pattern          31, Function: color auto exposure[0m
+[32mPass Pattern          32, Function: color_auto_focus[0m
+[32mPass Pattern          33, Function: color auto exposure[0m
+[32mPass Pattern          34, Function: color auto exposure[0m
+[32mPass Pattern          35, Function: color_auto_focus[0m
+[32mPass Pattern          36, Function: color auto exposure[0m
+[32mPass Pattern          37, Function: color_auto_focus[0m
+[32mPass Pattern          38, Function: color auto exposure[0m
+[32mPass Pattern          39, Function: color auto exposure[0m
+[32mPass Pattern          40, Function: color_auto_focus[0m
+[32mPass Pattern          41, Function: color auto exposure[0m
+[32mPass Pattern          42, Function: color auto exposure[0m
+[32mPass Pattern          43, Function: color_auto_focus[0m
+[32mPass Pattern          44, Function: color_auto_focus[0m
+[32mPass Pattern          45, Function: color_auto_focus[0m
+[32mPass Pattern          46, Function: color_auto_focus[0m
+[32mPass Pattern          47, Function: color auto exposure[0m
+[32mPass Pattern          48, Function: color auto exposure[0m
+[32mPass Pattern          49, Function: color auto exposure[0m
+[32mPass Pattern          50, Function: color_auto_focus[0m
+[32mPass Pattern          51, Function: color_auto_focus[0m
+[32mPass Pattern          52, Function: color auto exposure[0m
+[32mPass Pattern          53, Function: color auto exposure[0m
+[32mPass Pattern          54, Function: color_auto_focus[0m
+[32mPass Pattern          55, Function: color auto exposure[0m
+[32mPass Pattern          56, Function: color auto exposure[0m
+[32mPass Pattern          57, Function: color_auto_focus[0m
+[32mPass Pattern          58, Function: color_auto_focus[0m
+[32mPass Pattern          59, Function: color_auto_focus[0m
+[32mPass Pattern          60, Function: color auto exposure[0m
+[32mPass Pattern          61, Function: color auto exposure[0m
+[32mPass Pattern          62, Function: color auto exposure[0m
+[32mPass Pattern          63, Function: color_auto_focus[0m
+[32mPass Pattern          64, Function: color_auto_focus[0m
+[32mPass Pattern          65, Function: color_auto_focus[0m
+[32mPass Pattern          66, Function: color_auto_focus[0m
+[32mPass Pattern          67, Function: color auto exposure[0m
+[32mPass Pattern          68, Function: color_auto_focus[0m
+[32mPass Pattern          69, Function: color auto exposure[0m
+[32mPass Pattern          70, Function: color auto exposure[0m
+[32mPass Pattern          71, Function: color_auto_focus[0m
+[32mPass Pattern          72, Function: color auto exposure[0m
+[32mPass Pattern          73, Function: color auto exposure[0m
+[32mPass Pattern          74, Function: color auto exposure[0m
+[32mPass Pattern          75, Function: color_auto_focus[0m
+[32mPass Pattern          76, Function: color_auto_focus[0m
+[32mPass Pattern          77, Function: color auto exposure[0m
+[32mPass Pattern          78, Function: color_auto_focus[0m
+[32mPass Pattern          79, Function: color auto exposure[0m
+[32mPass Pattern          80, Function: color auto exposure[0m
+[32mPass Pattern          81, Function: color_auto_focus[0m
+[32mPass Pattern          82, Function: color_auto_focus[0m
+[32mPass Pattern          83, Function: color auto exposure[0m
+[32mPass Pattern          84, Function: color auto exposure[0m
+[32mPass Pattern          85, Function: color_auto_focus[0m
+[32mPass Pattern          86, Function: color auto exposure[0m
+[32mPass Pattern          87, Function: color auto exposure[0m
+[32mPass Pattern          88, Function: color auto exposure[0m
+[32mPass Pattern          89, Function: color_auto_focus[0m
+[32mPass Pattern          90, Function: color_auto_focus[0m
+[32mPass Pattern          91, Function: color_auto_focus[0m
+[32mPass Pattern          92, Function: color auto exposure[0m
+[32mPass Pattern          93, Function: color_auto_focus[0m
+[32mPass Pattern          94, Function: color_auto_focus[0m
+[32mPass Pattern          95, Function: color auto exposure[0m
+[32mPass Pattern          96, Function: color_auto_focus[0m
+[32mPass Pattern          97, Function: color_auto_focus[0m
+[32mPass Pattern          98, Function: color auto exposure[0m
+[32mPass Pattern          99, Function: color auto exposure[0m
+[32mPass Pattern         100, Function: color auto exposure[0m
+[32mPass Pattern         101, Function: color_auto_focus[0m
+[32mPass Pattern         102, Function: color auto exposure[0m
+[32mPass Pattern         103, Function: color auto exposure[0m
+[32mPass Pattern         104, Function: color auto exposure[0m
+[32mPass Pattern         105, Function: color_auto_focus[0m
+[32mPass Pattern         106, Function: color auto exposure[0m
+[32mPass Pattern         107, Function: color_auto_focus[0m
+[32mPass Pattern         108, Function: color auto exposure[0m
+[32mPass Pattern         109, Function: color_auto_focus[0m
+[32mPass Pattern         110, Function: color auto exposure[0m
+[32mPass Pattern         111, Function: color_auto_focus[0m
+[32mPass Pattern         112, Function: color auto exposure[0m
+[32mPass Pattern         113, Function: color_auto_focus[0m
+[32mPass Pattern         114, Function: color auto exposure[0m
+[32mPass Pattern         115, Function: color_auto_focus[0m
+[32mPass Pattern         116, Function: color_auto_focus[0m
+[32mPass Pattern         117, Function: color auto exposure[0m
+[32mPass Pattern         118, Function: color auto exposure[0m
+[32mPass Pattern         119, Function: color auto exposure[0m
+[32mPass Pattern         120, Function: color auto exposure[0m
+[32mPass Pattern         121, Function: color auto exposure[0m
+[32mPass Pattern         122, Function: color_auto_focus[0m
+[32mPass Pattern         123, Function: color_auto_focus[0m
+[32mPass Pattern         124, Function: color auto exposure[0m
+[32mPass Pattern         125, Function: color_auto_focus[0m
+[32mPass Pattern         126, Function: color_auto_focus[0m
+[32mPass Pattern         127, Function: color auto exposure[0m
+[32mPass Pattern         128, Function: color auto exposure[0m
+[32mPass Pattern         129, Function: color_auto_focus[0m
+[32mPass Pattern         130, Function: color_auto_focus[0m
+[32mPass Pattern         131, Function: color auto exposure[0m
+[32mPass Pattern         132, Function: color auto exposure[0m
+[32mPass Pattern         133, Function: color auto exposure[0m
+[32mPass Pattern         134, Function: color auto exposure[0m
+[32mPass Pattern         135, Function: color_auto_focus[0m
+[32mPass Pattern         136, Function: color auto exposure[0m
+[32mPass Pattern         137, Function: color_auto_focus[0m
+[32mPass Pattern         138, Function: color auto exposure[0m
+[32mPass Pattern         139, Function: color_auto_focus[0m
+[32mPass Pattern         140, Function: color auto exposure[0m
+[32mPass Pattern         141, Function: color_auto_focus[0m
+[32mPass Pattern         142, Function: color auto exposure[0m
+[32mPass Pattern         143, Function: color_auto_focus[0m
+[32mPass Pattern         144, Function: color auto exposure[0m
+[32mPass Pattern         145, Function: color_auto_focus[0m
+[32mPass Pattern         146, Function: color auto exposure[0m
+[32mPass Pattern         147, Function: color_auto_focus[0m
+[32mPass Pattern         148, Function: color auto exposure[0m
+[32mPass Pattern         149, Function: color_auto_focus[0m
+[32mPass Pattern         150, Function: color auto exposure[0m
+[32mPass Pattern         151, Function: color auto exposure[0m
+[32mPass Pattern         152, Function: color auto exposure[0m
+[32mPass Pattern         153, Function: color_auto_focus[0m
+[32mPass Pattern         154, Function: color auto exposure[0m
+[32mPass Pattern         155, Function: color auto exposure[0m
+[32mPass Pattern         156, Function: color_auto_focus[0m
+[32mPass Pattern         157, Function: color auto exposure[0m
+[32mPass Pattern         158, Function: color auto exposure[0m
+[32mPass Pattern         159, Function: color_auto_focus[0m
+[32mPass Pattern         160, Function: color_auto_focus[0m
+[32mPass Pattern         161, Function: color_auto_focus[0m
+[32mPass Pattern         162, Function: color_auto_focus[0m
+[32mPass Pattern         163, Function: color_auto_focus[0m
+[32mPass Pattern         164, Function: color auto exposure[0m
+[32mPass Pattern         165, Function: color_auto_focus[0m
+[32mPass Pattern         166, Function: color_auto_focus[0m
+[32mPass Pattern         167, Function: color_auto_focus[0m
+[32mPass Pattern         168, Function: color_auto_focus[0m
+[32mPass Pattern         169, Function: color auto exposure[0m
+[32mPass Pattern         170, Function: color auto exposure[0m
+[32mPass Pattern         171, Function: color auto exposure[0m
+[32mPass Pattern         172, Function: color auto exposure[0m
+[32mPass Pattern         173, Function: color auto exposure[0m
+[32mPass Pattern         174, Function: color_auto_focus[0m
+[32mPass Pattern         175, Function: color auto exposure[0m
+[32mPass Pattern         176, Function: color auto exposure[0m
+[32mPass Pattern         177, Function: color auto exposure[0m
+[32mPass Pattern         178, Function: color auto exposure[0m
+[32mPass Pattern         179, Function: color auto exposure[0m
+[32mPass Pattern         180, Function: color_auto_focus[0m
+[32mPass Pattern         181, Function: color auto exposure[0m
+[32mPass Pattern         182, Function: color_auto_focus[0m
+[32mPass Pattern         183, Function: color_auto_focus[0m
+[32mPass Pattern         184, Function: color auto exposure[0m
+[32mPass Pattern         185, Function: color auto exposure[0m
+[32mPass Pattern         186, Function: color_auto_focus[0m
+[32mPass Pattern         187, Function: color_auto_focus[0m
+[32mPass Pattern         188, Function: color auto exposure[0m
+[32mPass Pattern         189, Function: color_auto_focus[0m
+[32mPass Pattern         190, Function: color_auto_focus[0m
+[32mPass Pattern         191, Function: color auto exposure[0m
+[32mPass Pattern         192, Function: color auto exposure[0m
+[32mPass Pattern         193, Function: color_auto_focus[0m
+[32mPass Pattern         194, Function: color auto exposure[0m
+[32mPass Pattern         195, Function: color auto exposure[0m
+[32mPass Pattern         196, Function: color auto exposure[0m
+[32mPass Pattern         197, Function: color auto exposure[0m
+[32mPass Pattern         198, Function: color_auto_focus[0m
+[32mPass Pattern         199, Function: color_auto_focus[0m
+[32mPass Pattern         200, Function: color_auto_focus[0m
+[32mPass Pattern         201, Function: color auto exposure[0m
+[32mPass Pattern         202, Function: color_auto_focus[0m
+[32mPass Pattern         203, Function: color_auto_focus[0m
+[32mPass Pattern         204, Function: color auto exposure[0m
+[32mPass Pattern         205, Function: color_auto_focus[0m
+[32mPass Pattern         206, Function: color_auto_focus[0m
+[32mPass Pattern         207, Function: color auto exposure[0m
+[32mPass Pattern         208, Function: color auto exposure[0m
+[32mPass Pattern         209, Function: color_auto_focus[0m
+[32mPass Pattern         210, Function: color auto exposure[0m
+[32mPass Pattern         211, Function: color auto exposure[0m
+[32mPass Pattern         212, Function: color auto exposure[0m
+[32mPass Pattern         213, Function: color_auto_focus[0m
+[32mPass Pattern         214, Function: color auto exposure[0m
+[32mPass Pattern         215, Function: color auto exposure[0m
+[32mPass Pattern         216, Function: color_auto_focus[0m
+[32mPass Pattern         217, Function: color_auto_focus[0m
+[32mPass Pattern         218, Function: color auto exposure[0m
+[32mPass Pattern         219, Function: color auto exposure[0m
+[32mPass Pattern         220, Function: color_auto_focus[0m
+[32mPass Pattern         221, Function: color auto exposure[0m
+[32mPass Pattern         222, Function: color_auto_focus[0m
+[32mPass Pattern         223, Function: color auto exposure[0m
+[32mPass Pattern         224, Function: color auto exposure[0m
+[32mPass Pattern         225, Function: color auto exposure[0m
+[32mPass Pattern         226, Function: color_auto_focus[0m
+[32mPass Pattern         227, Function: color auto exposure[0m
+[32mPass Pattern         228, Function: color_auto_focus[0m
+[32mPass Pattern         229, Function: color auto exposure[0m
+[32mPass Pattern         230, Function: color_auto_focus[0m
+[32mPass Pattern         231, Function: color_auto_focus[0m
+[32mPass Pattern         232, Function: color_auto_focus[0m
+[32mPass Pattern         233, Function: color auto exposure[0m
+[32mPass Pattern         234, Function: color auto exposure[0m
+[32mPass Pattern         235, Function: color auto exposure[0m
+[32mPass Pattern         236, Function: color_auto_focus[0m
+[32mPass Pattern         237, Function: color_auto_focus[0m
+[32mPass Pattern         238, Function: color_auto_focus[0m
+[32mPass Pattern         239, Function: color_auto_focus[0m
+[32mPass Pattern         240, Function: color auto exposure[0m
+[32mPass Pattern         241, Function: color_auto_focus[0m
+[32mPass Pattern         242, Function: color_auto_focus[0m
+[32mPass Pattern         243, Function: color auto exposure[0m
+[32mPass Pattern         244, Function: color auto exposure[0m
+[32mPass Pattern         245, Function: color auto exposure[0m
+[32mPass Pattern         246, Function: color_auto_focus[0m
+[32mPass Pattern         247, Function: color auto exposure[0m
+[32mPass Pattern         248, Function: color_auto_focus[0m
+[32mPass Pattern         249, Function: color auto exposure[0m
+[32mPass Pattern         250, Function: color auto exposure[0m
+[32mPass Pattern         251, Function: color auto exposure[0m
+[32mPass Pattern         252, Function: color auto exposure[0m
+[32mPass Pattern         253, Function: color_auto_focus[0m
+[32mPass Pattern         254, Function: color_auto_focus[0m
+[32mPass Pattern         255, Function: color auto exposure[0m
+[32mPass Pattern         256, Function: color auto exposure[0m
+[32mPass Pattern         257, Function: color_auto_focus[0m
+[32mPass Pattern         258, Function: color_auto_focus[0m
+[32mPass Pattern         259, Function: color_auto_focus[0m
+[32mPass Pattern         260, Function: color auto exposure[0m
+[32mPass Pattern         261, Function: color_auto_focus[0m
+[32mPass Pattern         262, Function: color auto exposure[0m
+[32mPass Pattern         263, Function: color_auto_focus[0m
+[32mPass Pattern         264, Function: color_auto_focus[0m
+[32mPass Pattern         265, Function: color auto exposure[0m
+[32mPass Pattern         266, Function: color_auto_focus[0m
+[32mPass Pattern         267, Function: color_auto_focus[0m
+[32mPass Pattern         268, Function: color_auto_focus[0m
+[32mPass Pattern         269, Function: color auto exposure[0m
+[32mPass Pattern         270, Function: color_auto_focus[0m
+[32mPass Pattern         271, Function: color auto exposure[0m
+[32mPass Pattern         272, Function: color_auto_focus[0m
+[32mPass Pattern         273, Function: color auto exposure[0m
+[32mPass Pattern         274, Function: color_auto_focus[0m
+[32mPass Pattern         275, Function: color_auto_focus[0m
+[32mPass Pattern         276, Function: color auto exposure[0m
+[32mPass Pattern         277, Function: color auto exposure[0m
+[32mPass Pattern         278, Function: color_auto_focus[0m
+[32mPass Pattern         279, Function: color_auto_focus[0m
+[32mPass Pattern         280, Function: color auto exposure[0m
+[32mPass Pattern         281, Function: color auto exposure[0m
+[32mPass Pattern         282, Function: color_auto_focus[0m
+[32mPass Pattern         283, Function: color auto exposure[0m
+[32mPass Pattern         284, Function: color auto exposure[0m
+[32mPass Pattern         285, Function: color auto exposure[0m
+[32mPass Pattern         286, Function: color auto exposure[0m
+[32mPass Pattern         287, Function: color_auto_focus[0m
+[32mPass Pattern         288, Function: color_auto_focus[0m
+[32mPass Pattern         289, Function: color_auto_focus[0m
+[32mPass Pattern         290, Function: color_auto_focus[0m
+[32mPass Pattern         291, Function: color auto exposure[0m
+[32mPass Pattern         292, Function: color_auto_focus[0m
+[32mPass Pattern         293, Function: color auto exposure[0m
+[32mPass Pattern         294, Function: color_auto_focus[0m
+[32mPass Pattern         295, Function: color_auto_focus[0m
+[32mPass Pattern         296, Function: color auto exposure[0m
+[32mPass Pattern         297, Function: color_auto_focus[0m
+[32mPass Pattern         298, Function: color auto exposure[0m
+[32mPass Pattern         299, Function: color_auto_focus[0m
+[32mPass Pattern         300, Function: color auto exposure[0m
+[32mPass Pattern         301, Function: color auto exposure[0m
+[32mPass Pattern         302, Function: color_auto_focus[0m
+[32mPass Pattern         303, Function: color auto exposure[0m
+[32mPass Pattern         304, Function: color auto exposure[0m
+[32mPass Pattern         305, Function: color auto exposure[0m
+[32mPass Pattern         306, Function: color auto exposure[0m
+[32mPass Pattern         307, Function: color_auto_focus[0m
+[32mPass Pattern         308, Function: color auto exposure[0m
+[32mPass Pattern         309, Function: color_auto_focus[0m
+[32mPass Pattern         310, Function: color auto exposure[0m
+[32mPass Pattern         311, Function: color auto exposure[0m
+[32mPass Pattern         312, Function: color auto exposure[0m
+[32mPass Pattern         313, Function: color auto exposure[0m
+[32mPass Pattern         314, Function: color auto exposure[0m
+[32mPass Pattern         315, Function: color auto exposure[0m
+[32mPass Pattern         316, Function: color_auto_focus[0m
+[32mPass Pattern         317, Function: color_auto_focus[0m
+[32mPass Pattern         318, Function: color_auto_focus[0m
+[32mPass Pattern         319, Function: color auto exposure[0m
+[32mPass Pattern         320, Function: color_auto_focus[0m
+[32mPass Pattern         321, Function: color_auto_focus[0m
+[32mPass Pattern         322, Function: color_auto_focus[0m
+[32mPass Pattern         323, Function: color_auto_focus[0m
+[32mPass Pattern         324, Function: color auto exposure[0m
+[32mPass Pattern         325, Function: color auto exposure[0m
+[32mPass Pattern         326, Function: color auto exposure[0m
+[32mPass Pattern         327, Function: color_auto_focus[0m
+[32mPass Pattern         328, Function: color_auto_focus[0m
+[32mPass Pattern         329, Function: color_auto_focus[0m
+[32mPass Pattern         330, Function: color auto exposure[0m
+[32mPass Pattern         331, Function: color auto exposure[0m
+[32mPass Pattern         332, Function: color auto exposure[0m
+[32mPass Pattern         333, Function: color_auto_focus[0m
+[32mPass Pattern         334, Function: color auto exposure[0m
+[32mPass Pattern         335, Function: color_auto_focus[0m
+[32mPass Pattern         336, Function: color_auto_focus[0m
+[32mPass Pattern         337, Function: color auto exposure[0m
+[32mPass Pattern         338, Function: color auto exposure[0m
+[32mPass Pattern         339, Function: color auto exposure[0m
+[32mPass Pattern         340, Function: color_auto_focus[0m
+[32mPass Pattern         341, Function: color auto exposure[0m
+[32mPass Pattern         342, Function: color auto exposure[0m
+[32mPass Pattern         343, Function: color auto exposure[0m
+[32mPass Pattern         344, Function: color_auto_focus[0m
+[32mPass Pattern         345, Function: color auto exposure[0m
+[32mPass Pattern         346, Function: color_auto_focus[0m
+[32mPass Pattern         347, Function: color_auto_focus[0m
+[32mPass Pattern         348, Function: color_auto_focus[0m
+[32mPass Pattern         349, Function: color auto exposure[0m
+[32mPass Pattern         350, Function: color_auto_focus[0m
+[32mPass Pattern         351, Function: color_auto_focus[0m
+[32mPass Pattern         352, Function: color_auto_focus[0m
+[32mPass Pattern         353, Function: color auto exposure[0m
+[32mPass Pattern         354, Function: color auto exposure[0m
+[32mPass Pattern         355, Function: color_auto_focus[0m
+[32mPass Pattern         356, Function: color_auto_focus[0m
+[32mPass Pattern         357, Function: color auto exposure[0m
+[32mPass Pattern         358, Function: color_auto_focus[0m
+[32mPass Pattern         359, Function: color_auto_focus[0m
+[32mPass Pattern         360, Function: color auto exposure[0m
+[32mPass Pattern         361, Function: color_auto_focus[0m
+[32mPass Pattern         362, Function: color_auto_focus[0m
+[32mPass Pattern         363, Function: color auto exposure[0m
+[32mPass Pattern         364, Function: color auto exposure[0m
+[32mPass Pattern         365, Function: color auto exposure[0m
+[32mPass Pattern         366, Function: color_auto_focus[0m
+[32mPass Pattern         367, Function: color_auto_focus[0m
+[32mPass Pattern         368, Function: color auto exposure[0m
+[32mPass Pattern         369, Function: color_auto_focus[0m
+[32mPass Pattern         370, Function: color auto exposure[0m
+[32mPass Pattern         371, Function: color auto exposure[0m
+[32mPass Pattern         372, Function: color auto exposure[0m
+[32mPass Pattern         373, Function: color_auto_focus[0m
+[32mPass Pattern         374, Function: color auto exposure[0m
+[32mPass Pattern         375, Function: color auto exposure[0m
+[32mPass Pattern         376, Function: color_auto_focus[0m
+[32mPass Pattern         377, Function: color auto exposure[0m
+[32mPass Pattern         378, Function: color_auto_focus[0m
+[32mPass Pattern         379, Function: color auto exposure[0m
+[32mPass Pattern         380, Function: color auto exposure[0m
+[32mPass Pattern         381, Function: color auto exposure[0m
+[32mPass Pattern         382, Function: color_auto_focus[0m
+[32mPass Pattern         383, Function: color auto exposure[0m
+[32mPass Pattern         384, Function: color_auto_focus[0m
+[32mPass Pattern         385, Function: color auto exposure[0m
+[32mPass Pattern         386, Function: color auto exposure[0m
+[32mPass Pattern         387, Function: color auto exposure[0m
+[32mPass Pattern         388, Function: color auto exposure[0m
+[32mPass Pattern         389, Function: color_auto_focus[0m
+[32mPass Pattern         390, Function: color auto exposure[0m
+[32mPass Pattern         391, Function: color_auto_focus[0m
+[32mPass Pattern         392, Function: color auto exposure[0m
+[32mPass Pattern         393, Function: color_auto_focus[0m
+[32mPass Pattern         394, Function: color_auto_focus[0m
+[32mPass Pattern         395, Function: color auto exposure[0m
+[32mPass Pattern         396, Function: color_auto_focus[0m
+[32mPass Pattern         397, Function: color auto exposure[0m
+[32mPass Pattern         398, Function: color auto exposure[0m
+[32mPass Pattern         399, Function: color auto exposure[0m
+[32mPass Pattern         400, Function: color auto exposure[0m
+*************************************************************************
+*                         Congratulations!                              
+*                Your execution cycles = 48251 cycles          
+*                Your clock period = 2.2 ns          
+*                Total Latency = 106152.2 ns          
+*************************************************************************
+$finish called from file "PATTERN.vp", line 53.
+$finish at simulation time            108906600
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 108906600 ps
+CPU Time:      2.180 seconds;       Data structure size:   2.1Mb
+Wed Jan  1 04:01:49 2025
+CPU time: 1.703 seconds to compile + .497 seconds to elab + .805 seconds to link + 2.226 seconds in simulation

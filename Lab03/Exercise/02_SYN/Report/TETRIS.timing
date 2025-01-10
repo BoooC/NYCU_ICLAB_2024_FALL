@@ -1,0 +1,138 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 3
+Design : TETRIS
+Version: T-2022.03
+Date   : Fri Jan 10 13:10:39 2025
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: map_reg[2][5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: tetris[6] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  map_reg[2][5]/CK (DFFRX1)                0.00       0.00 r
+  map_reg[2][5]/Q (DFFRX1)                 0.59       0.59 f
+  U1143/Y (AND2XL)                         0.21       0.80 f
+  U1588/Y (NAND4BXL)                       0.17       0.96 r
+  U1376/Y (OAI21X1)                        0.14       1.11 f
+  U1702/Y (NOR2X2)                         0.14       1.25 r
+  U1703/Y (NAND3X2)                        0.10       1.35 f
+  U1137/Y (NOR2X2)                         0.13       1.48 r
+  U1170/Y (OAI21X2)                        0.14       1.62 f
+  U1704/Y (NOR2X4)                         0.26       1.88 r
+  U1705/Y (NAND3X2)                        0.12       2.00 f
+  U1706/Y (NOR2X2)                         0.12       2.13 r
+  U1707/Y (OAI2BB1X4)                      0.28       2.40 r
+  U1169/Y (INVX2)                          0.09       2.49 f
+  U1356/Y (BUFX4)                          0.25       2.74 f
+  U1621/Y (NOR2XL)                         0.81       3.55 r
+  tetris[6] (out)                          0.00       3.55 r
+  data arrival time                                   3.55
+
+  clock clk (rise edge)                    7.30       7.30
+  clock network delay (ideal)              0.00       7.30
+  clock uncertainty                       -0.10       7.20
+  output external delay                   -3.65       3.55
+  data required time                                  3.55
+  -----------------------------------------------------------
+  data required time                                  3.55
+  data arrival time                                  -3.55
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: map_reg[2][5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: tetris[3] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  map_reg[2][5]/CK (DFFRX1)                0.00       0.00 r
+  map_reg[2][5]/Q (DFFRX1)                 0.59       0.59 f
+  U1143/Y (AND2XL)                         0.21       0.80 f
+  U1588/Y (NAND4BXL)                       0.17       0.96 r
+  U1376/Y (OAI21X1)                        0.14       1.11 f
+  U1702/Y (NOR2X2)                         0.14       1.25 r
+  U1703/Y (NAND3X2)                        0.10       1.35 f
+  U1137/Y (NOR2X2)                         0.13       1.48 r
+  U1170/Y (OAI21X2)                        0.14       1.62 f
+  U1704/Y (NOR2X4)                         0.26       1.88 r
+  U1705/Y (NAND3X2)                        0.12       2.00 f
+  U1706/Y (NOR2X2)                         0.12       2.13 r
+  U1707/Y (OAI2BB1X4)                      0.28       2.40 r
+  U1169/Y (INVX2)                          0.09       2.49 f
+  U1356/Y (BUFX4)                          0.25       2.74 f
+  U1618/Y (NOR2XL)                         0.81       3.55 r
+  tetris[3] (out)                          0.00       3.55 r
+  data arrival time                                   3.55
+
+  clock clk (rise edge)                    7.30       7.30
+  clock network delay (ideal)              0.00       7.30
+  clock uncertainty                       -0.10       7.20
+  output external delay                   -3.65       3.55
+  data required time                                  3.55
+  -----------------------------------------------------------
+  data required time                                  3.55
+  data arrival time                                  -3.55
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: map_reg[2][5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: tetris[1] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  map_reg[2][5]/CK (DFFRX1)                0.00       0.00 r
+  map_reg[2][5]/Q (DFFRX1)                 0.59       0.59 f
+  U1143/Y (AND2XL)                         0.21       0.80 f
+  U1588/Y (NAND4BXL)                       0.17       0.96 r
+  U1376/Y (OAI21X1)                        0.14       1.11 f
+  U1702/Y (NOR2X2)                         0.14       1.25 r
+  U1703/Y (NAND3X2)                        0.10       1.35 f
+  U1137/Y (NOR2X2)                         0.13       1.48 r
+  U1170/Y (OAI21X2)                        0.14       1.62 f
+  U1704/Y (NOR2X4)                         0.26       1.88 r
+  U1705/Y (NAND3X2)                        0.12       2.00 f
+  U1706/Y (NOR2X2)                         0.12       2.13 r
+  U1707/Y (OAI2BB1X4)                      0.28       2.40 r
+  U1169/Y (INVX2)                          0.09       2.49 f
+  U1356/Y (BUFX4)                          0.25       2.74 f
+  U1617/Y (NOR2XL)                         0.81       3.55 r
+  tetris[1] (out)                          0.00       3.55 r
+  data arrival time                                   3.55
+
+  clock clk (rise edge)                    7.30       7.30
+  clock network delay (ideal)              0.00       7.30
+  clock uncertainty                       -0.10       7.20
+  output external delay                   -3.65       3.55
+  data required time                                  3.55
+  -----------------------------------------------------------
+  data required time                                  3.55
+  data arrival time                                  -3.55
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1

@@ -1,0 +1,47 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Fri Jan 10 13:03:53 2025
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     17
+    Shorted outputs (LINT-31)                                       8
+    Constant outputs (LINT-52)                                      9
+
+Nets                                                               12
+    Unloaded nets (LINT-2)                                         12
+--------------------------------------------------------------------------------
+
+Warning: In design 'BB', net 'net86' driven by pin 'C547/Z' has no loads. (LINT-2)
+Warning: In design 'BB', net 'net85' driven by pin 'C546/Z' has no loads. (LINT-2)
+Warning: In design 'BB', net 'net84' driven by pin 'C542/Z' has no loads. (LINT-2)
+Warning: In design 'BB', net 'net83' driven by pin 'C537/Z' has no loads. (LINT-2)
+Warning: In design 'BB', net 'net82' driven by pin 'C536/Z' has no loads. (LINT-2)
+Warning: In design 'BB', net 'net81' driven by pin 'C535/Z' has no loads. (LINT-2)
+Warning: In design 'BB', net 'net80' driven by pin 'C534/Z' has no loads. (LINT-2)
+Warning: In design 'BB', net 'net79' driven by pin 'C530/Z' has no loads. (LINT-2)
+Warning: In design 'BB', net 'net78' driven by pin 'C529/Z' has no loads. (LINT-2)
+Warning: In design 'BB', net 'net77' driven by pin 'C509/Z' has no loads. (LINT-2)
+Warning: In design 'BB', net 'net76' driven by pin 'C508/Z' has no loads. (LINT-2)
+Warning: In design 'BB', net 'net75' driven by pin 'C507/Z' has no loads. (LINT-2)
+Warning: In design 'BB', output port 'score_A[7]' is connected directly to output port 'score_B[3]'. (LINT-31)
+Warning: In design 'BB', output port 'score_A[7]' is connected directly to output port 'score_B[4]'. (LINT-31)
+Warning: In design 'BB', output port 'score_A[7]' is connected directly to output port 'score_B[5]'. (LINT-31)
+Warning: In design 'BB', output port 'score_A[7]' is connected directly to output port 'score_B[6]'. (LINT-31)
+Warning: In design 'BB', output port 'score_A[7]' is connected directly to output port 'score_B[7]'. (LINT-31)
+Warning: In design 'BB', output port 'score_A[7]' is connected directly to output port 'score_A[4]'. (LINT-31)
+Warning: In design 'BB', output port 'score_A[7]' is connected directly to output port 'score_A[5]'. (LINT-31)
+Warning: In design 'BB', output port 'score_A[7]' is connected directly to output port 'score_A[6]'. (LINT-31)
+Warning: In design 'BB', output port 'score_A[7]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'BB', output port 'score_A[6]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'BB', output port 'score_A[5]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'BB', output port 'score_A[4]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'BB', output port 'score_B[7]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'BB', output port 'score_B[6]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'BB', output port 'score_B[5]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'BB', output port 'score_B[4]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'BB', output port 'score_B[3]' is connected directly to 'logic 0'. (LINT-52)
+1

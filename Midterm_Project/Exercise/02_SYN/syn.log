@@ -1,0 +1,1262 @@
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+# (A) Global Parameters
+#======================================================
+set DESIGN "ISP"
+ISP
+set CYCLE 2.2
+2.2
+set INPUT_DLY [expr 0.5*$CYCLE]
+1.1
+set OUTPUT_DLY [expr 0.5*$CYCLE]
+1.1
+#======================================================
+# (B) Read RTL Code
+#======================================================
+# (B-1) analyze + elaborate
+set hdlin_auto_save_templates TRUE
+TRUE
+analyze -f sverilog $DESIGN\.v 
+Running PRESTO HDLC
+Compiling source file ../01_RTL/ISP.v
+Presto compilation completed successfully.
+Loading db file '/RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ss1p62v125c.db'
+Loading db file '/RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ff1p98vm40c.db'
+Loading db file '/RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_t33_generic_io_ss1p62v125c.db'
+Loading db file '/RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_t33_generic_io_tt1p8v25c.db'
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/standard.sldb'
+1
+elaborate $DESIGN  
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/gtech.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/standard.sldb'
+  Loading link library 'fsa0m_a_generic_core_ss1p62v125c'
+  Loading link library 'fsa0m_a_generic_core_ff1p98vm40c'
+  Loading link library 'fsa0m_a_t33_generic_io_ss1p62v125c'
+  Loading link library 'fsa0m_a_t33_generic_io_tt1p8v25c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 173 in file
+        '../01_RTL/ISP.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           174            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 326 in file
+        '../01_RTL/ISP.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           327            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 609 in file
+        '../01_RTL/ISP.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           610            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 806 in file
+        '../01_RTL/ISP.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           808            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine ISP line 340 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 350 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  in_valid_reg_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 354 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  in_pic_no_reg_reg  | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 366 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   in_mode_reg_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 378 in file
+                '../01_RTL/ISP.v'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+| in_ratio_mode_reg_reg | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+        in routine ISP line 390 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| direct_out_reg_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 395 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  bready_s_inf_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   awid_s_inf_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  awsize_s_inf_reg   | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  awburst_s_inf_reg  | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   arid_s_inf_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  arsize_s_inf_reg   | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  arburst_s_inf_reg  | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  awaddr_s_inf_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   awlen_s_inf_reg   | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 421 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   arlen_s_inf_reg   | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 433 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  araddr_s_inf_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 442 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  arvalid_s_inf_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 458 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  rready_s_inf_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 471 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  awvalid_s_inf_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 484 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| wdata_dly_count_reg | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 493 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  wvalid_s_inf_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 508 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   wdata_s_inf_reg   | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 515 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   wlast_s_inf_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 540 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    in_count_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 552 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  channel_count_reg  | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 565 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| add_gray_in_reg_reg | Flip-flop |  21   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 580 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  center_buffer_reg  | Flip-flop |  288  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 609 in file
+                '../01_RTL/ISP.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| focus_sub_in_1_reg_reg | Flip-flop |  48   |  Y  | N  | N  | N  | N  | N  | N  |
+| focus_sub_in_2_reg_reg | Flip-flop |  48   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+        in routine ISP line 656 in file
+                '../01_RTL/ISP.v'.
+=====================================================================================
+|       Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================
+| focus_add_stage_1_reg_reg | Flip-flop |  48   |  Y  | N  | N  | N  | N  | N  | N  |
+=====================================================================================
+
+Inferred memory devices in process
+        in routine ISP line 686 in file
+                '../01_RTL/ISP.v'.
+=====================================================================================
+|       Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================
+| focus_add_stage_2_reg_reg | Flip-flop |  27   |  Y  | N  | N  | N  | N  | N  | N  |
+=====================================================================================
+
+Inferred memory devices in process
+        in routine ISP line 692 in file
+                '../01_RTL/ISP.v'.
+=====================================================================================
+|       Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================
+| focus_add_stage_3_reg_reg | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+=====================================================================================
+
+Inferred memory devices in process
+        in routine ISP line 697 in file
+                '../01_RTL/ISP.v'.
+=====================================================================================
+|       Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================
+| focus_add_stage_4_reg_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+=====================================================================================
+
+Inferred memory devices in process
+        in routine ISP line 701 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| diff_acc_reg_2_reg  | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 710 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| diff_acc_reg_4_reg  | Flip-flop |  13   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 720 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| diff_acc_reg_6_reg  | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 729 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   focus_reg_6_reg   | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 741 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   focus_reg_4_reg   | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 750 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   focus_reg_2_reg   | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 759 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  focus_out_reg_reg  | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 773 in file
+                '../01_RTL/ISP.v'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+|   focus_record_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| focus_record_flag_reg | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+        in routine ISP line 786 in file
+                '../01_RTL/ISP.v'.
+====================================================================================
+|      Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================
+|   exposure_record_reg    | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+| exposure_record_flag_reg | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+====================================================================================
+
+Inferred memory devices in process
+        in routine ISP line 800 in file
+                '../01_RTL/ISP.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| current_img_size_reg | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine ISP line 821 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  img_size_reg_reg   | Flip-flop |  16   |  Y  | N  | N  | Y  | N  | N  | N  |
+|  img_size_reg_reg   | Flip-flop |  48   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 832 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  all_zero_flag_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 842 in file
+                '../01_RTL/ISP.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| exposure_exist_reg_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  focus_exist_reg_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+        in routine ISP line 853 in file
+                '../01_RTL/ISP.v'.
+====================================================================================
+|      Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================
+|    focus_restore_reg     | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+| exposure_acc_restore_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+====================================================================================
+
+Inferred memory devices in process
+        in routine ISP line 859 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   focus_count_reg   | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 871 in file
+                '../01_RTL/ISP.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| focus_pipe_count_reg | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine ISP line 883 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| exposure_count_reg  | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 896 in file
+                '../01_RTL/ISP.v'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+| adj_gray_data_reg_reg | Flip-flop |  112  |  Y  | N  | N  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+        in routine ISP line 909 in file
+                '../01_RTL/ISP.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| exp_add_stage_1_reg_reg | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+        in routine ISP line 920 in file
+                '../01_RTL/ISP.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| exp_add_stage_2_reg_reg | Flip-flop |  36   |  Y  | N  | N  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+        in routine ISP line 927 in file
+                '../01_RTL/ISP.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| exp_add_stage_3_reg_reg | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+        in routine ISP line 932 in file
+                '../01_RTL/ISP.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| exp_add_stage_4_reg_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+        in routine ISP line 941 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  exposure_acc_reg   | Flip-flop |  18   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 954 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    out_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine ISP line 966 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    out_data_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|     ISP/311      |   16   |    2    |      4       |
+|     ISP/802      |   16   |    4    |      4       |
+|     ISP/854      |   16   |    2    |      4       |
+|     ISP/855      |   16   |    8    |      4       |
+======================================================
+Presto compilation completed successfully. (ISP)
+Elaborated 1 design.
+Current design is now 'ISP'.
+Information: Building the design 'divided_by_9'. (HDL-193)
+
+Inferred memory devices in process
+        in routine divided_by_9 line 1017 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      busy_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine divided_by_9 line 1032 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       idx_reg       | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine divided_by_9 line 1047 in file
+                '../01_RTL/ISP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       quo_reg       | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       acc_reg       | Flip-flop |  13   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (divided_by_9)
+1
+# (B-2) read_sverilog
+#read_sverilog $DESIGN\.v
+# (B-3) set current design
+current_design $DESIGN
+Current design is 'ISP'.
+{ISP}
+link
+
+  Linking design 'ISP'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (2 designs)               /RAID2/COURSE/iclab/iclab055/Midterm_Project/Exercise/02_SYN/ISP.db, etc
+  fsa0m_a_generic_core_ss1p62v125c (library) /RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ss1p62v125c.db
+  fsa0m_a_generic_core_ff1p98vm40c (library) /RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ff1p98vm40c.db
+  fsa0m_a_t33_generic_io_ss1p62v125c (library) /RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_t33_generic_io_ss1p62v125c.db
+  fsa0m_a_t33_generic_io_tt1p8v25c (library) /RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_t33_generic_io_tt1p8v25c.db
+  dw_foundation.sldb (library) /usr/cad/synopsys/synthesis/cur/libraries/syn/dw_foundation.sldb
+
+1
+#======================================================
+#  (C) Global Setting
+#======================================================
+set_wire_load_mode top
+1
+# set_operating_conditions -max WCCOM -min BCCOM
+# set_wire_load_model -name umc18_wl10 -library slow
+#======================================================
+#  (D) Set Design Constraints
+#======================================================
+# (D-1) Setting Clock Constraints
+create_clock -name clk -period $CYCLE [get_ports clk] 
+1
+set_dont_touch_network             [get_clocks clk]
+1
+set_fix_hold                       [get_clocks clk]
+1
+set_clock_uncertainty       0.1    [get_clocks clk]
+1
+# set_clock_latency   -source 0      [get_clocks clk]
+# set_clock_latency           1      [get_clocks clk] 
+set_input_transition        0.5    [all_inputs] 
+1
+set_clock_transition        0.1    [all_clocks] 
+1
+# (D-2) Setting in/out Constraints
+set_input_delay   -max  $INPUT_DLY  -clock clk   [all_inputs] ;  # set_up time check 
+1
+set_input_delay   -min  0           -clock clk   [all_inputs] ;  # hold   time check 
+1
+set_output_delay  -max  $OUTPUT_DLY -clock clk   [all_outputs] ; # set_up time check 
+1
+set_output_delay  -min  0           -clock clk   [all_outputs] ; # hold   time check 
+1
+set_input_delay 0 -clock clk clk
+1
+set_input_delay 0 -clock clk rst_n
+1
+#set_max_delay $CYCLE -from [all_inputs] -to [all_outputs]
+# (D-3) Setting Design Environment
+# set_driving_cell -library umc18io3v5v_slow -lib_cell P2C    -pin {Y}  [get_ports clk]
+# set_driving_cell -library umc18io3v5v_slow -lib_cell P2C    -pin {Y}  [remove_from_collection [all_inputs] [get_ports clk]]
+# set_load  [load_of "umc18io3v5v_slow/P8C/A"]       [all_outputs] ; # ~= 0.038
+set_load 0.05 [all_outputs]
+1
+# (D-4) Setting DRC Constraint
+#set_max_delay           0     ; # Optimize delay max effort                 
+#set_max_area            0      ; # Optimize area max effort           
+set_max_transition      3       [all_inputs]   ; # U18 LUT Max Transition Value  
+1
+set_max_capacitance     0.15    [all_inputs]   ; # U18 LUT Max Capacitance Value
+1
+set_max_fanout          10      [all_inputs]
+1
+# set_dont_use slow/JKFF*
+#set_dont_touch [get_cells core_reg_macro]
+#set hdlin_ff_always_sync_set_reset true
+# (D-5) Report Clock skew
+report_clock -skew clk
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Changed wire load model for 'alt1' from '(none)' to 'G5K'. (OPT-170)
+Information: Changed wire load model for 'astr' from '(none)' to 'G5K'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'G5K'. (OPT-170)
+Information: Changed wire load model for 'astr' from '(none)' to 'G5K'. (OPT-170)
+Information: Updating design information... (UID-85)
+Warning: Design 'ISP' contains 3 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : clock_skew
+Design : ISP
+Version: T-2022.03
+Date   : Wed Jan  1 03:58:07 2025
+****************************************
+
+                 Rise      Fall  Min Rise  Min fall        Uncertainty
+Object          Delay     Delay     Delay     Delay     Plus      Minus
+--------------------------------------------------------------------------------
+clk                 -         -         -         -      0.10      0.10
+
+                 Max Transition      Min Transition
+Object           Rise      Fall      Rise      Fall
+-------------------------------------------------------
+clk              0.10      0.10      0.10      0.10
+1
+check_timing
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+
+Information: Checking unconstrained_endpoints...
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+1
+#======================================================
+#  (E) Optimization
+#======================================================
+check_design > Report/$DESIGN\.check
+set_fix_multiple_port_nets -all -buffer_constants [get_designs *]
+1
+set_fix_hold [all_clocks]
+1
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 4 cores. (OPT-1500)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | S-2021.06-DWBB_202106.0 |     *     |
+| Licensed DW Building Blocks        | S-2021.06-DWBB_202106.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler NXT WLM                                                           |
+| Comand line  | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 2751                                   |
+| Number of User Hierarchies                              | 1                                      |
+| Sequential Cell Count                                   | 1418                                   |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch cells                              | 347                                    |
+| Number of Dont Touch nets                               | 2                                      |
+| Number of size only cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 93 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'ISP'
+
+  Loading target library 'fsa0m_a_generic_core_ff1p98vm40c'
+  Loading target library 'fsa0m_a_t33_generic_io_ss1p62v125c'
+  Loading target library 'fsa0m_a_t33_generic_io_tt1p8v25c'
+Loaded alib file './alib-52/fsa0m_a_generic_core_ss1p62v125c.db.alib'
+Loaded alib file './alib-52/fsa0m_a_generic_core_ff1p98vm40c.db.alib'
+Loaded alib file './alib-52/fsa0m_a_t33_generic_io_ss1p62v125c.db.alib' (placeholder)
+Loaded alib file './alib-52/fsa0m_a_t33_generic_io_tt1p8v25c.db.alib' (placeholder)
+Warning: Operating condition WCCOM set on design ISP has different process,
+voltage and temperatures parameters than the parameters at which target library 
+fsa0m_a_generic_core_ff1p98vm40c is characterized. Delays may be inaccurate as a result. (OPT-998)
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy divided_by_9_inst before Pass 1 (OPT-776)
+Information: Ungrouping 1 of 2 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'ISP'
+Information: Added key list 'DesignWare' to design 'ISP'. (DDB-72)
+Information: The register 'focus_add_stage_3_reg_reg[1][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[24]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[25]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[26]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[27]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[28]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[29]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[30]' is a constant and will be removed. (OPT-1206)
+Information: The register 'araddr_s_inf_reg[31]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awlen_s_inf_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[24]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[25]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[26]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[27]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[28]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[29]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[30]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awaddr_s_inf_reg[31]' is a constant and will be removed. (OPT-1206)
+Information: The register 'arburst_s_inf_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'arsize_s_inf_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'arsize_s_inf_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'arid_s_inf_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'arid_s_inf_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'arid_s_inf_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'arid_s_inf_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awburst_s_inf_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awsize_s_inf_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awsize_s_inf_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awid_s_inf_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awid_s_inf_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awid_s_inf_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'awid_s_inf_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'arlen_s_inf_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: In design 'ISP', the register 'awlen_s_inf_reg[0]' is removed because it is merged to 'araddr_s_inf_reg[16]'. (OPT-1215)
+Information: In design 'ISP', the register 'awlen_s_inf_reg[1]' is removed because it is merged to 'araddr_s_inf_reg[16]'. (OPT-1215)
+Information: In design 'ISP', the register 'awlen_s_inf_reg[2]' is removed because it is merged to 'araddr_s_inf_reg[16]'. (OPT-1215)
+Information: In design 'ISP', the register 'awlen_s_inf_reg[3]' is removed because it is merged to 'araddr_s_inf_reg[16]'. (OPT-1215)
+Information: In design 'ISP', the register 'awlen_s_inf_reg[4]' is removed because it is merged to 'araddr_s_inf_reg[16]'. (OPT-1215)
+Information: In design 'ISP', the register 'awlen_s_inf_reg[5]' is removed because it is merged to 'araddr_s_inf_reg[16]'. (OPT-1215)
+Information: In design 'ISP', the register 'awlen_s_inf_reg[7]' is removed because it is merged to 'araddr_s_inf_reg[16]'. (OPT-1215)
+Information: In design 'ISP', the register 'arburst_s_inf_reg[0]' is removed because it is merged to 'araddr_s_inf_reg[16]'. (OPT-1215)
+Information: In design 'ISP', the register 'arsize_s_inf_reg[2]' is removed because it is merged to 'araddr_s_inf_reg[16]'. (OPT-1215)
+Information: In design 'ISP', the register 'awburst_s_inf_reg[0]' is removed because it is merged to 'araddr_s_inf_reg[16]'. (OPT-1215)
+Information: In design 'ISP', the register 'awsize_s_inf_reg[2]' is removed because it is merged to 'araddr_s_inf_reg[16]'. (OPT-1215)
+Information: In design 'ISP', the register 'bready_s_inf_reg' is removed because it is merged to 'araddr_s_inf_reg[16]'. (OPT-1215)
+Information: In design 'ISP', the register 'arlen_s_inf_reg[2]' is removed because it is merged to 'arlen_s_inf_reg[1]'. (OPT-1215)
+Information: In design 'ISP', the register 'arlen_s_inf_reg[3]' is removed because it is merged to 'arlen_s_inf_reg[1]'. (OPT-1215)
+Information: In design 'ISP', the register 'arlen_s_inf_reg[4]' is removed because it is merged to 'arlen_s_inf_reg[1]'. (OPT-1215)
+Information: In design 'ISP', the register 'arlen_s_inf_reg[5]' is removed because it is merged to 'arlen_s_inf_reg[1]'. (OPT-1215)
+Information: In design 'ISP', the register 'arlen_s_inf_reg[7]' is removed because it is merged to 'arlen_s_inf_reg[1]'. (OPT-1215)
+Information: In design 'ISP', the register 'arlen_s_inf_reg[0]' is removed because it is merged to 'arlen_s_inf_reg[1]'. (OPT-1215)
+ Implement Synthetic for 'ISP'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIE1' in the library 'fsa0m_a_generic_core_ss1p62v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIE0' in the library 'fsa0m_a_generic_core_ss1p62v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'BHD1' in the library 'fsa0m_a_generic_core_ss1p62v125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:42  297143.5      0.12      31.7      30.0                           22060916.0000      0.00  
+    0:00:43  288856.5      1.46     269.0      30.0                           21377956.0000      0.00  
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:43  288856.5      1.46     269.0      30.0                           21377956.0000      0.00  
+    0:00:43  288856.5      1.46     269.0      30.0                           21377956.0000      0.00  
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:45  167904.9      0.36     118.7      21.4                           10754147.0000      0.00  
+    0:00:48  172123.4      0.09      26.9      22.0                           11094510.0000      0.00  
+    0:00:48  172123.4      0.09      26.9      22.0                           11094510.0000      0.00  
+    0:00:49  171667.1      0.09      30.1      22.0                           11161543.0000      0.00  
+    0:00:49  171598.4      0.09      30.1      22.0                           11159696.0000      0.00  
+    0:00:49  171489.0      0.36      41.6      22.0                           11152308.0000      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:50  168907.9      0.36      32.5      22.0                           10930454.0000      0.00  
+    0:00:51  169032.9      0.14      29.4      22.0                           10946321.0000      0.00  
+    0:00:51  169032.9      0.14      29.4      22.0                           10946321.0000      0.00  
+    0:00:51  168751.7      0.14      21.0      22.0                           10943770.0000      0.00  
+    0:00:51  168751.7      0.14      21.0      22.0                           10943770.0000      0.00  
+    0:00:52  170386.0      0.11      22.8      22.0                           11063140.0000      0.00  
+    0:00:52  170386.0      0.11      22.8      22.0                           11063140.0000      0.00  
+    0:00:53  170432.8      0.10      21.7      22.0                           11067028.0000      0.00  
+    0:00:53  170432.8      0.10      21.7      22.0                           11067028.0000      0.00  
+    0:00:53  170573.5      0.10      21.7      22.0                           11076621.0000      0.00  
+    0:00:53  170573.5      0.10      21.7      22.0                           11076621.0000      0.00  
+    0:00:56  174648.2      0.00       0.0      24.1                           11377807.0000      0.00  
+    0:00:56  174648.2      0.00       0.0      24.1                           11377807.0000      0.00  
+    0:00:56  174648.2      0.00       0.0      24.1                           11377807.0000      0.00  
+    0:00:56  174648.2      0.00       0.0      24.1                           11377807.0000      0.00  
+    0:00:56  174648.2      0.00       0.0      24.1                           11377807.0000      0.00  
+    0:00:56  174648.2      0.00       0.0      24.1                           11377807.0000      0.00  
+    0:00:56  174648.2      0.00       0.0      24.1                           11377807.0000      0.00  
+    0:00:56  174648.2      0.00       0.0      24.1                           11377807.0000      0.00  
+    0:00:56  174648.2      0.00       0.0      24.1                           11377807.0000      0.00  
+    0:00:56  174648.2      0.00       0.0      24.1                           11377807.0000      0.00  
+    0:00:56  174648.2      0.00       0.0      24.1                           11377807.0000      0.00  
+
+
+  Beginning Design Rule Fixing  (max_fanout)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:56  174648.2      0.00       0.0      24.1                           11377807.0000      0.00  
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:00:56  174479.5      0.00       0.0       0.0                           11367454.0000      0.00  
+    0:00:56  174479.5      0.00       0.0       0.0                           11367454.0000      0.00  
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:56  174479.5      0.00       0.0       0.0                           11367454.0000      0.00  
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+    0:00:59  172198.4      0.06      15.5       0.0 focus_add_stage_1_reg_reg[5][2]/D 11092978.0000      0.00  
+    0:01:00  172748.3      0.04      10.8       0.0                           11156853.0000      0.00  
+    0:01:03  173029.6      0.06      11.6       0.0                           11174222.0000      0.00  
+    0:01:03  173029.6      0.06      11.6       0.0                           11174222.0000      0.00  
+    0:01:04  169707.9      0.06      10.3       0.0                           10787502.0000      0.00  
+    0:01:04  169707.9      0.06      10.3       0.0                           10787502.0000      0.00  
+    0:01:04  170770.3      0.05      10.9       0.0                           10840245.0000      0.00  
+    0:01:04  170770.3      0.05      10.9       0.0                           10840245.0000      0.00  
+    0:01:05  171667.1      0.03       3.4       0.0                           10942516.0000      0.00  
+    0:01:05  171667.1      0.03       3.4       0.0                           10942516.0000      0.00  
+    0:01:05  172617.1      0.03       2.9       0.0                           11017660.0000      0.00  
+    0:01:05  172617.1      0.03       2.9       0.0                           11017660.0000      0.00  
+    0:01:07  173901.4      0.00       0.0       0.0                           11136022.0000      0.00  
+    0:01:07  173901.4      0.00       0.0       0.0                           11136022.0000      0.00  
+    0:01:08  173901.4      0.00       0.0       0.0                           11136022.0000      0.00  
+    0:01:08  173901.4      0.00       0.0       0.0                           11136022.0000      0.00  
+    0:01:08  173901.4      0.00       0.0       0.0                           11136022.0000      0.00  
+    0:01:08  173901.4      0.00       0.0       0.0                           11136022.0000      0.00  
+    0:01:08  173901.4      0.00       0.0       0.0                           11136022.0000      0.00  
+    0:01:08  173901.4      0.00       0.0       0.0                           11136022.0000      0.00  
+    0:01:09  173901.4      0.00       0.0       0.0                           11136022.0000      0.00  
+    0:01:09  173901.4      0.00       0.0       0.0                           11136022.0000      0.00  
+    0:01:09  173901.4      0.00       0.0       0.0                           11136022.0000      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:01:10  174304.5      0.00       0.0       0.0                           11161617.0000      0.00  
+    0:01:10  173579.5      0.00       0.0       0.0                           11126060.0000      0.00  
+    0:01:10  173607.6      0.00       0.0       0.0                           11127744.0000      0.00  
+    0:01:10  173607.6      0.00       0.0       0.0                           11127744.0000      0.00  
+    0:01:11  171573.4      0.00       0.0       0.0                           10965753.0000      0.00  
+    0:01:11  170810.9      0.00       0.0       0.0                           10906274.0000      0.00  
+    0:01:11  170810.9      0.00       0.0       0.0                           10906274.0000      0.00  
+    0:01:11  170810.9      0.00       0.0       0.0                           10906274.0000      0.00  
+    0:01:11  170810.9      0.00       0.0       0.0                           10906274.0000      0.00  
+    0:01:11  170810.9      0.00       0.0       0.0                           10906274.0000      0.00  
+    0:01:11  170810.9      0.00       0.0       0.0                           10906274.0000      0.00  
+    0:01:12  168573.6      0.00       0.0       0.0                           10678689.0000      0.00  
+Loading db file '/RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ss1p62v125c.db'
+Loading db file '/RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ff1p98vm40c.db'
+Loading db file '/RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_t33_generic_io_ss1p62v125c.db'
+Loading db file '/RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_t33_generic_io_tt1p8v25c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'ISP' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'clk': 1333 load(s), 1 driver(s)
+  Loading target library 'fsa0m_a_generic_core_ff1p98vm40c'
+  Loading target library 'fsa0m_a_t33_generic_io_ss1p62v125c'
+  Loading target library 'fsa0m_a_t33_generic_io_tt1p8v25c'
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#uniquify
+#compile
+#======================================================
+#  (F) Output Reports 
+#======================================================
+report_design  >  Report/$DESIGN\.design
+report_resource >  Report/$DESIGN\.resource
+report_timing -max_paths 3 >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_power > Report/$DESIGN\.power
+report_clock > Report/$DESIGN\.clock
+report_port >  Report/$DESIGN\.port
+report_power >  Report/$DESIGN\.power
+#report_reference > Report/$DESIGN\.reference
+#======================================================
+#  (G) Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+define_name_rules name_rule -case_insensitive
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  (H) Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/RAID2/COURSE/iclab/iclab055/Midterm_Project/Exercise/02_SYN/Netlist/ISP_SYN.v'.
+1
+write -format ddc     -hierarchy -output $DESIGN\_SYN.ddc
+Writing ddc file 'ISP_SYN.ddc'.
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf -significant_digits 6
+Information: Writing timing information to file '/RAID2/COURSE/iclab/iclab055/Midterm_Project/Exercise/02_SYN/Netlist/ISP_SYN.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+Warning: Design 'ISP' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+1
+write_sdc Netlist/$DESIGN\_SYN.sdc
+1
+#======================================================
+#  (I) Finish and Quit
+#======================================================
+report_area -designware -hierarchy
+ 
+****************************************
+Report : area
+Design : ISP
+Version: T-2022.03
+Date   : Wed Jan  1 03:59:22 2025
+****************************************
+
+Library(s) Used:
+
+    fsa0m_a_generic_core_ss1p62v125c (File: /RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ss1p62v125c.db)
+
+Number of ports:                          398
+Number of nets:                          6869
+Number of cells:                         6669
+Number of combinational cells:           5336
+Number of sequential cells:              1333
+Number of macros/black boxes:               0
+Number of buf/inv:                       1460
+Number of references:                     111
+
+Combinational area:              93550.262067
+Buf/Inv area:                    14645.937514
+Noncombinational area:           75023.323574
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                168573.585641
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area             Local cell area
+                                  --------------------  ------------------------------ 
+Hierarchical cell                 Absolute     Percent  Combi-      Noncombi-   Black-
+                                  Total        Total    national    national    boxes   Design
+--------------------------------  -----------  -------  ----------  ----------  ------  ---------
+ISP                               168573.5856    100.0  93550.2621  75023.3236  0.0000  ISP
+--------------------------------  -----------  -------  ----------  ----------  ------  ---------
+Total                                                   93550.2621  75023.3236  0.0000
+
+
+Area of detected synthetic parts
+--------------------------------
+  No DW parts to report!
+
+Estimated area of ungrouped synthetic parts
+-------------------------------------------
+                                       Estimated  Perc. of
+  Module             Implem.  Count         Area cell area
+  ------------------ -------  ----- ------------ ---------
+  DP_OP_102_154_5367     str      1    2348.4169      1.4%
+  DP_OP_103_155_5367     str      1    2348.4169      1.4%
+  DP_OP_106_156_8122     str      1    1544.6333      0.9%
+  DP_OP_107_157_8122     str      1    1544.6333      0.9%
+  DP_OP_86_146_8526      str      1    1544.6333      0.9%
+  DP_OP_87_147_8526      str      1    1544.6333      0.9%
+  DP_OP_90_148_1314      str      1    1544.6333      0.9%
+  DP_OP_91_149_1314      str      1    1544.6333      0.9%
+  DP_OP_94_150_9904      str      1    1544.6333      0.9%
+  DP_OP_95_151_9904      str      1    1544.6333      0.9%
+  DP_OP_98_152_2612      str      1    2348.4169      1.4%
+  DP_OP_99_153_2612      str      1    2348.4169      1.4%
+  DW01_add            pparch     27   44217.1419     26.2%
+  DW01_dec           apparch      1      23.1235      0.0%
+  DW01_inc           apparch      8     432.4723      0.3%
+  DW01_sub           apparch      3     116.2426      0.1%
+  DW01_sub            pparch      1    2327.3934      1.4%
+  DW_cmp             apparch     17    3039.1806      1.8%
+  DW_rightsh            astr     32    7199.5388      4.3%
+  ------------------ -------  ----- ------------ ---------
+  DP_OP Subtotal:                12   21750.7339     12.9%
+  Total:                        101   79105.8271     46.9%
+
+Subtotal of datapath(DP_OP) cell area:  21750.7339  12.9%  (estimated)
+Total synthetic cell area:              79105.8271  46.9%  (estimated)
+
+1
+report_timing 
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : ISP
+Version: T-2022.03
+Date   : Wed Jan  1 03:59:23 2025
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: top
+
+  Startpoint: focus_sub_in_2_reg_reg_2__1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: focus_add_stage_1_reg_reg_2__7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ISP                enG30K                fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  focus_sub_in_2_reg_reg_2__1_/CK (QDFFP)                 0.00 #     0.00 r
+  focus_sub_in_2_reg_reg_2__1_/Q (QDFFP)                  0.41       0.41 f
+  U2927/O (INV1S)                                         0.12       0.53 r
+  U2926/O (OR2T)                                          0.25       0.78 r
+  U4113/O (OAI12H)                                        0.13       0.91 f
+  U4112/O (ND2P)                                          0.11       1.02 r
+  U4195/O (INV2)                                          0.09       1.11 f
+  U4332/O (NR2F)                                          0.17       1.28 r
+  U2936/O (INV2)                                          0.07       1.34 f
+  U4331/O (ND3P)                                          0.10       1.44 r
+  U2612/O (ND3P)                                          0.11       1.55 f
+  U4328/O (XNR2HS)                                        0.19       1.74 f
+  U3131/O (NR2T)                                          0.13       1.87 r
+  U3132/O (NR3HP)                                         0.09       1.96 f
+  focus_add_stage_1_reg_reg_2__7_/D (QDFFS)               0.00       1.96 f
+  data arrival time                                                  1.96
+
+  clock clk (rise edge)                                   2.20       2.20
+  clock network delay (ideal)                             0.00       2.20
+  clock uncertainty                                      -0.10       2.10
+  focus_add_stage_1_reg_reg_2__7_/CK (QDFFS)              0.00       2.10 r
+  library setup time                                     -0.14       1.96
+  data required time                                                 1.96
+  --------------------------------------------------------------------------
+  data required time                                                 1.96
+  data arrival time                                                 -1.96
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
+exit
+
+Memory usage for this session 404 Mbytes.
+Memory usage for this session including child processes 545 Mbytes.
+CPU usage for this session 138 seconds ( 0.04 hours ).
+Elapsed time for this session 83 seconds ( 0.02 hours ).
+
+Thank you...
+

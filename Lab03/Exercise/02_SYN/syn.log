@@ -1,0 +1,652 @@
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+# (A) Global Parameters
+#======================================================
+set DESIGN "TETRIS"
+TETRIS
+set CYCLE 7.3
+7.3
+set INPUT_DLY [expr 0.5*$CYCLE]
+3.65
+set OUTPUT_DLY [expr 0.5*$CYCLE]
+3.65
+#======================================================
+# (B) Read RTL Code
+#======================================================
+# (B-1) analyze + elaborate
+set hdlin_auto_save_templates TRUE
+TRUE
+analyze -f sverilog $DESIGN\.v 
+Running PRESTO HDLC
+Compiling source file ../01_RTL/TETRIS.v
+Presto compilation completed successfully.
+Loading db file '/RAID2/COURSE/iclab/iclabTA01/umc018/Synthesis/slow.db'
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/standard.sldb'
+1
+elaborate $DESIGN  
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/gtech.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/standard.sldb'
+  Loading link library 'slow'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ../01_RTL/TETRIS.v:85: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 84 in file
+        '../01_RTL/TETRIS.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            85            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 232 in file
+        '../01_RTL/TETRIS.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           253            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine TETRIS line 212 in file
+                '../01_RTL/TETRIS.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine TETRIS line 222 in file
+                '../01_RTL/TETRIS.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    round_num_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine TETRIS line 232 in file
+                '../01_RTL/TETRIS.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       map_reg       | Flip-flop |  90   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine TETRIS line 318 in file
+                '../01_RTL/TETRIS.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   score_count_reg   | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (TETRIS)
+Elaborated 1 design.
+Current design is now 'TETRIS'.
+Information: Building the design 'is_overlap'. (HDL-193)
+Presto compilation completed successfully. (is_overlap)
+1
+# (B-2) read_sverilog
+#read_sverilog $DESIGN\.v
+# (B-3) set current design
+current_design $DESIGN
+Current design is 'TETRIS'.
+{TETRIS}
+link
+
+  Linking design 'TETRIS'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (2 designs)               /RAID2/COURSE/iclab/iclab055/Lab03/02_SYN/TETRIS.db, etc
+  slow (library)              /RAID2/COURSE/iclab/iclabTA01/umc018/Synthesis/slow.db
+  dw_foundation.sldb (library) /usr/cad/synopsys/synthesis/cur/libraries/syn/dw_foundation.sldb
+
+1
+#======================================================
+#  (C) Global Setting
+#======================================================
+set_wire_load_mode top
+1
+# set_operating_conditions -max WCCOM -min BCCOM
+# set_wire_load_model -name umc18_wl10 -library slow
+#======================================================
+#  (D) Set Design Constraints
+#======================================================
+# (D-1) Setting Clock Constraints
+create_clock -name clk -period $CYCLE [get_ports clk] 
+1
+set_dont_touch_network             [get_clocks clk]
+1
+set_fix_hold                       [get_clocks clk]
+1
+set_clock_uncertainty       0.1    [get_clocks clk]
+1
+# set_clock_latency   -source 0      [get_clocks clk]
+# set_clock_latency           1      [get_clocks clk] 
+set_input_transition        0.5    [all_inputs] 
+1
+set_clock_transition        0.1    [all_clocks] 
+1
+# (D-2) Setting in/out Constraints
+set_input_delay   -max  $INPUT_DLY  -clock clk   [all_inputs] ;  # set_up time check 
+1
+set_input_delay   -min  0           -clock clk   [all_inputs] ;  # hold   time check 
+1
+set_output_delay  -max  $OUTPUT_DLY -clock clk   [all_outputs] ; # set_up time check 
+1
+set_output_delay  -min  0           -clock clk   [all_outputs] ; # hold   time check 
+1
+set_input_delay 0 -clock clk clk
+1
+set_input_delay 0 -clock clk rst_n
+1
+#set_max_delay $CYCLE -from [all_inputs] -to [all_outputs]
+# (D-3) Setting Design Environment
+# set_driving_cell -library umc18io3v5v_slow -lib_cell P2C    -pin {Y}  [get_ports clk]
+# set_driving_cell -library umc18io3v5v_slow -lib_cell P2C    -pin {Y}  [remove_from_collection [all_inputs] [get_ports clk]]
+# set_load  [load_of "umc18io3v5v_slow/P8C/A"]       [all_outputs] ; # ~= 0.038
+set_load 0.05 [all_outputs]
+1
+# (D-4) Setting DRC Constraint
+#set_max_delay           0     ; # Optimize delay max effort                 
+#set_max_area            0      ; # Optimize area max effort           
+set_max_transition      3       [all_inputs]   ; # U18 LUT Max Transition Value  
+1
+set_max_capacitance     0.15    [all_inputs]   ; # U18 LUT Max Capacitance Value
+1
+set_max_fanout          10      [all_inputs]
+1
+# set_dont_use slow/JKFF*
+#set_dont_touch [get_cells core_reg_macro]
+#set hdlin_ff_always_sync_set_reset true
+# (D-5) Report Clock skew
+report_clock -skew clk
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Updating design information... (UID-85)
+Warning: Design 'TETRIS' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : clock_skew
+Design : TETRIS
+Version: T-2022.03
+Date   : Fri Jan 10 13:09:35 2025
+****************************************
+
+                 Rise      Fall  Min Rise  Min fall        Uncertainty
+Object          Delay     Delay     Delay     Delay     Plus      Minus
+--------------------------------------------------------------------------------
+clk                 -         -         -         -      0.10      0.10
+
+                 Max Transition      Min Transition
+Object           Rise      Fall      Rise      Fall
+-------------------------------------------------------
+clk              0.10      0.10      0.10      0.10
+1
+check_timing
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+
+Information: Checking unconstrained_endpoints...
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+1
+#======================================================
+#  (E) Optimization
+#======================================================
+check_design > Report/$DESIGN\.check
+set_fix_multiple_port_nets -all -buffer_constants [get_designs *]
+1
+set_fix_hold [all_clocks]
+1
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Analyzing: "/RAID2/COURSE/iclab/iclabTA01/umc018/Synthesis/slow.db"
+Library analysis succeeded.
+Information: Running optimization using a maximum of 4 cores. (OPT-1500)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | S-2021.06-DWBB_202106.0 |     *     |
+| Licensed DW Building Blocks        | S-2021.06-DWBB_202106.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler NXT WLM                                                           |
+| Comand line  | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 15665                                  |
+| Number of User Hierarchies                              | 12                                     |
+| Sequential Cell Count                                   | 98                                     |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch cells                              | 6501                                   |
+| Number of Dont Touch nets                               | 1                                      |
+| Number of size only cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 6 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+Information: Uniquified 12 instances of design 'is_overlap'. (OPT-1056)
+  Simplifying Design 'TETRIS'
+
+Loaded alib file './alib-52/slow.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy is_overlap_generate[0].is_overlap_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy is_overlap_generate[11].is_overlap_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy is_overlap_generate[10].is_overlap_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy is_overlap_generate[9].is_overlap_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy is_overlap_generate[8].is_overlap_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy is_overlap_generate[7].is_overlap_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy is_overlap_generate[6].is_overlap_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy is_overlap_generate[5].is_overlap_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy is_overlap_generate[4].is_overlap_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy is_overlap_generate[3].is_overlap_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy is_overlap_generate[2].is_overlap_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy is_overlap_generate[1].is_overlap_inst before Pass 1 (OPT-776)
+Information: Ungrouping 12 of 13 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'TETRIS'
+Information: Added key list 'DesignWare' to design 'TETRIS'. (DDB-72)
+ Implement Synthetic for 'TETRIS'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1' in the library 'slow' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:10   53688.1      0.69      55.8     201.7                           6514138.0000      0.00  
+    0:00:10   53322.2      1.21      79.3     169.8                           6487435.5000      0.00  
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:10   53322.2      1.21      79.3     169.8                           6487435.5000      0.00  
+    0:00:10   53122.6      1.23      84.6     169.8                           6465503.0000      0.00  
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:10   28553.8      0.74      43.9      16.0                           1889533.1250      0.00  
+    0:00:11   29827.8      0.00       0.0      36.2                           2133538.5000      0.00  
+    0:00:11   29827.8      0.00       0.0      36.2                           2133538.5000      0.00  
+    0:00:11   29215.8      0.00       0.0      36.2                           2116002.2500      0.00  
+    0:00:11   29189.2      0.00       0.0      36.2                           2113512.5000      0.00  
+    0:00:11   29189.2      0.00       0.0      36.2                           2113512.5000      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:12   28713.5      0.00       0.0      32.4                           2035743.5000      0.00  
+    0:00:12   28713.5      0.00       0.0      32.4                           2035743.5000      0.00  
+    0:00:12   28713.5      0.00       0.0      32.4                           2035743.5000      0.00  
+    0:00:12   28350.9      0.00       0.0      24.1                           1969826.7500      0.00  
+    0:00:12   28350.9      0.00       0.0      24.1                           1969826.7500      0.00  
+    0:00:12   28350.9      0.00       0.0      24.1                           1969826.7500      0.00  
+    0:00:12   28350.9      0.00       0.0      24.1                           1969826.7500      0.00  
+    0:00:12   28350.9      0.00       0.0      24.1                           1969826.7500      0.00  
+    0:00:12   28350.9      0.00       0.0      24.1                           1969826.7500      0.00  
+    0:00:12   28350.9      0.00       0.0      24.1                           1969826.7500      0.00  
+    0:00:12   28350.9      0.00       0.0      24.1                           1969826.7500      0.00  
+    0:00:12   28350.9      0.00       0.0      24.1                           1969826.7500      0.00  
+    0:00:12   28350.9      0.00       0.0      24.1                           1969826.7500      0.00  
+    0:00:12   28350.9      0.00       0.0      24.1                           1969826.7500      0.00  
+    0:00:12   28350.9      0.00       0.0      24.1                           1969826.7500      0.00  
+    0:00:12   28350.9      0.00       0.0      24.1                           1969826.7500      0.00  
+    0:00:12   28350.9      0.00       0.0      24.1                           1969826.7500      0.00  
+    0:00:12   28350.9      0.00       0.0      24.1                           1969826.7500      0.00  
+    0:00:12   28350.9      0.00       0.0      24.1                           1969826.7500      0.00  
+    0:00:12   28350.9      0.00       0.0      24.1                           1969826.7500      0.00  
+    0:00:12   28350.9      0.00       0.0      24.1                           1969826.7500      0.00  
+    0:00:12   28350.9      0.00       0.0      24.1                           1969826.7500      0.00  
+
+
+  Beginning Design Rule Fixing  (max_fanout)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:12   28350.9      0.00       0.0      24.1                           1969826.7500      0.00  
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:00:12   28370.9      0.00       0.0       0.0                           1969961.6250      0.00  
+    0:00:12   28370.9      0.00       0.0       0.0                           1969961.6250      0.00  
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:12   28370.9      0.00       0.0       0.0                           1969961.6250      0.00  
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+    0:00:12   28001.6      0.00       0.0       0.0                           1768271.7500      0.00  
+    0:00:12   28001.6      0.00       0.0       0.0                           1768271.7500      0.00  
+    0:00:12   28001.6      0.00       0.0       0.0                           1768271.7500      0.00  
+    0:00:12   27981.7      0.00       0.0       0.0                           1766645.0000      0.00  
+    0:00:12   27981.7      0.00       0.0       0.0                           1766645.0000      0.00  
+    0:00:12   27981.7      0.00       0.0       0.0                           1766645.0000      0.00  
+    0:00:12   27981.7      0.00       0.0       0.0                           1766645.0000      0.00  
+    0:00:12   27981.7      0.00       0.0       0.0                           1766645.0000      0.00  
+    0:00:12   27981.7      0.00       0.0       0.0                           1766645.0000      0.00  
+    0:00:12   27981.7      0.00       0.0       0.0                           1766645.0000      0.00  
+    0:00:12   27981.7      0.00       0.0       0.0                           1766645.0000      0.00  
+    0:00:12   27981.7      0.00       0.0       0.0                           1766645.0000      0.00  
+    0:00:12   27981.7      0.00       0.0       0.0                           1766645.0000      0.00  
+    0:00:12   27981.7      0.00       0.0       0.0                           1766645.0000      0.00  
+    0:00:12   27981.7      0.00       0.0       0.0                           1766645.0000      0.00  
+    0:00:12   27981.7      0.00       0.0       0.0                           1766645.0000      0.00  
+    0:00:12   27981.7      0.00       0.0       0.0                           1766645.0000      0.00  
+    0:00:12   27981.7      0.00       0.0       0.0                           1766645.0000      0.00  
+    0:00:12   27981.7      0.00       0.0       0.0                           1766645.0000      0.00  
+    0:00:12   27981.7      0.00       0.0       0.0                           1766645.0000      0.00  
+    0:00:12   27981.7      0.00       0.0       0.0                           1766645.0000      0.00  
+    0:00:12   27981.7      0.00       0.0       0.0                           1766645.0000      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:12   27991.7      0.00       0.0       0.0                           1766892.5000      0.00  
+    0:00:13   27529.3      0.00       0.0       0.0                           1761938.8750      0.00  
+    0:00:13   27529.3      0.00       0.0       0.0                           1761938.8750      0.00  
+    0:00:13   27529.3      0.00       0.0       0.0                           1761938.8750      0.00  
+    0:00:13   27529.3      0.00       0.0       0.0                           1761393.2500      0.00  
+    0:00:13   27512.7      0.00       0.0       0.0                           1746460.0000      0.00  
+    0:00:13   27512.7      0.00       0.0       0.0                           1746460.0000      0.00  
+    0:00:13   27512.7      0.00       0.0       0.0                           1746460.0000      0.00  
+    0:00:13   27512.7      0.00       0.0       0.0                           1746460.0000      0.00  
+    0:00:13   27512.7      0.00       0.0       0.0                           1746460.0000      0.00  
+    0:00:13   27512.7      0.00       0.0       0.0                           1746460.0000      0.00  
+    0:00:13   27316.4      0.00       0.0       0.0                           1715924.0000      0.00  
+Loading db file '/RAID2/COURSE/iclab/iclabTA01/umc018/Synthesis/slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#uniquify
+#compile
+#======================================================
+#  (F) Output Reports 
+#======================================================
+report_design  >  Report/$DESIGN\.design
+report_resource >  Report/$DESIGN\.resource
+report_timing -max_paths 3 >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_power > Report/$DESIGN\.power
+report_clock > Report/$DESIGN\.clock
+report_port >  Report/$DESIGN\.port
+report_power >  Report/$DESIGN\.power
+#report_reference > Report/$DESIGN\.reference
+#======================================================
+#  (G) Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+define_name_rules name_rule -case_insensitive
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  (H) Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/RAID2/COURSE/iclab/iclab055/Lab03/02_SYN/Netlist/TETRIS_SYN.v'.
+1
+write -format ddc     -hierarchy -output $DESIGN\_SYN.ddc
+Writing ddc file 'TETRIS_SYN.ddc'.
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf -significant_digits 6
+Information: Writing timing information to file '/RAID2/COURSE/iclab/iclab055/Lab03/02_SYN/Netlist/TETRIS_SYN.sdf'. (WT-3)
+1
+write_sdc Netlist/$DESIGN\_SYN.sdc
+1
+#======================================================
+#  (I) Finish and Quit
+#======================================================
+report_area -designware -hierarchy
+ 
+****************************************
+Report : area
+Design : TETRIS
+Version: T-2022.03
+Date   : Fri Jan 10 13:10:39 2025
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabTA01/umc018/Synthesis/slow.db)
+
+Number of ports:                           88
+Number of nets:                          1479
+Number of cells:                         1379
+Number of combinational cells:           1280
+Number of sequential cells:                98
+Number of macros/black boxes:               0
+Number of buf/inv:                        159
+Number of references:                      78
+
+Combinational area:              20144.678826
+Buf/Inv area:                     1776.297647
+Noncombinational area:            7171.718536
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 27316.397363
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ----------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-  Black-
+                                  Total       Total    national    national   boxes   Design
+--------------------------------  ----------  -------  ----------  ---------  ------  ---------
+TETRIS                            27316.3974    100.0  20144.6788  7171.7185  0.0000  TETRIS
+--------------------------------  ----------  -------  ----------  ---------  ------  ---------
+Total                                                  20144.6788  7171.7185  0.0000
+
+
+Area of detected synthetic parts
+--------------------------------
+  No DW parts to report!
+
+Estimated area of ungrouped synthetic parts
+-------------------------------------------
+                                        Estimated  Perc. of
+  Module                Implem.  Count       Area cell area
+  --------------------- -------  ----- ---------- ---------
+  DP_OP_3140J1_122_8115     str      1   306.6127      1.1%
+  DW01_add              apparch      2    91.8086      0.3%
+  DW01_inc              apparch      3    53.8877      0.2%
+  DW_cmp                apparch      2    11.9750      0.0%
+  --------------------- -------  ----- ---------- ---------
+  DP_OP Subtotal:                    1   306.6127      1.1%
+  Total:                             8   464.2840      1.7%
+
+Subtotal of datapath(DP_OP) cell area:  306.6127  1.1%  (estimated)
+Total synthetic cell area:              464.2840  1.7%  (estimated)
+
+1
+report_timing 
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : TETRIS
+Version: T-2022.03
+Date   : Fri Jan 10 13:10:39 2025
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: map_reg_2__5_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: tetris[1] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  map_reg_2__5_/CK (DFFRX1)                0.00       0.00 r
+  map_reg_2__5_/Q (DFFRX1)                 0.59       0.59 f
+  U1143/Y (AND2XL)                         0.21       0.80 f
+  U1588/Y (NAND4BXL)                       0.17       0.96 r
+  U1376/Y (OAI21X1)                        0.14       1.11 f
+  U1702/Y (NOR2X2)                         0.14       1.25 r
+  U1703/Y (NAND3X2)                        0.10       1.35 f
+  U1137/Y (NOR2X2)                         0.13       1.48 r
+  U1170/Y (OAI21X2)                        0.14       1.62 f
+  U1704/Y (NOR2X4)                         0.26       1.88 r
+  U1705/Y (NAND3X2)                        0.12       2.00 f
+  U1706/Y (NOR2X2)                         0.12       2.13 r
+  U1707/Y (OAI2BB1X4)                      0.28       2.40 r
+  U1169/Y (INVX2)                          0.09       2.49 f
+  U1356/Y (BUFX4)                          0.25       2.74 f
+  U1617/Y (NOR2XL)                         0.81       3.55 r
+  tetris[1] (out)                          0.00       3.55 r
+  data arrival time                                   3.55
+
+  clock clk (rise edge)                    7.30       7.30
+  clock network delay (ideal)              0.00       7.30
+  clock uncertainty                       -0.10       7.20
+  output external delay                   -3.65       3.55
+  data required time                                  3.55
+  -----------------------------------------------------------
+  data required time                                  3.55
+  data arrival time                                  -3.55
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
+exit
+
+Memory usage for this session 241 Mbytes.
+Memory usage for this session including child processes 421 Mbytes.
+CPU usage for this session 72 seconds ( 0.02 hours ).
+Elapsed time for this session 69 seconds ( 0.02 hours ).
+
+Thank you...
+

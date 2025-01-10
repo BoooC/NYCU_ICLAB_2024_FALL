@@ -1,0 +1,131 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 3
+Design : BB
+Version: T-2022.03
+Date   : Fri Jan 10 13:04:45 2025
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: action[2] (input port clocked by clk)
+  Endpoint: score_temp_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     5.00       5.00 f
+  action[2] (in)                           0.00       5.00 f
+  U190/Y (INVXL)                           0.34       5.34 r
+  U126/Y (NOR2X1)                          0.15       5.50 f
+  U147/Y (INVXL)                           0.10       5.60 r
+  U121/Y (NOR2XL)                          0.09       5.69 f
+  U156/Y (INVXL)                           0.24       5.93 r
+  U162/Y (NAND2XL)                         0.27       6.20 f
+  U155/Y (NOR3XL)                          0.46       6.66 r
+  U146/Y (OAI211XL)                        0.21       6.87 f
+  U152/Y (OAI21XL)                         0.14       7.01 r
+  U151/Y (INVXL)                           0.13       7.14 f
+  U204/Y (OAI222XL)                        0.33       7.47 r
+  score_temp_reg[0]/D (DFFRX1)             0.00       7.47 r
+  data arrival time                                   7.47
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  clock uncertainty                       -0.10       9.90
+  score_temp_reg[0]/CK (DFFRX1)            0.00       9.90 r
+  library setup time                      -0.20       9.70
+  data required time                                  9.70
+  -----------------------------------------------------------
+  data required time                                  9.70
+  data arrival time                                  -7.47
+  -----------------------------------------------------------
+  slack (MET)                                         2.23
+
+
+  Startpoint: action[2] (input port clocked by clk)
+  Endpoint: score_temp_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     5.00       5.00 f
+  action[2] (in)                           0.00       5.00 f
+  U190/Y (INVXL)                           0.34       5.34 r
+  U126/Y (NOR2X1)                          0.15       5.50 f
+  U147/Y (INVXL)                           0.10       5.60 r
+  U121/Y (NOR2XL)                          0.09       5.69 f
+  U156/Y (INVXL)                           0.24       5.93 r
+  U162/Y (NAND2XL)                         0.27       6.20 f
+  U155/Y (NOR3XL)                          0.46       6.66 r
+  U146/Y (OAI211XL)                        0.21       6.87 f
+  U152/Y (OAI21XL)                         0.14       7.01 r
+  U151/Y (INVXL)                           0.13       7.14 f
+  U200/Y (OAI222XL)                        0.33       7.47 r
+  score_temp_reg[1]/D (DFFRX1)             0.00       7.47 r
+  data arrival time                                   7.47
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  clock uncertainty                       -0.10       9.90
+  score_temp_reg[1]/CK (DFFRX1)            0.00       9.90 r
+  library setup time                      -0.20       9.70
+  data required time                                  9.70
+  -----------------------------------------------------------
+  data required time                                  9.70
+  data arrival time                                  -7.47
+  -----------------------------------------------------------
+  slack (MET)                                         2.23
+
+
+  Startpoint: action[2] (input port clocked by clk)
+  Endpoint: score_temp_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     5.00       5.00 f
+  action[2] (in)                           0.00       5.00 f
+  U190/Y (INVXL)                           0.34       5.34 r
+  U126/Y (NOR2X1)                          0.15       5.50 f
+  U147/Y (INVXL)                           0.10       5.60 r
+  U121/Y (NOR2XL)                          0.09       5.69 f
+  U156/Y (INVXL)                           0.24       5.93 r
+  U162/Y (NAND2XL)                         0.27       6.20 f
+  U155/Y (NOR3XL)                          0.46       6.66 r
+  U146/Y (OAI211XL)                        0.21       6.87 f
+  U153/Y (NAND2XL)                         0.23       7.10 r
+  U197/Y (OAI222XL)                        0.22       7.33 f
+  score_temp_reg[2]/D (DFFRX1)             0.00       7.33 f
+  data arrival time                                   7.33
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  clock uncertainty                       -0.10       9.90
+  score_temp_reg[2]/CK (DFFRX1)            0.00       9.90 r
+  library setup time                      -0.31       9.59
+  data required time                                  9.59
+  -----------------------------------------------------------
+  data required time                                  9.59
+  data arrival time                                  -7.33
+  -----------------------------------------------------------
+  slack (MET)                                         2.26
+
+
+1

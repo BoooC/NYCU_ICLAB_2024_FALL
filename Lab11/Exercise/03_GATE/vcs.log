@@ -1,0 +1,1615 @@
+Command: vcs -timescale=1ns/1fs -j8 -sverilog +v2k -full64 -Mupdate -R -debug_access+all \
+-f filelist.f -o simv -l vcs.log -P /usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/linux64/novas.tab \
+/usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/linux64/pli.a -v /RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/Verilog/fsa0m_a_generic_core_30.lib.src \
++define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+         Version T-2022.06_Full64 -- Mon Dec  2 03:41:51 2024
+
+                    Copyright (c) 1991 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'TESTBED.v'
+Parsing included file 'PATTERN.vp'.
+Back to file 'TESTBED.v'.
+Parsing included file 'TMIP_SYN.v'.
+Back to file 'TESTBED.v'.
+Parsing design file '../04_MEM/SRAM_64X32.v'
+Parsing design file '../04_MEM/SRAM_192X32.v'
+Parsing library file '/RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/Verilog/fsa0m_a_generic_core_30.lib.src'
+Top Level Modules:
+       TESTBED
+TimeScale is 10 ps / 1 ps
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 1972
+TMIP, "DFFSBN SRAM_192X32_addr_reg_0_( .D (n3212),  .CK (clk),  .SB (n3487),  .Q (SRAM_192X32_addr[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 1974
+TMIP, "DFFSBN SRAM_192X32_addr_reg_1_( .D (n3211),  .CK (clk),  .SB (n3487),  .Q (SRAM_192X32_addr[1]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 1976
+TMIP, "DFFSBN SRAM_192X32_addr_reg_2_( .D (n3210),  .CK (clk),  .SB (n3487),  .Q (SRAM_192X32_addr[2]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 1978
+TMIP, "DFFSBN SRAM_192X32_addr_reg_3_( .D (n3209),  .CK (clk),  .SB (n3487),  .Q (SRAM_192X32_addr[3]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 1980
+TMIP, "DFFSBN SRAM_192X32_addr_reg_4_( .D (n3208),  .CK (clk),  .SB (n3487),  .Q (SRAM_192X32_addr[4]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 1982
+TMIP, "DFFSBN SRAM_192X32_addr_reg_5_( .D (n3207),  .CK (clk),  .SB (n3487),  .Q (SRAM_192X32_addr[5]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 4370
+TMIP, "FA1S U5452( .A (median_in[1]),  .B (n5277),  .CI (n4274),  .CO (n4268));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 4371
+TMIP, "FA1S U5453( .A (n4275),  .B (median_in[2]),  .CI (n4268),  .CO (n4269));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 4372
+TMIP, "FA1S U5454( .A (median_in[3]),  .B (n4278),  .CI (n4269),  .CO (n4270));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 4414
+TMIP, "FA1S U5482( .A (median_in[25]),  .B (median_in[24]),  .CI (n4296),  .CO (n4286));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 4415
+TMIP, "FA1S U5483( .A (median_in[26]),  .B (n4293),  .CI (n4286),  .CO (n4287));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 4416
+TMIP, "FA1S U5484( .A (n4297),  .B (median_in[27]),  .CI (n4287),  .CO (n4288));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 4417
+TMIP, "FA1S U5485( .A (median_in[28]),  .B (n4295),  .CI (n4288),  .CO (n4289));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 4438
+TMIP, "FA1S U5496( .A (median_in[1]),  .B (median_in[0]),  .CI (n4307),  .CO (n4298));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 4439
+TMIP, "FA1S U5497( .A (n4309),  .B (median_in[2]),  .CI (n4298),  .CO (n4299));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 4440
+TMIP, "FA1S U5498( .A (median_in[3]),  .B (n4310),  .CI (n4299),  .CO (n4300));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 4441
+TMIP, "FA1S U5499( .A (n4308),  .B (median_in[4]),  .CI (n4300),  .CO (n4301));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 4491
+TMIP, "FA1S U5535( .A (median_in[49]),  .B (median_in[48]),  .CI (n4332),  .CO (n4321));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 4492
+TMIP, "FA1S U5536( .A (median_in[50]),  .B (n4327),  .CI (n4321),  .CO (n4322));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 4493
+TMIP, "FA1S U5537( .A (n4329),  .B (median_in[51]),  .CI (n4322),  .CO (n4323));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 5464
+TMIP, "FA1S U6215( .A (median_in[25]),  .B (median_in[24]),  .CI (n5177),  .CO (n5136));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 5465
+TMIP, "FA1S U6216( .A (n5178),  .B (median_in[26]),  .CI (n5136),  .CO (n5137));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 5466
+TMIP, "FA1S U6217( .A (n5890),  .B (median_in[27]),  .CI (n5137),  .CO (n5138));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 5467
+TMIP, "FA1S U6218( .A (n5899),  .B (median_in[28]),  .CI (n5138),  .CO (n5139));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 5524
+TMIP, "FA1S U6259( .A (n5197),  .B (median_in[25]),  .CI (n5198),  .CO (n5189));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 5525
+TMIP, "FA1S U6260( .A (median_in[26]),  .B (n5199),  .CI (n5189),  .CO (n5190));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 5526
+TMIP, "FA1S U6261( .A (n5200),  .B (median_in[27]),  .CI (n5190),  .CO (n5191));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 5527
+TMIP, "FA1S U6262( .A (median_in[28]),  .B (n5201),  .CI (n5191),  .CO (n5192));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 5528
+TMIP, "FA1S U6263( .A (n5202),  .B (median_in[29]),  .CI (n5192),  .CO (n5193));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 5712
+TMIP, "FA1S U6396( .A (find_median_inst_mid1_reg[1]),  .B (find_median_inst_mid1_reg[0]),  .CI (n5358),  .CO (n5359));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 5714
+TMIP, "FA1S U6397( .A (n5375),  .B (find_median_inst_mid1_reg[2]),  .CI (n5359),  .CO (n5360));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 5906
+TMIP, "FA1S U6538( .A (median_in[49]),  .B (median_in[48]),  .CI (n5548),  .CO (n5535));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 5907
+TMIP, "FA1S U6539( .A (n5549),  .B (median_in[50]),  .CI (n5535),  .CO (n5536));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 5908
+TMIP, "FA1S U6540( .A (n5550),  .B (median_in[51]),  .CI (n5536),  .CO (n5537));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 5909
+TMIP, "FA1S U6541( .A (median_in[52]),  .B (n5551),  .CI (n5537),  .CO (n5538));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 6235
+TMIP, "FA1S U6771( .A (n5861),  .B (n5864),  .CI (pool_temp[17]),  .CO (n5774));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 6279
+TMIP, "FA1S U6806( .A (pool_temp[7]),  .B (n5857),  .CI (n5839),  .CO (n5840));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 6282
+TMIP, "FA1S U6809( .A (n5861),  .B (n5864),  .CI (pool_temp[1]),  .CO (n5843));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 6283
+TMIP, "FA1S U6810( .A (pool_temp[2]),  .B (n5867),  .CI (n5843),  .CO (n5844));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 6284
+TMIP, "FA1S U6811( .A (n5870),  .B (pool_temp[3]),  .CI (n5844),  .CO (n5845));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 6285
+TMIP, "FA1S U6812( .A (pool_temp[4]),  .B (n5873),  .CI (n5845),  .CO (n5846));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 6286
+TMIP, "FA1S U6813( .A (n5876),  .B (pool_temp[5]),  .CI (n5846),  .CO (n5847));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 6428
+TMIP, "FA1S U6898( .A (n6032),  .B (n6035),  .CI (pool_temp[25]),  .CO (n5976));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 6431
+TMIP, "FA1S U6901( .A (pool_temp[25]),  .B (n6034),  .CI (n6031),  .CO (n5986));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 6432
+TMIP, "FA1S U6902( .A (n6037),  .B (pool_temp[26]),  .CI (n5986),  .CO (n5987));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 6433
+TMIP, "FA1S U6903( .A (pool_temp[27]),  .B (n6040),  .CI (n5987),  .CO (n5988));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 6434
+TMIP, "FA1S U6904( .A (pool_temp[28]),  .B (n6043),  .CI (n5988),  .CO (n5989));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 6435
+TMIP, "FA1S U6905( .A (pool_temp[29]),  .B (n6046),  .CI (n5989),  .CO (n5990));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 6463
+TMIP, "FA1S U6925( .A (n6032),  .B (n6035),  .CI (pool_temp[9]),  .CO (n6006));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+TMIP_SYN.v, 6465
+TMIP, "FA1S U6927( .A (pool_temp[9]),  .B (n6034),  .CI (pool_temp[8]),  .CO (n6018));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+   ***   $sdf_annotate() version 1.2R
+   ***    SDF file: "TMIP_SYN.sdf"
+   ***    Annotation scope: TESTBED.u_TMIP
+   ***    No MTM selection argument specified
+   ***    No SCALE FACTORS argument specified
+   ***    No SCALE TYPE argument specified
+   ***    MTM selection defaulted to "TOOL_CONTROL":
+               (+maxdelays compiled, MAXIMUM delays selected)
+   ***    SCALE FACTORS defaulted to "1.0:1.0:1.0":
+   ***    SCALE TYPE defaulted to: "FROM_MTM"
+   ***    Turnoff delay: "FROM_FILE"
+   ***    Approximation (mipd) policy: "MAXIMUM"
+
+   ***    SDF annotation begin: Mon Dec  2 03:41:52 2024
+
+
+SDF Info: +pulse_r/100, +pulse_e/100 in effect
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+TMIP_SYN.sdf, 80890
+module: QDFFRBN, "instance: TESTBED.u_TMIP.conv_sram_stop_flag_reg_reg"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+TMIP_SYN.sdf, 80929
+module: QDFFRBN, "instance: TESTBED.u_TMIP.cal_count_reg_6_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+TMIP_SYN.sdf, 81148
+module: QDFFRBS, "instance: TESTBED.u_TMIP.state_reg_2_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+TMIP_SYN.sdf, 81169
+module: QDFFRBS, "instance: TESTBED.u_TMIP.cal_count_reg_1_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+TMIP_SYN.sdf, 81190
+module: QDFFRBS, "instance: TESTBED.u_TMIP.cal_count_reg_3_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+TMIP_SYN.sdf, 81211
+module: QDFFRBS, "instance: TESTBED.u_TMIP.find_median_inst_max1_reg_reg_1_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+TMIP_SYN.sdf, 81232
+module: QDFFRBS, "instance: TESTBED.u_TMIP.current_action_idx_reg_2_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+TMIP_SYN.sdf, 81253
+module: QDFFRBS, "instance: TESTBED.u_TMIP.cal_count_reg_7_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+TMIP_SYN.sdf, 81274
+module: QDFFRBN, "instance: TESTBED.u_TMIP.state_reg_3_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+All future warnings not reported; use +sdfverbose to report them.
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+TMIP_SYN.sdf, 81295
+module: QDFFRBN, "instance: TESTBED.u_TMIP.state_reg_0_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+          Total errors: 0
+          Total warnings: 235
+   ***    SDF annotation completed: Mon Dec  2 03:41:52 2024
+
+
+
+Warning-[DRTZ] Detect delay value roundoff to 0
+  Delay from design or SDF file roundoff to 0 based on timescale
+  Please use switch -diag timescale to dump detailed information.
+
+Starting vcs inline pass...
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+87 modules and 2 UDPs read.
+recompiling module PATTERN
+	However, due to incremental compilation, only 1 module needs to be compiled. 
+make[1]: Entering directory `/RAID2/COURSE/iclab/iclab055/Lab11/03_GATE/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+ld -shared  -Bsymbolic   -o .//../simv.daidir//_cuarc0.so objs/amcQw_d.o 
+rm -f _cuarc0.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/usr/cad/synopsys/vcs/2022.06/linux64/lib -L/usr/cad/synopsys/vcs/2022.06/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1     _255300_archive_1.so _255339_archive_1.so \
+_prev_archive_1.so _cuarc0.so objs/udps/qndjy.o objs/udps/Sbaqa.o  SIM_l.o      rmapats_mop.o \
+rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o           -lvirsim -lerrorinf \
+-lsnpsmalloc -lvfs /usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/linux64/pli.a  \
+-lvcsnew -lsimprofile -luclinative /usr/cad/synopsys/vcs/2022.06/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   \
+/usr/cad/synopsys/vcs/2022.06/linux64/lib/vcs_save_restore_new.o /usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/LINUX64/pli.a \
+-ldl -lm  -lc -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/RAID2/COURSE/iclab/iclab055/Lab11/03_GATE/csrc'
+Command: /RAID2/COURSE/iclab/iclab055/Lab11/03_GATE/./simv +v2k -a vcs.log +define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06_Full64; Runtime version T-2022.06_Full64;  Dec  2 03:41 2024
+Doing SDF annotation ...... Done
+[0;34m =========== Pattern:  0 =========== [m
+[0;32m $ Pass set: 0, latency:  135 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:  108 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:  108 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:  283 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern:  0 ###### [m
+[0;34m =========== Pattern:  1 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   66 [m
+[0;32m $ Pass set: 2, latency:   39 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern:  1 ###### [m
+[0;34m =========== Pattern:  2 =========== [m
+[0;32m $ Pass set: 0, latency:  108 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   34 [m
+[0;32m $ Pass set: 3, latency:   34 [m
+[0;32m $ Pass set: 4, latency:   34 [m
+[0;32m $ Pass set: 5, latency:   61 [m
+[0;32m $ Pass set: 6, latency:   34 [m
+[0;32m $ Pass set: 7, latency:  308 [m
+[0;33m ###### Pass pattern:  2 ###### [m
+[0;34m =========== Pattern:  3 =========== [m
+[0;32m $ Pass set: 0, latency:  810 [m
+[0;32m $ Pass set: 1, latency:  544 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:  168 [m
+[0;32m $ Pass set: 4, latency:  168 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:  116 [m
+[0;32m $ Pass set: 7, latency:  116 [m
+[0;33m ###### Pass pattern:  3 ###### [m
+[0;34m =========== Pattern:  4 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:  278 [m
+[0;32m $ Pass set: 3, latency:  360 [m
+[0;32m $ Pass set: 4, latency:   94 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:  382 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern:  4 ###### [m
+[0;34m =========== Pattern:  5 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   39 [m
+[0;32m $ Pass set: 4, latency:   39 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   39 [m
+[0;33m ###### Pass pattern:  5 ###### [m
+[0;34m =========== Pattern:  6 =========== [m
+[0;32m $ Pass set: 0, latency:   66 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   39 [m
+[0;32m $ Pass set: 3, latency:   39 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:   39 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern:  6 ###### [m
+[0;34m =========== Pattern:  7 =========== [m
+[0;32m $ Pass set: 0, latency:   34 [m
+[0;32m $ Pass set: 1, latency:   61 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   61 [m
+[0;32m $ Pass set: 4, latency:  182 [m
+[0;32m $ Pass set: 5, latency:   34 [m
+[0;32m $ Pass set: 6, latency:  108 [m
+[0;32m $ Pass set: 7, latency:   86 [m
+[0;33m ###### Pass pattern:  7 ###### [m
+[0;34m =========== Pattern:  8 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   61 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:  234 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   86 [m
+[0;33m ###### Pass pattern:  8 ###### [m
+[0;34m =========== Pattern:  9 =========== [m
+[0;32m $ Pass set: 0, latency:  626 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:  116 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:  626 [m
+[0;32m $ Pass set: 5, latency:  278 [m
+[0;32m $ Pass set: 6, latency:   94 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern:  9 ###### [m
+[0;34m =========== Pattern: 10 =========== [m
+[0;32m $ Pass set: 0, latency:   34 [m
+[0;32m $ Pass set: 1, latency:  256 [m
+[0;32m $ Pass set: 2, latency:   34 [m
+[0;32m $ Pass set: 3, latency:   86 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:   88 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   34 [m
+[0;33m ###### Pass pattern: 10 ###### [m
+[0;34m =========== Pattern: 11 =========== [m
+[0;32m $ Pass set: 0, latency:   39 [m
+[0;32m $ Pass set: 1, latency:   93 [m
+[0;32m $ Pass set: 2, latency:  120 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   39 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   93 [m
+[0;33m ###### Pass pattern: 11 ###### [m
+[0;34m =========== Pattern: 12 =========== [m
+[0;32m $ Pass set: 0, latency:  143 [m
+[0;32m $ Pass set: 1, latency:  278 [m
+[0;32m $ Pass set: 2, latency:  316 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:  360 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:  382 [m
+[0;32m $ Pass set: 7, latency:   94 [m
+[0;33m ###### Pass pattern: 12 ###### [m
+[0;34m =========== Pattern: 13 =========== [m
+[0;32m $ Pass set: 0, latency:  168 [m
+[0;32m $ Pass set: 1, latency:  170 [m
+[0;32m $ Pass set: 2, latency:  217 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:  278 [m
+[0;32m $ Pass set: 5, latency:  914 [m
+[0;32m $ Pass set: 6, latency:  264 [m
+[0;32m $ Pass set: 7, latency:  116 [m
+[0;33m ###### Pass pattern: 13 ###### [m
+[0;34m =========== Pattern: 14 =========== [m
+[0;32m $ Pass set: 0, latency:  190 [m
+[0;32m $ Pass set: 1, latency:  544 [m
+[0;32m $ Pass set: 2, latency:   94 [m
+[0;32m $ Pass set: 3, latency:   94 [m
+[0;32m $ Pass set: 4, latency:   94 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:  544 [m
+[0;32m $ Pass set: 7, latency:  190 [m
+[0;33m ###### Pass pattern: 14 ###### [m
+[0;34m =========== Pattern: 15 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   39 [m
+[0;32m $ Pass set: 3, latency:   93 [m
+[0;32m $ Pass set: 4, latency:   39 [m
+[0;32m $ Pass set: 5, latency:   39 [m
+[0;32m $ Pass set: 6, latency:   39 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 15 ###### [m
+[0;34m =========== Pattern: 16 =========== [m
+[0;32m $ Pass set: 0, latency:  256 [m
+[0;32m $ Pass set: 1, latency:   86 [m
+[0;32m $ Pass set: 2, latency:  108 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   86 [m
+[0;32m $ Pass set: 5, latency:  234 [m
+[0;32m $ Pass set: 6, latency:  160 [m
+[0;32m $ Pass set: 7, latency:  135 [m
+[0;33m ###### Pass pattern: 16 ###### [m
+[0;34m =========== Pattern: 17 =========== [m
+[0;32m $ Pass set: 0, latency:  160 [m
+[0;32m $ Pass set: 1, latency:   34 [m
+[0;32m $ Pass set: 2, latency:  160 [m
+[0;32m $ Pass set: 3, latency:   86 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:   34 [m
+[0;32m $ Pass set: 6, latency:  234 [m
+[0;32m $ Pass set: 7, latency:   61 [m
+[0;33m ###### Pass pattern: 17 ###### [m
+[0;34m =========== Pattern: 18 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   39 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   39 [m
+[0;32m $ Pass set: 7, latency:   39 [m
+[0;33m ###### Pass pattern: 18 ###### [m
+[0;34m =========== Pattern: 19 =========== [m
+[0;32m $ Pass set: 0, latency:   66 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   39 [m
+[0;32m $ Pass set: 3, latency:   93 [m
+[0;32m $ Pass set: 4, latency:   39 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   39 [m
+[0;32m $ Pass set: 7, latency:   66 [m
+[0;33m ###### Pass pattern: 19 ###### [m
+[0;34m =========== Pattern: 20 =========== [m
+[0;32m $ Pass set: 0, latency:   61 [m
+[0;32m $ Pass set: 1, latency:  160 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   34 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   34 [m
+[0;32m $ Pass set: 7, latency:   86 [m
+[0;33m ###### Pass pattern: 20 ###### [m
+[0;34m =========== Pattern: 21 =========== [m
+[0;32m $ Pass set: 0, latency:  544 [m
+[0;32m $ Pass set: 1, latency:  544 [m
+[0;32m $ Pass set: 2, latency:  360 [m
+[0;32m $ Pass set: 3, latency:   94 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:  434 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:  278 [m
+[0;33m ###### Pass pattern: 21 ###### [m
+[0;34m =========== Pattern: 22 =========== [m
+[0;32m $ Pass set: 0, latency:  278 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:  360 [m
+[0;32m $ Pass set: 3, latency:  810 [m
+[0;32m $ Pass set: 4, latency:  116 [m
+[0;32m $ Pass set: 5, latency:  278 [m
+[0;32m $ Pass set: 6, latency:  434 [m
+[0;32m $ Pass set: 7, latency:   94 [m
+[0;33m ###### Pass pattern: 22 ###### [m
+[0;34m =========== Pattern: 23 =========== [m
+[0;32m $ Pass set: 0, latency:   86 [m
+[0;32m $ Pass set: 1, latency:  160 [m
+[0;32m $ Pass set: 2, latency:   34 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   34 [m
+[0;32m $ Pass set: 5, latency:   86 [m
+[0;32m $ Pass set: 6, latency:   61 [m
+[0;32m $ Pass set: 7, latency:   34 [m
+[0;33m ###### Pass pattern: 23 ###### [m
+[0;34m =========== Pattern: 24 =========== [m
+[0;32m $ Pass set: 0, latency:  116 [m
+[0;32m $ Pass set: 1, latency:  544 [m
+[0;32m $ Pass set: 2, latency:  168 [m
+[0;32m $ Pass set: 3, latency:   94 [m
+[0;32m $ Pass set: 4, latency:  278 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:  116 [m
+[0;32m $ Pass set: 7, latency:  626 [m
+[0;33m ###### Pass pattern: 24 ###### [m
+[0;34m =========== Pattern: 25 =========== [m
+[0;32m $ Pass set: 0, latency:   94 [m
+[0;32m $ Pass set: 1, latency:   94 [m
+[0;32m $ Pass set: 2, latency:  626 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:  190 [m
+[0;32m $ Pass set: 5, latency:   94 [m
+[0;32m $ Pass set: 6, latency:  278 [m
+[0;32m $ Pass set: 7, latency:  116 [m
+[0;33m ###### Pass pattern: 25 ###### [m
+[0;34m =========== Pattern: 26 =========== [m
+[0;32m $ Pass set: 0, latency:   88 [m
+[0;32m $ Pass set: 1, latency:   34 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:  160 [m
+[0;32m $ Pass set: 4, latency:   86 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 26 ###### [m
+[0;34m =========== Pattern: 27 =========== [m
+[0;32m $ Pass set: 0, latency:  648 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:  242 [m
+[0;32m $ Pass set: 3, latency:  360 [m
+[0;32m $ Pass set: 4, latency:   94 [m
+[0;32m $ Pass set: 5, latency:  143 [m
+[0;32m $ Pass set: 6, latency:  360 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 27 ###### [m
+[0;34m =========== Pattern: 28 =========== [m
+[0;32m $ Pass set: 0, latency:   66 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   93 [m
+[0;32m $ Pass set: 3, latency:   66 [m
+[0;32m $ Pass set: 4, latency:   66 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   93 [m
+[0;32m $ Pass set: 7, latency:   66 [m
+[0;33m ###### Pass pattern: 28 ###### [m
+[0;34m =========== Pattern: 29 =========== [m
+[0;32m $ Pass set: 0, latency:  278 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:  278 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:  810 [m
+[0;32m $ Pass set: 7, latency:  278 [m
+[0;33m ###### Pass pattern: 29 ###### [m
+[0;34m =========== Pattern: 30 =========== [m
+[0;32m $ Pass set: 0, latency:   39 [m
+[0;32m $ Pass set: 1, latency:   93 [m
+[0;32m $ Pass set: 2, latency:   39 [m
+[0;32m $ Pass set: 3, latency:   39 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:   93 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 30 ###### [m
+[0;34m =========== Pattern: 31 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:  360 [m
+[0;32m $ Pass set: 4, latency:  544 [m
+[0;32m $ Pass set: 5, latency:  278 [m
+[0;32m $ Pass set: 6, latency:   94 [m
+[0;32m $ Pass set: 7, latency:  360 [m
+[0;33m ###### Pass pattern: 31 ###### [m
+[0;34m =========== Pattern: 32 =========== [m
+[0;32m $ Pass set: 0, latency:   39 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   66 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   39 [m
+[0;32m $ Pass set: 5, latency:   39 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   66 [m
+[0;33m ###### Pass pattern: 32 ###### [m
+[0;34m =========== Pattern: 33 =========== [m
+[0;32m $ Pass set: 0, latency:  382 [m
+[0;32m $ Pass set: 1, latency:  278 [m
+[0;32m $ Pass set: 2, latency:   94 [m
+[0;32m $ Pass set: 3, latency:  168 [m
+[0;32m $ Pass set: 4, latency:   94 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:  278 [m
+[0;33m ###### Pass pattern: 33 ###### [m
+[0;34m =========== Pattern: 34 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   34 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   34 [m
+[0;32m $ Pass set: 7, latency:   86 [m
+[0;33m ###### Pass pattern: 34 ###### [m
+[0;34m =========== Pattern: 35 =========== [m
+[0;32m $ Pass set: 0, latency:   39 [m
+[0;32m $ Pass set: 1, latency:   39 [m
+[0;32m $ Pass set: 2, latency:  120 [m
+[0;32m $ Pass set: 3, latency:   66 [m
+[0;32m $ Pass set: 4, latency:   93 [m
+[0;32m $ Pass set: 5, latency:   93 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 35 ###### [m
+[0;34m =========== Pattern: 36 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   88 [m
+[0;32m $ Pass set: 2, latency:  234 [m
+[0;32m $ Pass set: 3, latency:   88 [m
+[0;32m $ Pass set: 4, latency:   34 [m
+[0;32m $ Pass set: 5, latency:   86 [m
+[0;32m $ Pass set: 6, latency:  160 [m
+[0;32m $ Pass set: 7, latency:  182 [m
+[0;33m ###### Pass pattern: 36 ###### [m
+[0;34m =========== Pattern: 37 =========== [m
+[0;32m $ Pass set: 0, latency:  382 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:  409 [m
+[0;32m $ Pass set: 4, latency:   94 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:  626 [m
+[0;32m $ Pass set: 7, latency:  810 [m
+[0;33m ###### Pass pattern: 37 ###### [m
+[0;34m =========== Pattern: 38 =========== [m
+[0;32m $ Pass set: 0, latency:   39 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   39 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:   39 [m
+[0;32m $ Pass set: 6, latency:   39 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 38 ###### [m
+[0;34m =========== Pattern: 39 =========== [m
+[0;32m $ Pass set: 0, latency:  190 [m
+[0;32m $ Pass set: 1, latency:  143 [m
+[0;32m $ Pass set: 2, latency:  544 [m
+[0;32m $ Pass set: 3, latency:  700 [m
+[0;32m $ Pass set: 4, latency:  382 [m
+[0;32m $ Pass set: 5, latency:  190 [m
+[0;32m $ Pass set: 6, latency:  544 [m
+[0;32m $ Pass set: 7, latency:  382 [m
+[0;33m ###### Pass pattern: 39 ###### [m
+[0;34m =========== Pattern: 40 =========== [m
+[0;32m $ Pass set: 0, latency: 1342 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:  168 [m
+[0;32m $ Pass set: 3, latency:  278 [m
+[0;32m $ Pass set: 4, latency:  278 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:  544 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 40 ###### [m
+[0;34m =========== Pattern: 41 =========== [m
+[0;32m $ Pass set: 0, latency:  544 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:  278 [m
+[0;32m $ Pass set: 3, latency:  360 [m
+[0;32m $ Pass set: 4, latency:   94 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:  544 [m
+[0;32m $ Pass set: 7, latency:  278 [m
+[0;33m ###### Pass pattern: 41 ###### [m
+[0;34m =========== Pattern: 42 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:  135 [m
+[0;32m $ Pass set: 2, latency:   34 [m
+[0;32m $ Pass set: 3, latency:   34 [m
+[0;32m $ Pass set: 4, latency:  135 [m
+[0;32m $ Pass set: 5, latency:   34 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   34 [m
+[0;33m ###### Pass pattern: 42 ###### [m
+[0;34m =========== Pattern: 43 =========== [m
+[0;32m $ Pass set: 0, latency:   39 [m
+[0;32m $ Pass set: 1, latency:   39 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:   39 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 43 ###### [m
+[0;34m =========== Pattern: 44 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   93 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:   39 [m
+[0;32m $ Pass set: 6, latency:   39 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 44 ###### [m
+[0;34m =========== Pattern: 45 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   39 [m
+[0;32m $ Pass set: 2, latency:   39 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   39 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   66 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 45 ###### [m
+[0;34m =========== Pattern: 46 =========== [m
+[0;32m $ Pass set: 0, latency:   39 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   66 [m
+[0;32m $ Pass set: 3, latency:   66 [m
+[0;32m $ Pass set: 4, latency:   39 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   93 [m
+[0;32m $ Pass set: 7, latency:   93 [m
+[0;33m ###### Pass pattern: 46 ###### [m
+[0;34m =========== Pattern: 47 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   66 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   39 [m
+[0;32m $ Pass set: 5, latency:   39 [m
+[0;32m $ Pass set: 6, latency:   66 [m
+[0;32m $ Pass set: 7, latency:   39 [m
+[0;33m ###### Pass pattern: 47 ###### [m
+[0;34m =========== Pattern: 48 =========== [m
+[0;32m $ Pass set: 0, latency:   66 [m
+[0;32m $ Pass set: 1, latency:   39 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   93 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   66 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 48 ###### [m
+[0;34m =========== Pattern: 49 =========== [m
+[0;32m $ Pass set: 0, latency:   61 [m
+[0;32m $ Pass set: 1, latency:  160 [m
+[0;32m $ Pass set: 2, latency:   61 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   86 [m
+[0;32m $ Pass set: 5, latency:  234 [m
+[0;32m $ Pass set: 6, latency:  135 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 49 ###### [m
+[0;34m =========== Pattern: 50 =========== [m
+[0;32m $ Pass set: 0, latency:  135 [m
+[0;32m $ Pass set: 1, latency:  108 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:  308 [m
+[0;32m $ Pass set: 4, latency:  108 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   88 [m
+[0;33m ###### Pass pattern: 50 ###### [m
+[0;34m =========== Pattern: 51 =========== [m
+[0;32m $ Pass set: 0, latency:  108 [m
+[0;32m $ Pass set: 1, latency:   88 [m
+[0;32m $ Pass set: 2, latency:   86 [m
+[0;32m $ Pass set: 3, latency:   34 [m
+[0;32m $ Pass set: 4, latency:   34 [m
+[0;32m $ Pass set: 5, latency:   61 [m
+[0;32m $ Pass set: 6, latency:   61 [m
+[0;32m $ Pass set: 7, latency:  234 [m
+[0;33m ###### Pass pattern: 51 ###### [m
+[0;34m =========== Pattern: 52 =========== [m
+[0;32m $ Pass set: 0, latency:  168 [m
+[0;32m $ Pass set: 1, latency:  434 [m
+[0;32m $ Pass set: 2, latency:  168 [m
+[0;32m $ Pass set: 3, latency:  278 [m
+[0;32m $ Pass set: 4, latency:   94 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:  278 [m
+[0;32m $ Pass set: 7, latency:  544 [m
+[0;33m ###### Pass pattern: 52 ###### [m
+[0;34m =========== Pattern: 53 =========== [m
+[0;32m $ Pass set: 0, latency:   66 [m
+[0;32m $ Pass set: 1, latency:   66 [m
+[0;32m $ Pass set: 2, latency:   39 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   39 [m
+[0;33m ###### Pass pattern: 53 ###### [m
+[0;34m =========== Pattern: 54 =========== [m
+[0;32m $ Pass set: 0, latency:   94 [m
+[0;32m $ Pass set: 1, latency:  360 [m
+[0;32m $ Pass set: 2, latency:  648 [m
+[0;32m $ Pass set: 3, latency:  278 [m
+[0;32m $ Pass set: 4, latency:  168 [m
+[0;32m $ Pass set: 5, latency:   94 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:  456 [m
+[0;33m ###### Pass pattern: 54 ###### [m
+[0;34m =========== Pattern: 55 =========== [m
+[0;32m $ Pass set: 0, latency:   39 [m
+[0;32m $ Pass set: 1, latency:   39 [m
+[0;32m $ Pass set: 2, latency:   39 [m
+[0;32m $ Pass set: 3, latency:   66 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:   39 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   39 [m
+[0;33m ###### Pass pattern: 55 ###### [m
+[0;34m =========== Pattern: 56 =========== [m
+[0;32m $ Pass set: 0, latency:  108 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   34 [m
+[0;32m $ Pass set: 3, latency:   34 [m
+[0;32m $ Pass set: 4, latency:   61 [m
+[0;32m $ Pass set: 5, latency:   61 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 56 ###### [m
+[0;34m =========== Pattern: 57 =========== [m
+[0;32m $ Pass set: 0, latency:  810 [m
+[0;32m $ Pass set: 1, latency:  278 [m
+[0;32m $ Pass set: 2, latency:  168 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:  143 [m
+[0;32m $ Pass set: 5, latency:  544 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:  360 [m
+[0;33m ###### Pass pattern: 57 ###### [m
+[0;34m =========== Pattern: 58 =========== [m
+[0;32m $ Pass set: 0, latency:  544 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:  116 [m
+[0;32m $ Pass set: 5, latency:  278 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 58 ###### [m
+[0;34m =========== Pattern: 59 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   66 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   39 [m
+[0;33m ###### Pass pattern: 59 ###### [m
+[0;34m =========== Pattern: 60 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:  135 [m
+[0;32m $ Pass set: 2, latency:   61 [m
+[0;32m $ Pass set: 3, latency:   86 [m
+[0;32m $ Pass set: 4, latency:  160 [m
+[0;32m $ Pass set: 5, latency:   86 [m
+[0;32m $ Pass set: 6, latency:   34 [m
+[0;32m $ Pass set: 7, latency:   88 [m
+[0;33m ###### Pass pattern: 60 ###### [m
+[0;34m =========== Pattern: 61 =========== [m
+[0;32m $ Pass set: 0, latency:  278 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:  116 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:  143 [m
+[0;32m $ Pass set: 5, latency:  278 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:  143 [m
+[0;33m ###### Pass pattern: 61 ###### [m
+[0;34m =========== Pattern: 62 =========== [m
+[0;32m $ Pass set: 0, latency:   61 [m
+[0;32m $ Pass set: 1, latency:   34 [m
+[0;32m $ Pass set: 2, latency:  108 [m
+[0;32m $ Pass set: 3, latency:   61 [m
+[0;32m $ Pass set: 4, latency:   86 [m
+[0;32m $ Pass set: 5, latency:  160 [m
+[0;32m $ Pass set: 6, latency:   34 [m
+[0;32m $ Pass set: 7, latency:   61 [m
+[0;33m ###### Pass pattern: 62 ###### [m
+[0;34m =========== Pattern: 63 =========== [m
+[0;32m $ Pass set: 0, latency:  648 [m
+[0;32m $ Pass set: 1, latency:  278 [m
+[0;32m $ Pass set: 2, latency:  278 [m
+[0;32m $ Pass set: 3, latency:  278 [m
+[0;32m $ Pass set: 4, latency:  190 [m
+[0;32m $ Pass set: 5, latency:  278 [m
+[0;32m $ Pass set: 6, latency:  116 [m
+[0;32m $ Pass set: 7, latency:  278 [m
+[0;33m ###### Pass pattern: 63 ###### [m
+[0;34m =========== Pattern: 64 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   66 [m
+[0;32m $ Pass set: 2, latency:   39 [m
+[0;32m $ Pass set: 3, latency:   39 [m
+[0;32m $ Pass set: 4, latency:   39 [m
+[0;32m $ Pass set: 5, latency:   39 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 64 ###### [m
+[0;34m =========== Pattern: 65 =========== [m
+[0;32m $ Pass set: 0, latency:   34 [m
+[0;32m $ Pass set: 1, latency:   34 [m
+[0;32m $ Pass set: 2, latency:   34 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   34 [m
+[0;32m $ Pass set: 5, latency:  108 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   61 [m
+[0;33m ###### Pass pattern: 65 ###### [m
+[0;34m =========== Pattern: 66 =========== [m
+[0;32m $ Pass set: 0, latency:  278 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:  278 [m
+[0;32m $ Pass set: 3, latency:   94 [m
+[0;32m $ Pass set: 4, latency:  116 [m
+[0;32m $ Pass set: 5, latency:  116 [m
+[0;32m $ Pass set: 6, latency:  508 [m
+[0;32m $ Pass set: 7, latency:  360 [m
+[0;33m ###### Pass pattern: 66 ###### [m
+[0;34m =========== Pattern: 67 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   61 [m
+[0;32m $ Pass set: 2, latency:   61 [m
+[0;32m $ Pass set: 3, latency:   34 [m
+[0;32m $ Pass set: 4, latency:   61 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   86 [m
+[0;32m $ Pass set: 7, latency:  160 [m
+[0;33m ###### Pass pattern: 67 ###### [m
+[0;34m =========== Pattern: 68 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:  278 [m
+[0;32m $ Pass set: 2, latency:   94 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:  316 [m
+[0;32m $ Pass set: 5, latency:  382 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:  168 [m
+[0;33m ###### Pass pattern: 68 ###### [m
+[0;34m =========== Pattern: 69 =========== [m
+[0;32m $ Pass set: 0, latency:   66 [m
+[0;32m $ Pass set: 1, latency:   39 [m
+[0;32m $ Pass set: 2, latency:   39 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   39 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 69 ###### [m
+[0;34m =========== Pattern: 70 =========== [m
+[0;32m $ Pass set: 0, latency:   66 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   39 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 70 ###### [m
+[0;34m =========== Pattern: 71 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:  160 [m
+[0;32m $ Pass set: 2, latency:   61 [m
+[0;32m $ Pass set: 3, latency:   34 [m
+[0;32m $ Pass set: 4, latency:   34 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   34 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 71 ###### [m
+[0;34m =========== Pattern: 72 =========== [m
+[0;32m $ Pass set: 0, latency:   34 [m
+[0;32m $ Pass set: 1, latency:   34 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   86 [m
+[0;32m $ Pass set: 4, latency:  108 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:  108 [m
+[0;32m $ Pass set: 7, latency:  108 [m
+[0;33m ###### Pass pattern: 72 ###### [m
+[0;34m =========== Pattern: 73 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   39 [m
+[0;32m $ Pass set: 5, latency:   66 [m
+[0;32m $ Pass set: 6, latency:   39 [m
+[0;32m $ Pass set: 7, latency:   66 [m
+[0;33m ###### Pass pattern: 73 ###### [m
+[0;34m =========== Pattern: 74 =========== [m
+[0;32m $ Pass set: 0, latency:  382 [m
+[0;32m $ Pass set: 1, latency:  456 [m
+[0;32m $ Pass set: 2, latency:  168 [m
+[0;32m $ Pass set: 3, latency:  774 [m
+[0;32m $ Pass set: 4, latency:  242 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:  434 [m
+[0;33m ###### Pass pattern: 74 ###### [m
+[0;34m =========== Pattern: 75 =========== [m
+[0;32m $ Pass set: 0, latency:  108 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   88 [m
+[0;32m $ Pass set: 4, latency:   34 [m
+[0;32m $ Pass set: 5, latency:   86 [m
+[0;32m $ Pass set: 6, latency:   34 [m
+[0;32m $ Pass set: 7, latency:   86 [m
+[0;33m ###### Pass pattern: 75 ###### [m
+[0;34m =========== Pattern: 76 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   66 [m
+[0;32m $ Pass set: 2, latency:   66 [m
+[0;32m $ Pass set: 3, latency:   66 [m
+[0;32m $ Pass set: 4, latency:   66 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   39 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 76 ###### [m
+[0;34m =========== Pattern: 77 =========== [m
+[0;32m $ Pass set: 0, latency:  168 [m
+[0;32m $ Pass set: 1, latency:  278 [m
+[0;32m $ Pass set: 2, latency:  360 [m
+[0;32m $ Pass set: 3, latency:  360 [m
+[0;32m $ Pass set: 4, latency:  434 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:  278 [m
+[0;33m ###### Pass pattern: 77 ###### [m
+[0;34m =========== Pattern: 78 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   94 [m
+[0;32m $ Pass set: 2, latency:  544 [m
+[0;32m $ Pass set: 3, latency:   94 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:  116 [m
+[0;32m $ Pass set: 6, latency:   94 [m
+[0;32m $ Pass set: 7, latency:  360 [m
+[0;33m ###### Pass pattern: 78 ###### [m
+[0;34m =========== Pattern: 79 =========== [m
+[0;32m $ Pass set: 0, latency:   61 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:  160 [m
+[0;32m $ Pass set: 3, latency:  160 [m
+[0;32m $ Pass set: 4, latency:   34 [m
+[0;32m $ Pass set: 5, latency:  135 [m
+[0;32m $ Pass set: 6, latency:  182 [m
+[0;32m $ Pass set: 7, latency:  182 [m
+[0;33m ###### Pass pattern: 79 ###### [m
+[0;34m =========== Pattern: 80 =========== [m
+[0;32m $ Pass set: 0, latency:   34 [m
+[0;32m $ Pass set: 1, latency:  108 [m
+[0;32m $ Pass set: 2, latency:   34 [m
+[0;32m $ Pass set: 3, latency:   34 [m
+[0;32m $ Pass set: 4, latency:   86 [m
+[0;32m $ Pass set: 5, latency:   86 [m
+[0;32m $ Pass set: 6, latency:  160 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 80 ###### [m
+[0;34m =========== Pattern: 81 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   39 [m
+[0;32m $ Pass set: 2, latency:   66 [m
+[0;32m $ Pass set: 3, latency:   39 [m
+[0;32m $ Pass set: 4, latency:   39 [m
+[0;32m $ Pass set: 5, latency:   39 [m
+[0;32m $ Pass set: 6, latency:   39 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 81 ###### [m
+[0;34m =========== Pattern: 82 =========== [m
+[0;32m $ Pass set: 0, latency:  264 [m
+[0;32m $ Pass set: 1, latency:  168 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:  626 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:  116 [m
+[0;32m $ Pass set: 7, latency:   94 [m
+[0;33m ###### Pass pattern: 82 ###### [m
+[0;34m =========== Pattern: 83 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:  160 [m
+[0;32m $ Pass set: 2, latency:   34 [m
+[0;32m $ Pass set: 3, latency:   61 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:  160 [m
+[0;33m ###### Pass pattern: 83 ###### [m
+[0;34m =========== Pattern: 84 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:  278 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:  242 [m
+[0;32m $ Pass set: 4, latency:  116 [m
+[0;32m $ Pass set: 5, latency:  626 [m
+[0;32m $ Pass set: 6, latency:  116 [m
+[0;32m $ Pass set: 7, latency:  278 [m
+[0;33m ###### Pass pattern: 84 ###### [m
+[0;34m =========== Pattern: 85 =========== [m
+[0;32m $ Pass set: 0, latency:  434 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:  168 [m
+[0;32m $ Pass set: 3, latency:  278 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:  544 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 85 ###### [m
+[0;34m =========== Pattern: 86 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   93 [m
+[0;32m $ Pass set: 3, latency:   39 [m
+[0;32m $ Pass set: 4, latency:   39 [m
+[0;32m $ Pass set: 5, latency:   39 [m
+[0;32m $ Pass set: 6, latency:   66 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 86 ###### [m
+[0;34m =========== Pattern: 87 =========== [m
+[0;32m $ Pass set: 0, latency:   86 [m
+[0;32m $ Pass set: 1, latency:   34 [m
+[0;32m $ Pass set: 2, latency:  135 [m
+[0;32m $ Pass set: 3, latency:   61 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:   61 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   34 [m
+[0;33m ###### Pass pattern: 87 ###### [m
+[0;34m =========== Pattern: 88 =========== [m
+[0;32m $ Pass set: 0, latency:  168 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:  242 [m
+[0;32m $ Pass set: 3, latency:  116 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:  278 [m
+[0;32m $ Pass set: 6, latency: 1342 [m
+[0;32m $ Pass set: 7, latency:  264 [m
+[0;33m ###### Pass pattern: 88 ###### [m
+[0;34m =========== Pattern: 89 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   34 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:  135 [m
+[0;32m $ Pass set: 5, latency:  135 [m
+[0;32m $ Pass set: 6, latency:   86 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 89 ###### [m
+[0;34m =========== Pattern: 90 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:  160 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   34 [m
+[0;32m $ Pass set: 4, latency:   86 [m
+[0;32m $ Pass set: 5, latency:   34 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   34 [m
+[0;33m ###### Pass pattern: 90 ###### [m
+[0;34m =========== Pattern: 91 =========== [m
+[0;32m $ Pass set: 0, latency:  278 [m
+[0;32m $ Pass set: 1, latency:  360 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   94 [m
+[0;32m $ Pass set: 4, latency:  278 [m
+[0;32m $ Pass set: 5, latency:  217 [m
+[0;32m $ Pass set: 6, latency:   94 [m
+[0;32m $ Pass set: 7, latency:  168 [m
+[0;33m ###### Pass pattern: 91 ###### [m
+[0;34m =========== Pattern: 92 =========== [m
+[0;32m $ Pass set: 0, latency:   86 [m
+[0;32m $ Pass set: 1, latency:  308 [m
+[0;32m $ Pass set: 2, latency:   88 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:  160 [m
+[0;32m $ Pass set: 5, latency:   86 [m
+[0;32m $ Pass set: 6, latency:   61 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 92 ###### [m
+[0;34m =========== Pattern: 93 =========== [m
+[0;32m $ Pass set: 0, latency:   93 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   39 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 93 ###### [m
+[0;34m =========== Pattern: 94 =========== [m
+[0;32m $ Pass set: 0, latency:  242 [m
+[0;32m $ Pass set: 1, latency:  168 [m
+[0;32m $ Pass set: 2, latency:  544 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   12 [m
+[0;32m $ Pass set: 5, latency:  168 [m
+[0;32m $ Pass set: 6, latency:  143 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 94 ###### [m
+[0;34m =========== Pattern: 95 =========== [m
+[0;32m $ Pass set: 0, latency:   86 [m
+[0;32m $ Pass set: 1, latency:   34 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:  108 [m
+[0;32m $ Pass set: 5, latency:   86 [m
+[0;32m $ Pass set: 6, latency:  135 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 95 ###### [m
+[0;34m =========== Pattern: 96 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:  116 [m
+[0;32m $ Pass set: 4, latency:   94 [m
+[0;32m $ Pass set: 5, latency:  168 [m
+[0;32m $ Pass set: 6, latency:  626 [m
+[0;32m $ Pass set: 7, latency:  116 [m
+[0;33m ###### Pass pattern: 96 ###### [m
+[0;34m =========== Pattern: 97 =========== [m
+[0;32m $ Pass set: 0, latency:   39 [m
+[0;32m $ Pass set: 1, latency:   39 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   66 [m
+[0;32m $ Pass set: 5, latency:   39 [m
+[0;32m $ Pass set: 6, latency:   39 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 97 ###### [m
+[0;34m =========== Pattern: 98 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   61 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   12 [m
+[0;32m $ Pass set: 4, latency:   86 [m
+[0;32m $ Pass set: 5, latency:   61 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 98 ###### [m
+[0;34m =========== Pattern: 99 =========== [m
+[0;32m $ Pass set: 0, latency:   12 [m
+[0;32m $ Pass set: 1, latency:   12 [m
+[0;32m $ Pass set: 2, latency:   12 [m
+[0;32m $ Pass set: 3, latency:   66 [m
+[0;32m $ Pass set: 4, latency:   39 [m
+[0;32m $ Pass set: 5, latency:   12 [m
+[0;32m $ Pass set: 6, latency:   12 [m
+[0;32m $ Pass set: 7, latency:   12 [m
+[0;33m ###### Pass pattern: 99 ###### [m
+
+
+
+
+                        [0;32m＼O/       [mI LOVE ICLAB!                    
+                        [0;32m  \\
+                        [0;32m ノノ
+        [0;34m------------
+        | ┏┓ ┏┓ ┏┓ |
+        | ┗┛ ┗┛ ┗┛ |
+        | ┏┓ ┏┓ ┏┓ |
+        [0;34m| ┗┛ ┗┛ ┗┛ |   
+        [0;34m| ┏┓ ┏┓ ┏┓ |   
+        [0;34m| ┗┛ ┗┛ ┗┛ |   
+        [0;34m| ┏┓ ┏┓ ┏┓ |            															    							
+        [0;34m| ┗┛ ┗┛ ┗┛ |            															    							
+        [0;34m| ┏┓ ┏┓ ┏┓ |            															    							
+        [0;34m| ┗┛ ┗┛ ┗┛ |            															    							
+        [0;34m| ┏┓ ┏┓ ┏┓ |            															    							
+        [0;34m| ┗┛ ┗┛ ┗┛ |            															    							
+        [0;34m| ┏┓ ┏┓ ┏┓ |            															    							
+        [0;34m| ┗┛ ┗┛ ┗┛ |            															    							
+        [0;34m| ┏┓ ┏┓ ┏┓ |                   [33m [5m TQQQQQQQRV            QQQV            XQKFDDIPR       SOIDDELPV  
+        [0;34m| ┗┛ ┗┛ ┗┛ |                   [33m [5m GAAAAAAAAAAAM        EAAAAW        ZCAAAAAAAAAAT   QAAAAAAAAAAE  
+        [0;34m| ┏┓ ┏┓ ┏┓ |                   [33m [5m GAAG     TAAAB      MAAHAAD       YAAAH       Y   RAAAU       X  	
+        [0;34m| ┗┛ ┗┛ ┗┛ |                   [33m [5m GAAG      ZAAAT    SAAF DAAE      OAAA            CAAG           	
+        [0;34m| ┏┓ ┏┓ ┏┓ |                   [33m [5m GAAG       AAAT    AAAU  BAAS     ZAAABZ          TAAAD          	
+        [0;34m| ┗┛ ┗┛ ┗┛ |                   [33m [5m GAAG      CAAB    GAAP   RAAA       FAAAABU        UBAAAADV      
+        [0;34m| ┏┓ ┏┓ ┏┓ |                   [33m [5m GAAAAAAAAAAAL    VAAD     IAAH        QDAAAAAN        LBAAAAAS    
+        [0;34m| ┗┛ ┗┛ ┗┛ |                   [33m [5m GAAAAAAACPV     YAAAJMMMMMKAAAR           QAAAAQ         UHAAAC   
+        [0;34m| ┏┓ ┏┓ ┏┓ |                   [33m [5m GAAG            EAAAAAAAAAAAAAAW            OAAA            BAAD 
+        [0;34m| ┗┛ ┗┛ ┗┛ |                   [33m [5m GAAG           KAAB         JAAC            SAAA            DAAD  
+        [0;34m| ┏┓ ┏┓ ┏┓ |                   [33m [5m GAAG           AAAW          AAAL OAAL     DAAAM  CABT    PAAAA   
+        [0;34m| ┗┛ ┗┛ ┗┛ |                   [33m [5m GAAG          AAAE           TAAA RDAAAAAAAABI    IAAAAAAAAADT    
+        [0;34m| ┏┓ ┏┓ ┏┓ |            															    							
+        [0;34m| ┗┛ ┗┛ ┗┛ |            															    							
+[m---------------------------------------------------------------------------------------------------------------------------
+********************************************************************************
+                                Congratulations!                                
+                      Your execution cycles: 92434 cycles                         
+                          Your clock period: 7.8 ns                            
+                              Total Latency: 720985.2 ns                            
+********************************************************************************
+$finish called from file "PATTERN.vp", line 37.
+$finish at simulation time       10122937500 ps
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 10122937500 ps
+CPU Time:     94.680 seconds;       Data structure size:   1.8Mb
+Mon Dec  2 03:43:31 2024
+CPU time: 1.763 seconds to compile + .471 seconds to elab + .754 seconds to link + 94.721 seconds in simulation

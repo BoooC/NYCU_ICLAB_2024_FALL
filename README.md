@@ -72,7 +72,7 @@
 
 ## 資料結構
 ├── Lab01  
-- **├── Exercise**：包含所有模擬與合成相關腳本檔案  
+- **├── Exercise**：模擬與合成相關腳本(某些檔案需要自己link)  
     - **├── 01_RTL**：RTL Simulation  
     - **├── 02_STN**：Logic Synthesis  
     - **├── 03_GATE**：Gate Level Simulation  
@@ -86,8 +86,8 @@
 
 ├── Lab02  
 ├── Lab03  
-.
-.
+.  
+.  
 .  
 ├── Lab12  
 ├── PATTERN_template.v：通用 PATTERN 範本  

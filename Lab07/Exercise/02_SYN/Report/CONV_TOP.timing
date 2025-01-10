@@ -1,0 +1,81 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : CONV_TOP
+Version: T-2022.03
+Date   : Fri Jan 10 14:15:33 2025
+****************************************
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: top
+
+  Startpoint: u_FIFO_syn/r_binary_reg_reg[0]
+              (rising edge-triggered flip-flop clocked by clk1)
+  Endpoint: u_FIFO_syn/u_dual_sram
+            (rising edge-triggered flip-flop clocked by clk1)
+  Path Group: clk1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  CONV_TOP           enG30K                fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk1 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_FIFO_syn/r_binary_reg_reg[0]/CK (QDFFRBS)             0.00       0.00 r
+  u_FIFO_syn/r_binary_reg_reg[0]/Q (QDFFRBS)              0.65       0.65 r
+  u_FIFO_syn/u_dual_sram/B0 (DUAL_64X8X1BM1)              0.00       0.65 r
+  data arrival time                                                  0.65
+
+  clock clk1 (rise edge)                                 47.10      47.10
+  clock network delay (ideal)                             0.00      47.10
+  clock uncertainty                                      -0.10      47.00
+  u_FIFO_syn/u_dual_sram/CKB (DUAL_64X8X1BM1)             0.00      47.00 r
+  library setup time                                     -1.19      45.81
+  data required time                                                45.81
+  --------------------------------------------------------------------------
+  data required time                                                45.81
+  data arrival time                                                 -0.65
+  --------------------------------------------------------------------------
+  slack (MET)                                                       45.16
+
+
+  Startpoint: u_FIFO_syn/w_binary_reg_reg[0]
+              (rising edge-triggered flip-flop clocked by clk2)
+  Endpoint: u_FIFO_syn/u_dual_sram
+            (rising edge-triggered flip-flop clocked by clk2)
+  Path Group: clk2
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  CONV_TOP           enG30K                fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk2 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_FIFO_syn/w_binary_reg_reg[0]/CK (QDFFRBS)             0.00       0.00 r
+  u_FIFO_syn/w_binary_reg_reg[0]/Q (QDFFRBS)              0.66       0.66 r
+  u_FIFO_syn/u_dual_sram/A0 (DUAL_64X8X1BM1)              0.00       0.66 r
+  data arrival time                                                  0.66
+
+  clock clk2 (rise edge)                                 10.10      10.10
+  clock network delay (ideal)                             0.00      10.10
+  clock uncertainty                                      -0.10      10.00
+  u_FIFO_syn/u_dual_sram/CKA (DUAL_64X8X1BM1)             0.00      10.00 r
+  library setup time                                     -1.19       8.81
+  data required time                                                 8.81
+  --------------------------------------------------------------------------
+  data required time                                                 8.81
+  data arrival time                                                 -0.66
+  --------------------------------------------------------------------------
+  slack (MET)                                                        8.15
+
+
+1

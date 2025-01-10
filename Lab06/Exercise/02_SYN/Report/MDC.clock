@@ -1,0 +1,20 @@
+ 
+****************************************
+Report : clocks
+Design : MDC
+Version: T-2022.03
+Date   : Fri Jan 10 14:05:56 2025
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+clk             10.40   {0 5.2}             d f       {clk}
+--------------------------------------------------------------------------------
+1

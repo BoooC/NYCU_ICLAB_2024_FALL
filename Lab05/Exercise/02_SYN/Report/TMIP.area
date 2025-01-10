@@ -1,0 +1,32 @@
+ 
+****************************************
+Report : area
+Design : TMIP
+Version: T-2022.03
+Date   : Fri Jan 10 13:58:07 2025
+****************************************
+
+Library(s) Used:
+
+    fsa0m_a_generic_core_ss1p62v125c (File: /RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ss1p62v125c.db)
+    SRAM_64X32_WC (File: /RAID2/COURSE/iclab/iclab055/Lab05_2024A/Exercise/04_MEM/SRAM_64X32_WC.db)
+    SRAM_192X32_WC (File: /RAID2/COURSE/iclab/iclab055/Lab05_2024A/Exercise/04_MEM/SRAM_192X32_WC.db)
+
+Number of ports:                           27
+Number of nets:                          6957
+Number of cells:                         6742
+Number of combinational cells:           5801
+Number of sequential cells:               939
+Number of macros/black boxes:               2
+Number of buf/inv:                       1132
+Number of references:                     127
+
+Combinational area:              99371.764781
+Buf/Inv area:                    10030.607928
+Noncombinational area:           53687.189220
+Macro/Black Box area:           189521.367188
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                342580.321188
+Total area:                 undefined
+1

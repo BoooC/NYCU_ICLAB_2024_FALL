@@ -1,0 +1,5 @@
+IMC(64): 15.20-s069: (c) Copyright 1995-2019 Cadence Design Systems Inc - Coverage engine version: 15.20-s069
+Starting batch mode
+imc> load -run {cov_work/scope/test}
+imc: *I,RUNLD: Successfully loaded run /RAID2/COURSE/iclab/iclab055/Lab10/01_RTL/cov_work/scope/test.
+imc> report -text -summary -type -metrics covergroup -out {./Report/Coverage_Summary.log} -covered

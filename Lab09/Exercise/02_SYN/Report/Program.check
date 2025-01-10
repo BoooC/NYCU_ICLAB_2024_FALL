@@ -1,0 +1,101 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Wed Nov 27 01:34:36 2024
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     71
+    Unconnected ports (LINT-28)                                    71
+
+Cells                                                               6
+    Cells do not drive (LINT-1)                                     6
+
+Nets                                                                4
+    Unloaded nets (LINT-2)                                          4
+--------------------------------------------------------------------------------
+
+Warning: In design 'Program', cell 'B_86' does not drive any nets. (LINT-1)
+Warning: In design 'Program', cell 'B_87' does not drive any nets. (LINT-1)
+Warning: In design 'Program', cell 'B_88' does not drive any nets. (LINT-1)
+Warning: In design 'Program', cell 'B_89' does not drive any nets. (LINT-1)
+Warning: In design 'Program', cell 'B_90' does not drive any nets. (LINT-1)
+Warning: In design 'Program', cell 'B_91' does not drive any nets. (LINT-1)
+Warning: In design 'Program', net 'net359' driven by pin 'C3486/Z' has no loads. (LINT-2)
+Warning: In design 'Program', net 'net358' driven by pin 'C3474/Z' has no loads. (LINT-2)
+Warning: In design 'Program', net 'net357' driven by pin 'C3405/Z' has no loads. (LINT-2)
+Warning: In design 'Program', net 'net356' driven by pin 'C3219/Z' has no loads. (LINT-2)
+Warning: In design 'Program', port 'inf.D[71]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[70]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[69]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[68]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[67]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[66]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[65]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[64]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[63]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[62]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[61]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[60]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[59]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[58]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[57]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[56]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[55]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[54]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[53]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[52]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[51]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[50]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[49]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[48]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[47]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[46]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[45]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[44]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[43]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[42]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[41]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[40]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[39]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[38]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[37]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[36]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[35]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[34]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[33]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[32]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.D[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.R_RESP[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.R_RESP[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.R_DATA[39]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.R_DATA[38]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.R_DATA[37]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.R_DATA[36]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.R_DATA[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.R_DATA[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.R_DATA[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.B_RESP[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'Program', port 'inf.B_RESP[0]' is not connected to any nets. (LINT-28)
+1

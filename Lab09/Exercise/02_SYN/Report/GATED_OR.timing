@@ -1,0 +1,38 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : GATED_OR
+Version: T-2022.03
+Date   : Fri Nov 15 16:41:32 2024
+****************************************
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: top
+
+  Startpoint: latch_or_sleep_reg
+              (positive level-sensitive latch)
+  Endpoint: CLOCK_GATED
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  GATED_OR           enG5K                 fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  latch_or_sleep_reg/CK (QDLHRBN)          0.00       0.00 r
+  latch_or_sleep_reg/Q (QDLHRBN)           0.38       0.38 f
+  U4/O (OR2)                               0.33       0.71 f
+  CLOCK_GATED (out)                        0.00       0.71 f
+  data arrival time                                   0.71
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

@@ -1,0 +1,62 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+	-sort_by slack
+Design : CONV_TOP
+Version: P-2019.03-SP5-1
+Date   : Fri Jan 10 14:15:47 2025
+****************************************
+
+
+  Startpoint: u_Conv_ifmap_y_reg_0_
+               (rising edge-triggered flip-flop clocked by clk2)
+  Endpoint: u_FIFO_syn_u_dual_sram
+               (rising edge-triggered flip-flop clocked by clk2)
+  Path Group: clk2
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk2 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_Conv_ifmap_y_reg_0_/CK (QDFFRBS)                      0.00       0.00 r
+  u_Conv_ifmap_y_reg_0_/Q (QDFFRBS)                       0.95 *     0.95 r
+  U1138/O (INV1S)                                         0.65 *     1.60 f
+  U1234/O (NR2)                                           0.55 *     2.15 r
+  U1235/O (AOI22S)                                        0.27 *     2.42 f
+  U1236/O (NR2)                                           0.56 *     2.98 r
+  U1250/O (INV1S)                                         0.35 *     3.33 f
+  U1253/O (NR2P)                                          0.79 *     4.12 r
+  U1297/O (AOI22S)                                        0.25 *     4.37 f
+  U1300/O (AOI13HS)                                       0.24 *     4.61 r
+  U1309/O (NR3)                                           0.25 *     4.86 f
+  U1079/O (ND3S)                                          0.34 *     5.19 r
+  U1099/O (AN2S)                                          0.27 *     5.46 r
+  U1097/S (HA1S)                                          0.47 *     5.93 f
+  U1350/CO (FA1S)                                         0.55 *     6.48 f
+  U1349/CO (FA1S)                                         0.56 *     7.05 f
+  U1352/CO (FA1S)                                         0.53 *     7.57 f
+  U1354/CO (FA1S)                                         0.53 *     8.10 f
+  U1355/CO (FA1S)                                         0.53 *     8.62 f
+  U1123/C (HA1S)                                          0.29 *     8.92 f
+  U1122/O (MAOI1S)                                        0.49 *     9.41 r
+  u_FIFO_syn_u_dual_sram/DIA7 (DUAL_64X8X1BM1)            0.00 *     9.41 r
+  data arrival time                                                  9.41
+
+  clock clk2 (rise edge)                                 10.10      10.10
+  clock network delay (ideal)                             0.00      10.10
+  clock reconvergence pessimism                           0.00      10.10
+  clock uncertainty                                      -0.10      10.00
+  u_FIFO_syn_u_dual_sram/CKA (DUAL_64X8X1BM1)                       10.00 r
+  library setup time                                     -0.58 *     9.42
+  data required time                                                 9.42
+  ------------------------------------------------------------------------------
+  data required time                                                 9.42
+  data arrival time                                                 -9.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

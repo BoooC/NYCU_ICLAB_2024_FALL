@@ -1,0 +1,23 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Fri Jan 10 14:01:51 2025
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Nets                                                                9
+    Unloaded nets (LINT-2)                                          9
+--------------------------------------------------------------------------------
+
+Warning: In design 'MDC', net 'net457' driven by pin 'C11447/Z' has no loads. (LINT-2)
+Warning: In design 'MDC', net 'net456' driven by pin 'C11178/Z' has no loads. (LINT-2)
+Warning: In design 'MDC', net 'net455' driven by pin 'C11177/Z' has no loads. (LINT-2)
+Warning: In design 'MDC', net 'net454' driven by pin 'C11120/Z' has no loads. (LINT-2)
+Warning: In design 'MDC', net 'net453' driven by pin 'C11119/Z' has no loads. (LINT-2)
+Warning: In design 'MDC', net 'net452' driven by pin 'C11099/Z' has no loads. (LINT-2)
+Warning: In design 'MDC', net 'net451' driven by pin 'C11098/Z' has no loads. (LINT-2)
+Warning: In design 'MDC', net 'net450' driven by pin 'C11097/Z' has no loads. (LINT-2)
+Warning: In design 'MDC', net 'net449' driven by pin 'C11096/Z' has no loads. (LINT-2)
+1

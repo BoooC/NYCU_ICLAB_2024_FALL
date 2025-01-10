@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : TETRIS
+Version: T-2022.03
+Date   : Fri Jan 10 13:10:39 2025
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabTA01/umc018/Synthesis/slow.db)
+
+Number of ports:                           88
+Number of nets:                          1479
+Number of cells:                         1379
+Number of combinational cells:           1280
+Number of sequential cells:                98
+Number of macros/black boxes:               0
+Number of buf/inv:                        159
+Number of references:                      78
+
+Combinational area:              20144.678826
+Buf/Inv area:                     1776.297647
+Noncombinational area:            7171.718536
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 27316.397363
+Total area:                 undefined
+1

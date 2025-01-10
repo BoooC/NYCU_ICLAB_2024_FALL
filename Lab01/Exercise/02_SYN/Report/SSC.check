@@ -1,0 +1,89 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Fri Jan 10 12:52:42 2025
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     64
+    Unconnected ports (LINT-28)                                    64
+
+Cells                                                               8
+    Cells do not drive (LINT-1)                                     8
+--------------------------------------------------------------------------------
+
+Warning: In design 'Find_out_valid', cell 'C135' does not drive any nets. (LINT-1)
+Warning: In design 'Find_out_valid', cell 'C136' does not drive any nets. (LINT-1)
+Warning: In design 'Find_out_valid', cell 'C137' does not drive any nets. (LINT-1)
+Warning: In design 'Find_out_valid', cell 'C138' does not drive any nets. (LINT-1)
+Warning: In design 'Find_out_valid', cell 'C139' does not drive any nets. (LINT-1)
+Warning: In design 'Find_out_valid', cell 'C140' does not drive any nets. (LINT-1)
+Warning: In design 'Find_out_valid', cell 'C141' does not drive any nets. (LINT-1)
+Warning: In design 'Find_out_valid', cell 'C142' does not drive any nets. (LINT-1)
+Warning: In design 'Find_out_change', port 'card_num[63]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[62]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[61]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[60]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[59]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[58]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[57]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[56]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[55]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[54]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[53]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[52]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[51]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[50]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[49]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[48]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[47]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[46]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[45]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[44]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[43]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[42]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[41]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[40]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[39]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[38]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[37]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[36]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[35]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[34]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[33]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[32]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'Find_out_change', port 'card_num[0]' is not connected to any nets. (LINT-28)
+1

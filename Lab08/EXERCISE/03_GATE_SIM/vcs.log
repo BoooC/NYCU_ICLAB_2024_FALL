@@ -1,0 +1,930 @@
+Command: vcs -timescale=1ns/1fs -j8 -sverilog +v2k -full64 -Mupdate -R -debug_access+all \
+-y /usr/cad/synopsys/synthesis/cur/dw/sim_ver/ +libext+.v -f filelist.f -o simv -l \
+vcs.log -P /usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/linux64/novas.tab /usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/linux64/pli.a \
+-v /RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/Verilog/fsa0m_a_generic_core_30.lib.src \
++define+GATE +define+NCG +neg_tchk +nowarnNTCDSN
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+         Version T-2022.06_Full64 -- Fri Jan 10 14:23:18 2025
+
+                    Copyright (c) 1991 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'TESTBED.v'
+Parsing included file 'PATTERN.vp'.
+Back to file 'TESTBED.v'.
+Parsing included file 'SA_SYN.v'.
+Back to file 'TESTBED.v'.
+Parsing library file '/RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/Verilog/fsa0m_a_generic_core_30.lib.src'
+Top Level Modules:
+       TESTBED
+TimeScale is 10 ps / 1 ps
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3038
+SA, "GATED_OR genblk2_0__genblk1_0__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n31973));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3040
+SA, "GATED_OR genblk2_0__genblk1_1__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n31972));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3042
+SA, "GATED_OR genblk2_0__genblk1_2__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n31973));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3044
+SA, "GATED_OR genblk2_0__genblk1_3__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n31972));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3046
+SA, "GATED_OR genblk2_0__genblk1_4__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n31973));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3048
+SA, "GATED_OR genblk2_0__genblk1_5__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n32015));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3050
+SA, "GATED_OR genblk2_0__genblk1_6__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n32004));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3052
+SA, "GATED_OR genblk2_0__genblk1_7__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n32011));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3054
+SA, "GATED_OR genblk2_1__genblk1_0__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n31996));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3056
+SA, "GATED_OR genblk2_1__genblk1_1__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n31991));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3058
+SA, "GATED_OR genblk2_1__genblk1_2__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n32030));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3060
+SA, "GATED_OR genblk2_1__genblk1_3__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n31976));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3062
+SA, "GATED_OR genblk2_1__genblk1_4__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n32035));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3064
+SA, "GATED_OR genblk2_1__genblk1_5__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n32038));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3066
+SA, "GATED_OR genblk2_1__genblk1_6__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n31982));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3068
+SA, "GATED_OR genblk2_1__genblk1_7__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n32034));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3070
+SA, "GATED_OR genblk2_2__genblk1_0__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n20042));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3072
+SA, "GATED_OR genblk2_2__genblk1_1__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n31970));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3074
+SA, "GATED_OR genblk2_2__genblk1_2__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n31965));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3076
+SA, "GATED_OR genblk2_2__genblk1_3__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n32038));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3078
+SA, "GATED_OR genblk2_2__genblk1_4__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n32007));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3080
+SA, "GATED_OR genblk2_2__genblk1_5__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n31999));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3082
+SA, "GATED_OR genblk2_2__genblk1_6__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n32006));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3084
+SA, "GATED_OR genblk2_2__genblk1_7__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n32036));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3086
+SA, "GATED_OR genblk2_3__genblk1_0__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n31970));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3088
+SA, "GATED_OR genblk2_3__genblk1_1__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n32005));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3090
+SA, "GATED_OR genblk2_3__genblk1_2__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n32003));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3092
+SA, "GATED_OR genblk2_3__genblk1_3__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n32001));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3094
+SA, "GATED_OR genblk2_3__genblk1_4__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n32004));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3096
+SA, "GATED_OR genblk2_3__genblk1_5__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n32035));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3098
+SA, "GATED_OR genblk2_3__genblk1_6__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n31972));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3100
+SA, "GATED_OR genblk2_3__genblk1_7__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n31971));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3102
+SA, "GATED_OR genblk2_4__genblk1_0__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n31994));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3104
+SA, "GATED_OR genblk2_4__genblk1_1__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n32024));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3106
+SA, "GATED_OR genblk2_4__genblk1_2__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n32032));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3108
+SA, "GATED_OR genblk2_4__genblk1_3__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n31997));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3110
+SA, "GATED_OR genblk2_4__genblk1_4__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n31970));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3112
+SA, "GATED_OR genblk2_4__genblk1_5__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n32004));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3114
+SA, "GATED_OR genblk2_4__genblk1_6__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n31966));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3116
+SA, "GATED_OR genblk2_4__genblk1_7__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n31985));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3118
+SA, "GATED_OR genblk2_5__genblk1_0__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n31997));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3120
+SA, "GATED_OR genblk2_5__genblk1_1__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n32018));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3122
+SA, "GATED_OR genblk2_5__genblk1_2__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n32011));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3124
+SA, "GATED_OR genblk2_5__genblk1_3__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n32019));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3126
+SA, "GATED_OR genblk2_5__genblk1_4__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n32000));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3128
+SA, "GATED_OR genblk2_5__genblk1_5__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n31974));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3130
+SA, "GATED_OR genblk2_5__genblk1_6__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n31973));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3132
+SA, "GATED_OR genblk2_5__genblk1_7__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n31971));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3134
+SA, "GATED_OR genblk2_6__genblk1_0__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n31974));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3136
+SA, "GATED_OR genblk2_6__genblk1_1__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n31980));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3138
+SA, "GATED_OR genblk2_6__genblk1_2__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n32032));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3140
+SA, "GATED_OR genblk2_6__genblk1_3__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n31980));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3142
+SA, "GATED_OR genblk2_6__genblk1_4__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n31981));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3144
+SA, "GATED_OR genblk2_6__genblk1_5__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n32020));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3146
+SA, "GATED_OR genblk2_6__genblk1_6__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n31979));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3148
+SA, "GATED_OR genblk2_6__genblk1_7__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n31971));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3150
+SA, "GATED_OR genblk2_7__genblk1_0__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n32039));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3152
+SA, "GATED_OR genblk2_7__genblk1_1__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n31969));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3154
+SA, "GATED_OR genblk2_7__genblk1_2__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n32031));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3156
+SA, "GATED_OR genblk2_7__genblk1_3__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n31985));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3158
+SA, "GATED_OR genblk2_7__genblk1_4__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n32026));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3160
+SA, "GATED_OR genblk2_7__genblk1_5__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n31979));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3162
+SA, "GATED_OR genblk2_7__genblk1_6__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n_254_net_),  .RST_N (n31982));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SA_SYN.v, 3164
+SA, "GATED_OR genblk2_7__genblk1_7__GATED_weight( .CLOCK (clk),  .SLEEP_CTRL (n31962),  .RST_N (n32032));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+   ***   $sdf_annotate() version 1.2R
+   ***    SDF file: "SA_SYN.sdf"
+   ***    Annotation scope: TESTBED.I_SA
+   ***    No MTM selection argument specified
+   ***    No SCALE FACTORS argument specified
+   ***    No SCALE TYPE argument specified
+   ***    MTM selection defaulted to "TOOL_CONTROL":
+               (+typdelays compiled, TYPICAL delays selected)
+   ***    SCALE FACTORS defaulted to "1.0:1.0:1.0":
+   ***    SCALE TYPE defaulted to: "FROM_MTM"
+   ***    Turnoff delay: "FROM_FILE"
+   ***    Approximation (mipd) policy: "MAXIMUM"
+
+   ***    SDF annotation begin: Fri Jan 10 14:23:21 2025
+
+
+SDF Info: +pulse_r/100, +pulse_e/100 in effect
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+SA_SYN.sdf, 623003
+module: QDFFRBP, "instance: TESTBED.I_SA.QK_count_x_reg_2_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+SA_SYN.sdf, 623536
+module: QDFFRBP, "instance: TESTBED.I_SA.QK_count_y_reg_2_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+SA_SYN.sdf, 623975
+module: QDFFRBS, "instance: TESTBED.I_SA.P_reg_reg_3__1_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+SA_SYN.sdf, 623996
+module: QDFFRBS, "instance: TESTBED.I_SA.P_reg_reg_2__0_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+SA_SYN.sdf, 624017
+module: QDFFRBP, "instance: TESTBED.I_SA.QK_count_y_reg_1_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+SA_SYN.sdf, 624038
+module: QDFFRBP, "instance: TESTBED.I_SA.QK_count_y_reg_0_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+SA_SYN.sdf, 624059
+module: QDFFRBN, "instance: TESTBED.I_SA.out_count_x_reg_1_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+SA_SYN.sdf, 624082
+module: DFFRBS, "instance: TESTBED.I_SA.out_count_x_reg_0_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+SA_SYN.sdf, 624103
+module: QDFFRBN, "instance: TESTBED.I_SA.out_count_y_reg_2_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+All future warnings not reported; use +sdfverbose to report them.
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+SA_SYN.sdf, 624272
+module: DFFRBP, "instance: TESTBED.I_SA.QK_count_channel_reg_0_"
+  SDF Warning: Cannot find timing check $hold(posedge CK,posedge RB,...)
+      
+
+
+          Total errors: 0
+          Total warnings: 5071
+   ***    SDF annotation completed: Fri Jan 10 14:23:23 2025
+
+
+Starting vcs inline pass...
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+133 modules and 3 UDPs read.
+recompiling module mult_41x19_3
+recompiling module mac_19b_2
+recompiling module MAC_8_1
+recompiling module ReLU_div_3_4
+recompiling module MAC_4
+recompiling module OA222S
+recompiling module AOI22S
+recompiling module AO13S
+recompiling module MUX2
+recompiling module AO12
+recompiling module OAI12HS
+recompiling module OR3B1S
+recompiling module ND3S
+recompiling module ND2P
+recompiling module OR2S
+recompiling module BUF6
+recompiling module INV3CK
+recompiling module mult_41x19_5
+recompiling module mac_19b_4
+recompiling module MAC_8_3
+recompiling module ReLU_div_3_6
+recompiling module MAC_6
+recompiling module AOI22H
+recompiling module OAI22S
+recompiling module DFFRBS
+recompiling module QDFFRBT
+recompiling module XOR2HS
+recompiling module TESTBED
+recompiling module ND3HT
+recompiling module AN2S
+recompiling module NR2T
+recompiling module BUF3
+recompiling module INV2
+recompiling module mult_41x19_1
+recompiling module mac_19b_0
+recompiling module MAC_8_7
+recompiling module ReLU_div_3_2
+recompiling module MAC_2
+recompiling module FA1
+recompiling module MOAI1
+recompiling module AOI13H
+recompiling module OAI112HS
+recompiling module DFFN
+recompiling module AN3B2S
+recompiling module AN2B1P
+recompiling module OR2B1S
+recompiling module ND2T
+recompiling module BUF1
+recompiling module INV1
+recompiling module mult_41x19_2
+recompiling module mac_19b_1
+recompiling module MAC_8_0
+recompiling module ReLU_div_3_3
+recompiling module MAC_3
+recompiling module OAI222S
+recompiling module MAOI1S
+recompiling module MAO222S
+recompiling module MUX2S
+recompiling module AO12S
+recompiling module QDFFS
+recompiling module AN2B1
+recompiling module NR3
+recompiling module ND2S
+recompiling module GATED_OR
+recompiling module BUF6CK
+recompiling module INV4
+recompiling module mult_41x19_4
+recompiling module mac_19b_3
+recompiling module MAC_8_2
+recompiling module ReLU_div_3_5
+recompiling module MAC_5
+recompiling module AO222S
+recompiling module AOI22HP
+recompiling module AO13
+recompiling module HA1S
+recompiling module QDLHRBN
+recompiling module AOI12HS
+recompiling module AN4S
+recompiling module ND3P
+recompiling module ND2
+recompiling module OR2
+recompiling module BUF4
+recompiling module INV3
+recompiling module mult_41x19_6
+recompiling module mac_19b_5
+recompiling module MAC_8_4
+recompiling module PATTERN
+recompiling module ReLU_div_3_7
+recompiling module MAC_7
+recompiling module OA22S
+recompiling module MUXB2S
+recompiling module DFFRBP
+recompiling module QDFFRBS
+recompiling module XNR2HS
+recompiling module OR3B2S
+recompiling module ND3
+recompiling module AN2P
+recompiling module NR2P
+recompiling module BUF2
+recompiling module INV1S
+recompiling module SA
+recompiling module mac_19b_6
+recompiling module MAC_8_5
+recompiling module mac_19b_7
+recompiling module ReLU_div_3_0
+recompiling module MAC_0
+recompiling module AO22S
+recompiling module MOAI1S
+recompiling module AOI13HS
+recompiling module QDFFRBP
+recompiling module OA12T
+recompiling module AN4B1S
+recompiling module AN3S
+recompiling module AN2
+recompiling module NR2F
+recompiling module BUF1S
+recompiling module INV1CK
+recompiling module mult_41x19_0
+recompiling module MAC_8_6
+recompiling module mult_41x19_7
+recompiling module ReLU_div_3_1
+recompiling module MAC_1
+recompiling module FA1S
+recompiling module MOAI1H
+recompiling module AOI13HP
+recompiling module QDFFRBN
+recompiling module OA12S
+recompiling module AN4B1
+recompiling module AN2B1S
+recompiling module OR3S
+recompiling module NR2
+recompiling module BUF1CK
+recompiling module INV12
+All of 133 modules done
+make[1]: Entering directory `/RAID2/COURSE/iclab/iclab055/Lab08/EXERCISE/03_GATE_SIM/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/usr/cad/synopsys/vcs/2022.06/linux64/lib -L/usr/cad/synopsys/vcs/2022.06/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _66460_archive_1.so \
+_66483_archive_1.so _66484_archive_1.so _66485_archive_1.so _66486_archive_1.so _66487_archive_1.so \
+_66488_archive_1.so _66489_archive_1.so objs/udps/qndjy.o objs/udps/G0JcM.o objs/udps/Sbaqa.o \
+SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o \
+-lvirsim -lerrorinf -lsnpsmalloc -lvfs /usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/linux64/pli.a \
+-lvcsnew -lsimprofile -luclinative /usr/cad/synopsys/vcs/2022.06/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   \
+/usr/cad/synopsys/vcs/2022.06/linux64/lib/vcs_save_restore_new.o /usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/LINUX64/pli.a \
+-ldl -lm  -lc -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/RAID2/COURSE/iclab/iclab055/Lab08/EXERCISE/03_GATE_SIM/csrc' \
+
+Command: /RAID2/COURSE/iclab/iclab055/Lab08/EXERCISE/03_GATE_SIM/./simv +v2k +libext+.v -a vcs.log +define+GATE +define+NCG +neg_tchk +nowarnNTCDSN
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06_Full64; Runtime version T-2022.06_Full64;  Jan 10 14:23 2025
+Doing SDF annotation ...... Done
+*Verdi* Loading libsscore_vcs201906.so
+FSDB Dumper for VCS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+***********************************************************************
+*  ERROR -                                                            *
+*  The simulator version is newer than the FSDB dumper version which  *
+*  may cause abnormal behavior, please contact Synopsys support for   *
+*  assistance.                                                        *
+***********************************************************************
+*Verdi* : Create FSDB file 'SA_SYN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+[0;34mPASS PATTERN NO.   0,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.   1,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.   2,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.   3,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.   4,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.   5,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.   6,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.   7,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.   8,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.   9,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  10,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  11,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  12,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  13,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  14,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  15,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  16,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  17,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  18,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  19,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  20,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  21,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  22,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  23,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  24,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  25,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  26,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  27,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  28,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  29,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  30,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  31,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  32,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  33,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  34,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  35,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  36,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  37,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  38,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  39,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  40,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  41,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  42,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  43,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  44,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  45,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  46,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  47,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  48,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  49,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  50,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  51,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  52,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  53,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  54,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  55,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  56,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  57,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  58,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  59,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  60,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  61,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  62,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  63,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  64,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  65,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  66,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  67,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  68,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  69,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  70,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  71,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  72,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  73,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  74,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  75,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  76,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  77,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  78,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  79,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  80,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  81,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  82,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  83,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  84,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  85,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  86,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  87,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  88,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  89,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  90,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  91,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  92,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  93,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  94,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  95,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  96,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  97,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  98,[m [0;32mexecution cycle :   2[m
+[0;34mPASS PATTERN NO.  99,[m [0;32mexecution cycle :   2[m
+----------------------------------------------------------------------------------------------------------------------
+                                                  Congratulations!                                                    
+                                           You have passed all patterns!                                              
+                                           Your execution cycles =   200 cycles                                         
+                                           Your clock period = 50.0 ns                                                
+                                           Your total latency = 10000.0 ns                                               
+----------------------------------------------------------------------------------------------------------------------
+$finish called from file "PATTERN.vp", line 23.
+$finish at simulation time           1143775000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1143775000 ps
+CPU Time:     57.270 seconds;       Data structure size:  26.2Mb
+Fri Jan 10 14:24:03 2025
+CPU time: 8.559 seconds to compile + 1.678 seconds to elab + .792 seconds to link + 57.341 seconds in simulation

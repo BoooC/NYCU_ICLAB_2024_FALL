@@ -1,0 +1,140 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 3
+Design : Program
+Version: T-2022.03
+Date   : Wed Nov 27 01:35:20 2024
+****************************************
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: top
+
+  Startpoint: read_dram_done_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: formula_count_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Program            enG10K                fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  read_dram_done_reg/CK (QDFFRBP)          0.00       0.00 r
+  read_dram_done_reg/Q (QDFFRBP)           0.48       0.48 r
+  U1441/O (INV1CK)                         0.14       0.61 f
+  U2047/O (NR2P)                           0.17       0.78 r
+  U2048/O (ND3HT)                          0.19       0.97 f
+  U2058/O (INV1S)                          0.17       1.14 r
+  U2059/O (ND3P)                           0.16       1.30 f
+  U1247/O (NR2T)                           0.17       1.48 r
+  U2062/O (INV3)                           0.08       1.55 f
+  U2065/O (NR2P)                           0.12       1.67 r
+  U2066/O (ND2P)                           0.06       1.74 f
+  U2067/O (OAI12HS)                        0.09       1.83 r
+  formula_count_reg[3]/D (QDFFRBT)         0.00       1.83 r
+  data arrival time                                   1.83
+
+  clock clk (rise edge)                    2.10       2.10
+  clock network delay (ideal)              0.00       2.10
+  clock uncertainty                       -0.10       2.00
+  formula_count_reg[3]/CK (QDFFRBT)        0.00       2.00 r
+  library setup time                      -0.17       1.83
+  data required time                                  1.83
+  -----------------------------------------------------------
+  data required time                                  1.83
+  data arrival time                                  -1.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: formula_reg_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: formula_count_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Program            enG10K                fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  formula_reg_reg[0]/CK (QDFFRBT)          0.00       0.00 r
+  formula_reg_reg[0]/Q (QDFFRBT)           0.50       0.50 f
+  U1853/O (ND2P)                           0.15       0.65 r
+  U1378/O (NR2)                            0.10       0.75 f
+  U2049/O (MUX2)                           0.28       1.04 f
+  U2050/O (AN2T)                           0.24       1.28 f
+  U1246/OB (MXL2H)                         0.15       1.43 r
+  U2056/O (ND3HT)                          0.11       1.54 f
+  U1644/O (NR2P)                           0.14       1.68 r
+  U2057/O (ND2P)                           0.06       1.74 f
+  U1064/O (ND2)                            0.10       1.84 r
+  formula_count_reg[0]/D (QDFFRBT)         0.00       1.84 r
+  data arrival time                                   1.84
+
+  clock clk (rise edge)                    2.10       2.10
+  clock network delay (ideal)              0.00       2.10
+  clock uncertainty                       -0.10       2.00
+  formula_count_reg[0]/CK (QDFFRBT)        0.00       2.00 r
+  library setup time                      -0.16       1.84
+  data required time                                  1.84
+  -----------------------------------------------------------
+  data required time                                  1.84
+  data arrival time                                  -1.84
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: index_a_reg_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: diff_index_a_reg[10]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Program            enG10K                fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  index_a_reg_reg[0]/CK (QDFFN)            0.00       0.00 r
+  index_a_reg_reg[0]/Q (QDFFN)             0.45       0.45 r
+  U1538/O (INV1S)                          0.17       0.62 f
+  U1577/O (NR2)                            0.34       0.96 r
+  U2388/O (OAI12H)                         0.18       1.14 f
+  U1347/O (AOI12HP)                        0.23       1.37 r
+  U1346/O (OAI12HP)                        0.13       1.50 f
+  U2419/O (AOI12HS)                        0.22       1.72 r
+  U2420/O (XOR2HS)                         0.18       1.90 r
+  diff_index_a_reg[10]/D (QDFFS)           0.00       1.90 r
+  data arrival time                                   1.90
+
+  clock clk (rise edge)                    2.10       2.10
+  clock network delay (ideal)              0.00       2.10
+  clock uncertainty                       -0.10       2.00
+  diff_index_a_reg[10]/CK (QDFFS)          0.00       2.00 r
+  library setup time                      -0.10       1.90
+  data required time                                  1.90
+  -----------------------------------------------------------
+  data required time                                  1.90
+  data arrival time                                  -1.90
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1

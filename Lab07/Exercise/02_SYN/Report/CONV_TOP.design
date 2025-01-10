@@ -1,0 +1,88 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : design
+Design : CONV_TOP
+Version: T-2022.03
+Date   : Fri Jan 10 14:15:33 2025
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    fsa0m_a_generic_core_ss1p62v125c (File: /RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ss1p62v125c.db)
+    DUAL_64X8X1BM1_WC (File: /RAID2/COURSE/iclab/iclab055/Lab07/Exercise/04_MEM/DUAL_64X8X1BM1_WC.db)
+
+Local Link Library:
+
+    {fsa0m_a_generic_core_ss1p62v125c.db, DUAL_64X8X1BM1_WC.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : WCCOM
+    Library : fsa0m_a_generic_core_ss1p62v125c
+    Process :   1.00
+    Temperature : 125.00
+    Voltage :   1.62
+    Interconnect Model : worst_case_tree
+
+Wire Loading Model:
+
+    Selected automatically from the total cell area.
+
+Name           :   enG30K
+Location       :   fsa0m_a_generic_core_ss1p62v125c
+Resistance     :   0
+Capacitance    :   0.000175
+Area           :   0
+Slope          :   0.5
+Fanout   Length   Points Average Cap Std Deviation
+--------------------------------------------------------------
+     1    32.60
+     2    65.50
+     3   118.60
+     4   177.70
+     5   263.30
+    10   488.40
+    16   913.10
+    50  1170.80
+    90  1519.80
+
+
+
+Wire Loading Model Mode: top.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    DesignWare
+
+Design Parameters:
+
+    None specified.
+1

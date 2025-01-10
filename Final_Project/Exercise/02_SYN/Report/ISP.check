@@ -1,0 +1,70 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Fri Jan  3 16:17:22 2025
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     14
+    Unconnected ports (LINT-28)                                    14
+
+Cells                                                              17
+    Cells do not drive (LINT-1)                                    17
+
+Nets                                                               19
+    Unloaded nets (LINT-2)                                         19
+--------------------------------------------------------------------------------
+
+Warning: In design 'ISP', cell 'B_134' does not drive any nets. (LINT-1)
+Warning: In design 'ISP', cell 'B_135' does not drive any nets. (LINT-1)
+Warning: In design 'ISP', cell 'B_136' does not drive any nets. (LINT-1)
+Warning: In design 'ISP', cell 'B_137' does not drive any nets. (LINT-1)
+Warning: In design 'ISP', cell 'B_138' does not drive any nets. (LINT-1)
+Warning: In design 'ISP', cell 'B_139' does not drive any nets. (LINT-1)
+Warning: In design 'ISP', cell 'B_140' does not drive any nets. (LINT-1)
+Warning: In design 'ISP', cell 'B_141' does not drive any nets. (LINT-1)
+Warning: In design 'ISP', cell 'B_142' does not drive any nets. (LINT-1)
+Warning: In design 'ISP', cell 'B_143' does not drive any nets. (LINT-1)
+Warning: In design 'ISP', cell 'B_144' does not drive any nets. (LINT-1)
+Warning: In design 'ISP', cell 'B_145' does not drive any nets. (LINT-1)
+Warning: In design 'ISP', cell 'B_152' does not drive any nets. (LINT-1)
+Warning: In design 'ISP', cell 'B_155' does not drive any nets. (LINT-1)
+Warning: In design 'ISP', cell 'B_158' does not drive any nets. (LINT-1)
+Warning: In design 'ISP', cell 'B_159' does not drive any nets. (LINT-1)
+Warning: In design 'divided_by_9', cell 'I_4' does not drive any nets. (LINT-1)
+Warning: In design 'ISP', net 'shift_divided_by_3_min/net2979' driven by pin 'shift_divided_by_3_min/C292/Z' has no loads. (LINT-2)
+Warning: In design 'ISP', net 'min_div_out_valid' driven by pin 'shift_divided_by_3_min/out_valid' has no loads. (LINT-2)
+Warning: In design 'ISP', net 'net563' driven by pin 'add_1094/Z_0' has no loads. (LINT-2)
+Warning: In design 'ISP', net 'net562' driven by pin 'C5857/Z' has no loads. (LINT-2)
+Warning: In design 'ISP', net 'net561' driven by pin 'C5853/Z' has no loads. (LINT-2)
+Warning: In design 'ISP', net 'net560' driven by pin 'C5849/Z' has no loads. (LINT-2)
+Warning: In design 'ISP', net 'net559' driven by pin 'C5812/Z' has no loads. (LINT-2)
+Warning: In design 'ISP', net 'net558' driven by pin 'C5803/Z' has no loads. (LINT-2)
+Warning: In design 'ISP', net 'net557' driven by pin 'C5653/Z' has no loads. (LINT-2)
+Warning: In design 'ISP', net 'net556' driven by pin 'C5623/Z' has no loads. (LINT-2)
+Warning: In design 'ISP', net 'net555' driven by pin 'C5609/Z' has no loads. (LINT-2)
+Warning: In design 'ISP', net 'net554' driven by pin 'C5524/Z' has no loads. (LINT-2)
+Warning: In design 'ISP', net 'net553' driven by pin 'C5511/Z' has no loads. (LINT-2)
+Warning: In design 'ISP', net 'net552' driven by pin 'C5500/Z' has no loads. (LINT-2)
+Warning: In design 'ISP', net 'net551' driven by pin 'C5493/Z' has no loads. (LINT-2)
+Warning: In design 'ISP', net 'net550' driven by pin 'C5461/Z' has no loads. (LINT-2)
+Warning: In design 'ISP', net 'div_out_valid' driven by pin 'divided_by_9_inst/out_valid' has no loads. (LINT-2)
+Warning: In design 'ISP', net 'divided_by_9_inst/net2876' driven by pin 'divided_by_9_inst/C187/Z' has no loads. (LINT-2)
+Warning: In design 'ISP', net 'shift_divided_by_3_max/net2966' driven by pin 'shift_divided_by_3_max/C292/Z' has no loads. (LINT-2)
+Warning: In design 'ISP', port 'wready_s_inf' is not connected to any nets. (LINT-28)
+Warning: In design 'ISP', port 'bid_s_inf[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'ISP', port 'bid_s_inf[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'ISP', port 'bid_s_inf[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'ISP', port 'bid_s_inf[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'ISP', port 'bresp_s_inf[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'ISP', port 'bresp_s_inf[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'ISP', port 'bvalid_s_inf' is not connected to any nets. (LINT-28)
+Warning: In design 'ISP', port 'rid_s_inf[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'ISP', port 'rid_s_inf[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'ISP', port 'rid_s_inf[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'ISP', port 'rid_s_inf[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'ISP', port 'rresp_s_inf[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'ISP', port 'rresp_s_inf[0]' is not connected to any nets. (LINT-28)
+1

@@ -1,0 +1,191 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'SA' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : SA
+Version: T-2022.03
+Date   : Fri Nov 15 17:38:37 2024
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: QK_count_y_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: QK_matrix_reg[7][3][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SA                 enG200K               fsa0m_a_generic_core_ss1p62v125c
+  mac_19b_4          enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  ReLU_div_3_4       enG5K                 fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  QK_count_y_reg[0]/CK (QDFFRBP)                          0.00 #     0.00 r
+  QK_count_y_reg[0]/Q (QDFFRBP)                           0.62       0.62 r
+  U23045/O (ND3P)                                         0.60       1.22 f
+  U22212/O (NR2T)                                         0.75       1.97 r
+  U22230/O (INV1S)                                        0.72       2.69 f
+  U27693/O (MOAI1S)                                       0.64       3.32 r
+  U23391/O (AN4B1S)                                       0.25       3.57 f
+  U27746/O (ND3S)                                         0.26       3.83 r
+  U28588/O (INV1S)                                        0.15       3.98 f
+  U22184/O (AN4S)                                         0.36       4.35 f
+  U22405/O (AOI13H)                                       0.46       4.80 r
+  U23474/O (INV1S)                                        0.43       5.23 f
+  U22395/O (NR2T)                                         0.59       5.82 r
+  mac_19b_inst_3/in_1[6] (mac_19b_4)                      0.00       5.82 r
+  mac_19b_inst_3/U294/O (MOAI1)                           0.58       6.40 f
+  mac_19b_inst_3/U23/O (INV2)                             0.40       6.79 r
+  mac_19b_inst_3/U9/O (NR2P)                              0.29       7.08 f
+  mac_19b_inst_3/U190/O (INV1S)                           0.46       7.55 r
+  mac_19b_inst_3/U365/O (MOAI1S)                          0.27       7.81 f
+  mac_19b_inst_3/U381/CO (FA1S)                           0.60       8.41 f
+  mac_19b_inst_3/U205/S (FA1S)                            0.69       9.11 r
+  mac_19b_inst_3/U234/S (FA1S)                            0.63       9.74 f
+  mac_19b_inst_3/U412/O (OR2S)                            0.31      10.04 f
+  mac_19b_inst_3/U17/O (AOI22S)                           0.31      10.35 r
+  mac_19b_inst_3/U53/O (MOAI1)                            0.18      10.53 f
+  mac_19b_inst_3/U15/O (AOI22S)                           0.31      10.84 r
+  mac_19b_inst_3/U14/O (MOAI1)                            0.18      11.02 f
+  mac_19b_inst_3/U59/O (AOI22S)                           0.32      11.34 r
+  mac_19b_inst_3/U302/O (MOAI1S)                          0.22      11.56 f
+  mac_19b_inst_3/U260/CO (FA1S)                           0.54      12.10 f
+  mac_19b_inst_3/U741/CO (FA1)                            0.38      12.48 f
+  mac_19b_inst_3/U259/CO (FA1S)                           0.47      12.94 f
+  mac_19b_inst_3/U258/CO (FA1S)                           0.49      13.44 f
+  mac_19b_inst_3/U257/CO (FA1S)                           0.49      13.93 f
+  mac_19b_inst_3/U256/CO (FA1S)                           0.49      14.42 f
+  mac_19b_inst_3/U255/CO (FA1S)                           0.49      14.92 f
+  mac_19b_inst_3/U254/CO (FA1S)                           0.49      15.41 f
+  mac_19b_inst_3/U253/CO (FA1S)                           0.49      15.91 f
+  mac_19b_inst_3/U252/CO (FA1S)                           0.49      16.40 f
+  mac_19b_inst_3/U251/CO (FA1S)                           0.49      16.89 f
+  mac_19b_inst_3/U250/CO (FA1S)                           0.49      17.39 f
+  mac_19b_inst_3/U249/CO (FA1S)                           0.49      17.88 f
+  mac_19b_inst_3/U248/CO (FA1S)                           0.49      18.37 f
+  mac_19b_inst_3/U247/CO (FA1S)                           0.49      18.87 f
+  mac_19b_inst_3/U303/CO (FA1S)                           0.49      19.36 f
+  mac_19b_inst_3/U246/CO (FA1S)                           0.49      19.86 f
+  mac_19b_inst_3/U245/CO (FA1S)                           0.49      20.35 f
+  mac_19b_inst_3/U244/CO (FA1S)                           0.49      20.84 f
+  mac_19b_inst_3/U243/CO (FA1S)                           0.49      21.34 f
+  mac_19b_inst_3/U242/CO (FA1S)                           0.49      21.83 f
+  mac_19b_inst_3/U241/CO (FA1S)                           0.57      22.40 f
+  mac_19b_inst_3/U210/O (AOI22S)                          0.33      22.73 r
+  mac_19b_inst_3/U35/O (MOAI1)                            0.18      22.91 f
+  mac_19b_inst_3/U207/O (AOI22S)                          0.29      23.19 r
+  mac_19b_inst_3/U34/O (XNR2HS)                           0.19      23.39 f
+  mac_19b_inst_3/psum_out[39] (mac_19b_4)                 0.00      23.39 f
+  U22375/O (AN2)                                          0.35      23.74 f
+  ReLU_div_3_inst_3/in[39] (ReLU_div_3_4)                 0.00      23.74 f
+  ReLU_div_3_inst_3/U126/O (AN2)                          0.29      24.03 f
+  ReLU_div_3_inst_3/U127/O (AN2B1S)                       0.24      24.28 r
+  ReLU_div_3_inst_3/U130/O (INV1S)                        0.10      24.38 f
+  ReLU_div_3_inst_3/U62/O (AN2S)                          0.19      24.57 f
+  ReLU_div_3_inst_3/U61/O (MUX2S)                         0.30      24.87 f
+  ReLU_div_3_inst_3/U131/O (AO12)                         0.36      25.24 f
+  ReLU_div_3_inst_3/U132/O (MUX2)                         0.34      25.58 f
+  ReLU_div_3_inst_3/U134/O (AO12)                         0.31      25.89 f
+  ReLU_div_3_inst_3/U135/O (MUX2)                         0.34      26.23 f
+  ReLU_div_3_inst_3/U33/O (AO12)                          0.31      26.54 f
+  ReLU_div_3_inst_3/U137/O (MUX2)                         0.34      26.88 f
+  ReLU_div_3_inst_3/U139/O (AO12)                         0.31      27.19 f
+  ReLU_div_3_inst_3/U140/O (MUX2)                         0.34      27.53 f
+  ReLU_div_3_inst_3/U142/O (AO12)                         0.31      27.84 f
+  ReLU_div_3_inst_3/U143/O (MUX2)                         0.34      28.18 f
+  ReLU_div_3_inst_3/U31/O (AO12)                          0.31      28.49 f
+  ReLU_div_3_inst_3/U145/O (MUX2)                         0.34      28.83 f
+  ReLU_div_3_inst_3/U147/O (AO12)                         0.31      29.14 f
+  ReLU_div_3_inst_3/U148/O (MUX2)                         0.34      29.48 f
+  ReLU_div_3_inst_3/U150/O (AO12)                         0.31      29.79 f
+  ReLU_div_3_inst_3/U151/O (MUX2)                         0.34      30.13 f
+  ReLU_div_3_inst_3/U29/O (AO12)                          0.31      30.44 f
+  ReLU_div_3_inst_3/U153/O (MUX2)                         0.34      30.78 f
+  ReLU_div_3_inst_3/U155/O (AO12)                         0.31      31.09 f
+  ReLU_div_3_inst_3/U156/O (MUX2)                         0.34      31.43 f
+  ReLU_div_3_inst_3/U158/O (AO12)                         0.31      31.74 f
+  ReLU_div_3_inst_3/U159/O (MUX2)                         0.34      32.08 f
+  ReLU_div_3_inst_3/U27/O (AO12)                          0.31      32.39 f
+  ReLU_div_3_inst_3/U161/O (MUX2)                         0.34      32.73 f
+  ReLU_div_3_inst_3/U163/O (AO12)                         0.31      33.04 f
+  ReLU_div_3_inst_3/U164/O (MUX2)                         0.34      33.38 f
+  ReLU_div_3_inst_3/U166/O (AO12)                         0.31      33.69 f
+  ReLU_div_3_inst_3/U167/O (MUX2)                         0.34      34.04 f
+  ReLU_div_3_inst_3/U25/O (AO12)                          0.31      34.35 f
+  ReLU_div_3_inst_3/U169/O (MUX2)                         0.34      34.69 f
+  ReLU_div_3_inst_3/U171/O (AO12)                         0.31      35.00 f
+  ReLU_div_3_inst_3/U172/O (MUX2)                         0.34      35.34 f
+  ReLU_div_3_inst_3/U174/O (AO12)                         0.31      35.65 f
+  ReLU_div_3_inst_3/U175/O (MUX2)                         0.34      35.99 f
+  ReLU_div_3_inst_3/U23/O (AO12)                          0.31      36.30 f
+  ReLU_div_3_inst_3/U177/O (MUX2)                         0.34      36.64 f
+  ReLU_div_3_inst_3/U179/O (AO12)                         0.31      36.95 f
+  ReLU_div_3_inst_3/U180/O (MUX2)                         0.34      37.30 f
+  ReLU_div_3_inst_3/U182/O (AO12)                         0.31      37.60 f
+  ReLU_div_3_inst_3/U183/O (MUX2)                         0.34      37.95 f
+  ReLU_div_3_inst_3/U21/O (AO12)                          0.31      38.26 f
+  ReLU_div_3_inst_3/U185/O (MUX2)                         0.34      38.60 f
+  ReLU_div_3_inst_3/U187/O (AO12)                         0.31      38.91 f
+  ReLU_div_3_inst_3/U190/O (MUX2)                         0.34      39.26 f
+  ReLU_div_3_inst_3/U192/O (AO12)                         0.31      39.57 f
+  ReLU_div_3_inst_3/U195/O (MUX2)                         0.34      39.91 f
+  ReLU_div_3_inst_3/U19/O (AO12)                          0.31      40.22 f
+  ReLU_div_3_inst_3/U199/O (MUX2)                         0.34      40.57 f
+  ReLU_div_3_inst_3/U201/O (AO12)                         0.31      40.88 f
+  ReLU_div_3_inst_3/U203/O (MUX2)                         0.34      41.22 f
+  ReLU_div_3_inst_3/U205/O (AO12)                         0.31      41.53 f
+  ReLU_div_3_inst_3/U207/O (MUX2)                         0.34      41.88 f
+  ReLU_div_3_inst_3/U209/O (AO12)                         0.31      42.19 f
+  ReLU_div_3_inst_3/U211/O (MUX2)                         0.34      42.53 f
+  ReLU_div_3_inst_3/U213/O (AO12)                         0.31      42.84 f
+  ReLU_div_3_inst_3/U215/O (MUX2)                         0.34      43.18 f
+  ReLU_div_3_inst_3/U15/O (AO12)                          0.31      43.50 f
+  ReLU_div_3_inst_3/U218/O (MUX2)                         0.34      43.84 f
+  ReLU_div_3_inst_3/U220/O (AO12)                         0.31      44.15 f
+  ReLU_div_3_inst_3/U222/O (MUX2)                         0.34      44.49 f
+  ReLU_div_3_inst_3/U224/O (AO12)                         0.31      44.80 f
+  ReLU_div_3_inst_3/U226/O (MUX2)                         0.34      45.15 f
+  ReLU_div_3_inst_3/U11/O (AO12)                          0.31      45.46 f
+  ReLU_div_3_inst_3/U229/O (MUX2)                         0.34      45.80 f
+  ReLU_div_3_inst_3/U231/O (AO12)                         0.31      46.11 f
+  ReLU_div_3_inst_3/U233/O (MUX2)                         0.34      46.46 f
+  ReLU_div_3_inst_3/U235/O (AO12)                         0.31      46.77 f
+  ReLU_div_3_inst_3/U243/O (MUX2)                         0.34      47.11 f
+  ReLU_div_3_inst_3/U6/O (AO12)                           0.31      47.42 f
+  ReLU_div_3_inst_3/U246/O (MUX2)                         0.34      47.77 f
+  ReLU_div_3_inst_3/U248/O (AO12)                         0.31      48.08 f
+  ReLU_div_3_inst_3/U4/O (MUX2S)                          0.28      48.36 f
+  ReLU_div_3_inst_3/U103/O (AO12S)                        0.31      48.67 f
+  ReLU_div_3_inst_3/U251/O (AN2)                          0.26      48.93 f
+  ReLU_div_3_inst_3/out[0] (ReLU_div_3_4)                 0.00      48.93 f
+  U24242/O (AOI22H)                                       0.50      49.43 r
+  U24822/O (MOAI1S)                                       0.35      49.78 f
+  QK_matrix_reg[7][3][0]/D (QDFFS)                        0.00      49.78 f
+  data arrival time                                                 49.78
+
+  clock clk (rise edge)                                  50.00      50.00
+  clock network delay (ideal)                             0.00      50.00
+  QK_matrix_reg[7][3][0]/CK (QDFFS)                       0.00      50.00 r
+  library setup time                                     -0.22      49.78
+  data required time                                                49.78
+  --------------------------------------------------------------------------
+  data required time                                                49.78
+  data arrival time                                                -49.78
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+1

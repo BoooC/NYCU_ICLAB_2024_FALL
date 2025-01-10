@@ -1,0 +1,99 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : design
+Design : TMIP
+Version: T-2022.03
+Date   : Fri Jan 10 13:58:07 2025
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    fsa0m_a_generic_core_ss1p62v125c (File: /RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ss1p62v125c.db)
+    SRAM_64X32_WC (File: /RAID2/COURSE/iclab/iclab055/Lab05_2024A/Exercise/04_MEM/SRAM_64X32_WC.db)
+    SRAM_192X32_WC (File: /RAID2/COURSE/iclab/iclab055/Lab05_2024A/Exercise/04_MEM/SRAM_192X32_WC.db)
+
+Local Link Library:
+
+    {fsa0m_a_generic_core_ss1p62v125c.db, fsa0m_a_generic_core_ff1p98vm40c.db, fsa0m_a_t33_generic_io_ss1p62v125c.db, fsa0m_a_t33_generic_io_tt1p8v25c.db, SRAM_192X32_WC.db, SRAM_64X32_WC.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : WCCOM
+    Library : fsa0m_a_generic_core_ss1p62v125c
+    Process :   1.00
+    Temperature : 125.00
+    Voltage :   1.62
+    Interconnect Model : worst_case_tree
+
+Min Operating Conditions:
+
+
+    Operating Condition Name : BCCOM
+    Library : fsa0m_a_generic_core_ff1p98vm40c
+    Process :   1.00
+    Temperature : -40.00
+    Voltage :   1.98
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    Selected manually by the user.
+
+Name           :   G5K
+Location       :   fsa0m_a_generic_core_ss1p62v125c
+Resistance     :   0
+Capacitance    :   0.000175
+Area           :   0
+Slope          :   0.5
+Fanout   Length   Points Average Cap Std Deviation
+--------------------------------------------------------------
+     1    18.00
+     2    38.10
+     3    60.80
+     4    98.00
+     5   143.40
+    10   244.10
+    16   496.60
+    50   788.10
+    90  1387.60
+
+
+
+Wire Loading Model Mode: top.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    DesignWare
+
+Design Parameters:
+
+    None specified.
+1
