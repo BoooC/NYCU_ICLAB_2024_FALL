@@ -1,0 +1,1309 @@
+Command: vcs -timescale=1ns/1fs -j8 -sverilog +v2k -full64 -Mupdate -R -debug_access+all \
+-f filelist.f -o simv -l vcs.log -P /usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/linux64/novas.tab \
+/usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/linux64/pli.a -v /RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/Verilog/fsa0m_a_generic_core_30.lib.src \
+-v /RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/Verilog/fsa0m_a_t33_generic_io_30.lib.src \
++define+POST +maxdelays +neg_tchk
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+         Version T-2022.06_Full64 -- Thu Dec  5 03:52:28 2024
+
+                    Copyright (c) 1991 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'TESTBED.v'
+Parsing included file 'PATTERN.v'.
+Back to file 'TESTBED.v'.
+Parsing included file 'CHIP.v'.
+Back to file 'TESTBED.v'.
+Parsing library file '/RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/Verilog/fsa0m_a_generic_core_30.lib.src'
+Parsing library file '/RAID2/COURSE/iclab/iclabTA01/UMC018_CBDK/CIC/Verilog/fsa0m_a_t33_generic_io_30.lib.src'
+Top Level Modules:
+       TESTBED
+TimeScale is 10 ps / 1 ps
+
+Warning-[TFIPC] Too few instance port connections
+CHIP.v, 2518
+TETRIS, "FA1S U1042( .CO (n812),  .A (n849),  .B (n1261),  .CI (n850));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+CHIP.v, 2522
+TETRIS, "FA1S U1043( .CO (n813),  .A (n837),  .B (n836),  .CI (n812));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+CHIP.v, 2575
+TETRIS, "FA1S U1057( .CO (n830),  .A (n829),  .B (intadd_2_A_0_),  .CI (n828));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+CHIP.v, 2579
+TETRIS, "FA1S U1058( .CO (n832),  .A (n831),  .B (intadd_2_A_1_),  .CI (n830));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+CHIP.v, 2648
+TETRIS, "FA1S U1074( .CO (n851),  .A (n1271),  .B (n1264),  .CI (n1270));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+CHIP.v, 2652
+TETRIS, "FA1S U1075( .CO (n852),  .A (n857),  .B (n856),  .CI (n851));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+CHIP.v, 2656
+TETRIS, "FA1S U1076( .CO (n853),  .A (n864),  .B (n863),  .CI (n852));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+   ***   $sdf_annotate() version 1.2R
+   ***    SDF file: "CHIP.sdf"
+   ***    Annotation scope: TESTBED.u_CHIP
+   ***    No MTM selection argument specified
+   ***    No SCALE FACTORS argument specified
+   ***    No SCALE TYPE argument specified
+   ***    MTM selection defaulted to "TOOL_CONTROL":
+               (+maxdelays compiled, MAXIMUM delays selected)
+   ***    SCALE FACTORS defaulted to "1.0:1.0:1.0":
+   ***    SCALE TYPE defaulted to: "FROM_MTM"
+   ***    Turnoff delay: "FROM_FILE"
+   ***    Approximation (mipd) policy: "MAXIMUM"
+
+   ***    SDF annotation begin: Thu Dec  5 03:52:29 2024
+
+
+SDF Info: +pulse_r/100, +pulse_e/100 in effect
+
+Warning-[SDFCOM_UHICD] Up-hierarchy Interconnect Delay ignored
+CHIP.sdf, 299
+module: YA2GSD, "instance: TESTBED.u_CHIP.O_TVALID"
+  SDF Warning: INTERCONNECT Delay to up-hierarchy destination accOutput is 
+  ignored, DEVICE Delay on port 'O' applied.
+  Up-hierarchy interconnect delay arises when the load is hierarchically above
+  the source.
+
+
+Warning-[SDFCOM_UHICD] Up-hierarchy Interconnect Delay ignored
+CHIP.sdf, 300
+module: YA2GSD, "instance: TESTBED.u_CHIP.O_SVALID"
+  SDF Warning: INTERCONNECT Delay to up-hierarchy destination accOutput is 
+  ignored, DEVICE Delay on port 'O' applied.
+  Up-hierarchy interconnect delay arises when the load is hierarchically above
+  the source.
+
+
+Warning-[SDFCOM_UHICD] Up-hierarchy Interconnect Delay ignored
+CHIP.sdf, 301
+module: YA2GSD, "instance: TESTBED.u_CHIP.O_FAIL"
+  SDF Warning: INTERCONNECT Delay to up-hierarchy destination accOutput is 
+  ignored, DEVICE Delay on port 'O' applied.
+  Up-hierarchy interconnect delay arises when the load is hierarchically above
+  the source.
+
+
+Warning-[SDFCOM_UHICD] Up-hierarchy Interconnect Delay ignored
+CHIP.sdf, 302
+module: YA2GSD, "instance: TESTBED.u_CHIP.O_SCORE_3"
+  SDF Warning: INTERCONNECT Delay to up-hierarchy destination accOutput is 
+  ignored, DEVICE Delay on port 'O' applied.
+  Up-hierarchy interconnect delay arises when the load is hierarchically above
+  the source.
+
+
+Warning-[SDFCOM_UHICD] Up-hierarchy Interconnect Delay ignored
+CHIP.sdf, 303
+module: YA2GSD, "instance: TESTBED.u_CHIP.O_SCORE_2"
+  SDF Warning: INTERCONNECT Delay to up-hierarchy destination accOutput is 
+  ignored, DEVICE Delay on port 'O' applied.
+  Up-hierarchy interconnect delay arises when the load is hierarchically above
+  the source.
+
+
+Warning-[SDFCOM_UHICD] Up-hierarchy Interconnect Delay ignored
+CHIP.sdf, 304
+module: YA2GSD, "instance: TESTBED.u_CHIP.O_SCORE_1"
+  SDF Warning: INTERCONNECT Delay to up-hierarchy destination accOutput is 
+  ignored, DEVICE Delay on port 'O' applied.
+  Up-hierarchy interconnect delay arises when the load is hierarchically above
+  the source.
+
+
+Warning-[SDFCOM_UHICD] Up-hierarchy Interconnect Delay ignored
+CHIP.sdf, 305
+module: YA2GSD, "instance: TESTBED.u_CHIP.O_SCORE_0"
+  SDF Warning: INTERCONNECT Delay to up-hierarchy destination accOutput is 
+  ignored, DEVICE Delay on port 'O' applied.
+  Up-hierarchy interconnect delay arises when the load is hierarchically above
+  the source.
+
+
+Warning-[SDFCOM_UHICD] Up-hierarchy Interconnect Delay ignored
+CHIP.sdf, 306
+module: YA2GSD, "instance: TESTBED.u_CHIP.O_TETRIS_71"
+  SDF Warning: INTERCONNECT Delay to up-hierarchy destination accOutput is 
+  ignored, DEVICE Delay on port 'O' applied.
+  Up-hierarchy interconnect delay arises when the load is hierarchically above
+  the source.
+
+
+Warning-[SDFCOM_UHICD] Up-hierarchy Interconnect Delay ignored
+CHIP.sdf, 307
+module: YA2GSD, "instance: TESTBED.u_CHIP.O_TETRIS_70"
+  SDF Warning: INTERCONNECT Delay to up-hierarchy destination accOutput is 
+  ignored, DEVICE Delay on port 'O' applied.
+  Up-hierarchy interconnect delay arises when the load is hierarchically above
+  the source.
+
+All future warnings not reported; use +sdfverbose to report them.
+
+Warning-[SDFCOM_UHICD] Up-hierarchy Interconnect Delay ignored
+CHIP.sdf, 308
+module: YA2GSD, "instance: TESTBED.u_CHIP.O_TETRIS_69"
+  SDF Warning: INTERCONNECT Delay to up-hierarchy destination accOutput is 
+  ignored, DEVICE Delay on port 'O' applied.
+  Up-hierarchy interconnect delay arises when the load is hierarchically above
+  the source.
+
+
+          Total errors: 0
+          Total warnings: 79
+   ***    SDF annotation completed: Thu Dec  5 03:52:29 2024
+
+
+Starting vcs inline pass...
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+50 modules and 1 UDP read.
+recompiling module TETRIS
+recompiling module PATTERN
+recompiling module CHIP
+recompiling module AO222S
+recompiling module OA222S
+recompiling module OAI222S
+recompiling module YA2GSD
+recompiling module FA1S
+recompiling module AN2B1S
+recompiling module BUF1
+recompiling module BUF1S
+recompiling module BUF2
+recompiling module INV12CK
+recompiling module INV1S
+recompiling module INV2
+recompiling module INV8CK
+recompiling module VCC3IOD
+recompiling module GNDIOD
+recompiling module VCCKD
+recompiling module GNDKD
+recompiling module AO22S
+recompiling module AOI22S
+recompiling module MAOI1S
+recompiling module MOAI1S
+recompiling module OAI22S
+recompiling module XMD
+recompiling module MAO222S
+recompiling module OA13S
+recompiling module AO112S
+recompiling module AOI13HS
+recompiling module DFFRBS
+recompiling module OA112S
+recompiling module OAI112HS
+recompiling module QDFFRBN
+recompiling module QDFFRBS
+recompiling module AO12
+recompiling module AO12S
+recompiling module OA12S
+recompiling module OAI12HS
+recompiling module TESTBED
+recompiling module AN3S
+recompiling module ND3S
+recompiling module NR3
+recompiling module OR2B1S
+recompiling module OR3S
+recompiling module AN2S
+recompiling module ND2S
+recompiling module NR2
+recompiling module OR2
+recompiling module OR2S
+make[1]: Entering directory `/RAID2/COURSE/iclab/iclab055/Lab12/Exercise/06_POST/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/usr/cad/synopsys/vcs/2022.06/linux64/lib -L/usr/cad/synopsys/vcs/2022.06/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _256667_archive_1.so \
+_256686_archive_1.so _256687_archive_1.so _256688_archive_1.so objs/udps/qndjy.o \
+SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o \
+-lvirsim -lerrorinf -lsnpsmalloc -lvfs /usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/linux64/pli.a \
+-lvcsnew -lsimprofile -luclinative /usr/cad/synopsys/vcs/2022.06/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   \
+/usr/cad/synopsys/vcs/2022.06/linux64/lib/vcs_save_restore_new.o /usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/LINUX64/pli.a \
+-ldl -lm  -lc -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/RAID2/COURSE/iclab/iclab055/Lab12/Exercise/06_POST/csrc' \
+
+Command: /RAID2/COURSE/iclab/iclab055/Lab12/Exercise/06_POST/./simv +v2k -a vcs.log +define+POST +maxdelays +neg_tchk
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06_Full64; Runtime version T-2022.06_Full64;  Dec  5 03:52 2024
+Doing SDF annotation ...... Done
+*Verdi* Loading libsscore_vcs201906.so
+FSDB Dumper for VCS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+***********************************************************************
+*  ERROR -                                                            *
+*  The simulator version is newer than the FSDB dumper version which  *
+*  may cause abnormal behavior, please contact Synopsys support for   *
+*  assistance.                                                        *
+***********************************************************************
+*Verdi* : Create FSDB file 'CHIP_POST.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+No.          0 PASS
+No.          1 PASS
+No.          2 PASS
+No.          3 PASS
+No.          4 PASS
+No.          5 PASS
+No.          6 PASS
+No.          7 PASS
+No.          8 PASS
+No.          9 PASS
+No.         10 PASS
+No.         11 PASS
+No.         12 PASS
+No.         13 PASS
+No.         14 PASS
+No.         15 PASS
+No.         16 PASS
+No.         17 PASS
+No.         18 PASS
+No.         19 PASS
+No.         20 PASS
+No.         21 PASS
+No.         22 PASS
+No.         23 PASS
+No.         24 PASS
+No.         25 PASS
+No.         26 PASS
+No.         27 PASS
+No.         28 PASS
+No.         29 PASS
+No.         30 PASS
+No.         31 PASS
+No.         32 PASS
+No.         33 PASS
+No.         34 PASS
+No.         35 PASS
+No.         36 PASS
+No.         37 PASS
+No.         38 PASS
+No.         39 PASS
+No.         40 PASS
+No.         41 PASS
+No.         42 PASS
+No.         43 PASS
+No.         44 PASS
+No.         45 PASS
+No.         46 PASS
+No.         47 PASS
+No.         48 PASS
+No.         49 PASS
+No.         50 PASS
+No.         51 PASS
+No.         52 PASS
+No.         53 PASS
+No.         54 PASS
+No.         55 PASS
+No.         56 PASS
+No.         57 PASS
+No.         58 PASS
+No.         59 PASS
+No.         60 PASS
+No.         61 PASS
+No.         62 PASS
+No.         63 PASS
+No.         64 PASS
+No.         65 PASS
+No.         66 PASS
+No.         67 PASS
+No.         68 PASS
+No.         69 PASS
+No.         70 PASS
+No.         71 PASS
+No.         72 PASS
+No.         73 PASS
+No.         74 PASS
+No.         75 PASS
+No.         76 PASS
+No.         77 PASS
+No.         78 PASS
+No.         79 PASS
+No.         80 PASS
+No.         81 PASS
+No.         82 PASS
+No.         83 PASS
+No.         84 PASS
+No.         85 PASS
+No.         86 PASS
+No.         87 PASS
+No.         88 PASS
+No.         89 PASS
+No.         90 PASS
+No.         91 PASS
+No.         92 PASS
+No.         93 PASS
+No.         94 PASS
+No.         95 PASS
+No.         96 PASS
+No.         97 PASS
+No.         98 PASS
+No.         99 PASS
+No.        100 PASS
+No.        101 PASS
+No.        102 PASS
+No.        103 PASS
+No.        104 PASS
+No.        105 PASS
+No.        106 PASS
+No.        107 PASS
+No.        108 PASS
+No.        109 PASS
+No.        110 PASS
+No.        111 PASS
+No.        112 PASS
+No.        113 PASS
+No.        114 PASS
+No.        115 PASS
+No.        116 PASS
+No.        117 PASS
+No.        118 PASS
+No.        119 PASS
+No.        120 PASS
+No.        121 PASS
+No.        122 PASS
+No.        123 PASS
+No.        124 PASS
+No.        125 PASS
+No.        126 PASS
+No.        127 PASS
+No.        128 PASS
+No.        129 PASS
+No.        130 PASS
+No.        131 PASS
+No.        132 PASS
+No.        133 PASS
+No.        134 PASS
+No.        135 PASS
+No.        136 PASS
+No.        137 PASS
+No.        138 PASS
+No.        139 PASS
+No.        140 PASS
+No.        141 PASS
+No.        142 PASS
+No.        143 PASS
+No.        144 PASS
+No.        145 PASS
+No.        146 PASS
+No.        147 PASS
+No.        148 PASS
+No.        149 PASS
+No.        150 PASS
+No.        151 PASS
+No.        152 PASS
+No.        153 PASS
+No.        154 PASS
+No.        155 PASS
+No.        156 PASS
+No.        157 PASS
+No.        158 PASS
+No.        159 PASS
+No.        160 PASS
+No.        161 PASS
+No.        162 PASS
+No.        163 PASS
+No.        164 PASS
+No.        165 PASS
+No.        166 PASS
+No.        167 PASS
+No.        168 PASS
+No.        169 PASS
+No.        170 PASS
+No.        171 PASS
+No.        172 PASS
+No.        173 PASS
+No.        174 PASS
+No.        175 PASS
+No.        176 PASS
+No.        177 PASS
+No.        178 PASS
+No.        179 PASS
+No.        180 PASS
+No.        181 PASS
+No.        182 PASS
+No.        183 PASS
+No.        184 PASS
+No.        185 PASS
+No.        186 PASS
+No.        187 PASS
+No.        188 PASS
+No.        189 PASS
+No.        190 PASS
+No.        191 PASS
+No.        192 PASS
+No.        193 PASS
+No.        194 PASS
+No.        195 PASS
+No.        196 PASS
+No.        197 PASS
+No.        198 PASS
+No.        199 PASS
+No.        200 PASS
+No.        201 PASS
+No.        202 PASS
+No.        203 PASS
+No.        204 PASS
+No.        205 PASS
+No.        206 PASS
+No.        207 PASS
+No.        208 PASS
+No.        209 PASS
+No.        210 PASS
+No.        211 PASS
+No.        212 PASS
+No.        213 PASS
+No.        214 PASS
+No.        215 PASS
+No.        216 PASS
+No.        217 PASS
+No.        218 PASS
+No.        219 PASS
+No.        220 PASS
+No.        221 PASS
+No.        222 PASS
+No.        223 PASS
+No.        224 PASS
+No.        225 PASS
+No.        226 PASS
+No.        227 PASS
+No.        228 PASS
+No.        229 PASS
+No.        230 PASS
+No.        231 PASS
+No.        232 PASS
+No.        233 PASS
+No.        234 PASS
+No.        235 PASS
+No.        236 PASS
+No.        237 PASS
+No.        238 PASS
+No.        239 PASS
+No.        240 PASS
+No.        241 PASS
+No.        242 PASS
+No.        243 PASS
+No.        244 PASS
+No.        245 PASS
+No.        246 PASS
+No.        247 PASS
+No.        248 PASS
+No.        249 PASS
+No.        250 PASS
+No.        251 PASS
+No.        252 PASS
+No.        253 PASS
+No.        254 PASS
+No.        255 PASS
+No.        256 PASS
+No.        257 PASS
+No.        258 PASS
+No.        259 PASS
+No.        260 PASS
+No.        261 PASS
+No.        262 PASS
+No.        263 PASS
+No.        264 PASS
+No.        265 PASS
+No.        266 PASS
+No.        267 PASS
+No.        268 PASS
+No.        269 PASS
+No.        270 PASS
+No.        271 PASS
+No.        272 PASS
+No.        273 PASS
+No.        274 PASS
+No.        275 PASS
+No.        276 PASS
+No.        277 PASS
+No.        278 PASS
+No.        279 PASS
+No.        280 PASS
+No.        281 PASS
+No.        282 PASS
+No.        283 PASS
+No.        284 PASS
+No.        285 PASS
+No.        286 PASS
+No.        287 PASS
+No.        288 PASS
+No.        289 PASS
+No.        290 PASS
+No.        291 PASS
+No.        292 PASS
+No.        293 PASS
+No.        294 PASS
+No.        295 PASS
+No.        296 PASS
+No.        297 PASS
+No.        298 PASS
+No.        299 PASS
+No.        300 PASS
+No.        301 PASS
+No.        302 PASS
+No.        303 PASS
+No.        304 PASS
+No.        305 PASS
+No.        306 PASS
+No.        307 PASS
+No.        308 PASS
+No.        309 PASS
+No.        310 PASS
+No.        311 PASS
+No.        312 PASS
+No.        313 PASS
+No.        314 PASS
+No.        315 PASS
+No.        316 PASS
+No.        317 PASS
+No.        318 PASS
+No.        319 PASS
+No.        320 PASS
+No.        321 PASS
+No.        322 PASS
+No.        323 PASS
+No.        324 PASS
+No.        325 PASS
+No.        326 PASS
+No.        327 PASS
+No.        328 PASS
+No.        329 PASS
+No.        330 PASS
+No.        331 PASS
+No.        332 PASS
+No.        333 PASS
+No.        334 PASS
+No.        335 PASS
+No.        336 PASS
+No.        337 PASS
+No.        338 PASS
+No.        339 PASS
+No.        340 PASS
+No.        341 PASS
+No.        342 PASS
+No.        343 PASS
+No.        344 PASS
+No.        345 PASS
+No.        346 PASS
+No.        347 PASS
+No.        348 PASS
+No.        349 PASS
+No.        350 PASS
+No.        351 PASS
+No.        352 PASS
+No.        353 PASS
+No.        354 PASS
+No.        355 PASS
+No.        356 PASS
+No.        357 PASS
+No.        358 PASS
+No.        359 PASS
+No.        360 PASS
+No.        361 PASS
+No.        362 PASS
+No.        363 PASS
+No.        364 PASS
+No.        365 PASS
+No.        366 PASS
+No.        367 PASS
+No.        368 PASS
+No.        369 PASS
+No.        370 PASS
+No.        371 PASS
+No.        372 PASS
+No.        373 PASS
+No.        374 PASS
+No.        375 PASS
+No.        376 PASS
+No.        377 PASS
+No.        378 PASS
+No.        379 PASS
+No.        380 PASS
+No.        381 PASS
+No.        382 PASS
+No.        383 PASS
+No.        384 PASS
+No.        385 PASS
+No.        386 PASS
+No.        387 PASS
+No.        388 PASS
+No.        389 PASS
+No.        390 PASS
+No.        391 PASS
+No.        392 PASS
+No.        393 PASS
+No.        394 PASS
+No.        395 PASS
+No.        396 PASS
+No.        397 PASS
+No.        398 PASS
+No.        399 PASS
+No.        400 PASS
+No.        401 PASS
+No.        402 PASS
+No.        403 PASS
+No.        404 PASS
+No.        405 PASS
+No.        406 PASS
+No.        407 PASS
+No.        408 PASS
+No.        409 PASS
+No.        410 PASS
+No.        411 PASS
+No.        412 PASS
+No.        413 PASS
+No.        414 PASS
+No.        415 PASS
+No.        416 PASS
+No.        417 PASS
+No.        418 PASS
+No.        419 PASS
+No.        420 PASS
+No.        421 PASS
+No.        422 PASS
+No.        423 PASS
+No.        424 PASS
+No.        425 PASS
+No.        426 PASS
+No.        427 PASS
+No.        428 PASS
+No.        429 PASS
+No.        430 PASS
+No.        431 PASS
+No.        432 PASS
+No.        433 PASS
+No.        434 PASS
+No.        435 PASS
+No.        436 PASS
+No.        437 PASS
+No.        438 PASS
+No.        439 PASS
+No.        440 PASS
+No.        441 PASS
+No.        442 PASS
+No.        443 PASS
+No.        444 PASS
+No.        445 PASS
+No.        446 PASS
+No.        447 PASS
+No.        448 PASS
+No.        449 PASS
+No.        450 PASS
+No.        451 PASS
+No.        452 PASS
+No.        453 PASS
+No.        454 PASS
+No.        455 PASS
+No.        456 PASS
+No.        457 PASS
+No.        458 PASS
+No.        459 PASS
+No.        460 PASS
+No.        461 PASS
+No.        462 PASS
+No.        463 PASS
+No.        464 PASS
+No.        465 PASS
+No.        466 PASS
+No.        467 PASS
+No.        468 PASS
+No.        469 PASS
+No.        470 PASS
+No.        471 PASS
+No.        472 PASS
+No.        473 PASS
+No.        474 PASS
+No.        475 PASS
+No.        476 PASS
+No.        477 PASS
+No.        478 PASS
+No.        479 PASS
+No.        480 PASS
+No.        481 PASS
+No.        482 PASS
+No.        483 PASS
+No.        484 PASS
+No.        485 PASS
+No.        486 PASS
+No.        487 PASS
+No.        488 PASS
+No.        489 PASS
+No.        490 PASS
+No.        491 PASS
+No.        492 PASS
+No.        493 PASS
+No.        494 PASS
+No.        495 PASS
+No.        496 PASS
+No.        497 PASS
+No.        498 PASS
+No.        499 PASS
+No.        500 PASS
+No.        501 PASS
+No.        502 PASS
+No.        503 PASS
+No.        504 PASS
+No.        505 PASS
+No.        506 PASS
+No.        507 PASS
+No.        508 PASS
+No.        509 PASS
+No.        510 PASS
+No.        511 PASS
+No.        512 PASS
+No.        513 PASS
+No.        514 PASS
+No.        515 PASS
+No.        516 PASS
+No.        517 PASS
+No.        518 PASS
+No.        519 PASS
+No.        520 PASS
+No.        521 PASS
+No.        522 PASS
+No.        523 PASS
+No.        524 PASS
+No.        525 PASS
+No.        526 PASS
+No.        527 PASS
+No.        528 PASS
+No.        529 PASS
+No.        530 PASS
+No.        531 PASS
+No.        532 PASS
+No.        533 PASS
+No.        534 PASS
+No.        535 PASS
+No.        536 PASS
+No.        537 PASS
+No.        538 PASS
+No.        539 PASS
+No.        540 PASS
+No.        541 PASS
+No.        542 PASS
+No.        543 PASS
+No.        544 PASS
+No.        545 PASS
+No.        546 PASS
+No.        547 PASS
+No.        548 PASS
+No.        549 PASS
+No.        550 PASS
+No.        551 PASS
+No.        552 PASS
+No.        553 PASS
+No.        554 PASS
+No.        555 PASS
+No.        556 PASS
+No.        557 PASS
+No.        558 PASS
+No.        559 PASS
+No.        560 PASS
+No.        561 PASS
+No.        562 PASS
+No.        563 PASS
+No.        564 PASS
+No.        565 PASS
+No.        566 PASS
+No.        567 PASS
+No.        568 PASS
+No.        569 PASS
+No.        570 PASS
+No.        571 PASS
+No.        572 PASS
+No.        573 PASS
+No.        574 PASS
+No.        575 PASS
+No.        576 PASS
+No.        577 PASS
+No.        578 PASS
+No.        579 PASS
+No.        580 PASS
+No.        581 PASS
+No.        582 PASS
+No.        583 PASS
+No.        584 PASS
+No.        585 PASS
+No.        586 PASS
+No.        587 PASS
+No.        588 PASS
+No.        589 PASS
+No.        590 PASS
+No.        591 PASS
+No.        592 PASS
+No.        593 PASS
+No.        594 PASS
+No.        595 PASS
+No.        596 PASS
+No.        597 PASS
+No.        598 PASS
+No.        599 PASS
+No.        600 PASS
+No.        601 PASS
+No.        602 PASS
+No.        603 PASS
+No.        604 PASS
+No.        605 PASS
+No.        606 PASS
+No.        607 PASS
+No.        608 PASS
+No.        609 PASS
+No.        610 PASS
+No.        611 PASS
+No.        612 PASS
+No.        613 PASS
+No.        614 PASS
+No.        615 PASS
+No.        616 PASS
+No.        617 PASS
+No.        618 PASS
+No.        619 PASS
+No.        620 PASS
+No.        621 PASS
+No.        622 PASS
+No.        623 PASS
+No.        624 PASS
+No.        625 PASS
+No.        626 PASS
+No.        627 PASS
+No.        628 PASS
+No.        629 PASS
+No.        630 PASS
+No.        631 PASS
+No.        632 PASS
+No.        633 PASS
+No.        634 PASS
+No.        635 PASS
+No.        636 PASS
+No.        637 PASS
+No.        638 PASS
+No.        639 PASS
+No.        640 PASS
+No.        641 PASS
+No.        642 PASS
+No.        643 PASS
+No.        644 PASS
+No.        645 PASS
+No.        646 PASS
+No.        647 PASS
+No.        648 PASS
+No.        649 PASS
+No.        650 PASS
+No.        651 PASS
+No.        652 PASS
+No.        653 PASS
+No.        654 PASS
+No.        655 PASS
+No.        656 PASS
+No.        657 PASS
+No.        658 PASS
+No.        659 PASS
+No.        660 PASS
+No.        661 PASS
+No.        662 PASS
+No.        663 PASS
+No.        664 PASS
+No.        665 PASS
+No.        666 PASS
+No.        667 PASS
+No.        668 PASS
+No.        669 PASS
+No.        670 PASS
+No.        671 PASS
+No.        672 PASS
+No.        673 PASS
+No.        674 PASS
+No.        675 PASS
+No.        676 PASS
+No.        677 PASS
+No.        678 PASS
+No.        679 PASS
+No.        680 PASS
+No.        681 PASS
+No.        682 PASS
+No.        683 PASS
+No.        684 PASS
+No.        685 PASS
+No.        686 PASS
+No.        687 PASS
+No.        688 PASS
+No.        689 PASS
+No.        690 PASS
+No.        691 PASS
+No.        692 PASS
+No.        693 PASS
+No.        694 PASS
+No.        695 PASS
+No.        696 PASS
+No.        697 PASS
+No.        698 PASS
+No.        699 PASS
+No.        700 PASS
+No.        701 PASS
+No.        702 PASS
+No.        703 PASS
+No.        704 PASS
+No.        705 PASS
+No.        706 PASS
+No.        707 PASS
+No.        708 PASS
+No.        709 PASS
+No.        710 PASS
+No.        711 PASS
+No.        712 PASS
+No.        713 PASS
+No.        714 PASS
+No.        715 PASS
+No.        716 PASS
+No.        717 PASS
+No.        718 PASS
+No.        719 PASS
+No.        720 PASS
+No.        721 PASS
+No.        722 PASS
+No.        723 PASS
+No.        724 PASS
+No.        725 PASS
+No.        726 PASS
+No.        727 PASS
+No.        728 PASS
+No.        729 PASS
+No.        730 PASS
+No.        731 PASS
+No.        732 PASS
+No.        733 PASS
+No.        734 PASS
+No.        735 PASS
+No.        736 PASS
+No.        737 PASS
+No.        738 PASS
+No.        739 PASS
+No.        740 PASS
+No.        741 PASS
+No.        742 PASS
+No.        743 PASS
+No.        744 PASS
+No.        745 PASS
+No.        746 PASS
+No.        747 PASS
+No.        748 PASS
+No.        749 PASS
+No.        750 PASS
+No.        751 PASS
+No.        752 PASS
+No.        753 PASS
+No.        754 PASS
+No.        755 PASS
+No.        756 PASS
+No.        757 PASS
+No.        758 PASS
+No.        759 PASS
+No.        760 PASS
+No.        761 PASS
+No.        762 PASS
+No.        763 PASS
+No.        764 PASS
+No.        765 PASS
+No.        766 PASS
+No.        767 PASS
+No.        768 PASS
+No.        769 PASS
+No.        770 PASS
+No.        771 PASS
+No.        772 PASS
+No.        773 PASS
+No.        774 PASS
+No.        775 PASS
+No.        776 PASS
+No.        777 PASS
+No.        778 PASS
+No.        779 PASS
+No.        780 PASS
+No.        781 PASS
+No.        782 PASS
+No.        783 PASS
+No.        784 PASS
+No.        785 PASS
+No.        786 PASS
+No.        787 PASS
+No.        788 PASS
+No.        789 PASS
+No.        790 PASS
+No.        791 PASS
+No.        792 PASS
+No.        793 PASS
+No.        794 PASS
+No.        795 PASS
+No.        796 PASS
+No.        797 PASS
+No.        798 PASS
+No.        799 PASS
+No.        800 PASS
+No.        801 PASS
+No.        802 PASS
+No.        803 PASS
+No.        804 PASS
+No.        805 PASS
+No.        806 PASS
+No.        807 PASS
+No.        808 PASS
+No.        809 PASS
+No.        810 PASS
+No.        811 PASS
+No.        812 PASS
+No.        813 PASS
+No.        814 PASS
+No.        815 PASS
+No.        816 PASS
+No.        817 PASS
+No.        818 PASS
+No.        819 PASS
+No.        820 PASS
+No.        821 PASS
+No.        822 PASS
+No.        823 PASS
+No.        824 PASS
+No.        825 PASS
+No.        826 PASS
+No.        827 PASS
+No.        828 PASS
+No.        829 PASS
+No.        830 PASS
+No.        831 PASS
+No.        832 PASS
+No.        833 PASS
+No.        834 PASS
+No.        835 PASS
+No.        836 PASS
+No.        837 PASS
+No.        838 PASS
+No.        839 PASS
+No.        840 PASS
+No.        841 PASS
+No.        842 PASS
+No.        843 PASS
+No.        844 PASS
+No.        845 PASS
+No.        846 PASS
+No.        847 PASS
+No.        848 PASS
+No.        849 PASS
+No.        850 PASS
+No.        851 PASS
+No.        852 PASS
+No.        853 PASS
+No.        854 PASS
+No.        855 PASS
+No.        856 PASS
+No.        857 PASS
+No.        858 PASS
+No.        859 PASS
+No.        860 PASS
+No.        861 PASS
+No.        862 PASS
+No.        863 PASS
+No.        864 PASS
+No.        865 PASS
+No.        866 PASS
+No.        867 PASS
+No.        868 PASS
+No.        869 PASS
+No.        870 PASS
+No.        871 PASS
+No.        872 PASS
+No.        873 PASS
+No.        874 PASS
+No.        875 PASS
+No.        876 PASS
+No.        877 PASS
+No.        878 PASS
+No.        879 PASS
+No.        880 PASS
+No.        881 PASS
+No.        882 PASS
+No.        883 PASS
+No.        884 PASS
+No.        885 PASS
+No.        886 PASS
+No.        887 PASS
+No.        888 PASS
+No.        889 PASS
+No.        890 PASS
+No.        891 PASS
+No.        892 PASS
+No.        893 PASS
+No.        894 PASS
+No.        895 PASS
+No.        896 PASS
+No.        897 PASS
+No.        898 PASS
+No.        899 PASS
+No.        900 PASS
+No.        901 PASS
+No.        902 PASS
+No.        903 PASS
+No.        904 PASS
+No.        905 PASS
+No.        906 PASS
+No.        907 PASS
+No.        908 PASS
+No.        909 PASS
+No.        910 PASS
+No.        911 PASS
+No.        912 PASS
+No.        913 PASS
+No.        914 PASS
+No.        915 PASS
+No.        916 PASS
+No.        917 PASS
+No.        918 PASS
+No.        919 PASS
+No.        920 PASS
+No.        921 PASS
+No.        922 PASS
+No.        923 PASS
+No.        924 PASS
+No.        925 PASS
+No.        926 PASS
+No.        927 PASS
+No.        928 PASS
+No.        929 PASS
+No.        930 PASS
+No.        931 PASS
+No.        932 PASS
+No.        933 PASS
+No.        934 PASS
+No.        935 PASS
+No.        936 PASS
+No.        937 PASS
+No.        938 PASS
+No.        939 PASS
+No.        940 PASS
+No.        941 PASS
+No.        942 PASS
+No.        943 PASS
+No.        944 PASS
+No.        945 PASS
+No.        946 PASS
+No.        947 PASS
+No.        948 PASS
+No.        949 PASS
+No.        950 PASS
+No.        951 PASS
+No.        952 PASS
+No.        953 PASS
+No.        954 PASS
+No.        955 PASS
+No.        956 PASS
+No.        957 PASS
+No.        958 PASS
+No.        959 PASS
+No.        960 PASS
+No.        961 PASS
+No.        962 PASS
+No.        963 PASS
+No.        964 PASS
+No.        965 PASS
+No.        966 PASS
+No.        967 PASS
+No.        968 PASS
+No.        969 PASS
+No.        970 PASS
+No.        971 PASS
+No.        972 PASS
+No.        973 PASS
+No.        974 PASS
+No.        975 PASS
+No.        976 PASS
+No.        977 PASS
+No.        978 PASS
+No.        979 PASS
+No.        980 PASS
+No.        981 PASS
+No.        982 PASS
+No.        983 PASS
+No.        984 PASS
+No.        985 PASS
+No.        986 PASS
+No.        987 PASS
+No.        988 PASS
+No.        989 PASS
+No.        990 PASS
+No.        991 PASS
+No.        992 PASS
+No.        993 PASS
+No.        994 PASS
+No.        995 PASS
+No.        996 PASS
+No.        997 PASS
+No.        998 PASS
+No.        999 PASS
+**************************************************
+                  Congratulations!               
+              execution cycles =   84824
+              clock period = 40.000000ns
+**************************************************
+$finish called from file "PATTERN.v", line 26.
+$finish at simulation time           4461420000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 4461420000 ps
+CPU Time:      9.020 seconds;       Data structure size:   0.6Mb
+Thu Dec  5 03:52:40 2024
+CPU time: 1.042 seconds to compile + .338 seconds to elab + .659 seconds to link + 9.083 seconds in simulation
