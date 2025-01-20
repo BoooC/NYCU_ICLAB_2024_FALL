@@ -22,7 +22,7 @@
 | Lab03 | Pattern                              | Tetris (+Pattern)                              |  5% |
 | Lab04 | Designware IP                        | Convolution Neural Network (CNN)               |  5% |
 | Lab05 | Memory                               | Template Matching with Image Processing (TMIP) |  5% |
-| Lab06 | Design Compiler & Soft IP            | Matrix Determinant Calculator (MMC)            |  5% |
+| Lab06 | Design Compiler & Soft IP            | Matrix Determinant Calculator (MDC)            |  5% |
 | Lab07 | Cross Domain Clock                   | Convolution with Clock Domain Crossing (CONV)  |  5% |
 | Lab08 | Low Power Design                     | Self-attention (SA)                            |  5% |
 | Lab09 | SystemVerilog Design                 | Stock Trading Program                          |  5% |
@@ -33,8 +33,8 @@
 | OT    | Online Test                          | Ramen                                          |  5% |
 | MP    | DRAM with AXI-4                      | Image Signal Processing (ISP)                  | 10% |
 | FP    | APR with MP                          | Image Signal Processing (ISP)                  | 10% |
-| ME    | Focus on front-end design            | iclab midterm exam (written exam)              |  8% |
-| FE    | Focus on back-end design             | iclab final   exam (written exam)              |  8% |
+| ME    | Focus on front-end design            | Midterm Exam (written exam)                    |  8% |
+| FE    | Focus on back-end design             | Final   Exam (written exam)                    |  8% |
 
 ---
 
