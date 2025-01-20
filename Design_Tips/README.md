@@ -5,6 +5,7 @@
 - 由於Latency計算方式是從in_valid拉下來後才開始算，所以大部分的Lab壓Latency的效益都會是最高的
 - 有些reg可以拔掉reset(但要注意，不能導致電路的輸出出現unknown)
 - 如果有使用到DRAM並且DRAM的Latency很長的話，design可以盡量切Pipeline壓低CT
+- 如果要壓超低CT的話，除法器可以用連減，乘法器可以用連加，加減法器可以切段，拆bit數來做 (要壓到2ns以下才可能會需要這樣做)  
 - 如果電路的演算法太複雜的話，可以寫一個超大counter，然後針對每個cycle去控制所有訊號，這樣會好寫很多只是會比較花時間
 - 如果SRAM的控制很複雜的話，建議用Excel將SRAM的控制都先規劃好再去寫RTL
 - 用多個小counter比直接用一個大counter的timing和area通常都會比較好，但會比較難寫一點
