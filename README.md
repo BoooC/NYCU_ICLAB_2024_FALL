@@ -95,6 +95,8 @@
 
 ---
 
-## PATTERN
-管神PATTERN: https://github.com/aelog134256/iclab2024fall/tree/main
+## Other
+有需要找數位IC設計家教的可以找我
+從基礎到進階都可
+Email: booo.c.chen@gmail.com
 
