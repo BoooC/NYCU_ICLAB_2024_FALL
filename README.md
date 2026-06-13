@@ -91,12 +91,6 @@
 .  
 ├── Lab12  
 ├── PATTERN_template.v：通用 PATTERN 範本  
-├── [Design_Tips](./Design_Tips/)：01~06 的優化技巧與注意事項
+├── [Design_Tips](./Design_Tips/)：01~06 的優化技巧與注意
 
----
-
-## Other
-有需要找數位IC設計家教的可以找我
-從基礎到進階都可
-Email: booo.c.chen@gmail.com
 
